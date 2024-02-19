@@ -1,0 +1,8 @@
+envs {
+  envsCloud = [
+    {
+      uuid = "bd339d7c-5877-4793-8127-8e6b5ef38692"
+      folderName = "jira-small-2"
+    },
+  ]
+}
