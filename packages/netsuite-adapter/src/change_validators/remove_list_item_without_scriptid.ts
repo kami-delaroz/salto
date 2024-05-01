@@ -24,16 +24,17 @@ import {
 import { logger } from '@salto-io/logging'
 import { values } from '@salto-io/lowerdash'
 import { NetsuiteChangeValidator } from './types'
-import { PERMISSION, ROLE } from '../constants'
+import { PERMISSIONS, ROLE } from '../constants'
 import {
-  RolePermission,
-  getPermissionsListPath,
+  RolePermissionObject,
   isRolePermissionObject,
 } from '../custom_references/weak_references/permissions_references'
 
 const log = logger(module)
 
-type ItemInList = RolePermission
+const PERMISSION = 'permission'
+
+export type ItemInList = RolePermissionObject
 
 type GetItemList = (instance: InstanceElement) => ItemInList[]
 type GetItemString = (item: ItemInList) => string
@@ -56,8 +57,10 @@ export type ItemListGetters = {
   getDetailedMessage: GetMessage
 }
 
+const getRoleListPath: GetListPath = () => [PERMISSIONS, PERMISSION]
+
 const getRolePermissionList: GetItemList = instance => {
-  const listPathValue = _.get(instance.value, getPermissionsListPath())
+  const listPathValue = _.get(instance.value, getRoleListPath())
   if (_.isPlainObject(listPathValue)) {
     return Object.values(listPathValue).filter(isRolePermissionObject)
   }
@@ -71,7 +74,7 @@ const getRolePermissionList: GetItemList = instance => {
   return []
 }
 
-const getRolePermkey: GetItemString = (permission: RolePermission): string => {
+const getRolePermkey: GetItemString = (permission: RolePermissionObject): string => {
   const { permkey } = permission
   if (_.isString(permkey)) {
     return permkey
@@ -85,7 +88,7 @@ const getRoleMessage = (removedListItems: string[]): string =>
 const roleGetters: ItemListGetters = {
   getItemList: getRolePermissionList,
   getItemString: getRolePermkey,
-  getListPath: getPermissionsListPath,
+  getListPath: getRoleListPath,
   getDetailedMessage: getRoleMessage,
 }
 
