@@ -17,11 +17,14 @@ import { Element, ElemIdGetter, InstanceElement, isInstanceElement } from '@salt
 import { elements as elementUtils, config as configUtils } from '@salto-io/adapter-components'
 import { naclCase } from '@salto-io/adapter-utils'
 import { values } from '@salto-io/lowerdash'
+import { logger } from '@salto-io/logging'
 import _ from 'lodash'
 import { JiraConfig } from '../../config/config'
 import { JIRA } from '../../constants'
 import { FilterCreator } from '../../filter'
 import { FIELD_TYPE_NAME } from './constants'
+
+const log = logger(module)
 
 const { generateInstanceNameFromConfig } = elementUtils
 
@@ -34,14 +37,7 @@ const getFieldType = (instance: InstanceElement): string | undefined =>
 
 const isCustomField = (instance: InstanceElement): boolean => instance.value.schema?.custom !== undefined
 
-const getInstanceName = (instance: InstanceElement, config: JiraConfig, getElemIdFunc?: ElemIdGetter): string => {
-  const baseName = generateInstanceNameFromConfig(instance.value, instance.elemID.typeName, config.apiDefinitions)
-
-  if (baseName === undefined) {
-    return instance.elemID.name
-  }
-
-  const defaultName = naclCase(
+const nameNaclCase = (baseName: string, instance: InstanceElement, config: JiraConfig): string => naclCase(
     [
       baseName,
       config.fetch.addTypeToFieldName ?? true ? getFieldType(instance) : undefined,
@@ -50,6 +46,23 @@ const getInstanceName = (instance: InstanceElement, config: JiraConfig, getElemI
       .filter(values.isDefined)
       .join('__'),
   )
+
+const getInstanceName = (instance: InstanceElement, config: JiraConfig, getElemIdFunc?: ElemIdGetter): string => {
+  const baseName = generateInstanceNameFromConfig(instance.value, instance.elemID.typeName, config.apiDefinitions)
+
+  if (baseName === undefined) {
+    return instance.elemID.name
+  }
+
+  // SALTO-5887: JSM CustomerRequestType was changed to RequestType - support same id for both
+  // we do not support id stickiness (through get element from state) in this case
+  if (baseName === 'Customer Request Type') {
+    const newName = nameNaclCase('Request Type', instance, config)
+    log.trace(`'Customer Request Type' field was found. changing id to be based on 'Request Type': ${newName}`)
+    return newName
+  }
+
+  const defaultName = nameNaclCase(baseName, instance, config)
 
   const { serviceIdField } = configUtils.getConfigWithDefault(
     config.apiDefinitions.types[instance.elemID.typeName].transformation,
