@@ -1,0 +1,5 @@
+jira.WorkflowScheme Copy_of_testWorkflowScheme4@s {
+  name = "Copy of testWorkflowScheme4"
+  description = "(This copy was automatically generated from a draft, when workflow scheme 'testWorkflowScheme' was made inactive.)"
+  defaultWorkflow = jira.Workflow.instance.Alon_s_Test_Workflow_10@tsss
+}

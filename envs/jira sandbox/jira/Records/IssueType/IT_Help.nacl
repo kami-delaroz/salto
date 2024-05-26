@@ -1,0 +1,6 @@
+jira.IssueType IT_Help@s {
+  description = "An IT problem or question."
+  name = "IT Help"
+  untranslatedName = "IT Help"
+  hierarchyLevel = 0
+}

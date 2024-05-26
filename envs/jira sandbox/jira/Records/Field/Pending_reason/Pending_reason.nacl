@@ -1,0 +1,10 @@
+jira.Field Pending_reason__select__c@suuuu {
+  name = "Pending reason"
+  description = "Specify the reason for moving the issue to the Pending status"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  contexts = [
+    jira.CustomFieldContext.instance.Pending_reason__select__c_suuuu_Default_Configuration_Scheme_for_Pending_reason@uuuuumusssss,
+  ]
+  _alias = "Pending reason"
+}

@@ -1,0 +1,21 @@
+jira.Dashboard Custom_dashboard@s {
+  description = ""
+  name = "Custom dashboard"
+  owner = {
+    id = "5cd027a783de300fe5d4b9b0"
+    displayName = "Ori Moisis"
+  }
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.Custom_dashboard_s__Watched_Issues_0_0@umuusuu,
+    jira.DashboardGadget.instance.Custom_dashboard_s__Bubble_Chart_0_1@umuusuu,
+    jira.DashboardGadget.instance.Custom_dashboard_s__Agile_Wallboard_Gadget_1_0@umuussuu,
+    jira.DashboardGadget.instance.Custom_dashboard_s__Average_Time_in_Status_1_1@umuusssuu,
+    jira.DashboardGadget.instance.Custom_dashboard_s__Average_Age_Chart_2_0@umuussuu,
+  ]
+  layout = "AAA"
+}

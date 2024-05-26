@@ -1,0 +1,10 @@
+jira.Field Responders__responders_entity_field_cftype__c@uubbbuu {
+  name = "Responders"
+  description = "Add responders to an incident."
+  isLocked = true
+  type = "com.atlassian.jira.modules.servicemanagement.responders-entity:responders-entity-field-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Responders__responders_entity_field_cftype__c_uubbbuu_Default_Configuration_Scheme_for_Responders@uuuuuuumussss,
+  ]
+  _alias = "Responders"
+}

@@ -1,0 +1,23 @@
+jira.ObjectTypeAttribute People_Employees_Status {
+  objectType = jira.ObjectType.instance.People_Employees
+  name = "Status"
+  type = 7
+  description = "Status of employee"
+  typeValueMulti = [
+    jira.UnknownType.instance.missing_2,
+    jira.ObjectSchemaStatus.instance.People__Inactive,
+  ]
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  _alias = "Status"
+}

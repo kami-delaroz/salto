@@ -1,0 +1,49 @@
+jira.SLA Time_to_close_after_resolution_ITSAMPLE@ssssu {
+  name = "Time to close after resolution"
+  config = {
+    definition = {
+      start = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "resolution-sla-condition-factory"
+          conditionId = "resolution-set-hit-condition"
+          name = "Resolution: Set"
+        },
+      ]
+      stop = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = "6"
+          name = "Entered Status: Closed"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "resolution-sla-condition-factory"
+          conditionId = "resolution-cleared-hit-condition"
+          name = "Resolution: Cleared"
+        },
+      ]
+    }
+    goals = [
+      {
+        jqlQuery = "\"Ticket category\" in (\"Service requests\", Incidents)"
+        duration = 86400000
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_ITSAMPLE@sbsu
+        defaultGoal = false
+        timeMetricId = 0
+      },
+      {
+        jqlQuery = ""
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_ITSAMPLE@sbsu
+        defaultGoal = true
+        timeMetricId = 0
+      },
+    ]
+    slaDisplayFormat = "NEW_SLA_FORMAT"
+  }
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Time to close after resolution"
+}

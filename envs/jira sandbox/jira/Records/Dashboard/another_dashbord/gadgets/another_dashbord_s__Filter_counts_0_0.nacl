@@ -1,0 +1,67 @@
+jira.DashboardGadget another_dashbord_s__Filter_counts_0_0@umuusuu {
+  moduleKey = "com.atlassian.servicedesk.dashboard-items-plugin:filter-count-dashboard-item"
+  color = "blue"
+  position = {
+    row = 0
+    column = 0
+  }
+  title = "Filter counts"
+  properties = [
+    {
+      key = "countOptions"
+      value = [
+        {
+          name = "Priority - Medium"
+          jql = "priority = Medium"
+          hasTrigger = false
+          trigger = {
+            display = ""
+            triggerEquality = ""
+            triggerOn = ""
+          }
+          id = "c368"
+        },
+        {
+          name = "Priority - High"
+          jql = "priority = High"
+          hasTrigger = false
+          trigger = {
+            display = ""
+            triggerEquality = ""
+            triggerOn = ""
+          }
+          id = "c372"
+        },
+      ]
+    },
+    {
+      key = "isConfigured"
+      value = true
+    },
+    {
+      key = "projectFilterDetails"
+      values = [
+        {
+          key = "name"
+          value = "EnhancedFilter1"
+        },
+        {
+          key = "type"
+          value = "filter"
+        },
+        {
+          key = "id"
+          value = "1000099"
+        },
+      ]
+    },
+    {
+      key = "refresh"
+      value = "false"
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.another_dashbord@s,
+  ]
+  _alias = "Filter counts"
+}

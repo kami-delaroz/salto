@@ -1,0 +1,25 @@
+jira.NotificationScheme test3 {
+  name = "test3"
+  description = "test"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          type = "CurrentUser"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+    {
+      notifications = [
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Created@s
+    },
+  ]
+}

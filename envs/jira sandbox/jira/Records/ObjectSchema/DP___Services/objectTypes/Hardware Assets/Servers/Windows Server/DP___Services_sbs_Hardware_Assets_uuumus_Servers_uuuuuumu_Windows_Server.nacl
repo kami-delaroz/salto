@@ -1,0 +1,13 @@
+jira.ObjectType DP___Services_sbs_Hardware_Assets_uuumus_Servers_uuuuuumu_Windows_Server@uuuuuuuumus {
+  name = "Windows Server"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets_uuumus_Servers@uuuuuumu
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Windows
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "Windows Server"
+}

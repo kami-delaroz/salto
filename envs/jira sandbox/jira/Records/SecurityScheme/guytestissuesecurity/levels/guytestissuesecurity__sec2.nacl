@@ -1,0 +1,20 @@
+jira.SecurityLevel guytestissuesecurity__sec2 {
+  description = ""
+  name = "sec2"
+  members = [
+    {
+      holder = {
+        type = "projectLead"
+      }
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+    },
+  ]
+  _parent = [
+    jira.SecurityScheme.instance.guytestissuesecurity,
+  ]
+}

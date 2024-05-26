@@ -1,0 +1,10 @@
+jira.Field For_ACE__datepicker__c@suuuu {
+  name = "For ACE"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:daterange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datepicker"
+  contexts = [
+    jira.CustomFieldContext.instance.For_ACE__datepicker__c_suuuu_Default_Configuration_Scheme_for_For_ACE@uuuuumusssss,
+  ]
+  _alias = "For ACE"
+}

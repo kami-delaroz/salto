@@ -1,0 +1,46 @@
+jira.Screen AlonScreen2 {
+  name = "AlonScreen2"
+  description = "desc"
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Custom_multi_line_field__textarea__c@sssuuuu,
+        jira.Field.instance.Approvers__multiuserpicker__c,
+        jira.Field.instance.testSelectList4__cascadingselect__c,
+        jira.Field.instance.Affects_versions__array@suu,
+        jira.Field.instance.guytest__float__c,
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+    tab4 = {
+      name = "tab4"
+      fields = [
+        jira.Field.instance.Approvals__sd_approvals__c@uubuu,
+      ]
+      position = 1
+    }
+    tab3 = {
+      name = "tab3"
+      fields = [
+        jira.Field.instance.CustomMultiSelect__multiselect__c,
+      ]
+      position = 2
+    }
+    tab5 = {
+      name = "tab5"
+      fields = [
+        jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu,
+      ]
+      position = 3
+    }
+    tab6 = {
+      name = "tab6"
+      fields = [
+        jira.Field.instance.Attachment__array,
+      ]
+      position = 4
+    }
+  }
+}

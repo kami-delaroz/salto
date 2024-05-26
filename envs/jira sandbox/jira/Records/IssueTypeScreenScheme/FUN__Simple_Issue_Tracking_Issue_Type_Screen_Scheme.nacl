@@ -1,0 +1,10 @@
+jira.IssueTypeScreenScheme FUN__Simple_Issue_Tracking_Issue_Type_Screen_Scheme@fsssssss {
+  name = "FUN: Simple Issue Tracking Issue Type Screen Scheme"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.FUN__Simple_Issue_Tracking_Screen_Scheme@fsssss
+    },
+  ]
+}

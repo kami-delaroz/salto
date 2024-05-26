@@ -1,0 +1,9 @@
+jira.Field Progress__progress {
+  name = "Progress"
+  schema = {
+    type = "progress"
+    system = "progress"
+  }
+  description = ""
+  _alias = "Progress"
+}

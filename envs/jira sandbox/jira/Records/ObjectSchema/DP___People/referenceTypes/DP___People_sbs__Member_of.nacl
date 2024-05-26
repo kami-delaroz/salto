@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType DP___People_sbs__Member_of@uuumuus {
+  name = "Member of"
+  color = "FF991F"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.DP___People@sbs,
+  ]
+}

@@ -1,0 +1,259 @@
+jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss {
+  name = "CustomConfigurationScheme for CustomSelectList"
+  isGlobalContext = false
+  options = {
+    p1 = {
+      value = "p1"
+      disabled = false
+      cascadingOptions = {
+        c11 = {
+          value = "c11"
+          disabled = false
+          position = 0
+        }
+        c12 = {
+          value = "c12"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 0
+    }
+    p2 = {
+      value = "p2"
+      disabled = false
+      cascadingOptions = {
+        c22 = {
+          value = "c22"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 1
+    }
+    p3 = {
+      value = "p3"
+      disabled = true
+      cascadingOptions = {
+        c1111 = {
+          value = "c1111"
+          disabled = false
+          position = 0
+        }
+        c1112 = {
+          value = "c1112"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 2
+    }
+    p4 = {
+      value = "p4"
+      disabled = false
+      cascadingOptions = {
+        c41 = {
+          value = "c41"
+          disabled = false
+          position = 0
+        }
+        c1111 = {
+          value = "c1111"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 3
+    }
+    p5 = {
+      value = "p5"
+      disabled = false
+      position = 4
+    }
+    p6 = {
+      value = "p6"
+      disabled = false
+      cascadingOptions = {
+        c61 = {
+          value = "c61"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 5
+    }
+    p7 = {
+      value = "p7"
+      disabled = false
+      position = 6
+    }
+    p9 = {
+      value = "p9"
+      disabled = false
+      cascadingOptions = {
+        c81 = {
+          value = "c81"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 7
+    }
+    a = {
+      value = "a"
+      disabled = false
+      position = 8
+    }
+    p11 = {
+      value = "p11"
+      disabled = false
+      cascadingOptions = {
+        c1 = {
+          value = "c1"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 9
+    }
+    p10 = {
+      value = "p10"
+      disabled = false
+      cascadingOptions = {
+        c1000 = {
+          value = "c1000"
+          disabled = false
+          position = 0
+        }
+        c1100 = {
+          value = "c1100"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 10
+    }
+    p14 = {
+      value = "p14"
+      disabled = false
+      position = 11
+    }
+    p12 = {
+      value = "p12"
+      disabled = false
+      position = 12
+    }
+    p20 = {
+      value = "p20"
+      disabled = false
+      position = 13
+    }
+    p21 = {
+      value = "p21"
+      disabled = false
+      position = 14
+    }
+    p22 = {
+      value = "p22"
+      disabled = false
+      position = 15
+    }
+    p23 = {
+      value = "p23"
+      disabled = false
+      position = 16
+    }
+    p24 = {
+      value = "p24"
+      disabled = false
+      position = 17
+    }
+    p25 = {
+      value = "p25"
+      disabled = false
+      position = 18
+    }
+    p26 = {
+      value = "p26"
+      disabled = false
+      position = 19
+    }
+    p27 = {
+      value = "p27"
+      disabled = false
+      cascadingOptions = {
+        c271 = {
+          value = "c271"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 20
+    }
+    p28 = {
+      value = "p28"
+      disabled = false
+      cascadingOptions = {
+        c281 = {
+          value = "c281"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 21
+    }
+    p29 = {
+      value = "p29"
+      disabled = false
+      position = 22
+    }
+    p30 = {
+      value = "p30"
+      disabled = false
+      cascadingOptions = {
+        c0001 = {
+          value = "c0001"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 23
+    }
+    p31 = {
+      value = "p31"
+      disabled = false
+      cascadingOptions = {
+        c00001 = {
+          value = "c00001"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 24
+    }
+    p32 = {
+      value = "p32"
+      disabled = false
+      cascadingOptions = {
+        c002 = {
+          value = "c002"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 25
+    }
+  }
+  defaultValue = {
+    type = "option.cascading"
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+  ]
+  _parent = [
+    jira.Field.instance.testSelectList2__cascadingselect__c,
+  ]
+  _alias = "testSelectList2 context in CustomConfigurationScheme for CustomSelectList"
+}

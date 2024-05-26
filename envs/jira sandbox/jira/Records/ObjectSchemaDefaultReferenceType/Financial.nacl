@@ -1,0 +1,6 @@
+jira.ObjectSchemaDefaultReferenceType Financial {
+  name = "Financial"
+  description = "Financial"
+  color = "d12cc6"
+  removable = true
+}

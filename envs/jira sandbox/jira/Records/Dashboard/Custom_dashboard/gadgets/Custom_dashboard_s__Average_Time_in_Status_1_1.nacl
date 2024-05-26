@@ -1,0 +1,52 @@
+jira.DashboardGadget Custom_dashboard_s__Average_Time_in_Status_1_1@umuusssuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.ext.charting:timeinstatus-gadget/com/atlassian/jira/ext/charting/gadget/timeinstatus-gadget.xml"
+  color = "blue"
+  position = {
+    row = 1
+    column = 1
+  }
+  title = "Average Time in Status"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "isPopup"
+          value = "false"
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+        {
+          key = "statuses"
+          value = "3|4|5|10000"
+        },
+        {
+          key = "periodName"
+          value = "daily"
+        },
+        {
+          key = "projectOrFilterId"
+          value = jira.Project.instance.test_proj_one@b
+        },
+        {
+          key = "daysprevious"
+          value = "30"
+        },
+        {
+          key = "yaxisPeriod"
+          value = "hourly"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.Custom_dashboard@s,
+  ]
+  _alias = "Average Time in Status"
+}

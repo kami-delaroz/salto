@@ -1,0 +1,29 @@
+jira.Dashboard ITSM_Sample_Dashboard@s {
+  description = "This is a sample dashboard"
+  name = "ITSM Sample Dashboard"
+  owner = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.ITSM_sample_space@s
+      }
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Introduction_0_0@uumuuuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Filter_counts_0_1@uumuusuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Issue_Statistics_0_2@uumuusuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Two_Dimensional_Filter_Statistics_0_3@uumuusssuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Pie_Chart_1_0@uumuusuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Bubble_Chart_1_1@uumuusuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Recently_Created_Chart_1_2@uumuussuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__2_0@uumuuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Service_project_report_2_1@uumuussuu,
+    jira.DashboardGadget.instance.ITSM_Sample_Dashboard_s__Heat_Map_2_2@uumuusuu,
+  ]
+  layout = "AAA"
+}

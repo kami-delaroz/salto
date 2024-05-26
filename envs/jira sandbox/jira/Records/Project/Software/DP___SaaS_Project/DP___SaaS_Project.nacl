@@ -1,0 +1,15 @@
+jira.Project DP___SaaS_Project@sbss {
+  key = "DSP"
+  description = "Description Diff"
+  name = "DP - SaaS Project"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.DSP__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.DSP__Scrum_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.DSP__Scrum_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "6205b3c7d362410069133701"
+    displayName = "Dan Putman"
+  }
+}

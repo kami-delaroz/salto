@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Device_Manager@s {
+  name = "Device Manager"
+  icon = file("jira/ObjectTypeIcon/Device_Manager.png")
+}

@@ -1,0 +1,13 @@
+jira.Project Batel_project_10_02_24@ssbb {
+  key = "BP102"
+  description = ""
+  name = "Batel project 10-02-24"
+  projectTypeKey = "software"
+  entityId = "da5d1165-7d20-4ebf-af54-d4e1fae72332"
+  uuid = "da5d1165-7d20-4ebf-af54-d4e1fae72332"
+  issueSecurityScheme = jira.SecurityScheme.instance.BP102__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+}

@@ -1,0 +1,183 @@
+jira.Workflow transitionTest {
+  description = ""
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = 173.58734576006634
+        },
+      ]
+    }
+    first__From__Open__Directed@fffsff = {
+      name = "first"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 173.58734576006634
+          targetAngle = 3.8869910536581176
+        },
+      ]
+      to = jira.Status.instance.approved
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          operator = "AND"
+          conditions = [
+            {
+              type = "InProjectRoleCondition"
+              configuration = {
+                projectRole = {
+                  id = jira.ProjectRole.instance.IdoTeamRole
+                }
+              }
+            },
+            {
+              type = "InProjectRoleCondition"
+              configuration = {
+                projectRole = {
+                  id = jira.ProjectRole.instance.shay_role@s
+                }
+              }
+            },
+          ]
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    s__From__Open__Directed@fffsff = {
+      name = "s"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 133.72129943982276
+          targetAngle = -24.520828801148976
+        },
+      ]
+      to = jira.Status.instance.aaa
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "InProjectRoleCondition"
+          configuration = {
+            projectRole = {
+              id = jira.ProjectRole.instance.aaa
+            }
+          }
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.aaa
+      name = "aaa"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 506.021484375
+        y = 202.29999877929689
+      }
+    },
+    {
+      id = jira.Status.instance.approved
+      name = "Approved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 384.033203125
+        y = 117.4
+      }
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 592.41015625
+        y = 117.4
+      }
+    },
+  ]
+  name = "transitionTest"
+  diagramInitialEntry = {
+    x = 617
+    y = 67.4
+  }
+}

@@ -1,0 +1,20 @@
+jira.Queue All_open_tickets_ITSAMPLE@ssu {
+  name = "All open tickets"
+  jql = "${ jira.Field.instance.Resolution__resolution } = Unresolved ORDER BY \"Time to resolution\" ASC"
+  columns = [
+    jira.Field.instance.Request_Type__vp_origin__c@suubuu,
+    jira.Field.instance.Key,
+    jira.Field.instance.Summary__string,
+    jira.Field.instance.Reporter__user,
+    jira.Field.instance.Assignee__user,
+    jira.Field.instance.Status__status,
+    jira.Field.instance.Created__datetime,
+    jira.Field.instance.missing_customfield_10188,
+  ]
+  canBeHidden = false
+  favourite = false
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:All open tickets"
+}

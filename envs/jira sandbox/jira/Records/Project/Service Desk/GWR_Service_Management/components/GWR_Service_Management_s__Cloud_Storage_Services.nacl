@@ -1,0 +1,13 @@
+jira.ProjectComponent GWR_Service_Management_s__Cloud_Storage_Services@uumuuss {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Cloud Storage Services"
+  leadAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+  _parent = [
+    jira.Project.instance.GWR_Service_Management@s,
+  ]
+  _alias = "GWR Service Management:Cloud Storage Services"
+}

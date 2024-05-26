@@ -1,0 +1,7 @@
+jira.IssueTypeScheme INCIDENT__Software_Development_Issue_Type_Scheme@fsssss {
+  name = "INCIDENT: Software Development Issue Type Scheme"
+  defaultIssueTypeId = jira.IssueType.instance.Incident
+  issueTypeIds = [
+    jira.IssueType.instance.Incident,
+  ]
+}

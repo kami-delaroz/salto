@@ -1,0 +1,30 @@
+jira.Screen AP__Kanban_Bug_Screen@fsss {
+  name = "AP: Kanban Bug Screen"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Summary__string,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+        jira.Field.instance.Components__array,
+        jira.Field.instance.Description__string,
+        jira.Field.instance.Reporter__user,
+        jira.Field.instance.Fix_versions__array@suu,
+        jira.Field.instance.Priority__priority,
+        jira.Field.instance.Labels__array,
+        jira.Field.instance.Security_Level__securitylevel@suu,
+        jira.Field.instance.Environment__string,
+        jira.Field.instance.Attachment__array,
+        jira.Field.instance.Affects_versions__array@suu,
+        jira.Field.instance.Linked_Issues__array@suu,
+        jira.Field.instance.Assignee__user,
+        jira.Field.instance.Epic_Link__gh_epic_link__c@suubbuu,
+        jira.Field.instance.Parent,
+        jira.Field.instance.____________labels__c@_01513_01491_01492s_01489_01506_01489_01512_01497_01514uuuu,
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+  }
+}

@@ -1,0 +1,6 @@
+jira.Status jjj {
+  name = "jjj"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = "This status is managed internally by Jira Software"
+  _alias = "jjj"
+}

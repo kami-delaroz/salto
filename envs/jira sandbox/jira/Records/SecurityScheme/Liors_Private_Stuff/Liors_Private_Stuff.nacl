@@ -1,0 +1,7 @@
+jira.SecurityScheme Liors_Private_Stuff@s {
+  name = "Liors Private Stuff"
+  description = ""
+  levels = [
+    jira.SecurityLevel.instance.Liors_Private_Stuff_s__PrivateField@uumuu,
+  ]
+}

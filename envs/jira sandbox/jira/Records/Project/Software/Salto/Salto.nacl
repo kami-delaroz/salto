@@ -1,0 +1,33 @@
+jira.Project Salto {
+  key = "SALTO"
+  description = ""
+  url = "https://github.com/salto-io/salto"
+  name = "Salto"
+  projectTypeKey = "software"
+  components = [
+    jira.ProjectComponent.instance.Salto__CLI,
+    jira.ProjectComponent.instance.Salto__Core,
+    jira.ProjectComponent.instance.Salto__HubSpot_Adapter@uus,
+    jira.ProjectComponent.instance.Salto__Jira_Adapter@uus,
+    jira.ProjectComponent.instance.Salto__Netsuite_Adapter@uus,
+    jira.ProjectComponent.instance.Salto__Salesforce_Adapter@uus,
+    jira.ProjectComponent.instance.Salto__Solution_Engineering@uus,
+    jira.ProjectComponent.instance.Salto__Stripe_Adapter@uus,
+    jira.ProjectComponent.instance.Salto__VS_Code_Extension@uuss,
+    jira.ProjectComponent.instance.Salto__Workato_Adapter@uus,
+    jira.ProjectComponent.instance.Salto__Zendesk_Adapter@uus,
+    jira.ProjectComponent.instance.Salto__Zuora_Billing_Adapter@uuss,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.SALTO__Software_Simplified_Workflow_Scheme__1_@fsssssjk
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.SALTO__Software_Development_Issue_Type_Screen_Scheme@fssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.SALTO__Software_Development_Issue_Type_Scheme@fsssss
+  leadAccountId = {
+    id = "5c7289009170244d98d8192c"
+    displayName = "Gil Hoffer"
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}

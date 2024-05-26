@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType Processes__Assigned_to@uus {
+  name = "Assigned to"
+  color = "5243AA"
+  removable = true
+  _parent = [
+    jira.ObjectSchema.instance.Processes,
+  ]
+}

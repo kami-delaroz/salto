@@ -1,0 +1,395 @@
+jira.Workflow Lior_s_Test_Workflow_3@tsss {
+  description = "desc3"
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Build_Broken__From__any_status__Global@sfffssff = {
+      name = "Build Broken"
+      description = ""
+      to = jira.Status.instance.build_broken@s
+      type = "global"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    AnotherTestTransition__From__Approved__Directed@fffsff = {
+      name = "AnotherTestTransition"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.approved
+        },
+      ]
+      to = jira.Status.instance.approved
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    BackLogToSharedStatus__From__Backlog__Directed@fffsff = {
+      name = "BackLogToSharedStatus"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.backlog
+        },
+      ]
+      to = jira.Status.instance.a_shared_status3@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.AP2__Kanban_Bug_Screen@fsss
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Hello_Yuri__From__Approved__Directed@sfffsff = {
+      name = "Hello Yuri"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.approved
+        },
+      ]
+      to = jira.Status.instance.build_broken@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          operator = "OR"
+          conditions = [
+            {
+              type = "AlwaysFalseCondition"
+            },
+            {
+              type = "BlockInProgressApprovalCondition"
+            },
+            {
+              type = "CompareNumberCFCondition"
+              configuration = {
+                fieldId = jira.Field.instance.Story_point_estimate__jsw_story_points__c@ssuubbuu
+                fieldValue = "501"
+                comparator = "="
+              }
+            },
+            {
+              type = "UserInAnyGroupCondition"
+              configuration = {
+                groups = [
+                  jira.Group.instance.jira_administrators@b.name,
+                  jira.Group.instance.system_administrators@b.name,
+                ]
+              }
+            },
+          ]
+        }
+        triggers = [
+          {
+            key = "com.atlassian.jira.plugins.jira-development-integration-plugin:review-summarized-trigger"
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    ImportantTransition__From__A_shared_status__Directed@fffsssff = {
+      name = "ImportantTransition"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.a_shared_status3@s
+        },
+      ]
+      to = jira.Status.instance.approved
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    LiorTestTransition__From__Open__Directed@fffsff = {
+      name = "LiorTestTransition"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+        },
+      ]
+      to = jira.Status.instance.build_broken@s
+      type = "directed"
+      rules = {
+        validators = [
+          {
+            type = "FieldRequiredValidator"
+            configuration = {
+              errorMessage = ""
+              ignoreContext = false
+              fieldIds = [
+                jira.Field.instance.testetst__multicheckboxes__c,
+              ]
+            }
+          },
+          {
+            type = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            configuration = {
+              value = "{\"uuid\":\"bd1aaa25-00ad-49b5-9423-b03e425d8df4\",\"enabled\":true,\"description\":\"Lior Test ScriptRunner Validator \",\"expression\":\"!config['enabled'] ? true : (true)\",\"errorMessage\":\"A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information.\"}"
+            }
+          },
+          {
+            type = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            configuration = {
+              value = "{\"uuid\":\"8e4ba219-4715-495a-b854-203ba8ca2af5\",\"enabled\":true,\"description\":\"Another ScriptRunner validator\",\"expression\":\"!config['enabled'] ? true : (issue.getResolution() == \\\"Fixed\\\")\",\"errorMessage\":\"A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information.\"}"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    TransitionToSharedStatus__From__A_shared_status__Directed@fffsssff = {
+      name = "TransitionToSharedStatus"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.a_shared_status3@s
+        },
+      ]
+      to = jira.Status.instance.build_broken@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Wow__From__Backlog__Directed@fffsff = {
+      name = "Wow"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.backlog
+        },
+      ]
+      to = jira.Status.instance.approved
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.a_shared_status3@s
+      name = "A shared status"
+      properties = [
+        {
+          key = "PropKey"
+          value = "PropValue"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "פרופ קי"
+          value = "פרופ    וליו"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.approved
+      name = "Approved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.backlog
+      name = "Backlog"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.build_broken@s
+      name = "Build Broken"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.resolved
+      name = "Resolved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+  ]
+  name = "Lior's Test Workflow 3"
+}

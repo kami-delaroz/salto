@@ -1,0 +1,491 @@
+jira.Workflow jira {
+  description = "The default Jira workflow."
+  transitions = {
+    Create_Issue__From__none__Initial@sfffsff = {
+      name = "Create Issue"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "common.forms.create"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "0"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037202
+          targetAngle = -70.01689347810002
+        },
+      ]
+    }
+    Close_Issue__From__In_Progress_Open_Reopened__Directed@sfffsszdzdff = {
+      name = "Close Issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 32.07327721530661
+          targetAngle = -70.01689347810002
+        },
+        {
+          id = jira.Status.instance.in_progress@s
+          sourceAngle = -15.751173663453025
+          targetAngle = 139.59376128125461
+        },
+        {
+          id = jira.Status.instance.reopened
+          sourceAngle = -157.7890807475563
+          targetAngle = 32.07327721530661
+        },
+      ]
+      to = jira.Status.instance.closed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Resolve_Issue_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Closed@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          operator = "AND"
+          conditions = [
+            {
+              type = "PermissionCondition"
+              configuration = {
+                permissionKey = "CLOSE_ISSUES"
+              }
+            },
+            {
+              type = "PermissionCondition"
+              configuration = {
+                permissionKey = "RESOLVE_ISSUES"
+              }
+            },
+          ]
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "closeissue.close"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "closeissue.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "60"
+        },
+      ]
+    }
+    Reopen_Issue__From__Closed_Resolved__Directed@sfffszdff = {
+      name = "Reopen Issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.resolved
+          sourceAngle = 78.11134196037202
+          targetAngle = -70.01689347810002
+        },
+        {
+          id = jira.Status.instance.closed
+          sourceAngle = 4.484606009544626
+          targetAngle = -70.01689347810002
+        },
+      ]
+      to = jira.Status.instance.reopened
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Reopened@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "RESOLVE_ISSUES"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "issue.operations.reopen.issue"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "issue.operations.reopen.issue"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "80"
+        },
+      ]
+    }
+    Stop_Progress__From__In_Progress__Directed@sfffssff = {
+      name = "Stop Progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.in_progress@s
+          sourceAngle = 176.08842818747132
+          targetAngle = 177.1014232007183
+        },
+      ]
+      to = jira.Status.instance.open
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Work_Stopped_On_Issue@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "ASSIGNABLE_USER"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "stopprogress.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "20"
+        },
+      ]
+    }
+    Start_Progress__From__Open_Reopened__Directed@sfffszdff = {
+      name = "Start Progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 78.11134196037202
+          targetAngle = -70.01689347810002
+        },
+        {
+          id = jira.Status.instance.reopened
+          sourceAngle = 175.5371815279595
+          targetAngle = 3.4422152858973765
+        },
+      ]
+      to = jira.Status.instance.in_progress@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "AssignToCurrentUserFunction"
+          },
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Work_Started_On_Issue@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "ASSIGNABLE_USER"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "startprogress.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "20"
+        },
+      ]
+    }
+    Resolve_Issue__From__In_Progress_Open_Reopened__Directed@sfffsszdzdff = {
+      name = "Resolve Issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 2.632434868986484
+          targetAngle = 175.47117576306746
+        },
+        {
+          id = jira.Status.instance.in_progress@s
+          sourceAngle = 78.11134196037202
+          targetAngle = 3.911571812528663
+        },
+        {
+          id = jira.Status.instance.reopened
+          sourceAngle = 3.862209053865168
+          targetAngle = 3.911571812528663
+        },
+      ]
+      to = jira.Status.instance.resolved
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Resolve_Issue_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Resolved@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "RESOLVE_ISSUES"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "resolveissue.resolve"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "resolveissue.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "40"
+        },
+      ]
+    }
+    Close_Issue__From__Resolved__Directed@sfffsff = {
+      name = "Close Issue"
+      description = "Closing an issue indicates there is no more work to be done on it, and it has been verified as complete."
+      from = [
+        {
+          id = jira.Status.instance.resolved
+          sourceAngle = 144.3806578113409
+          targetAngle = -70.01689347810002
+        },
+      ]
+      to = jira.Status.instance.closed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Closed@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "CLOSE_ISSUES"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "closeissue.close"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "closeissue.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "60"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.closed
+      name = "Closed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      location = {
+        x = 1522
+        y = 315
+      }
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      name = "In Progress"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1305.5
+        y = 421
+      }
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1328
+        y = 165
+      }
+    },
+    {
+      id = jira.Status.instance.reopened
+      name = "Reopened"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1713.75
+        y = 421
+      }
+    },
+    {
+      id = jira.Status.instance.resolved
+      name = "Resolved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1714.5
+        y = 165
+      }
+    },
+  ]
+  name = "jira"
+  diagramInitialEntry = {
+    x = 1353
+    y = 54
+  }
+}

@@ -1,0 +1,10 @@
+jira.ObjectTypeOrder IT_Inventory__s_Hardware_Assets_uumus_Servers_childOrder@uuuuumuu {
+  objectTypes = [
+    jira.ObjectType.instance.IT_Inventory__s_Hardware_Assets_uumus_Servers_uuuuumu_Red_Hat_Linux@uuuuuuumuss,
+    jira.ObjectType.instance.IT_Inventory__s_Hardware_Assets_uumus_Servers_uuuuumu_Windows_Server@uuuuuuumus,
+  ]
+  assetsSchema = jira.ObjectSchema.instance.IT_Inventory_@s
+  _parent = [
+    jira.ObjectType.instance.IT_Inventory__s_Hardware_Assets_uumus_Servers@uuuuumu,
+  ]
+}

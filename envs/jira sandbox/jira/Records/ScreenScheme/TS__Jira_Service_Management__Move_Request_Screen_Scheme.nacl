@@ -1,0 +1,7 @@
+jira.ScreenScheme TS__Jira_Service_Management__Move_Request_Screen_Scheme@fsssfssss {
+  name = "TS: Jira Service Management: Move Request Screen Scheme"
+  description = "This Jira Service Management Screen Scheme was generated automatically"
+  screens = {
+    default = jira.Screen.instance.TS__Jira_Service_Management__Move_Request_Issue_Screen@fsssfssss
+  }
+}

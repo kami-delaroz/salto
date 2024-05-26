@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus ITSBX__In_Use@uus {
+  name = "In Use"
+  description = "Asset is deployed and functioning"
+  category = 1
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "ITSBX:In Use"
+}

@@ -1,0 +1,15 @@
+jira.Project shir_project_s@um {
+  key = "SR"
+  description = "desc"
+  name = "shir_project@s"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.shay_workflow_scheme@s
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.SP__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.SP__Kanban_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "62ebc187e50f2f2a395557cc"
+    displayName = "Shay Cohen"
+  }
+}

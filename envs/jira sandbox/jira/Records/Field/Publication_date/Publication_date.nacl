@@ -1,0 +1,10 @@
+jira.Field Publication_date__datepicker__c@suuuu {
+  name = "Publication date"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:daterange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datepicker"
+  contexts = [
+    jira.CustomFieldContext.instance.Publication_date__datepicker__c_suuuu_Default_Configuration_Scheme_for_Publication_date@uuuuumusssss,
+  ]
+  _alias = "Publication date"
+}

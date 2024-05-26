@@ -1,0 +1,19 @@
+jira.Project AlonCompanyProjectTest {
+  key = "LNCMPNPRJT"
+  description = "rfewrw4frt43t34"
+  url = "https://www.cnn.com"
+  name = "AlonCompanyProjectTest"
+  projectCategory = jira.ProjectCategory.instance.ProjCatOne
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.1801BugWorkflowScheme4
+  permissionScheme = jira.PermissionScheme.instance.AlonPermissionScheme
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueSecurityScheme = jira.SecurityScheme.instance.name
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.test
+  issueTypeScheme = jira.IssueTypeScheme.instance.Default_Issue_Type_Scheme@s
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.test
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+}
