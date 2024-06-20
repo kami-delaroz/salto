@@ -1,0 +1,11 @@
+jira.Field Atlas_project_status__read_only_string_issue_field__c@ssuubbbbuu {
+  name = "Atlas project status"
+  description = "Status of Atlas project connected via Atlas for Jira Cloud"
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:readonlyissuefieldsearcher"
+  type = "read-only-string-issue-field"
+  contexts = [
+    jira.CustomFieldContext.instance.Atlas_project_status__read_only_string_issue_field__c_ssuubbbbuu_Default_Configuration_Scheme_for_Atlas_project_status@uuuuuuuuuumussssss,
+  ]
+  _alias = "Atlas project status"
+}

@@ -1,0 +1,9 @@
+jira.Field Reporter__user {
+  name = "Reporter"
+  schema = {
+    type = "user"
+    system = "reporter"
+  }
+  description = ""
+  _alias = "Reporter"
+}

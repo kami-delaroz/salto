@@ -1,0 +1,10 @@
+jira.Field Actual_start__datetime__c@suuuu {
+  name = "Actual start"
+  description = "Enter when the change actually started."
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:datetimerange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datetime"
+  contexts = [
+    jira.CustomFieldContext.instance.Actual_start__datetime__c_suuuu_Default_Configuration_Scheme_for_Actual_start@uuuuumusssss,
+  ]
+  _alias = "Actual start"
+}

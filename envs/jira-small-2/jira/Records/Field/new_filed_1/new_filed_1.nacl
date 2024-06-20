@@ -1,0 +1,10 @@
+jira.Field new_filed_1__labels__c@bbuuuu {
+  name = "new-filed-1"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:labelsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:labels"
+  contexts = [
+    jira.CustomFieldContext.instance.new_filed_1__labels__c_bbuuuu_Default_Configuration_Scheme_for_new_filed_1@uuuuuumussssbb,
+  ]
+  _alias = "new-filed-1"
+}

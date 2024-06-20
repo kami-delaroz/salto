@@ -1,0 +1,13 @@
+jira.Project My_Kanban_Project@s {
+  key = "KAN"
+  description = ""
+  name = "My Kanban Project"
+  projectTypeKey = "software"
+  entityId = "9b9c7086-c1e7-4482-a9e8-e0699bced859"
+  uuid = "9b9c7086-c1e7-4482-a9e8-e0699bced859"
+  issueSecurityScheme = jira.SecurityScheme.instance.KAN__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "712020:270ac903-8edf-433c-b4b6-b2696115b96a"
+    displayName = "batel"
+  }
+}

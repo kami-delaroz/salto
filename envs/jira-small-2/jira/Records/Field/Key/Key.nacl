@@ -1,0 +1,5 @@
+jira.Field Key {
+  name = "Key"
+  description = ""
+  _alias = "Key"
+}

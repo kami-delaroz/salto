@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_uif_setting@v {
+  id = "jira.admin.uif.setting"
+  value = "true"
+  name = "jira.admin.uif.setting"
+  type = "boolean"
+}

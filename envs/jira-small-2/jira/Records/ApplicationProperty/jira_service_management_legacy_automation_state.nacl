@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_service_management_legacy_automation_state@vbvbv {
+  id = "jira.service-management.legacy-automation.state"
+  value = ""
+  name = "jira.service-management.legacy-automation.state"
+  type = "string"
+}

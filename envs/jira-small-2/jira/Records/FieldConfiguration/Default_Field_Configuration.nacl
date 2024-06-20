@@ -1,0 +1,185 @@
+jira.FieldConfiguration Default_Field_Configuration@s {
+  name = "Default Field Configuration"
+  description = "The default field configuration"
+  isDefault = true
+  fields = {
+    Summary__string = {
+      description = "qagggad"
+      isHidden = false
+      isRequired = true
+    }
+    Issue_Type__issuetype@suu = {
+      isHidden = false
+      isRequired = true
+    }
+    Security_Level__securitylevel@suu = {
+      isHidden = false
+      isRequired = true
+    }
+    Priority__priority = {
+      isHidden = false
+      isRequired = false
+    }
+    Due_date__date@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Components__array = {
+      isHidden = false
+      isRequired = false
+    }
+    Affects_versions__array@suu = {
+      isHidden = true
+      isRequired = false
+    }
+    Fix_versions__array@suu = {
+      isHidden = true
+      isRequired = false
+    }
+    Assignee__user = {
+      isHidden = false
+      isRequired = false
+    }
+    Reporter__user = {
+      isHidden = false
+      isRequired = true
+    }
+    Environment__string = {
+      description = "For example operating system, software platform and/or hardware specifications (include as appropriate for the issue)."
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Description__string = {
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Time_tracking__timetracking@suu = {
+      description = "An estimate of how much work remains until this issue will be resolved.The format of this is ' *w *d *h *m ' (representing weeks, days, hours and minutes - where * can be any number).Examples: 4d, 5h 30m, 60m and 3w."
+      isHidden = false
+      isRequired = false
+    }
+    Resolution__resolution = {
+      isHidden = false
+      isRequired = false
+    }
+    Attachment__array = {
+      isHidden = false
+      isRequired = false
+    }
+    Comment__comments_page@uub = {
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Labels__array = {
+      isHidden = false
+      isRequired = false
+    }
+    Log_Work__array@suu = {
+      description = "Allows work to be logged whilst creating, editing or transitioning issues."
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Linked_Issues__array@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Approvers__multiuserpicker__c = {
+      description = "Contains users needed for approval. This custom field was created by Jira Service Desk."
+      isHidden = true
+      isRequired = false
+    }
+    Impact__select__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Change_type__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Change_risk__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Change_reason__select__c@suuuu = {
+      description = "Choose the reason for the change request"
+      isHidden = false
+      isRequired = false
+    }
+    Actual_start__datetime__c@suuuu = {
+      description = "Enter when the change actually started."
+      isHidden = true
+      isRequired = false
+    }
+    Actual_end__datetime__c@suuuu = {
+      description = "Enter when the change actually ended."
+      isHidden = true
+      isRequired = false
+    }
+    _CHART__Date_of_First_Response__firstresponsedate__c@hissssuuuu = {
+      description = ""
+      isHidden = true
+      isRequired = false
+    }
+    _CHART__Time_in_Status__timeinstatus__c@hisssuuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    dgd__labels__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    new_filed_1__labels__c@bbuuuu = {
+      isHidden = false
+      isRequired = false
+      description = ""
+    }
+    new_field_2__labels__c@bbuuuu = {
+      isHidden = false
+      isRequired = false
+      description = ""
+    }
+    new_field_3__labels__c@bbuuuu = {
+      isHidden = false
+      isRequired = false
+      description = ""
+    }
+    AABBZZZZZ__labels__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    frfr__labels__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    For_ACE__datepicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Story_Points__float__c@suuuu = {
+      description = "Measurement of complexity and/or size of a requirement."
+      isHidden = false
+      isRequired = false
+    }
+    NewCustomFieldLior__multicheckboxes__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    multiChoiceField__multiselect__c = {
+      isHidden = false
+      isRequired = false
+    }
+  }
+}

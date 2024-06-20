@@ -1,0 +1,4 @@
+jira.ProjectRole Administrators {
+  name = "Administrators"
+  description = "A project role that represents administrators in a project"
+}

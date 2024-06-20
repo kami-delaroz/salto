@@ -1,0 +1,9 @@
+jira.Filter filter_318 {
+  name = "filter_318"
+  description = "auto generated filter number 318"
+  owner = {
+    id = "712020:270ac903-8edf-433c-b4b6-b2696115b96a"
+    displayName = "batel"
+  }
+  jql = "${ jira.Field.instance.Assignee__user } = currentUser() AND ${ jira.Field.instance.Status__status } = '${ jira.Status.instance.open.name }'"
+}

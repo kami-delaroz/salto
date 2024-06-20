@@ -1,0 +1,3 @@
+jira.Group jira_admins_filterenv@b {
+  name = "jira-admins-filterenv"
+}

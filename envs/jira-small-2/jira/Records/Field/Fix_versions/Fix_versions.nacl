@@ -1,0 +1,10 @@
+jira.Field Fix_versions__array@suu {
+  name = "Fix versions"
+  schema = {
+    type = "array"
+    items = "version"
+    system = "fixVersions"
+  }
+  description = ""
+  _alias = "Fix versions"
+}

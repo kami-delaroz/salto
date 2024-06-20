@@ -1,0 +1,18 @@
+jira.ApplicationRole Jira_Software@s {
+  key = "jira-software"
+  groups = [
+    jira.Group.instance.org_admins@b,
+    jira.Group.instance.jira_software_users_filterenv@b,
+    jira.Group.instance.atlassian_addons_admin@b,
+  ]
+  name = "Jira Software"
+  defaultGroups = [
+    jira.Group.instance.jira_software_users_filterenv@b,
+  ]
+  selectedByDefault = false
+  defined = true
+  numberOfSeats = 10
+  userCountDescription = "user"
+  hasUnlimitedSeats = false
+  platform = false
+}

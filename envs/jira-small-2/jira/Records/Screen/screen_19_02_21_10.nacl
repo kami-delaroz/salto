@@ -1,0 +1,10 @@
+jira.Screen screen_19_02_21_10@sbbb {
+  name = "screen 19-02-21-10"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      position = 0
+    }
+  }
+}

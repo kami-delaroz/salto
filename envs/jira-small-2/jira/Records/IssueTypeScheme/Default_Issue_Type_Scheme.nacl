@@ -1,0 +1,11 @@
+jira.IssueTypeScheme Default_Issue_Type_Scheme@s {
+  name = "Default Issue Type Scheme"
+  description = "Default issue type scheme is the list of global issue types. All newly created issue types will automatically be added to this scheme."
+  isDefault = true
+  issueTypeIds = [
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Task,
+  ]
+}

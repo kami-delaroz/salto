@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_announcement_banner_is_dismissable@vvvvb {
+  id = "jira.admin.announcement.banner.is-dismissable"
+  value = "false"
+  name = "jira.admin.announcement.banner.is-dismissable"
+  type = "boolean"
+}

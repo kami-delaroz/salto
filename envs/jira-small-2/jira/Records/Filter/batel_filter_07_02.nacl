@@ -1,0 +1,8 @@
+jira.Filter batel_filter_07_02@b {
+  name = "batel-filter-07-02"
+  owner = {
+    id = "712020:270ac903-8edf-433c-b4b6-b2696115b96a"
+    displayName = "batel"
+  }
+  jql = "${ jira.Field.instance.Created__datetime } >= -30d order by ${ jira.Field.instance.Created__datetime } DESC"
+}

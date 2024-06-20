@@ -1,0 +1,36 @@
+jira.DashboardGadget Default_dashboard_s__Activity_Stream_1_1@umuusuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.streams.streams-jira-plugin:activitystream-gadget/gadgets/activitystream-gadget.xml"
+  color = "blue"
+  position = {
+    row = 1
+    column = 1
+  }
+  title = "Activity Stream"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "numofentries"
+          value = "5"
+        },
+        {
+          key = "keys"
+          value = "__all_projects__"
+        },
+        {
+          key = "title"
+          value = "Your Company JIRA"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.Default_dashboard@s,
+  ]
+  _alias = "Activity Stream"
+}

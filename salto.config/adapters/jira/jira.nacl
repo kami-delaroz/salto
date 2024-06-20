@@ -1,0 +1,17 @@
+jira {
+  fetch = {
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+    ]
+  }
+  deploy = {
+    forceDelete = false
+    defaultMissingUserFallback = "ed"
+    taskMaxRetries = 180
+    taskRetryDelay = 1500
+  }
+}
