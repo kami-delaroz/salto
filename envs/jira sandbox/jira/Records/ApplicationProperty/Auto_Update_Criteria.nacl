@@ -2,7 +2,7 @@ jira.ApplicationProperty Auto_Update_Criteria@s {
   id = "jira.issuenav.criteria.autoupdate"
   value = "false"
   name = "Auto Update Criteria"
-  desc = "Turn on to update search results automatically"
+  desc = "Turn on to update search results automatically ghjhg"
   type = "boolean"
   defaultValue = "true"
 }
