@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Link {
+  name = "Link"
+  icon = file("jira/ObjectTypeIcon/Link.png")
+}

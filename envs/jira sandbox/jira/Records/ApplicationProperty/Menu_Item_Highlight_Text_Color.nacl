@@ -1,0 +1,6 @@
+jira.ApplicationProperty Menu_Item_Highlight_Text_Color@s {
+  id = "jira.lf.menu.textcolour"
+  value = "#ffffff"
+  name = "Menu Item Highlight Text Color"
+  type = "colour"
+}

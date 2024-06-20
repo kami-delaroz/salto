@@ -1,0 +1,23 @@
+jira.ObjectTypeAttribute ITSBX_Hardware_Assets_us_Operational_Status@uumus {
+  objectType = jira.ObjectType.instance.ITSBX_Hardware_Assets@us
+  name = "Operational Status"
+  type = 7
+  description = "Health status of asset/CI"
+  typeValueMulti = [
+    jira.UnknownType.instance.missing_2,
+    jira.ObjectSchemaStatus.instance.ITSBX__Inactive,
+  ]
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  _alias = "Operational Status"
+}

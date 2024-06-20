@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon GPS_Device@s {
+  name = "GPS Device"
+  icon = file("jira/ObjectTypeIcon/GPS_Device.png")
+}

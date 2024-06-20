@@ -1,0 +1,6 @@
+jira.IssueTypeScheme Neta_aaa1@s {
+  name = "Neta aaa1"
+  issueTypeIds = [
+    jira.IssueType.instance.Neta_aaa1@s,
+  ]
+}

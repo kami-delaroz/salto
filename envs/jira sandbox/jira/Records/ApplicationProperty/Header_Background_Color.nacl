@@ -1,0 +1,6 @@
+jira.ApplicationProperty Header_Background_Color@s {
+  id = "jira.lf.top.bgcolour"
+  value = "#205081"
+  name = "Header Background Color"
+  type = "colour"
+}

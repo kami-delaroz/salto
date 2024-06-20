@@ -1,0 +1,14 @@
+jira.ObjectType Lior_s_IT_Schema_tss_new_Root@uuumus {
+  name = "new Root"
+  type = 0
+  description = ""
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.3D_Printer@s
+  parentObjectTypeId = jira.ObjectSchema.instance.Lior_s_IT_Schema@tss
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "new Root"
+}

@@ -1,0 +1,3 @@
+jira.Group iso_27003_people {
+  name = "iso_27003_people"
+}

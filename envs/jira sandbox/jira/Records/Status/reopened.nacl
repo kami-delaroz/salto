@@ -1,0 +1,6 @@
+jira.Status reopened {
+  name = "Reopened"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = "This issue was once resolved, but the resolution was deemed incorrect. From here issues are either marked assigned or resolved."
+  _alias = "Reopened"
+}

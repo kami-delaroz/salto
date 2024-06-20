@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus idoA_Schema_s__eTMOR@umuu {
+  name = "eTMOR"
+  description = "emon right or wrong"
+  category = 1
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+  _alias = "idoA Schema:eTMOR"
+}

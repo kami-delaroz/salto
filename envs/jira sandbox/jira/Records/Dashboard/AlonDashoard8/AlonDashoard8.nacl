@@ -1,0 +1,21 @@
+jira.Dashboard AlonDashoard8 {
+  description = ""
+  name = "AlonDashoard8"
+  owner = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.AlonDashoard8__Watched_Issues_0_0@uusuu,
+    jira.DashboardGadget.instance.AlonDashoard8__Bubble_Chart_0_1@uusuu,
+    jira.DashboardGadget.instance.AlonDashoard8__Agile_Wallboard_Gadget_1_0@uussuu,
+    jira.DashboardGadget.instance.AlonDashoard8__Average_Time_in_Status_1_1@uusssuu,
+    jira.DashboardGadget.instance.AlonDashoard8__Average_Age_Chart_2_0@uussuu,
+  ]
+  layout = "AAA"
+}

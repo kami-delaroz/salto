@@ -1,0 +1,13 @@
+jira.ObjectType ITSBX_Hardware_Assets@us {
+  name = "Hardware Assets"
+  type = 0
+  inherited = true
+  abstractObjectType = true
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Workstation
+  parentObjectTypeId = jira.ObjectSchema.instance.ITSBX
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "Hardware Assets"
+}

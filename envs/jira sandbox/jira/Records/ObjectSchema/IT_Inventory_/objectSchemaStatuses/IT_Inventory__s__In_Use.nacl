@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus IT_Inventory__s__In_Use@uumuus {
+  name = "In Use"
+  description = "Asset is deployed and functioning"
+  category = 1
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "IT Inventory :In Use"
+}

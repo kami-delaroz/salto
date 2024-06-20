@@ -1,0 +1,12 @@
+jira.CustomFieldContext Urgency4__select__c_test {
+  name = "test"
+  description = ""
+  isGlobalContext = true
+  defaultValue = {
+    type = "option.single"
+  }
+  _parent = [
+    jira.Field.instance.Urgency4__select__c,
+  ]
+  _alias = "Urgency4 context in test"
+}

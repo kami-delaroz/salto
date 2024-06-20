@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Windows_Client@s {
+  name = "Windows Client"
+  icon = file("jira/ObjectTypeIcon/Windows_Client.png")
+}

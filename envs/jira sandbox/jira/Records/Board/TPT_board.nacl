@@ -1,0 +1,42 @@
+jira.Board TPT_board@s {
+  name = "TPT board"
+  type = "scrum"
+  admins = {
+    users = [
+      {
+        id = "5cd027a783de300fe5d4b9b0"
+        displayName = "Ori Moisis"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.test_proj_two@b
+  }
+  filterId = jira.Filter.instance.Filter_for_TPT_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "To Do"
+        statuses = [
+          jira.Status.instance.to_do@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "none"
+  }
+  estimation = {
+    field = jira.Field.instance.Story_Points__float__c@suuuu
+  }
+}

@@ -1,0 +1,16 @@
+jira.Filter Filter_for_testNewBoard@s {
+  name = "Filter for testNewBoard"
+  owner = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.AlonCompanyProject.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.AlonCompanyProject
+      }
+    },
+  ]
+}

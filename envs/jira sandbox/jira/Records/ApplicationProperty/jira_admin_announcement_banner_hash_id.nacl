@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_announcement_banner_hash_id@vvvvb {
+  id = "jira.admin.announcement.banner.hash-id"
+  value = "E5CE0B1F7TDAZH1IBTNH6PQ2TP9FLLO6"
+  name = "jira.admin.announcement.banner.hash-id"
+  type = "string"
+}

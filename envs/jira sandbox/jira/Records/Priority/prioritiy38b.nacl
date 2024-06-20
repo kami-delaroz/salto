@@ -1,0 +1,6 @@
+jira.Priority prioritiy38b {
+  statusColor = "#ffffff"
+  description = "Serious problem that could block progress."
+  iconUrl = "https://ori-salto-test.atlassian.net/images/icons/priorities/medium.svg"
+  name = "prioritiy38b"
+}

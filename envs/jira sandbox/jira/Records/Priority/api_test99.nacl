@@ -1,0 +1,6 @@
+jira.Priority api_test99 {
+  statusColor = "#fff00f"
+  description = ""
+  iconUrl = "https://ori-salto-test.atlassian.net/images/icons/priorities/blocker.svg"
+  name = "api_test99"
+}

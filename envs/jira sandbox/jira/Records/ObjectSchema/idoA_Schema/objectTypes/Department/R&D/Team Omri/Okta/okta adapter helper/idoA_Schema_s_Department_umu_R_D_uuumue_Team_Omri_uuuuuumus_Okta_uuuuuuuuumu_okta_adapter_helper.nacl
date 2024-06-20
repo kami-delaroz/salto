@@ -1,0 +1,14 @@
+jira.ObjectType idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus_Okta_uuuuuuuuumu_okta_adapter_helper@uuuuuuuuuuumuss {
+  name = "okta adapter helper"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus_Okta@uuuuuuuuumu
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Parallel_Tasks@s
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+  _alias = "okta adapter helper"
+}

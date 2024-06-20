@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Employees_umu_Employment_Type@uuumus {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Employees@umu
+  name = "Employment Type"
+  type = 0
+  description = "Full-time employee, contractor, etc etc."
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = "Full-time employee,Contractor"
+  defaultTypeId = 10
+  _alias = "Employment Type"
+}

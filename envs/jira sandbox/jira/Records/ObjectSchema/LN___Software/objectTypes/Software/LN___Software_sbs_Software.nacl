@@ -1,0 +1,14 @@
+jira.ObjectType LN___Software_sbs_Software@uuumu {
+  name = "Software"
+  type = 0
+  description = ""
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Software_Box@s
+  parentObjectTypeId = jira.ObjectSchema.instance.LN___Software@sbs
+  _parent = [
+    jira.ObjectSchema.instance.LN___Software@sbs,
+  ]
+  _alias = "Software"
+}

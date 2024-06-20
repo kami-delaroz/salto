@@ -1,0 +1,30 @@
+jira.Board GT_board@s {
+  name = "GT board"
+  type = "scrum"
+  admins = {
+    users = [
+      {
+        id = "60a60ff79b362f006919d5ff"
+        displayName = "Guy Hamo"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.guytestmigration
+  }
+  filterId = jira.Filter.instance.Filter_for_GT_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "none"
+  }
+  estimation = {
+    field = jira.Field.instance.Story_Points__float__c@suuuu
+  }
+}

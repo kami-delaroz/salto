@@ -1,0 +1,6 @@
+jira.Priority test8 {
+  statusColor = "#ffffff"
+  description = ""
+  iconUrl = "https://ori-salto-test.atlassian.net/images/icons/priorities/medium.svg"
+  name = "test8"
+}

@@ -1,0 +1,13 @@
+jira.Screen Neta_aaa1@s {
+  name = "Neta aaa1"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+  }
+}

@@ -1,0 +1,23 @@
+jira.ObjectTypeAttribute Lior_s_IT_Schema_tss_Models_uuumu_Hardware_Models_uuuuumus_error@uuuuuuuumu {
+  objectType = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Hardware_Models@uuuuumus
+  name = "error"
+  type = 0
+  description = "its mine"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  suffix = ""
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = true
+  regexValidation = ""
+  qlQuery = ""
+  options = ""
+  iql = ""
+  defaultTypeId = 0
+  _alias = "error"
+}

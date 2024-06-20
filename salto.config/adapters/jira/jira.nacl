@@ -1,0 +1,19 @@
+jira {
+  fetch = {
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+      {
+        type = "CustomFieldContext"
+      }
+    ]
+    enableJSM = true
+    enableJSMPremium = true
+  }
+  deploy = {
+    forceDelete = false
+  }
+}

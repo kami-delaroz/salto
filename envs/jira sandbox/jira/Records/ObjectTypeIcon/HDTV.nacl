@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon HDTV {
+  name = "HDTV"
+  icon = file("jira/ObjectTypeIcon/HDTV.png")
+}

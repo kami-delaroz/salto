@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType IT_Inventory__s__Assigned_to@uumuus {
+  name = "Assigned to"
+  color = "5243AA"
+  removable = true
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+}

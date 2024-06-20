@@ -1,0 +1,16 @@
+jira.Filter Filter_for_EM_board@s {
+  name = "Filter for EM board"
+  owner = {
+    id = "62d20c47a94a6f9c0eff9866"
+    displayName = "Ido Zak"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.Empty22.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.Empty22
+      }
+    },
+  ]
+}

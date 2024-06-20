@@ -1,0 +1,34 @@
+jira.Project GWR_Service_Management@s {
+  key = "GWRJSM1"
+  description = ""
+  name = "GWR Service Management"
+  projectTypeKey = "service_desk"
+  components = [
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Active_Directory@uumuus,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Analytics_and_Reporting_Service@uumuusss,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Billing_Services@uumuus,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Cloud_Storage_Services@uumuuss,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Data_Center_Services@uumuuss,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Email_and_Collaboration_Services@uumuusss,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Financial_Services@uumuus,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__HR_Services@uumuus,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Intranet@uumuu,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Jira@uumuu,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Office_Network@uumuus,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Payroll_Services@uumuus,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Printers@uumuu,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Public_Website@uumuus,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__VPN_Server@uumuus,
+    jira.ProjectComponent.instance.GWR_Service_Management_s__Webstore_Purchasing_Services@uumuuss,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_GWRJSM1@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_GWRJSM1@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.GWRJSM1__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.GWRJSM1__Jira_Service_Management_Issue_Type_Scheme@fssssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_GWRJSM1@s
+  leadAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+}

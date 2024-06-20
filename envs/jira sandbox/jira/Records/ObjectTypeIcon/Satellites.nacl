@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Satellites {
+  name = "Satellites"
+  icon = file("jira/ObjectTypeIcon/Satellites.png")
+}

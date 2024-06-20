@@ -1,0 +1,11 @@
+jira.Field Flagged__multicheckboxes__c {
+  name = "Flagged"
+  description = "Allows to flag issues with impediments."
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"
+  contexts = [
+    jira.CustomFieldContext.instance.Flagged__multicheckboxes__c_Default_Configuration_Scheme_for_Flagged@uuuuussss,
+  ]
+  _alias = "Flagged"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Git {
+  name = "Git"
+  icon = file("jira/ObjectTypeIcon/Git.png")
+}
