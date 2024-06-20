@@ -1,0 +1,6 @@
+jira.Status not_applicable@s {
+  name = "not applicable"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "not applicable"
+}

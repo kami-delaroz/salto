@@ -1,0 +1,10 @@
+jira.Field shay_user_picker__userpicker__c@ssuuuu {
+  name = "shay user picker"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:userpickergroupsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:userpicker"
+  contexts = [
+    jira.CustomFieldContext.instance.shay_user_picker__userpicker__c_ssuuuu_Default_Configuration_Scheme_for_shay_user_picker@uuuuuumussssss,
+  ]
+  _alias = "shay user picker"
+}

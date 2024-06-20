@@ -1,0 +1,43 @@
+jira.Screen LNTSM3__Jira_Service_Management__Change_Create_Issue_Screen@fsssfssss {
+  name = "LNTSM3: Jira Service Management: Change Create Issue Screen"
+  description = ""
+  tabs = {
+    Default = {
+      name = "Default"
+      fields = [
+        jira.Field.instance.Summary__string,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+        jira.Field.instance.Components__array,
+        jira.Field.instance.Attachment__array,
+        jira.Field.instance.Description__string,
+        jira.Field.instance.Reporter__user,
+        jira.Field.instance.Linked_Issues__array@suu,
+        jira.Field.instance.Assignee__user,
+        jira.Field.instance.Priority__priority,
+        jira.Field.instance.Labels__array,
+        jira.Field.instance.Request_Type__vp_origin__c@suubuu,
+        jira.Field.instance.Request_language__sd_request_language__c@suubbuu,
+        jira.Field.instance.Urgency__select__c,
+        jira.Field.instance.Impact__select__c,
+        jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu,
+        jira.Field.instance.Satisfaction__sd_request_feedback__c@uubbuu,
+        jira.Field.instance.Change_risk__select__c@suuuu,
+        jira.Field.instance.Planned_start__datetime__c@suuuu,
+        jira.Field.instance.Planned_end__datetime__c@suuuu,
+        jira.Field.instance.Change_type__select__c@suuuu,
+        jira.Field.instance.Change_start_date__datetime__c@ssuuuu,
+        jira.Field.instance.Change_completion_date__datetime__c@ssuuuu,
+        jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu,
+        jira.Field.instance.Time_tracking__timetracking@suu,
+        jira.Field.instance.Approvers__multiuserpicker__c,
+        jira.Field.instance.Organizations__sd_customer_organizations__c@uubbuu,
+        jira.Field.instance.Approver_groups__multigrouppicker__c@suuuu,
+        jira.Field.instance.Implementation_plan__textarea__c@suuuu,
+        jira.Field.instance.Backout_plan__textarea__c@suuuu,
+        jira.Field.instance.Test_plan__textarea__c@suuuu,
+        jira.Field.instance.Change_reason__select__c@suuuu,
+      ]
+      position = 0
+    }
+  }
+}

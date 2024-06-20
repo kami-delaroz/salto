@@ -1,0 +1,14 @@
+jira.ObjectType Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Red_Hat_Linux_uuuuuuuumuss_singer@uuuuuuuuuuuumu {
+  name = "singer"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Red_Hat_Linux@uuuuuuuumuss
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Red_Hat@s
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "singer"
+}

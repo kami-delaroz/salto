@@ -1,0 +1,4 @@
+jira.ProjectRole IdoTeamRole {
+  name = "IdoTeamRole"
+  description = ""
+}

@@ -1,0 +1,11 @@
+jira.IssueTypeScheme LNPRJCT3__Scrum_Issue_Type_Scheme__1_@fsssssjk {
+  name = "LNPRJCT3: Scrum Issue Type Scheme (1)"
+  defaultIssueTypeId = jira.IssueType.instance.Story
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Epic,
+  ]
+}

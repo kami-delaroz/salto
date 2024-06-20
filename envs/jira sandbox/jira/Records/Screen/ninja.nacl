@@ -1,0 +1,10 @@
+jira.Screen ninja {
+  name = "ninja"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      position = 0
+    }
+  }
+}

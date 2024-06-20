@@ -1,0 +1,10 @@
+jira.Field How_many_times_has_this_happened_before__float__c@ssssssuuuu {
+  name = "How many times has this happened before"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:float"
+  contexts = [
+    jira.CustomFieldContext.instance.How_many_times_has_this_happened_before__float__c_ssssssuuuu_Default_Configuration_Scheme_for_How_many_times_has_this_happened_before@uuuuuuuuuumussssssssss,
+  ]
+  _alias = "How many times has this happened before"
+}

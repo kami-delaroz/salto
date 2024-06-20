@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Skyscrapers {
+  name = "Skyscrapers"
+  icon = file("jira/ObjectTypeIcon/Skyscrapers.png")
+}

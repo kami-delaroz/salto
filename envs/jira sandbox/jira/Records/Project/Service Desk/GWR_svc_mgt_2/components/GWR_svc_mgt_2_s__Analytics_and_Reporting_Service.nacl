@@ -1,0 +1,13 @@
+jira.ProjectComponent GWR_svc_mgt_2_s__Analytics_and_Reporting_Service@uuumuusss {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Analytics and Reporting Service"
+  leadAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+  _parent = [
+    jira.Project.instance.GWR_svc_mgt_2@s,
+  ]
+  _alias = "GWR svc mgt 2:Analytics and Reporting Service"
+}

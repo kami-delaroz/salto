@@ -1,0 +1,315 @@
+jira.RequestType New_mobile_device_ITSAMPLE@ssu {
+  name = "New mobile device"
+  description = "Need a mobile phone or time for replacement? Let us know."
+  helpText = ""
+  issueTypeId = jira.IssueType.instance._System__Service_request_with_approvals@hissss
+  workflowStatuses = [
+    {
+      id = jira.Status.instance.pending
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.waiting_for_support@s
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.escalated
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.canceled
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.waiting_for_approval@s
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.waiting_for_customer@s
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.closed
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.resolved
+      custom = ""
+    },
+  ]
+  requestForm = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Summary__string
+          data = {
+            custom = false
+            global = true
+            required = true
+            properties = [
+              {
+                key = "jsd.field.helpText"
+                value = "e.g. New mobile phone for Alice Smith"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Approvers__multiuserpicker__c
+          data = {
+            custom = true
+            global = true
+            description = "Contains users needed for approval. This custom field was created by Jira."
+            required = true
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "Who is your manager?"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Description__string
+          data = {
+            custom = false
+            global = true
+            required = false
+            properties = [
+              {
+                key = "jsd.field.helpText"
+                value = "e.g. 32G or 64G, the size of the screen, etc. Please also fill in why you need this new device"
+              },
+              {
+                key = "jsd.field.displayName"
+                value = "Phone details and justification"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Attachment__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+      ]
+    }
+  }
+  avatarId = "10534"
+  issueView = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Assignee__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Reporter__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_Type__vp_origin__c@suubuu
+          data = {
+            custom = true
+            global = true
+            description = "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_language__sd_request_language__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "The language which a request was raised in."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Priority__priority
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Labels__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the users that are participants in service project customer portal requests. This custom field is created programmatically and required by service project."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Organizations__sd_customer_organizations__c@uubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Urgency__select__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Impact__select__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Pending_reason__select__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = "Specify the reason for moving the issue to the Pending status"
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Product_categorization__cascadingselect__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Operational_categorization__cascadingselect__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Components__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Satisfaction__sd_request_feedback__c@uubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores request feedback in service project requests. This custom field is created programmatically and required by service project."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Time_tracking__timetracking@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Original_estimate__number@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+      ]
+    }
+  }
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:New mobile device"
+}

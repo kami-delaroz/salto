@@ -1,0 +1,19 @@
+jira.Project testIdoProject {
+  key = "TSTDPRJCT"
+  description = ""
+  name = "testIdoProject"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.GlobalTransitions
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueSecurityScheme = jira.SecurityScheme.instance.name3
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.TSTDPRJCT__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.TSTDPRJCT__Kanban_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}

@@ -1,0 +1,16 @@
+jira.Project AlonCompanyProject15 {
+  key = "LNCMPNPJ15"
+  description = ""
+  name = "AlonCompanyProject15"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.LNPRJCT3__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueSecurityScheme = jira.SecurityScheme.instance.name
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.LNCMPNPRJC__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.Default_Issue_Type_Scheme@s
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+}

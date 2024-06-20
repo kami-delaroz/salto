@@ -1,0 +1,1041 @@
+jira.Workflow LNTSM3__Change_Management_workflow_for_Jira_Service_Management@fsssssss {
+  description = "This Jira Service Management Change Management workflow was generated for Project LNTSM3"
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.review
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueStatusFunction"
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = -70.01689347810002
+        },
+      ]
+    }
+    Normal_change__From__Review__Directed@sfffsff = {
+      name = "Normal change"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.review
+          sourceAngle = 78.11134196037203
+          targetAngle = -70.01689347810002
+        },
+      ]
+      to = jira.Status.instance.planning
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Decline__From__Review__Directed@fffsff = {
+      name = "Decline"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.review
+          sourceAngle = 174.5211743197677
+          targetAngle = -18.33874929595336
+        },
+      ]
+      to = jira.Status.instance.declined
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Mark_as_canceled__From__Review__Directed@ssfffsff = {
+      name = "Mark as canceled"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.review
+          sourceAngle = 174.5211743197677
+          targetAngle = -157.4989707995646
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Complete__From__Implementing__Directed@fffsff = {
+      name = "Complete"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.implementing
+          sourceAngle = 150.1106650990439
+          targetAngle = -159.08099058970254
+        },
+      ]
+      to = jira.Status.instance.completed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Mark_as_canceled__From__Planning__Directed@ssfffsff = {
+      name = "Mark as canceled"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.planning
+          sourceAngle = 175.30706939783246
+          targetAngle = -157.4989707995646
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Mark_as_canceled__From__Declined__Directed@ssfffsff = {
+      name = "Mark as canceled"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.declined
+          sourceAngle = 142.96914937375135
+          targetAngle = 175.4767505704118
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Mark_as_done__From__Review__Directed@ssfffsff = {
+      name = "Mark as done"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.review
+          sourceAngle = 4.601124171777892
+          targetAngle = 3.6601104986293924
+        },
+      ]
+      to = jira.Status.instance.completed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Fail__From__Implementing__Directed@fffsff = {
+      name = "Fail"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.implementing
+          sourceAngle = 24.83374271392066
+          targetAngle = -151.65988986782781
+        },
+      ]
+      to = jira.Status.instance.failed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_implementing__From__Failed__Directed@ssfffsff = {
+      name = "Back to implementing"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.failed
+          sourceAngle = -70.01689347810002
+          targetAngle = 3.2624947011114256
+        },
+      ]
+      to = jira.Status.instance.implementing
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Mark_as_canceled__From__Implementing__Directed@ssfffsff = {
+      name = "Mark as canceled"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.implementing
+          sourceAngle = 176.31879080152905
+          targetAngle = -17.657994425257982
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Standard_change__From__Review__Directed@sfffsff = {
+      name = "Standard change"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.review
+          sourceAngle = 4.601124171777892
+          targetAngle = -10.257145796428292
+        },
+      ]
+      to = jira.Status.instance.awaiting_implementation@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Ready_for_approval__From__Planning__Directed@ssfffsff = {
+      name = "Ready for approval"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.planning
+          sourceAngle = 143.3391887536398
+          targetAngle = -158.1323929946118
+        },
+      ]
+      to = jira.Status.instance.authorize
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Approve__From__Authorize__Directed@fffsff = {
+      name = "Approve"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.authorize
+          sourceAngle = 78.11134196037203
+          targetAngle = -168.22900209890688
+        },
+      ]
+      to = jira.Status.instance.awaiting_implementation@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "BlockInProgressApprovalCondition"
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Implement__From__Awaiting_implementation__Directed@fffssff = {
+      name = "Implement"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.awaiting_implementation@s
+          sourceAngle = 78.11134196037203
+          targetAngle = -161.587487337868
+        },
+      ]
+      to = jira.Status.instance.implementing
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_awaiting_implementation__From__Implementing__Directed@sssfffsff = {
+      name = "Back to awaiting implementation"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.implementing
+          sourceAngle = -14.998712213824582
+          targetAngle = 17.35737887587869
+        },
+      ]
+      to = jira.Status.instance.awaiting_implementation@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Decline__From__Authorize__Directed@fffsff = {
+      name = "Decline"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.authorize
+          sourceAngle = 175.60852373291496
+          targetAngle = 4.07711373580539
+        },
+      ]
+      to = jira.Status.instance.declined
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "BlockInProgressApprovalCondition"
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_planning__From__Authorize__Directed@ssfffsff = {
+      name = "Back to planning"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.authorize
+          sourceAngle = -17.258094649225402
+          targetAngle = 29.540641733420916
+        },
+      ]
+      to = jira.Status.instance.planning
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "BlockInProgressApprovalCondition"
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Emergency_override__From__Review__Directed@sfffsff = {
+      name = "Emergency override"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.review
+          sourceAngle = 4.601124171777892
+          targetAngle = 3.2624947011114256
+        },
+      ]
+      to = jira.Status.instance.implementing
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_review__From__Declined__Directed@ssfffsff = {
+      name = "Back to review"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.declined
+          sourceAngle = -156.40635975661797
+          targetAngle = -153.00540373697555
+        },
+      ]
+      to = jira.Status.instance.review
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Fail__From__Review__Directed@fffsff = {
+      name = "Fail"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.review
+          sourceAngle = 4.601124171777892
+          targetAngle = -21.175976513226686
+        },
+      ]
+      to = jira.Status.instance.failed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Mark_as_canceled__From__Authorize__Directed@ssfffsff = {
+      name = "Mark as canceled"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.authorize
+          sourceAngle = 175.60852373291496
+          targetAngle = -70.01689347810002
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Mark_as_canceled__From__Awaiting_implementation__Directed@ssfffssff = {
+      name = "Mark as canceled"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.awaiting_implementation@s
+          sourceAngle = 177.64846279367657
+          targetAngle = -17.657994425257982
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Ready_for_approval__From__Review__Directed@ssfffsff = {
+      name = "Ready for approval"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.review
+          sourceAngle = 4.601124171777892
+          targetAngle = 3.808635846633177
+        },
+      ]
+      to = jira.Status.instance.authorize
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Fail__From__Awaiting_implementation__Directed@fffssff = {
+      name = "Fail"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.awaiting_implementation@s
+          sourceAngle = 2.1732411393298423
+          targetAngle = -21.175976513226686
+        },
+      ]
+      to = jira.Status.instance.failed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Complete__From__Awaiting_implementation__Directed@fffssff = {
+      name = "Complete"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.awaiting_implementation@s
+          sourceAngle = 160.19691818609235
+          targetAngle = 175.80353045919804
+        },
+      ]
+      to = jira.Status.instance.completed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___56@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.authorize
+      name = "Authorize"
+      properties = [
+        {
+          key = "approval.active"
+          value = "true"
+        },
+        {
+          key = "approval.condition.type"
+          value = "numberPerPrincipal"
+        },
+        {
+          key = "approval.condition.value"
+          value = "1"
+        },
+        {
+          key = "approval.exclude"
+          value = "reporter,assignee"
+        },
+        {
+          key = "approval.field.id"
+          value = "customfield_10169"
+        },
+        {
+          key = "approval.groups"
+          value = "true"
+        },
+        {
+          key = "approval.pre-populated.field.id"
+          value = "customfield_10171"
+        },
+        {
+          key = "approval.transition.approved"
+          value = "9202"
+        },
+        {
+          key = "approval.transition.rejected"
+          value = "9232"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1138.7040405273438
+        y = -25.27551254653929
+      }
+    },
+    {
+      id = jira.Status.instance.awaiting_implementation@s
+      name = "Awaiting implementation"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1142.0634155273438
+        y = 70.48074212646486
+      }
+    },
+    {
+      id = jira.Status.instance.canceled
+      name = "Canceled"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1032.9696655273438
+        y = 295.9878912353515
+      }
+    },
+    {
+      id = jira.Status.instance.completed
+      name = "Completed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1252.9852905273438
+        y = 295.9878912353515
+      }
+    },
+    {
+      id = jira.Status.instance.declined
+      name = "Declined"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 910.7506103515625
+        y = -25.27551254653929
+      }
+    },
+    {
+      id = jira.Status.instance.failed
+      name = "Failed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1433.1254815673828
+        y = 295.9878912353515
+      }
+    },
+    {
+      id = jira.Status.instance.implementing
+      name = "Implementing"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1209.7743530273438
+        y = 173.31233535051348
+      }
+    },
+    {
+      id = jira.Status.instance.planning
+      name = "Planning"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1142.0634155273438
+        y = -120.31891598463056
+      }
+    },
+    {
+      id = jira.Status.instance.review
+      name = "Review"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1149.0868530273438
+        y = -224.45408149719236
+      }
+    },
+  ]
+  name = "LNTSM3: Change Management workflow for Jira Service Management"
+  diagramInitialEntry = {
+    x = 1179.7743530273438
+    y = -314.5999481201172
+  }
+}

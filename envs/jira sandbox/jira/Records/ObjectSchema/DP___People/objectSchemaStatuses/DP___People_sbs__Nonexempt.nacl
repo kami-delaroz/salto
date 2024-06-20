@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus DP___People_sbs__Nonexempt@uuumuu {
+  name = "Nonexempt"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.DP___People@sbs,
+  ]
+  _alias = "DP - People:Nonexempt"
+}

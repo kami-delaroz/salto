@@ -1,0 +1,112 @@
+jira.Automation When_a_change_request_is_created___then_attach_the_default_change_management_form_GWR_svc_mgt_2@ssssss_08594sssssssusss {
+  name = "When a change request is created → then attach the default change management form"
+  state = "ENABLED"
+  authorAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+  actor = {
+    type = "ACCOUNT_ID"
+    value = {
+      id = "61980f073618cd006f48823b"
+      displayName = "Geoffrey Routledge"
+    }
+  }
+  trigger = {
+    component = "TRIGGER"
+    schemaVersion = 1
+    type = "jira.issue.event.trigger:created"
+    value = {
+      eventKey = "jira:issue_created"
+      issueEvent = "issue_created"
+    }
+    children = [
+    ]
+    conditions = [
+    ]
+  }
+  components = [
+    {
+      component = "CONDITION"
+      schemaVersion = 3
+      type = "jira.issue.condition"
+      value = {
+        selectedField = {
+          type = "NAME"
+          value = jira.Field.instance.Request_Type__vp_origin__c@suubuu.name
+        }
+        selectedFieldType = "com.atlassian.servicedesk:vp-origin"
+        comparison = "EQUALS"
+        compareFieldValue = {
+          type = "NAME"
+          value = "Request a change"
+          multiValue = false
+        }
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+    {
+      component = "ACTION"
+      schemaVersion = 1
+      type = "jira.proforma.form.add.action"
+      value = {
+        templateFormsConfig = {
+          projectId = 10203
+          templateFormIds = [
+            1,
+          ]
+        }
+        formVisibility = "internal"
+        allowDuplicates = false
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+  ]
+  canOtherRuleTrigger = true
+  notifyOnError = "FIRSTERROR"
+  projects = [
+    {
+      projectId = jira.Project.instance.GWR_svc_mgt_2@s
+    },
+  ]
+  labels = [
+    jira.AutomationLabel.instance.Change_management@s,
+  ]
+  tags = [
+    {
+      tagType = "CREATION_TYPE"
+      tagValue = "AUTO"
+    },
+    {
+      tagType = "SAMPLE_RULE"
+      tagValue = "service_desk"
+    },
+    {
+      tagType = "SAMPLE_RULE_INTENT"
+      tagValue = "change_management_deployment_state"
+    },
+    {
+      tagType = "TEMPLATE_ID"
+      tagValue = "cm_template_5"
+    },
+  ]
+  ruleHome = {
+    ruleLifecycleHome = {
+      locationARI = "ari:cloud:jira:cc55e2a7-7908-4b67-ad90-b8c78de0e9ad:project/10203"
+    }
+    ruleBillingHome = {
+      locationARI = "ari:cloud:jira-servicedesk::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
+    }
+  }
+  writeAccessType = "UNRESTRICTED"
+  collaborators = [
+  ]
+  billingType = "SYSTEM"
+  _alias = "When a change request is created → then attach the default change management form"
+}

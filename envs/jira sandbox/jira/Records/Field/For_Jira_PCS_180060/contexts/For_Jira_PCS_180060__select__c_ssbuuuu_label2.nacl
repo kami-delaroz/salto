@@ -1,0 +1,22 @@
+jira.CustomFieldContext For_Jira_PCS_180060__select__c_ssbuuuu_label2@uuuuuuumu {
+  name = "label2"
+  description = ""
+  isGlobalContext = false
+  options = {
+    _@_01499 = {
+      value = "כ"
+      disabled = false
+      position = 0
+    }
+  }
+  defaultValue = {
+    type = "option.single"
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.testMany11,
+  ]
+  _parent = [
+    jira.Field.instance.For_Jira_PCS_180060__select__c@ssbuuuu,
+  ]
+  _alias = "For Jira PCS-180060 context in label2"
+}

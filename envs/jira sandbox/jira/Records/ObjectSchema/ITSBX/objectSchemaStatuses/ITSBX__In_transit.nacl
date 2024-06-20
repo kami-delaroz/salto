@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus ITSBX__In_transit@uus {
+  name = "In transit"
+  description = "Asset is being transported"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "ITSBX:In transit"
+}

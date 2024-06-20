@@ -1,0 +1,6 @@
+jira.Status staged {
+  name = "Staged"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = "This status is managed internally by Jira Software"
+  _alias = "Staged"
+}

@@ -1,0 +1,9 @@
+jira.Field Message_Custom_Field__for_edit___message__c@sssjskuuuu {
+  name = "Message Custom Field (for edit)"
+  description = ""
+  type = "com.atlassian.jira.toolkit:message"
+  contexts = [
+    jira.CustomFieldContext.instance.Message_Custom_Field__for_edit___message__c_sssjskuuuu_Default_Configuration_Scheme_for_Message_Custom_Field__for_edit_@uuuuuuuuuumusssssssjsk,
+  ]
+  _alias = "Message Custom Field (for edit)"
+}

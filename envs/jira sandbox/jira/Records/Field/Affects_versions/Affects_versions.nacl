@@ -1,0 +1,10 @@
+jira.Field Affects_versions__array@suu {
+  name = "Affects versions"
+  schema = {
+    type = "array"
+    items = "version"
+    system = "versions"
+  }
+  description = ""
+  _alias = "Affects versions"
+}

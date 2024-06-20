@@ -1,0 +1,209 @@
+jira.Workflow Copy_of_migrationtest3@s {
+  description = "(This copy was automatically generated from a draft, when workflow 'migrationtest3' was made inactive.)"
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = 173.58804365787094
+        },
+      ]
+    }
+    tran1__From__Open__Directed@fffsff = {
+      name = "tran1"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = -70.01689347810002
+          targetAngle = 78.11134196037203
+        },
+      ]
+      to = jira.Status.instance.new0
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    tran2__From__new0__Directed@fffsff = {
+      name = "tran2"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.new0
+          sourceAngle = -70.01689347810002
+          targetAngle = 78.11134196037203
+        },
+      ]
+      to = jira.Status.instance.new1
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    tran3__From__new1__Directed@fffsff = {
+      name = "tran3"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.new1
+          sourceAngle = 173.64064487114604
+          targetAngle = -22.667152696795462
+        },
+      ]
+      to = jira.Status.instance.new2
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.new0
+      name = "new0"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1058.046875
+        y = -93.70000122070311
+      }
+    },
+    {
+      id = jira.Status.instance.new1
+      name = "new1"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1058.046875
+        y = -174.2499992675781
+      }
+    },
+    {
+      id = jira.Status.instance.new2
+      name = "new2"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 785.046875
+        y = -110.24999926757809
+      }
+    },
+    {
+      id = jira.Status.instance.new3
+      name = "new3"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1079.40625
+        y = 117.4
+      }
+    },
+  ]
+  name = "Copy of migrationtest3"
+  diagramInitialEntry = {
+    x = 1104
+    y = 67.4
+  }
+}

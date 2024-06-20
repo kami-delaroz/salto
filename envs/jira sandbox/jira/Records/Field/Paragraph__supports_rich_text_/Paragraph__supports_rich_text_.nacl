@@ -1,0 +1,10 @@
+jira.Field Paragraph__supports_rich_text___textarea__c@sjsskuuuu {
+  name = "Paragraph (supports rich text)"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.Paragraph__supports_rich_text___textarea__c_sjsskuuuu_Default_Configuration_Scheme_for_Paragraph__supports_rich_text_@uuuuuuuuumusssssjssk,
+  ]
+  _alias = "Paragraph (supports rich text)"
+}

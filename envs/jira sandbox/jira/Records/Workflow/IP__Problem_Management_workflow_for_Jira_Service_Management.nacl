@@ -1,0 +1,391 @@
+jira.Workflow IP__Problem_Management_workflow_for_Jira_Service_Management@fsssssss {
+  description = "3This Jira Service Management Problem Management workflow was generated for Project IP2"
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueStatusFunction"
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Cancel__From__Open_Under_Review_Under_investigation__Directed@fffszdszdsff = {
+      name = "Cancel"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.under_review@s
+        },
+        {
+          id = jira.Status.instance.under_investigation@s
+        },
+        {
+          id = jira.Status.instance.open
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___5@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Complete__From__Open_Under_investigation__Directed@fffszdsff = {
+      name = "Complete"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.under_investigation@s
+        },
+        {
+          id = jira.Status.instance.open
+        },
+      ]
+      to = jira.Status.instance.completed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___5@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Investigate__From__Pending_Under_Review__Directed@fffszdsff = {
+      name = "Investigate"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.under_review@s
+        },
+        {
+          id = jira.Status.instance.pending
+        },
+      ]
+      to = jira.Status.instance.under_investigation@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___6@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Pending__From__Under_Review_Under_investigation__Directed@fffsszdsff = {
+      name = "Pending"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.under_review@s
+        },
+        {
+          id = jira.Status.instance.under_investigation@s
+        },
+      ]
+      to = jira.Status.instance.pending
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Pending_Reason_screen___5@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Close__From__Canceled_Completed__Directed@fffszdff = {
+      name = "Close"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.completed
+        },
+        {
+          id = jira.Status.instance.canceled
+        },
+      ]
+      to = jira.Status.instance.closed
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Review__From__Open__Directed@fffsff = {
+      name = "Review"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+        },
+      ]
+      to = jira.Status.instance.under_review@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___6@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_under_review__From__Pending__Directed@sssfffsff = {
+      name = "Back to under review"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.pending
+        },
+      ]
+      to = jira.Status.instance.under_review@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___6@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_work_in_progress__From__Completed__Directed@ssssfffsff = {
+      name = "Back to work in progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.completed
+        },
+      ]
+      to = jira.Status.instance.under_investigation@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___6@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.canceled
+      name = "Canceled"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.closed
+      name = "Closed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.completed
+      name = "Completed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.pending
+      name = "Pending"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.under_investigation@s
+      name = "Under investigation"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.under_review@s
+      name = "Under Review"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+  ]
+  name = "IP: Problem Management workflow for Jira Service Management"
+}

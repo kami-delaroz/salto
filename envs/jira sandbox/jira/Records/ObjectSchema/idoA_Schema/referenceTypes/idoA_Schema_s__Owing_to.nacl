@@ -1,0 +1,9 @@
+jira.ObjectSchemaReferenceType idoA_Schema_s__Owing_to@umuus {
+  name = "Owing to"
+  description = "Hi hey"
+  color = "8777D9"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+}

@@ -1,0 +1,7 @@
+jira.ScreenScheme AUD__Software_Development_Bug_Screen_Scheme@fsssss {
+  name = "AUD: Software Development Bug Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.AUD__Software_Development_Bug_Screen@fssss
+  }
+}

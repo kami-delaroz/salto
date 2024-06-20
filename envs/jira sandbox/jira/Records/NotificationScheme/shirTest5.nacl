@@ -1,0 +1,20 @@
+jira.NotificationScheme shirTest5 {
+  name = "shirTest5"
+  description = "change"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "CurrentUser"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+  ]
+}

@@ -1,0 +1,14 @@
+jira.IssueTypeScreenScheme TEST__Scrum_Issue_Type_Screen_Scheme@fsssss {
+  name = "TEST: Scrum Issue Type Screen Scheme"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Bug
+      screenSchemeId = jira.ScreenScheme.instance.TEST__Scrum_Bug_Screen_Scheme@fssss
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.TEST__Scrum_Default_Screen_Scheme@fssss
+    },
+  ]
+}

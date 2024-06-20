@@ -1,0 +1,13 @@
+jira.ObjectType ITSBX_Models_Hardware_Models@uus {
+  name = "Hardware Models"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.ITSBX_Models
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "Hardware Models"
+}
