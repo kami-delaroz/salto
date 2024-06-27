@@ -6,12 +6,12 @@ jira.CustomFieldContext Fieldy_McField__multicheckboxes__c_suuuu_Default_Configu
     fsdfsd = {
       value = "fsdfsd"
       disabled = false
-      position = 0
+      position = 1
     }
     fsdfsdfsdfds = {
       value = "fsdfsdfsdfds"
       disabled = false
-      position = 1
+      position = 2
     }
   }
   defaultValue = {

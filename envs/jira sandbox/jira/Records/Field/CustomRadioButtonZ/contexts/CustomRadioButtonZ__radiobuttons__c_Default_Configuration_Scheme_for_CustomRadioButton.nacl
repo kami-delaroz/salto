@@ -6,17 +6,17 @@ jira.CustomFieldContext CustomRadioButtonZ__radiobuttons__c_Default_Configuratio
     opt1 = {
       value = "opt1"
       disabled = true
-      position = 0
+      position = 1
     }
     opt2 = {
       value = "opt2"
       disabled = true
-      position = 1
+      position = 2
     }
     opt3 = {
       value = "opt3"
       disabled = true
-      position = 2
+      position = 3
     }
   }
   defaultValue = {

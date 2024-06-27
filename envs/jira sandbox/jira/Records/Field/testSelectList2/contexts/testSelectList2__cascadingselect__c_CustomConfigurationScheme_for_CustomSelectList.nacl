@@ -17,7 +17,7 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 1
         }
       }
-      position = 0
+      position = 1
     }
     p2 = {
       value = "p2"
@@ -29,7 +29,7 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 1
+      position = 2
     }
     p3 = {
       value = "p3"
@@ -46,7 +46,7 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 1
         }
       }
-      position = 2
+      position = 3
     }
     p4 = {
       value = "p4"
@@ -63,12 +63,12 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 1
         }
       }
-      position = 3
+      position = 4
     }
     p5 = {
       value = "p5"
       disabled = false
-      position = 4
+      position = 5
     }
     p6 = {
       value = "p6"
@@ -80,12 +80,12 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 5
+      position = 6
     }
     p7 = {
       value = "p7"
       disabled = false
-      position = 6
+      position = 7
     }
     p9 = {
       value = "p9"
@@ -97,12 +97,12 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 7
+      position = 8
     }
     a = {
       value = "a"
       disabled = false
-      position = 8
+      position = 9
     }
     p11 = {
       value = "p11"
@@ -114,7 +114,7 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 9
+      position = 10
     }
     p10 = {
       value = "p10"
@@ -131,52 +131,52 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 1
         }
       }
-      position = 10
+      position = 11
     }
     p14 = {
       value = "p14"
       disabled = false
-      position = 11
+      position = 12
     }
     p12 = {
       value = "p12"
       disabled = false
-      position = 12
+      position = 13
     }
     p20 = {
       value = "p20"
       disabled = false
-      position = 13
+      position = 14
     }
     p21 = {
       value = "p21"
       disabled = false
-      position = 14
+      position = 15
     }
     p22 = {
       value = "p22"
       disabled = false
-      position = 15
+      position = 16
     }
     p23 = {
       value = "p23"
       disabled = false
-      position = 16
+      position = 17
     }
     p24 = {
       value = "p24"
       disabled = false
-      position = 17
+      position = 18
     }
     p25 = {
       value = "p25"
       disabled = false
-      position = 18
+      position = 19
     }
     p26 = {
       value = "p26"
       disabled = false
-      position = 19
+      position = 20
     }
     p27 = {
       value = "p27"
@@ -188,7 +188,7 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 20
+      position = 21
     }
     p28 = {
       value = "p28"
@@ -200,12 +200,12 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 21
+      position = 22
     }
     p29 = {
       value = "p29"
       disabled = false
-      position = 22
+      position = 23
     }
     p30 = {
       value = "p30"
@@ -217,7 +217,7 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 23
+      position = 24
     }
     p31 = {
       value = "p31"
@@ -229,7 +229,7 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 24
+      position = 25
     }
     p32 = {
       value = "p32"
@@ -241,7 +241,7 @@ jira.CustomFieldContext testSelectList2__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 25
+      position = 26
     }
   }
   defaultValue = {

@@ -3,4 +3,5 @@ jira.Priority test8 {
   description = ""
   iconUrl = "https://ori-salto-test.atlassian.net/images/icons/priorities/medium.svg"
   name = "test8"
+  _alias = "test8"
 }

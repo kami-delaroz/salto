@@ -3,4 +3,5 @@ jira.Priority test_api_88 {
   description = "hey"
   iconUrl = "https://ori-salto-test.atlassian.net/images/icons/priorities/blocker.svg"
   name = "test_api_88"
+  _alias = "test_api_88"
 }

@@ -6,22 +6,22 @@ jira.CustomFieldContext DP___Severity__select__c_sbsuuuu_Default_Configuration_S
     Mild = {
       value = "Mild"
       disabled = false
-      position = 0
+      position = 1
     }
     Medium = {
       value = "Medium"
       disabled = false
-      position = 1
+      position = 2
     }
     Severe = {
       value = "Severe"
       disabled = false
-      position = 2
+      position = 3
     }
     Critical = {
       value = "Critical"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

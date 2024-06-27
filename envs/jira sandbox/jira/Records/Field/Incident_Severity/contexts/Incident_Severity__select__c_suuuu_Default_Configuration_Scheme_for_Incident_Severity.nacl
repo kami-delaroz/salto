@@ -6,17 +6,17 @@ jira.CustomFieldContext Incident_Severity__select__c_suuuu_Default_Configuration
     SEV1 = {
       value = "SEV1"
       disabled = false
-      position = 0
+      position = 1
     }
     SEV2 = {
       value = "SEV2"
       disabled = false
-      position = 1
+      position = 2
     }
     SEV3 = {
       value = "SEV3"
       disabled = false
-      position = 2
+      position = 3
     }
   }
   defaultValue = {

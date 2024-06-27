@@ -22,6 +22,7 @@ jira.Screen DSP__Scrum_Bug_Screen@fsss {
         jira.Field.instance.Assignee__user,
         jira.Field.instance.Sprint__gh_sprint__c@uubuu,
         jira.Field.instance.DP___Severity__select__c@sbsuuuu,
+        jira.Field.instance.DP___Asset_Field_1__cmdb_object_cftype__c@sbsssuubbuu,
       ]
       position = 0
     }

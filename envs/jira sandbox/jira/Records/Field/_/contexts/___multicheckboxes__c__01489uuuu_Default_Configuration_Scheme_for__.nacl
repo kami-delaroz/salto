@@ -6,12 +6,12 @@ jira.CustomFieldContext ___multicheckboxes__c__01489uuuu_Default_Configuration_S
     option1 = {
       value = "option1"
       disabled = false
-      position = 0
+      position = 1
     }
     option2 = {
       value = "option2"
       disabled = false
-      position = 1
+      position = 2
     }
   }
   defaultValue = {

@@ -3,7 +3,7 @@ jira.ObjectTypeAttribute ITSBX_Models_Hardware_Models_uus_Status@uuumu {
   name = "Status"
   type = 7
   typeValueMulti = [
-    jira.UnknownType.instance.missing_2,
+    jira.ObjectSchemaGlobalStatus.instance.Active,
     jira.ObjectSchemaStatus.instance.ITSBX__Inactive,
   ]
   editable = true

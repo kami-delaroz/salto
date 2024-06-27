@@ -6,17 +6,17 @@ jira.CustomFieldContext SLA_Level__select__c_suuuu_Default_Configuration_Scheme_
     Urgent_SLA@s = {
       value = "Urgent SLA"
       disabled = false
-      position = 0
+      position = 1
     }
     Gold_SLA@s = {
       value = "Gold SLA"
       disabled = false
-      position = 1
+      position = 2
     }
     Normal_SLA@s = {
       value = "Normal SLA"
       disabled = false
-      position = 2
+      position = 3
     }
   }
   defaultValue = {

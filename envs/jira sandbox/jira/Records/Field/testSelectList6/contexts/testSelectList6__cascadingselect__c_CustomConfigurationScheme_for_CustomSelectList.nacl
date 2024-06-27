@@ -18,7 +18,7 @@ jira.CustomFieldContext testSelectList6__cascadingselect__c_CustomConfigurationS
           position = 1
         }
       }
-      position = 0
+      position = 1
     }
     p2 = {
       value = "p2"
@@ -30,17 +30,17 @@ jira.CustomFieldContext testSelectList6__cascadingselect__c_CustomConfigurationS
           position = 0
         }
       }
-      position = 1
+      position = 2
     }
     p3 = {
       value = "p3"
       disabled = true
-      position = 2
+      position = 3
     }
     p4 = {
       value = "p4"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

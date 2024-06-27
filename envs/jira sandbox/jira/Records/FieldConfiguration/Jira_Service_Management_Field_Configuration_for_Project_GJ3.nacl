@@ -1004,5 +1004,20 @@ Examples: 4d, 5h 30m, 60m and 3w.
       isRequired = false
       renderer = "wiki-renderer"
     }
+    DP___Asset_Field_1__cmdb_object_cftype__c@sbsssuubbuu = {
+      description = "For Testing"
+      isHidden = false
+      isRequired = false
+    }
+    Simple_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    AAA_test_custom_field__multicheckboxes__c@sssuuuu = {
+      description = "original description"
+      isHidden = false
+      isRequired = false
+    }
   }
 }

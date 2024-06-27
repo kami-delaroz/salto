@@ -15,7 +15,6 @@ jira.Automation On_urgent_SLA__alert_Noam___create_SLA_activation@sszdssszesss {
   }
   trigger = {
     component = "TRIGGER"
-    schemaVersion = 1
     type = "jira.issue.event.trigger:created"
     value = {
       eventKey = "jira:issue_created"
@@ -29,7 +28,6 @@ jira.Automation On_urgent_SLA__alert_Noam___create_SLA_activation@sszdssszesss {
   components = [
     {
       component = "CONDITION"
-      schemaVersion = 3
       type = "jira.issue.condition"
       value = {
         selectedField = {
@@ -53,7 +51,6 @@ jira.Automation On_urgent_SLA__alert_Noam___create_SLA_activation@sszdssszesss {
     },
     {
       component = "ACTION"
-      schemaVersion = 2
       type = "jira.issue.add.watcher"
       value = {
         watchers = [
@@ -73,7 +70,6 @@ jira.Automation On_urgent_SLA__alert_Noam___create_SLA_activation@sszdssszesss {
     },
     {
       component = "ACTION"
-      schemaVersion = 1
       type = "cmdb.object.create"
       value = {
         schemaId = jira.ObjectSchema.instance.Processes
@@ -102,14 +98,6 @@ jira.Automation On_urgent_SLA__alert_Noam___create_SLA_activation@sszdssszesss {
       tagValue = "true"
     },
   ]
-  ruleHome = {
-    ruleLifecycleHome = {
-      locationARI = "ari:cloud:jira-software::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-    ruleBillingHome = {
-      locationARI = "ari:cloud:jira-software::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-  }
   writeAccessType = "UNRESTRICTED"
   collaborators = [
   ]

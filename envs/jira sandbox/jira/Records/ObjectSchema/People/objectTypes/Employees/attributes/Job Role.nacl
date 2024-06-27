@@ -15,7 +15,7 @@ jira.ObjectTypeAttribute People_Employees_Job_Role@uus {
   uniqueAttribute = false
   options = ""
   defaultTypeId = -1
-  additionalValue = jira.ObjectSchemaDefaultReferenceType.instance.missing_8
+  additionalValue = jira.ObjectSchemaReferenceType.instance.People__Performs_role_of@uuss
   typeValue = jira.ObjectType.instance.People_Role
   _alias = "Job Role"
 }

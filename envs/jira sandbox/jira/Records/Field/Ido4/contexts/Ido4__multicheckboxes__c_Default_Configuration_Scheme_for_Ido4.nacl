@@ -6,12 +6,12 @@ jira.CustomFieldContext Ido4__multicheckboxes__c_Default_Configuration_Scheme_fo
     a = {
       value = "a"
       disabled = false
-      position = 0
+      position = 1
     }
     bb = {
       value = "bb"
       disabled = false
-      position = 1
+      position = 2
     }
   }
   defaultValue = {

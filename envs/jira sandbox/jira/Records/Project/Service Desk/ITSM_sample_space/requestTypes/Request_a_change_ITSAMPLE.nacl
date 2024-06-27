@@ -3,6 +3,8 @@ jira.RequestType Request_a_change_ITSAMPLE@ssu {
   description = "For example, upgrade a server (VPN) or an application (Jira)."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Change@his
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.authorize

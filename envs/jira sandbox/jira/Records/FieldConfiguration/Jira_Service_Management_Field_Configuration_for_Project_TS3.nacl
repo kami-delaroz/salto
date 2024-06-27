@@ -918,5 +918,20 @@ High: will probably affect the operations of the app (downtime, customer data, s
       isHidden = false
       isRequired = false
     }
+    DP___Asset_Field_1__cmdb_object_cftype__c@sbsssuubbuu = {
+      description = "For Testing"
+      isHidden = false
+      isRequired = false
+    }
+    Simple_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    AAA_test_custom_field__multicheckboxes__c@sssuuuu = {
+      description = "original description"
+      isHidden = false
+      isRequired = false
+    }
   }
 }

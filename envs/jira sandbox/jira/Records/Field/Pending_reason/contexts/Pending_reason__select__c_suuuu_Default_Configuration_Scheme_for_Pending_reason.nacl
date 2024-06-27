@@ -6,22 +6,22 @@ jira.CustomFieldContext Pending_reason__select__c_suuuu_Default_Configuration_Sc
     More_info_required@s = {
       value = "More info required"
       disabled = false
-      position = 0
+      position = 1
     }
     Awaiting_approval@s = {
       value = "Awaiting approval"
       disabled = false
-      position = 1
+      position = 2
     }
     Waiting_on_vendor@s = {
       value = "Waiting on vendor"
       disabled = false
-      position = 2
+      position = 3
     }
     Pending_on_change_request@s = {
       value = "Pending on change request"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

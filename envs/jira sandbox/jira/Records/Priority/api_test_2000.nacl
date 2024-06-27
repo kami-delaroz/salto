@@ -3,4 +3,5 @@ jira.Priority api_test_2000 {
   description = "Minor problem or easily worked around."
   iconUrl = "https://ori-salto-test.atlassian.net/images/icons/priorities/low.svg"
   name = "api_test_2000"
+  _alias = "api_test_2000"
 }

@@ -6,22 +6,22 @@ jira.CustomFieldContext Severity__select__c_Default_Configuration_Scheme_for_Sev
     Sev_0@b = {
       value = "Sev-0"
       disabled = false
-      position = 0
+      position = 1
     }
     Sev_1@b = {
       value = "Sev-1"
       disabled = false
-      position = 1
+      position = 2
     }
     Sev_2@b = {
       value = "Sev-2"
       disabled = false
-      position = 2
+      position = 3
     }
     Sev_3@b = {
       value = "Sev-3"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

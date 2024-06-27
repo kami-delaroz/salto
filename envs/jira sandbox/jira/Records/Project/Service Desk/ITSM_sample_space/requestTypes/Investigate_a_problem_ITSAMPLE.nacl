@@ -3,6 +3,8 @@ jira.RequestType Investigate_a_problem_ITSAMPLE@ssu {
   description = "Create a problem to track the cause of one or more incidents."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Problem@his
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.under_review@s

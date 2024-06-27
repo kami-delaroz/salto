@@ -6,32 +6,32 @@ jira.CustomFieldContext Compliance_Type__select__c_suuuu_Default_Configuration_S
     None = {
       value = "None"
       disabled = false
-      position = 0
+      position = 1
     }
     GDPR = {
       value = "GDPR"
       disabled = false
-      position = 1
+      position = 2
     }
     HIPAA = {
       value = "HIPAA"
       disabled = false
-      position = 2
+      position = 3
     }
     ISO_27001@s = {
       value = "ISO 27001"
       disabled = false
-      position = 3
+      position = 4
     }
     SOC2 = {
       value = "SOC2"
       disabled = false
-      position = 4
+      position = 5
     }
     FEDRAMP = {
       value = "FEDRAMP"
       disabled = false
-      position = 5
+      position = 6
     }
   }
   defaultValue = {

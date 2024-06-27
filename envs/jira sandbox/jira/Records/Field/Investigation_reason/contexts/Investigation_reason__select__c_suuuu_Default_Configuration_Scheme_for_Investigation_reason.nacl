@@ -6,22 +6,22 @@ jira.CustomFieldContext Investigation_reason__select__c_suuuu_Default_Configurat
     High_impact_incident@s = {
       value = "High impact incident"
       disabled = false
-      position = 0
+      position = 1
     }
     Recurring_incident@s = {
       value = "Recurring incident"
       disabled = false
-      position = 1
+      position = 2
     }
     Non_routine_incident@bs = {
       value = "Non-routine incident"
       disabled = false
-      position = 2
+      position = 3
     }
     Other = {
       value = "Other"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

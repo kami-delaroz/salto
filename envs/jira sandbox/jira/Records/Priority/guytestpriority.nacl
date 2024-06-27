@@ -3,4 +3,5 @@ jira.Priority guytestpriority {
   description = ""
   iconUrl = "/images/icons/priorities/minor.svg"
   name = "guytestpriority"
+  _alias = "guytestpriority"
 }

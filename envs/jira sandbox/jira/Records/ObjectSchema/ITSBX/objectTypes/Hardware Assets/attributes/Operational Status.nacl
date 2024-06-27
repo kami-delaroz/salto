@@ -4,7 +4,7 @@ jira.ObjectTypeAttribute ITSBX_Hardware_Assets_us_Operational_Status@uumus {
   type = 7
   description = "Health status of asset/CI"
   typeValueMulti = [
-    jira.UnknownType.instance.missing_2,
+    jira.ObjectSchemaGlobalStatus.instance.Active,
     jira.ObjectSchemaStatus.instance.ITSBX__Inactive,
   ]
   editable = true

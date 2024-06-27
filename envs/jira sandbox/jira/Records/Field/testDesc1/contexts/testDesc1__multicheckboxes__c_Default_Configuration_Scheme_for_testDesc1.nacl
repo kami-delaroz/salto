@@ -6,7 +6,7 @@ jira.CustomFieldContext testDesc1__multicheckboxes__c_Default_Configuration_Sche
     aa = {
       value = "aa"
       disabled = false
-      position = 0
+      position = 1
     }
   }
   defaultValue = {

@@ -3,6 +3,8 @@ jira.RequestType Onboard_new_employees_ITSAMPLE@ssu {
   description = "Request access for new employees."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending

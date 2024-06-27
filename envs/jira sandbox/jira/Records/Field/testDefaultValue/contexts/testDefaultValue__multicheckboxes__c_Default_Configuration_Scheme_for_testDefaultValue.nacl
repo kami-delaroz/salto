@@ -6,17 +6,17 @@ jira.CustomFieldContext testDefaultValue__multicheckboxes__c_Default_Configurati
     a = {
       value = "a"
       disabled = false
-      position = 0
+      position = 1
     }
     b = {
       value = "b"
       disabled = false
-      position = 1
+      position = 2
     }
     c = {
       value = "c"
       disabled = false
-      position = 2
+      position = 3
     }
   }
   defaultValue = {

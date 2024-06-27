@@ -3,6 +3,8 @@ jira.RequestType Report_broken_hardware_ITSAMPLE@ssu {
   description = "Report hardware that might be faulty or broken e.g. a broken computer screen or a damaged server."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Incident@his
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.completed

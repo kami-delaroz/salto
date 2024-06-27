@@ -12,4 +12,7 @@ jira.Project DP___SaaS_Project@sbss {
     id = "6205b3c7d362410069133701"
     displayName = "Dan Putman"
   }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.DP___Asset_Field_1__cmdb_object_cftype__c_sbsssuubbuu_Default_Configuration_Scheme_for_DP___Asset_Field_1@uuuuuuuuuuumusssssbsss,
+  ]
 }

@@ -3,4 +3,5 @@ jira.Priority Low_test {
   description = "Minor problem or easily worked around."
   iconUrl = "/images/icons/priorities/low.svg"
   name = "Low_test"
+  _alias = "Low_test"
 }

@@ -15,7 +15,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
   }
   trigger = {
     component = "TRIGGER"
-    schemaVersion = -1
     type = "devops.deploy.event.trigger:statechange"
     value = {
       environments = [
@@ -36,7 +35,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
   components = [
     {
       component = "CONDITION"
-      schemaVersion = -1
       type = "jira.jql.condition"
       children = [
       ]
@@ -46,12 +44,10 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
     },
     {
       component = "CONDITION"
-      schemaVersion = -1
       type = "jira.condition.container.block"
       children = [
         {
           component = "CONDITION_BLOCK"
-          schemaVersion = 1
           type = "jira.condition.if.block"
           value = {
             conditionMatchType = "ALL"
@@ -59,7 +55,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
           children = [
             {
               component = "ACTION"
-              schemaVersion = 10
               type = "jira.issue.transition"
               value = {
                 operations = [
@@ -91,7 +86,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
           conditions = [
             {
               component = "CONDITION"
-              schemaVersion = 1
               type = "jira.comparator.condition"
               value = {
                 first = "{{deployment.state}}"
@@ -107,7 +101,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
         },
         {
           component = "CONDITION_BLOCK"
-          schemaVersion = 1
           type = "jira.condition.if.block"
           value = {
             conditionMatchType = "ALL"
@@ -115,7 +108,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
           children = [
             {
               component = "ACTION"
-              schemaVersion = 10
               type = "jira.issue.transition"
               value = {
                 operations = [
@@ -147,7 +139,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
           conditions = [
             {
               component = "CONDITION"
-              schemaVersion = 1
               type = "jira.comparator.condition"
               value = {
                 first = "{{deployment.state}}"
@@ -163,7 +154,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
         },
         {
           component = "CONDITION_BLOCK"
-          schemaVersion = 1
           type = "jira.condition.if.block"
           value = {
             conditionMatchType = "ALL"
@@ -171,7 +161,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
           children = [
             {
               component = "ACTION"
-              schemaVersion = 10
               type = "jira.issue.transition"
               value = {
                 operations = [
@@ -203,7 +192,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
           conditions = [
             {
               component = "CONDITION"
-              schemaVersion = 1
               type = "jira.comparator.condition"
               value = {
                 first = "{{deployment.state}}"
@@ -219,7 +207,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
         },
         {
           component = "CONDITION_BLOCK"
-          schemaVersion = 1
           type = "jira.condition.if.block"
           value = {
             conditionMatchType = "ALL"
@@ -227,7 +214,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
           children = [
             {
               component = "ACTION"
-              schemaVersion = 10
               type = "jira.issue.transition"
               value = {
                 operations = [
@@ -247,7 +233,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
           conditions = [
             {
               component = "CONDITION"
-              schemaVersion = 1
               type = "jira.comparator.condition"
               value = {
                 first = "{{deployment.state}}"
@@ -294,14 +279,6 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
       tagValue = "cm_template_2"
     },
   ]
-  ruleHome = {
-    ruleLifecycleHome = {
-      locationARI = "ari:cloud:jira:cc55e2a7-7908-4b67-ad90-b8c78de0e9ad:project/10202"
-    }
-    ruleBillingHome = {
-      locationARI = "ari:cloud:jira-servicedesk::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-  }
   writeAccessType = "UNRESTRICTED"
   collaborators = [
   ]

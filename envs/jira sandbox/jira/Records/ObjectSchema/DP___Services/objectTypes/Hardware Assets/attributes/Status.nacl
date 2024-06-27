@@ -4,7 +4,7 @@ jira.ObjectTypeAttribute DP___Services_sbs_Hardware_Assets_uuumus_Status@uuuuuum
   type = 7
   description = "Status of record"
   typeValueMulti = [
-    jira.UnknownType.instance.missing_2,
+    jira.ObjectSchemaGlobalStatus.instance.Active,
     jira.ObjectSchemaStatus.instance.DP___Services_sbs__Inactive@uuumuu,
   ]
   editable = true

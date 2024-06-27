@@ -6,7 +6,7 @@ jira.CustomFieldContext Select_List__single_choice___select__c_ssjskuuuu_Default
     aaa = {
       value = "aaa"
       disabled = false
-      position = 0
+      position = 1
     }
   }
   defaultValue = {

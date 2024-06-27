@@ -3,7 +3,7 @@ jira.ObjectTypeAttribute DP___Services_sbs_Models_uuumu_Hardware_Models_uuuuumus
   name = "Status"
   type = 7
   typeValueMulti = [
-    jira.UnknownType.instance.missing_2,
+    jira.ObjectSchemaGlobalStatus.instance.Active,
     jira.ObjectSchemaStatus.instance.DP___Services_sbs__Inactive@uuumuu,
   ]
   editable = true
