@@ -6,17 +6,17 @@ jira.CustomFieldContext Change_type__select__c_suuuu_Default_Configuration_Schem
     Standard = {
       value = "Standard"
       disabled = false
-      position = 0
+      position = 1
     }
     Normal = {
       value = "Normal"
       disabled = false
-      position = 1
+      position = 2
     }
     Emergency = {
       value = "Emergency"
       disabled = false
-      position = 2
+      position = 3
     }
   }
   defaultValue = {

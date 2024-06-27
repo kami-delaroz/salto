@@ -14,7 +14,6 @@ jira.Automation Alert_on_call_engineer_on_high_incident_severity_AlonCompanyProj
   }
   trigger = {
     component = "TRIGGER"
-    schemaVersion = 2
     type = "jira.issue.field.changed"
     value = {
       changeType = "ANY_CHANGE"
@@ -35,7 +34,6 @@ jira.Automation Alert_on_call_engineer_on_high_incident_severity_AlonCompanyProj
   components = [
     {
       component = "ACTION"
-      schemaVersion = 10
       type = "jira.issue.edit"
       value = {
         operations = [
@@ -61,7 +59,6 @@ jira.Automation Alert_on_call_engineer_on_high_incident_severity_AlonCompanyProj
     },
     {
       component = "ACTION"
-      schemaVersion = 3
       type = "jira.issue.assign"
       value = {
         assignType = "GROUP"
@@ -97,14 +94,6 @@ jira.Automation Alert_on_call_engineer_on_high_incident_severity_AlonCompanyProj
       tagValue = "true"
     },
   ]
-  ruleHome = {
-    ruleLifecycleHome = {
-      locationARI = "ari:cloud:jira:cc55e2a7-7908-4b67-ad90-b8c78de0e9ad:project/10024"
-    }
-    ruleBillingHome = {
-      locationARI = "ari:cloud:jira-software::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-  }
   writeAccessType = "UNRESTRICTED"
   collaborators = [
   ]

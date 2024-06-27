@@ -6,22 +6,22 @@ jira.CustomFieldContext Urgency__select__c_Default_Configuration_Scheme_for_Urge
     Critical = {
       value = "Critical"
       disabled = false
-      position = 0
+      position = 1
     }
     High = {
       value = "High"
       disabled = false
-      position = 1
+      position = 2
     }
     Medium = {
       value = "Medium"
       disabled = false
-      position = 2
+      position = 3
     }
     Low = {
       value = "Low"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

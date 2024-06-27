@@ -6,22 +6,22 @@ jira.CustomFieldContext NewCustomFieldLior__multicheckboxes__c_Default_Configura
     "1@" = {
       value = "1"
       disabled = false
-      position = 0
+      position = 1
     }
     "2@" = {
       value = "2"
       disabled = false
-      position = 1
+      position = 2
     }
     "3@" = {
       value = "3"
       disabled = false
-      position = 2
+      position = 3
     }
     "4@" = {
       value = "4"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

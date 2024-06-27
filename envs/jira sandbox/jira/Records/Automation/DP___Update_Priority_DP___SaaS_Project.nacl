@@ -15,7 +15,6 @@ jira.Automation DP___Update_Priority_DP___SaaS_Project@sbssusbss {
   }
   trigger = {
     component = "TRIGGER"
-    schemaVersion = 1
     type = "jira.issue.event.trigger:created"
     value = {
       eventKey = "jira:issue_created"
@@ -29,7 +28,6 @@ jira.Automation DP___Update_Priority_DP___SaaS_Project@sbssusbss {
   components = [
     {
       component = "CONDITION"
-      schemaVersion = 3
       type = "jira.issue.condition"
       value = {
         selectedField = {
@@ -55,7 +53,6 @@ jira.Automation DP___Update_Priority_DP___SaaS_Project@sbssusbss {
     },
     {
       component = "ACTION"
-      schemaVersion = 10
       type = "jira.issue.edit"
       value = {
         operations = [
@@ -95,14 +92,6 @@ jira.Automation DP___Update_Priority_DP___SaaS_Project@sbssusbss {
       tagValue = "true"
     },
   ]
-  ruleHome = {
-    ruleLifecycleHome = {
-      locationARI = "ari:cloud:jira:cc55e2a7-7908-4b67-ad90-b8c78de0e9ad:project/10200"
-    }
-    ruleBillingHome = {
-      locationARI = "ari:cloud:jira-software::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-  }
   writeAccessType = "UNRESTRICTED"
   collaborators = [
   ]

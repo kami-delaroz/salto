@@ -6,27 +6,27 @@ jira.CustomFieldContext Org_Tier__select__c_suuuu_Default_Configuration_Scheme_f
     Paying = {
       value = "Paying"
       disabled = false
-      position = 0
+      position = 1
     }
     Pro = {
       value = "Pro"
       disabled = false
-      position = 1
+      position = 2
     }
     Trial = {
       value = "Trial"
       disabled = false
-      position = 2
+      position = 3
     }
     Free = {
       value = "Free"
       disabled = false
-      position = 3
+      position = 4
     }
     NA = {
       value = "NA"
       disabled = false
-      position = 4
+      position = 5
     }
   }
   defaultValue = {

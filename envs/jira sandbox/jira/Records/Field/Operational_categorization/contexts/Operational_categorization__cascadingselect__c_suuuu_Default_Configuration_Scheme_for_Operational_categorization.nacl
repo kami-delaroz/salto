@@ -38,7 +38,7 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 5
         }
       }
-      position = 0
+      position = 1
     }
     Break___Fix@sds = {
       value = "Break / Fix"
@@ -75,7 +75,7 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 5
         }
       }
-      position = 1
+      position = 2
     }
     Configuration = {
       value = "Configuration"
@@ -117,12 +117,12 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 6
         }
       }
-      position = 2
+      position = 3
     }
     Connectivity = {
       value = "Connectivity"
       disabled = false
-      position = 3
+      position = 4
     }
     Hardware_Request@s = {
       value = "Hardware Request"
@@ -154,7 +154,7 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 4
         }
       }
-      position = 4
+      position = 5
     }
     Instance_Request@s = {
       value = "Instance Request"
@@ -186,7 +186,7 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 4
         }
       }
-      position = 5
+      position = 6
     }
     Network_Request@s = {
       value = "Network Request"
@@ -208,7 +208,7 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 2
         }
       }
-      position = 6
+      position = 7
     }
     Process_Request@s = {
       value = "Process Request"
@@ -225,7 +225,7 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 1
         }
       }
-      position = 7
+      position = 8
     }
     Server_Change@s = {
       value = "Server Change"
@@ -267,7 +267,7 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 6
         }
       }
-      position = 8
+      position = 9
     }
     VM_Request@s = {
       value = "VM Request"
@@ -289,7 +289,7 @@ jira.CustomFieldContext Operational_categorization__cascadingselect__c_suuuu_Def
           position = 2
         }
       }
-      position = 9
+      position = 10
     }
   }
   defaultValue = {

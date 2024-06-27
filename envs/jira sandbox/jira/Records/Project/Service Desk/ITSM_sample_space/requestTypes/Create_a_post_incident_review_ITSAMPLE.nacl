@@ -3,6 +3,8 @@ jira.RequestType Create_a_post_incident_review_ITSAMPLE@ssbsu {
   description = "Document and share learnings from an incident so that it doesn't happen again"
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Post_incident_review@hisbs
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.closed

@@ -4,7 +4,7 @@ jira.ObjectTypeAttribute People_Employees_Status {
   type = 7
   description = "Status of employee"
   typeValueMulti = [
-    jira.UnknownType.instance.missing_2,
+    jira.ObjectSchemaGlobalStatus.instance.Active,
     jira.ObjectSchemaStatus.instance.People__Inactive,
   ]
   editable = true

@@ -3,6 +3,8 @@ jira.RequestType Report_a_system_problem_ITSAMPLE@sssu {
   description = "Let us know if something isn't working properly and we'll aim to get it back up and running quickly."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Incident@his
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.completed

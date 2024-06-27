@@ -4,4 +4,5 @@ jira.Priority Highest {
   iconUrl = "/images/icons/priorities/highest.svg"
   name = "Highest"
   isDefault = true
+  _alias = "Highest"
 }

@@ -14,7 +14,6 @@ jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_r
   }
   trigger = {
     component = "TRIGGER"
-    schemaVersion = 1
     type = "jira.issue.event.trigger:commented"
     value = {
       eventKey = "jira:issue_updated"
@@ -31,7 +30,6 @@ jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_r
   components = [
     {
       component = "CONDITION"
-      schemaVersion = 4
       type = "jira.user.condition"
       value = {
         conditions = [
@@ -65,7 +63,6 @@ jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_r
     },
     {
       component = "CONDITION"
-      schemaVersion = -1
       type = "jira.jql.condition"
       children = [
       ]
@@ -75,7 +72,6 @@ jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_r
     },
     {
       component = "ACTION"
-      schemaVersion = 10
       type = "jira.issue.transition"
       value = {
         operations = [
@@ -115,14 +111,6 @@ jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_r
       tagValue = "itsm_template_3"
     },
   ]
-  ruleHome = {
-    ruleLifecycleHome = {
-      locationARI = "ari:cloud:jira:cc55e2a7-7908-4b67-ad90-b8c78de0e9ad:project/10204"
-    }
-    ruleBillingHome = {
-      locationARI = "ari:cloud:jira-servicedesk::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-  }
   writeAccessType = "UNRESTRICTED"
   collaborators = [
   ]

@@ -43,6 +43,16 @@ jira.ProjectRole atlassian_addons_project_access@b {
       }
     },
     {
+      displayName = "Jira Misc Workflow Extensions"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "557058:472c64c9-2567-4213-839b-86bf21558300"
+          displayName = "Jira Misc Workflow Extensions"
+        }
+      }
+    },
+    {
       displayName = "Jira Outlook"
       type = "atlassian-user-role-actor"
       actorUser = {

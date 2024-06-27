@@ -3,4 +3,5 @@ jira.Priority Low {
   description = "Minor problem or easily worked around."
   iconUrl = "/images/icons/priorities/low.svg"
   name = "Low"
+  _alias = "Low"
 }

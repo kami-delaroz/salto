@@ -4,7 +4,7 @@ jira.ObjectTypeAttribute DP___Services_sbs_Hardware_Assets_uuumus_Operational_St
   type = 7
   description = "Health status of asset/CI"
   typeValueMulti = [
-    jira.UnknownType.instance.missing_2,
+    jira.ObjectSchemaGlobalStatus.instance.Active,
     jira.ObjectSchemaStatus.instance.DP___Services_sbs__Inactive@uuumuu,
   ]
   editable = true

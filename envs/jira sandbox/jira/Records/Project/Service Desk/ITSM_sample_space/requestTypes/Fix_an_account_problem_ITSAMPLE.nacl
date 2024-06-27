@@ -3,6 +3,8 @@ jira.RequestType Fix_an_account_problem_ITSAMPLE@sssu {
   description = "Having trouble accessing certain websites or systems? We'll help you out."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending

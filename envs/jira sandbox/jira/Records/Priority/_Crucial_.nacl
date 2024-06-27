@@ -3,4 +3,5 @@ jira.Priority _Crucial_@hi {
   description = "urgentttt"
   iconUrl = "/images/icons/priorities/trivial.svg"
   name = "[Crucial]"
+  _alias = "[Crucial]"
 }

@@ -6,12 +6,12 @@ jira.CustomFieldContext customer_care__radiobuttons__c_suuuu_Default_Configurati
     in_focus@s = {
       value = "in focus"
       disabled = false
-      position = 0
+      position = 1
     }
     regular = {
       value = "regular"
       disabled = false
-      position = 1
+      position = 2
     }
   }
   defaultValue = {

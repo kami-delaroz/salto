@@ -6,12 +6,12 @@ jira.CustomFieldContext Select_List__multiple_choices___multiselect__c_ssjskuuuu
     aaa = {
       value = "aaa"
       disabled = false
-      position = 0
+      position = 1
     }
     bbb = {
       value = "bbb"
       disabled = false
-      position = 1
+      position = 2
     }
   }
   defaultValue = {

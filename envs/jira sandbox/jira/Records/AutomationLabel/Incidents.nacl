@@ -1,4 +1,5 @@
 jira.AutomationLabel Incidents {
   name = "Incidents"
   color = "T500"
+  editable = true
 }

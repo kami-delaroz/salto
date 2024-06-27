@@ -15,7 +15,6 @@ jira.Automation On_urgent_SLA__alert_Noam@sszdss {
   }
   trigger = {
     component = "TRIGGER"
-    schemaVersion = 1
     type = "jira.issue.event.trigger:created"
     value = {
       eventKey = "jira:issue_created"
@@ -29,7 +28,6 @@ jira.Automation On_urgent_SLA__alert_Noam@sszdss {
   components = [
     {
       component = "CONDITION"
-      schemaVersion = 3
       type = "jira.issue.condition"
       value = {
         selectedField = {
@@ -53,7 +51,6 @@ jira.Automation On_urgent_SLA__alert_Noam@sszdss {
     },
     {
       component = "ACTION"
-      schemaVersion = 2
       type = "jira.issue.add.watcher"
       value = {
         watchers = [
@@ -78,14 +75,6 @@ jira.Automation On_urgent_SLA__alert_Noam@sszdss {
   ]
   tags = [
   ]
-  ruleHome = {
-    ruleLifecycleHome = {
-      locationARI = "ari:cloud:jira-software::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-    ruleBillingHome = {
-      locationARI = "ari:cloud:jira-software::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-  }
   writeAccessType = "UNRESTRICTED"
   collaborators = [
   ]

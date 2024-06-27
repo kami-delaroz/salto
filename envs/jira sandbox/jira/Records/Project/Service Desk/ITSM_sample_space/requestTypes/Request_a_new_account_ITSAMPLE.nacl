@@ -3,6 +3,8 @@ jira.RequestType Request_a_new_account_ITSAMPLE@sssu {
   description = "Request a new account for a system."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending

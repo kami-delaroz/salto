@@ -14,7 +14,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
   }
   trigger = {
     component = "TRIGGER"
-    schemaVersion = 1
     type = "jira.issue.event.trigger:commented"
     value = {
       eventKey = "jira:issue_updated"
@@ -31,7 +30,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
   components = [
     {
       component = "CONDITION"
-      schemaVersion = 1
       type = "jira.comparator.condition"
       value = {
         first = "{{${ jira.Field.instance.Comment__comments_page@uub }.internal}}"
@@ -45,12 +43,10 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
     },
     {
       component = "CONDITION"
-      schemaVersion = -1
       type = "jira.condition.container.block"
       children = [
         {
           component = "CONDITION_BLOCK"
-          schemaVersion = 1
           type = "jira.condition.if.block"
           value = {
             conditionMatchType = "ALL"
@@ -58,7 +54,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
           children = [
             {
               component = "ACTION"
-              schemaVersion = 10
               type = "jira.issue.transition"
               value = {
                 operations = [
@@ -78,7 +73,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
           conditions = [
             {
               component = "CONDITION"
-              schemaVersion = 4
               type = "jira.user.condition"
               value = {
                 conditions = [
@@ -102,7 +96,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
             },
             {
               component = "CONDITION"
-              schemaVersion = 3
               type = "jira.issue.condition"
               value = {
                 selectedField = {
@@ -126,7 +119,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
         },
         {
           component = "CONDITION_BLOCK"
-          schemaVersion = 1
           type = "jira.condition.if.block"
           value = {
             conditionMatchType = "ALL"
@@ -134,7 +126,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
           children = [
             {
               component = "ACTION"
-              schemaVersion = 10
               type = "jira.issue.transition"
               value = {
                 operations = [
@@ -154,7 +145,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
           conditions = [
             {
               component = "CONDITION"
-              schemaVersion = 4
               type = "jira.user.condition"
               value = {
                 conditions = [
@@ -178,7 +168,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
             },
             {
               component = "CONDITION"
-              schemaVersion = 3
               type = "jira.issue.condition"
               value = {
                 selectedField = {
@@ -228,14 +217,6 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
       tagValue = "itsm_template_6"
     },
   ]
-  ruleHome = {
-    ruleLifecycleHome = {
-      locationARI = "ari:cloud:jira:cc55e2a7-7908-4b67-ad90-b8c78de0e9ad:project/10202"
-    }
-    ruleBillingHome = {
-      locationARI = "ari:cloud:jira-servicedesk::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad"
-    }
-  }
   writeAccessType = "UNRESTRICTED"
   collaborators = [
   ]

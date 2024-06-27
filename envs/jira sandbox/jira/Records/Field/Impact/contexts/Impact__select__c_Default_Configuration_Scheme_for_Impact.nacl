@@ -6,27 +6,27 @@ jira.CustomFieldContext Impact__select__c_Default_Configuration_Scheme_for_Impac
     Extensive___Widespread@sds = {
       value = "Extensive / Widespread"
       disabled = false
-      position = 0
+      position = 1
     }
     Significant___Large@sds = {
       value = "Significant / Large"
       disabled = false
-      position = 1
+      position = 2
     }
     Moderate___Limited@sds = {
       value = "Moderate / Limited"
       disabled = false
-      position = 2
+      position = 3
     }
     Minor___Localized@sds = {
       value = "Minor / Localized"
       disabled = false
-      position = 3
+      position = 4
     }
     test = {
       value = "test"
       disabled = true
-      position = 4
+      position = 5
     }
   }
   defaultValue = {

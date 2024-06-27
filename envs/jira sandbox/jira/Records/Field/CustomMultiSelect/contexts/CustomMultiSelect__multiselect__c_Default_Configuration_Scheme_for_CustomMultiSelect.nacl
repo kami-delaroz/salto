@@ -6,17 +6,17 @@ jira.CustomFieldContext CustomMultiSelect__multiselect__c_Default_Configuration_
     opt1 = {
       value = "opt1"
       disabled = false
-      position = 0
+      position = 1
     }
     opt2 = {
       value = "opt2"
       disabled = false
-      position = 1
+      position = 2
     }
     opt3 = {
       value = "opt3"
       disabled = false
-      position = 2
+      position = 3
     }
   }
   defaultValue = {

@@ -3,6 +3,8 @@ jira.RequestType Request_new_hardware_ITSAMPLE@ssu {
   description = "For example, a new mouse or monitor."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending

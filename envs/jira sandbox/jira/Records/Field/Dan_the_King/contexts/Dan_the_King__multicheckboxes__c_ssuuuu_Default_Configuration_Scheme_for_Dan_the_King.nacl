@@ -6,12 +6,12 @@ jira.CustomFieldContext Dan_the_King__multicheckboxes__c_ssuuuu_Default_Configur
     true = {
       value = "true"
       disabled = false
-      position = 0
+      position = 1
     }
     false = {
       value = "false"
       disabled = false
-      position = 1
+      position = 2
     }
   }
   defaultValue = {

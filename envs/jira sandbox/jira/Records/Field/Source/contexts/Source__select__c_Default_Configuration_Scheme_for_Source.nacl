@@ -6,32 +6,32 @@ jira.CustomFieldContext Source__select__c_Default_Configuration_Scheme_for_Sourc
     Email = {
       value = "Email"
       disabled = false
-      position = 0
+      position = 1
     }
     Phone = {
       value = "Phone"
       disabled = false
-      position = 1
+      position = 2
     }
     Monitoring_systems@s = {
       value = "Monitoring systems"
       disabled = false
-      position = 2
+      position = 3
     }
     Vendor_technical_advisory@ds = {
       value = "Vendor/technical advisory"
       disabled = false
-      position = 3
+      position = 4
     }
     Customer = {
       value = "Customer"
       disabled = false
-      position = 4
+      position = 5
     }
     Other = {
       value = "Other"
       disabled = false
-      position = 5
+      position = 6
     }
   }
   defaultValue = {

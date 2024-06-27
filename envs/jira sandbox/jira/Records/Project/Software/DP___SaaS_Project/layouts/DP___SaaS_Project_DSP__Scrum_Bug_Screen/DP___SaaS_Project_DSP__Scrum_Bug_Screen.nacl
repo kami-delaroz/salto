@@ -45,6 +45,17 @@ jira.IssueLayout DP___SaaS_Project_DSP__Scrum_Bug_Screen@sbssufsss {
       },
       {
         type = "FIELD"
+        sectionType = "PRIMARY"
+        key = jira.Field.instance.DP___Asset_Field_1__cmdb_object_cftype__c@sbsssuubbuu
+        data = {
+          custom = true
+          global = true
+          description = "For Testing"
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
         sectionType = "SECONDARY"
         key = jira.Field.instance.Story_Points__float__c@suuuu
         data = {

@@ -6,7 +6,7 @@ jira.CustomFieldContext field_13_12_23__multicheckboxes__c_bbbuuuu_Default_Confi
     "1@" = {
       value = "1"
       disabled = false
-      position = 0
+      position = 1
     }
   }
   defaultValue = {

@@ -13,7 +13,7 @@ jira.CustomFieldContext testTest__cascadingselect__c_Default_Configuration_Schem
           position = 0
         }
       }
-      position = 0
+      position = 1
     }
   }
   defaultValue = {

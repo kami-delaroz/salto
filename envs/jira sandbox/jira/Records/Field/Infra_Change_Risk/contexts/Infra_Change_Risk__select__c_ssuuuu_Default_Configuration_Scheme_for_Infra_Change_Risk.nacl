@@ -6,17 +6,17 @@ jira.CustomFieldContext Infra_Change_Risk__select__c_ssuuuu_Default_Configuratio
     Low = {
       value = "Low"
       disabled = false
-      position = 0
+      position = 1
     }
     Medium = {
       value = "Medium"
       disabled = false
-      position = 1
+      position = 2
     }
     High = {
       value = "High"
       disabled = false
-      position = 2
+      position = 3
     }
   }
   defaultValue = {

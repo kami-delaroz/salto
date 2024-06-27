@@ -3,6 +3,8 @@ jira.RequestType Request_new_software_ITSAMPLE@ssu {
   description = "If you need a software license, raise a request here."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending

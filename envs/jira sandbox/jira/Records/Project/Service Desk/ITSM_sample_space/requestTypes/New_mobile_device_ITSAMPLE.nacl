@@ -3,6 +3,8 @@ jira.RequestType New_mobile_device_ITSAMPLE@ssu {
   description = "Need a mobile phone or time for replacement? Let us know."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request_with_approvals@hissss
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending

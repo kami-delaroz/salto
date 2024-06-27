@@ -6,22 +6,22 @@ jira.CustomFieldContext For_Jira_PCS_180060__select__c_ssbuuuu_Default_Configura
     a = {
       value = "a"
       disabled = false
-      position = 0
+      position = 1
     }
     _@s = {
       value = " "
       disabled = false
-      position = 1
+      position = 2
     }
     ddd = {
       value = "ddd"
       disabled = false
-      position = 2
+      position = 3
     }
     b = {
       value = "b"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

@@ -3,4 +3,5 @@ jira.Priority prioritiy69 {
   description = "Serious problem that could block progress.3aaa3"
   iconUrl = "/images/icons/priorities/medium.svg"
   name = "prioritiy69"
+  _alias = "prioritiy69"
 }

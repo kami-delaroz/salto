@@ -3,4 +3,5 @@ jira.Priority Medium {
   description = "Has the potential to affect progress."
   iconUrl = "/images/icons/priorities/medium.svg"
   name = "Medium"
+  _alias = "Medium"
 }

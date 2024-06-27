@@ -6,22 +6,22 @@ jira.CustomFieldContext Change_requires_downtime___select__c_ssauuuu_Default_Con
     Yes = {
       value = "Yes"
       disabled = false
-      position = 0
+      position = 1
     }
     No = {
       value = "No"
       disabled = false
-      position = 1
+      position = 2
     }
     Definitely = {
       value = "Definitely"
       disabled = false
-      position = 2
+      position = 3
     }
     Maybe = {
       value = "Maybe"
       disabled = false
-      position = 3
+      position = 4
     }
   }
   defaultValue = {

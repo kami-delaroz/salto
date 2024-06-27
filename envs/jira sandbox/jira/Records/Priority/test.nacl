@@ -3,4 +3,5 @@ jira.Priority test {
   description = "Serious problem that could block progress."
   iconUrl = "https://ori-salto-test.atlassian.net/images/icons/priorities/critical.svg"
   name = "test"
+  _alias = "test"
 }

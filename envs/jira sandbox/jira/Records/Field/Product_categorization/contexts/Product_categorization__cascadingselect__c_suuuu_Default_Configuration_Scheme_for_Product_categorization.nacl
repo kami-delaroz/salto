@@ -48,32 +48,32 @@ jira.CustomFieldContext Product_categorization__cascadingselect__c_suuuu_Default
           position = 7
         }
       }
-      position = 0
+      position = 1
     }
     Software = {
       value = "Software"
       disabled = false
-      position = 1
+      position = 2
     }
     Communication = {
       value = "Communication"
       disabled = false
-      position = 2
+      position = 3
     }
     Service = {
       value = "Service"
       disabled = false
-      position = 3
+      position = 4
     }
     People = {
       value = "People"
       disabled = false
-      position = 4
+      position = 5
     }
     Document = {
       value = "Document"
       disabled = false
-      position = 5
+      position = 6
     }
   }
   defaultValue = {

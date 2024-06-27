@@ -3,6 +3,8 @@ jira.RequestType Request_admin_access_ITSAMPLE@ssu {
   description = "For example, if you need to administer Jira."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending
