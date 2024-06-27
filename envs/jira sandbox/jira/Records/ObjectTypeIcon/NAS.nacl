@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon NAS {
+  name = "NAS"
+  icon = file("jira/ObjectTypeIcon/NAS.png")
+}

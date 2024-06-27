@@ -1,0 +1,5 @@
+jira.WorkflowScheme classic {
+  name = "classic"
+  description = "classic"
+  defaultWorkflow = jira.Workflow.instance.classic_default_workflow@s
+}

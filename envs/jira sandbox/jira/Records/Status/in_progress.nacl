@@ -1,0 +1,6 @@
+jira.Status in_progress@s {
+  name = "In Progress"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = "This issue is being actively worked on at the moment by the assignee."
+  _alias = "In Progress"
+}

@@ -1,0 +1,46 @@
+jira.Board JC22_board@s {
+  name = "JC22 board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "60e8b78784c9920071996842"
+        displayName = "Lior Neudorfer"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.JiraCon_Project@s
+  }
+  filterId = jira.Filter.instance.Filter_for_JC22_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Backlog"
+        statuses = [
+          jira.Status.instance.backlog,
+        ]
+      },
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

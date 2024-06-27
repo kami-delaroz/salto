@@ -1,0 +1,14 @@
+jira.Screen JIRA_Service_Desk_Pending_Reason_screen___55@ssssssbs {
+  name = "JIRA Service Desk Pending Reason screen - 55"
+  description = "Screen to specify the pending reason when transitioning to the Pending status"
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Linked_Issues__array@suu,
+        jira.Field.instance.Pending_reason__select__c@suuuu,
+      ]
+      position = 0
+    }
+  }
+}

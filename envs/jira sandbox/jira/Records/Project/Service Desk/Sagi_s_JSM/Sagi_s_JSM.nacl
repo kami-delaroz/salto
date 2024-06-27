@@ -1,0 +1,34 @@
+jira.Project Sagi_s_JSM@ts {
+  key = "SJ"
+  description = ""
+  name = "Sagi's JSM"
+  projectTypeKey = "service_desk"
+  components = [
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Active_Directory@uumuus,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Analytics_and_Reporting_Service@uumuusss,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Billing_Services@uumuus,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Cloud_Storage_Services@uumuuss,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Data_Center_Services@uumuuss,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Email_and_Collaboration_Services@uumuusss,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Financial_Services@uumuus,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__HR_Services@uumuus,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Intranet@uumuu,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Jira@uumuu,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Office_Network@uumuus,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Payroll_Services@uumuus,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Printers@uumuu,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Public_Website@uumuus,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__VPN_Server@uumuus,
+    jira.ProjectComponent.instance.Sagi_s_JSM_ts__Webstore_Purchasing_Services@uumuuss,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_SJ@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_SJ@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.SJ__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.SJ__Jira_Service_Management_Issue_Type_Scheme@fssssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_SJ@s
+  leadAccountId = {
+    id = "605c3da2109af10068b38c4e"
+    displayName = "Sagi Bracha"
+  }
+}

@@ -1,0 +1,8 @@
+jira.ScreenScheme AS2__Simple_Issue_Tracking_Screen_Scheme__1_@fssssssjk {
+  name = "AS2: Simple Issue Tracking Screen Scheme (1)"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.AS2__Simple_Issue_Tracking_Edit_View_Issue_Screen__1_@fssssdsssjk
+    create = jira.Screen.instance.AS2__Simple_Issue_Tracking_Create_Issue_Screen__1_@fsssssssjk
+  }
+}

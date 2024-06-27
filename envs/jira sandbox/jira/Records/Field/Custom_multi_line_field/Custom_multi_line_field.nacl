@@ -1,0 +1,10 @@
+jira.Field Custom_multi_line_field__textarea__c@sssuuuu {
+  name = "Custom multi line field"
+  description = "the description"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.Custom_multi_line_field__textarea__c_sssuuuu_Default_Configuration_Scheme_for_Custom_multi_line_field@uuuuuuumusssssss,
+  ]
+  _alias = "Custom multi line field"
+}

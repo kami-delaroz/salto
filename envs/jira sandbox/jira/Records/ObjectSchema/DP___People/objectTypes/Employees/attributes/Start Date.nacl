@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute DP___People_sbs_Employees_uuumu_Start_Date@uuuuumus {
+  objectType = jira.ObjectType.instance.DP___People_sbs_Employees@uuumu
+  name = "Start Date"
+  type = 0
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 4
+  _alias = "Start Date"
+}

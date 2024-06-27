@@ -1,0 +1,11 @@
+jira.Field Major_incident__major_incident_entity_field_cftype__c@suubbbbuu {
+  name = "Major incident"
+  description = "Mark incident as major."
+  isLocked = true
+  searcherKey = "com.atlassian.jira.modules.servicemanagement.major-incident-entity:major-incident-entity-field-searcher"
+  type = "com.atlassian.jira.modules.servicemanagement.major-incident-entity:major-incident-entity-field-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Major_incident__major_incident_entity_field_cftype__c_suubbbbuu_Default_Configuration_Scheme_for_Major_incident@uuuuuuuuumusssss,
+  ]
+  _alias = "Major incident"
+}

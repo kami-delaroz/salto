@@ -1,0 +1,351 @@
+jira.RequestType Report_a_system_problem_ITSAMPLE@sssu {
+  name = "Report a system problem"
+  description = "Let us know if something isn't working properly and we'll aim to get it back up and running quickly."
+  helpText = ""
+  issueTypeId = jira.IssueType.instance._System__Incident@his
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
+  workflowStatuses = [
+    {
+      id = jira.Status.instance.completed
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.pending
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.work_in_progress@s
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.closed
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.canceled
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.open
+      custom = ""
+    },
+  ]
+  requestForm = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Summary__string
+          data = {
+            custom = false
+            global = true
+            required = true
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "Summarize the problem"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Description__string
+          data = {
+            custom = false
+            global = true
+            required = true
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "Describe what happened and how it occurred"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Attachment__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Urgency__select__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "How urgently does this need to be fixed?"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Impact__select__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "How big of an impact is the problem to you or the organization?"
+              },
+            ]
+          }
+        },
+      ]
+    }
+  }
+  avatarId = "10521"
+  issueView = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Assignee__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Reporter__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_Type__vp_origin__c@suubuu
+          data = {
+            custom = true
+            global = true
+            description = "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_language__sd_request_language__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "The language which a request was raised in."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Priority__priority
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Severity__select__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Labels__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the users that are participants in service project customer portal requests. This custom field is created programmatically and required by service project."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Organizations__sd_customer_organizations__c@uubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Responders__responders_entity_field_cftype__c@uubbbuu
+          data = {
+            custom = true
+            global = true
+            description = "Add responders to an incident."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Major_incident__major_incident_entity_field_cftype__c@suubbbbuu
+          data = {
+            custom = true
+            global = true
+            description = "Mark incident as major."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Pending_reason__select__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = "Specify the reason for moving the issue to the Pending status"
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Source__select__c
+          data = {
+            custom = true
+            global = true
+            description = "Captures the reporting source for this issue"
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Product_categorization__cascadingselect__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Operational_categorization__cascadingselect__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Components__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Satisfaction__sd_request_feedback__c@uubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores request feedback in service project requests. This custom field is created programmatically and required by service project."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Time_tracking__timetracking@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Original_estimate__number@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu
+          data = {
+            custom = true
+            global = true
+            description = "Link services from the service registry to an issue."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+      ]
+    }
+  }
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Report a system problem"
+}

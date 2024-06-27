@@ -1,0 +1,14 @@
+jira.ObjectType Lior_s_IT_Schema_tss_Models_uuumu_Software_Models_uuuuumus_java_models@uuuuuuuumus {
+  name = "java models"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Software_Models@uuuuumus
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "java models"
+}

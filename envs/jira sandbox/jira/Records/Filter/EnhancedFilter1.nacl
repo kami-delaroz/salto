@@ -1,0 +1,14 @@
+jira.Filter EnhancedFilter1 {
+  name = "EnhancedFilter1"
+  description = "Filter managed by ScriptRunner: project = \"AlonCompanyProject\" OR issueFunction in linkedIssuesOf(\"project = 'Empty22'\", \"clones\")"
+  owner = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+  jql = "${ jira.Field.instance.Project__project } = \"AlonCompanyProject\" OR ${ jira.Field.instance.Created__datetime } > '3000/12/12 00:00'"
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+}

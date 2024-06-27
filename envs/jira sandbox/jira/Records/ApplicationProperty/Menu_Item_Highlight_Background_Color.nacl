@@ -1,0 +1,6 @@
+jira.ApplicationProperty Menu_Item_Highlight_Background_Color@s {
+  id = "jira.lf.menu.bgcolour"
+  value = "#3b73af"
+  name = "Menu Item Highlight Background Color"
+  type = "colour"
+}

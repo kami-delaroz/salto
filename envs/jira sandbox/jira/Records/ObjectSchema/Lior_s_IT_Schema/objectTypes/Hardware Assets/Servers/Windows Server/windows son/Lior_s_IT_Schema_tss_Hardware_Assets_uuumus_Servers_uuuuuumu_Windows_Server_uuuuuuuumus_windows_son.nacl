@@ -1,0 +1,14 @@
+jira.ObjectType Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Windows_Server_uuuuuuuumus_windows_son@uuuuuuuuuuumus {
+  name = "windows son"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Windows_Server@uuuuuuuumus
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Windows
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "windows son"
+}

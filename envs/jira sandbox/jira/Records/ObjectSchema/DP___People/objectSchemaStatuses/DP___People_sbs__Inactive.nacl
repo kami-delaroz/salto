@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus DP___People_sbs__Inactive@uuumuu {
+  name = "Inactive"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.DP___People@sbs,
+  ]
+  _alias = "DP - People:Inactive"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Raspberry_Pi@s {
+  name = "Raspberry Pi"
+  icon = file("jira/ObjectTypeIcon/Raspberry_Pi.png")
+}

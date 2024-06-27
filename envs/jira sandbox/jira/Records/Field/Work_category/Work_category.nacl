@@ -1,0 +1,11 @@
+jira.Field Work_category__work_category_field_cftype__c@suubbbuu {
+  name = "Work category"
+  description = "Jira system field that displays the category of work a specific issue belongs to."
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugins.work-category-field:work-category-field-searcher"
+  type = "com.atlassian.jira.plugins.work-category-field:work-category-field-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Work_category__work_category_field_cftype__c_suubbbuu_Default_Configuration_Scheme_for_Work_category@uuuuuuuumusssss,
+  ]
+  _alias = "Work category"
+}

@@ -1,0 +1,34 @@
+jira.Project AlonITSM {
+  key = "AL"
+  description = ""
+  name = "AlonITSM"
+  projectTypeKey = "service_desk"
+  components = [
+    jira.ProjectComponent.instance.AlonITSM__Active_Directory@uus,
+    jira.ProjectComponent.instance.AlonITSM__Analytics_and_Reporting_Service@uusss,
+    jira.ProjectComponent.instance.AlonITSM__Billing_Services@uus,
+    jira.ProjectComponent.instance.AlonITSM__Cloud_Storage_Services@uuss,
+    jira.ProjectComponent.instance.AlonITSM__Data_Center_Services@uuss,
+    jira.ProjectComponent.instance.AlonITSM__Email_and_Collaboration_Services@uusss,
+    jira.ProjectComponent.instance.AlonITSM__Financial_Services@uus,
+    jira.ProjectComponent.instance.AlonITSM__HR_Services@uus,
+    jira.ProjectComponent.instance.AlonITSM__Intranet,
+    jira.ProjectComponent.instance.AlonITSM__Jira,
+    jira.ProjectComponent.instance.AlonITSM__Office_Network@uus,
+    jira.ProjectComponent.instance.AlonITSM__Payroll_Services@uus,
+    jira.ProjectComponent.instance.AlonITSM__Printers,
+    jira.ProjectComponent.instance.AlonITSM__Public_Website@uus,
+    jira.ProjectComponent.instance.AlonITSM__VPN_Server@uus,
+    jira.ProjectComponent.instance.AlonITSM__Webstore_Purchasing_Services@uuss,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_AL@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_AL@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.AL__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.Default_Issue_Type_Scheme@s
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_AL@s
+  leadAccountId = {
+    id = "640a4787f00d095406f6727f"
+    displayName = "Ido Amit"
+  }
+}

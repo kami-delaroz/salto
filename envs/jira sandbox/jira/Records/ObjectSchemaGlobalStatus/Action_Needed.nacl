@@ -1,0 +1,5 @@
+jira.ObjectSchemaGlobalStatus Action_Needed@s {
+  name = "Action Needed"
+  description = ""
+  category = 2
+}

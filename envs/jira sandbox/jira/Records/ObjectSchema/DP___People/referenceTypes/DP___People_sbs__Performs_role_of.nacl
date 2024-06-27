@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType DP___People_sbs__Performs_role_of@uuumuuss {
+  name = "Performs role of"
+  color = "2684FF"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.DP___People@sbs,
+  ]
+}

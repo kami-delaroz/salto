@@ -1,0 +1,4 @@
+jira.SecurityScheme gd {
+  name = "gd"
+  description = "fgdf"
+}

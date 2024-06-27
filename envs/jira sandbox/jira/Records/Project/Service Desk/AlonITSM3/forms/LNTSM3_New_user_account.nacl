@@ -1,0 +1,872 @@
+jira.Form LNTSM3_New_user_account@uss {
+  publish = {
+  }
+  design = {
+    settings = {
+      name = "New user account"
+      submit = {
+        lock = false
+        pdf = false
+      }
+    }
+    layout = [
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "heading"
+            attrs = {
+              level = 2
+            }
+            content = [
+              {
+                type = "text"
+                text = "Person making request"
+              },
+            ]
+          },
+          {
+            type = "layoutSection"
+            content = [
+              {
+                type = "layoutColumn"
+                attrs = {
+                  width = 50
+                }
+                content = [
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      layout = "default"
+                      parameters = {
+                        id = 1
+                      }
+                      localId = "a245fa9c-9dca-46e8-a9d8-446c2ec621a7"
+                    }
+                  },
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      layout = "default"
+                      parameters = {
+                        id = 2
+                      }
+                      localId = "a2381400-aae7-45ac-b450-41d90ec26a10"
+                    }
+                  },
+                ]
+              },
+              {
+                type = "layoutColumn"
+                attrs = {
+                  width = 50
+                }
+                content = [
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      layout = "default"
+                      parameters = {
+                        id = 3
+                      }
+                      localId = "f1e10770-15d5-4a75-b729-105678b6ad65"
+                    }
+                  },
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      layout = "default"
+                      parameters = {
+                        id = 4
+                      }
+                      localId = "fa219021-0dc1-4c2f-bf53-10ff0cd9c2c9"
+                    }
+                  },
+                ]
+              },
+            ]
+          },
+          {
+            type = "heading"
+            attrs = {
+              level = 2
+            }
+            content = [
+              {
+                type = "text"
+                text = "System Access"
+              },
+            ]
+          },
+          {
+            type = "table"
+            attrs = {
+              isNumberColumnEnabled = false
+              layout = "default"
+              localId = "e393ce51-88b6-4180-82b4-95727c8da402"
+            }
+            content = [
+              {
+                type = "tableRow"
+                content = [
+                  {
+                    type = "tableHeader"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "paragraph"
+                        content = [
+                          {
+                            type = "text"
+                            text = "System"
+                            marks = [
+                              {
+                                type = "strong"
+                              },
+                            ]
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableHeader"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "paragraph"
+                        content = [
+                          {
+                            type = "text"
+                            text = "Change requested"
+                            marks = [
+                              {
+                                type = "strong"
+                              },
+                            ]
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableHeader"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "paragraph"
+                        content = [
+                          {
+                            type = "text"
+                            text = "Access level needed"
+                            marks = [
+                              {
+                                type = "strong"
+                              },
+                            ]
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                ]
+              },
+              {
+                type = "tableRow"
+                content = [
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 5
+                          }
+                          localId = "24332d8d-889c-4288-bb8e-2b5f18ba70fe"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 6
+                          }
+                          localId = "34bc8caa-b778-4ad2-a8f3-77f5530adbd3"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 7
+                          }
+                          localId = "5fedce93-31a0-428f-b6d9-e64f0f4da11b"
+                        }
+                      },
+                    ]
+                  },
+                ]
+              },
+              {
+                type = "tableRow"
+                content = [
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 8
+                          }
+                          localId = "10158b1c-9057-466c-bb4b-0663c9ceeb25"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 9
+                          }
+                          localId = "f347e665-0cea-4bec-b59d-f44cc218caed"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 10
+                          }
+                          localId = "66507c05-3edf-4770-a0df-6453ad12c6f1"
+                        }
+                      },
+                    ]
+                  },
+                ]
+              },
+              {
+                type = "tableRow"
+                content = [
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 11
+                          }
+                          localId = "98c1632f-ed74-482a-963f-c1666a143a17"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 12
+                          }
+                          localId = "69ced462-fbd3-4caf-a769-09012f397735"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 13
+                          }
+                          localId = "2415e852-f712-4e93-ab74-9aabf8348d35"
+                        }
+                      },
+                    ]
+                  },
+                ]
+              },
+              {
+                type = "tableRow"
+                content = [
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 14
+                          }
+                          localId = "988e1454-06c0-4c5a-8794-d1ac3bd5a05c"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 15
+                          }
+                          localId = "efdc9f27-e618-482f-97c0-c2072bd60d58"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 16
+                          }
+                          localId = "90936c7d-749f-4ea6-b4a2-a5bea3b7f590"
+                        }
+                      },
+                    ]
+                  },
+                ]
+              },
+              {
+                type = "tableRow"
+                content = [
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 17
+                          }
+                          localId = "43f8eb33-31fd-42eb-a663-898ce1210de7"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 18
+                          }
+                          localId = "c959ae49-aa28-461f-88c5-3246d87a8c26"
+                        }
+                      },
+                    ]
+                  },
+                  {
+                    type = "tableCell"
+                    attrs = {
+                    }
+                    content = [
+                      {
+                        type = "extension"
+                        attrs = {
+                          extensionKey = "question"
+                          extensionType = "com.thinktilt.proforma"
+                          layout = "default"
+                          parameters = {
+                            id = 19
+                          }
+                          localId = "3f719610-a023-4daf-ba9b-babe0b4f54e8"
+                        }
+                      },
+                    ]
+                  },
+                ]
+              },
+            ]
+          },
+        ]
+      },
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "heading"
+            attrs = {
+              level = 2
+            }
+            content = [
+              {
+                type = "text"
+                text = "Terms and conditions"
+              },
+            ]
+          },
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              layout = "default"
+              parameters = {
+                id = 20
+              }
+              localId = "652e0b80-30cd-4e04-bc9c-7c2ba7c9f50d"
+            }
+          },
+          {
+            type = "paragraph"
+            content = [
+            ]
+          },
+        ]
+      },
+    ]
+    conditions = {
+      "21@" = {
+        t = "sh"
+        i = {
+          co = {
+            cIds = {
+              "9@" = [
+                "71",
+              ]
+            }
+          }
+        }
+        o = {
+          sIds = [
+            "1",
+          ]
+        }
+      }
+    }
+    sections = {
+      "1@" = {
+        conditions = [
+          "21",
+        ]
+      }
+    }
+    questions = {
+      "1@" = {
+        type = "ts"
+        label = "Name"
+        validation = {
+        }
+      }
+      "2@" = {
+        type = "ts"
+        label = "Phone"
+        validation = {
+        }
+      }
+      "3@" = {
+        type = "ts"
+        label = "Job title"
+        validation = {
+        }
+      }
+      "4@" = {
+        type = "te"
+        label = " Email"
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "5@" = {
+        type = "tl"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "6@" = {
+        type = "cs"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+          {
+            id = "70"
+            label = "New user"
+          },
+          {
+            id = "71"
+            label = "Change of access"
+          },
+          {
+            id = "100"
+            label = "Disable account"
+          },
+          {
+            id = "0"
+            label = "Other..."
+            other = true
+          },
+        ]
+        questionKey = ""
+      }
+      "7@" = {
+        type = "pg"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "8@" = {
+        type = "tl"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "9@" = {
+        type = "cs"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+          {
+            id = "70"
+            label = "New user"
+          },
+          {
+            id = "71"
+            label = "Change of access"
+          },
+          {
+            id = "100"
+            label = "Disable account"
+          },
+          {
+            id = "0"
+            label = "Other..."
+            other = true
+          },
+        ]
+        questionKey = ""
+      }
+      "10@" = {
+        type = "pg"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "11@" = {
+        type = "tl"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "12@" = {
+        type = "cs"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+          {
+            id = "70"
+            label = "New user"
+          },
+          {
+            id = "71"
+            label = "Change of access"
+          },
+          {
+            id = "100"
+            label = "Disable account"
+          },
+          {
+            id = "0"
+            label = "Other..."
+            other = true
+          },
+        ]
+        questionKey = ""
+      }
+      "13@" = {
+        type = "pg"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "14@" = {
+        type = "tl"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "15@" = {
+        type = "cs"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+          {
+            id = "70"
+            label = "New user"
+          },
+          {
+            id = "71"
+            label = "Change of access"
+          },
+          {
+            id = "100"
+            label = "Disable account"
+          },
+          {
+            id = "0"
+            label = "Other..."
+            other = true
+          },
+        ]
+        questionKey = ""
+      }
+      "16@" = {
+        type = "pg"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "17@" = {
+        type = "tl"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "18@" = {
+        type = "cs"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+          {
+            id = "70"
+            label = "New user"
+          },
+          {
+            id = "71"
+            label = "Change of access"
+          },
+          {
+            id = "100"
+            label = "Disable account"
+          },
+          {
+            id = "0"
+            label = "Other..."
+            other = true
+          },
+        ]
+        questionKey = ""
+      }
+      "19@" = {
+        type = "pg"
+        label = ""
+        description = ""
+        validation = {
+          rq = false
+        }
+        choices = [
+        ]
+        questionKey = ""
+      }
+      "20@" = {
+        type = "cm"
+        label = ""
+        description = ""
+        validation = {
+          rq = true
+          mns = 3
+        }
+        choices = [
+          {
+            id = "76"
+            label = "I agree to never provide my password for another to use"
+          },
+          {
+            id = "77"
+            label = "I agree to use the systems above only for their intended purpose"
+          },
+          {
+            id = "78"
+            label = "I agree to never disclose confidential information accessed via these systems"
+            other = false
+          },
+        ]
+        questionKey = ""
+      }
+    }
+  }
+  _parent = [
+    jira.Project.instance.AlonITSM3,
+  ]
+}

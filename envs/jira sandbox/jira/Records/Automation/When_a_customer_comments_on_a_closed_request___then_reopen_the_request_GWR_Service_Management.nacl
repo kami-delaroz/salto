@@ -1,0 +1,119 @@
+jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_request_GWR_Service_Management@ssssssss_08594ssssuss {
+  name = "When a customer comments on a closed request → then reopen the request"
+  state = "ENABLED"
+  authorAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+  actor = {
+    type = "ACCOUNT_ID"
+    value = {
+      id = "61980f073618cd006f48823b"
+      displayName = "Geoffrey Routledge"
+    }
+  }
+  trigger = {
+    component = "TRIGGER"
+    type = "jira.issue.event.trigger:commented"
+    value = {
+      eventKey = "jira:issue_updated"
+      issueEvent = "issue_commented"
+      eventTypes = [
+        "PRIMARY_ACTION",
+      ]
+    }
+    children = [
+    ]
+    conditions = [
+    ]
+  }
+  components = [
+    {
+      component = "CONDITION"
+      type = "jira.user.condition"
+      value = {
+        conditions = [
+          {
+            field = "initiator"
+            check = "USER_IS"
+            criteria = [
+              {
+                type = "SMART"
+                value = "{{issue.reporter}}"
+              },
+            ]
+          },
+          {
+            field = "initiator"
+            check = "NOT_IN_ROLE"
+            criteria = [
+              {
+                type = "NAME"
+                value = "Service Desk Team"
+              },
+            ]
+          },
+        ]
+        operator = "OR"
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+    {
+      component = "CONDITION"
+      type = "jira.jql.condition"
+      children = [
+      ]
+      conditions = [
+      ]
+      rawValue = "statusCategory = done"
+    },
+    {
+      component = "ACTION"
+      type = "jira.issue.transition"
+      value = {
+        operations = [
+        ]
+        sendNotifications = true
+        destinationStatus = {
+          type = "ID"
+          value = jira.Status.instance.reopened
+        }
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+  ]
+  canOtherRuleTrigger = false
+  notifyOnError = "FIRSTERROR"
+  projects = [
+    {
+      projectId = jira.Project.instance.GWR_Service_Management@s
+    },
+  ]
+  labels = [
+  ]
+  tags = [
+    {
+      tagType = "CREATION_TYPE"
+      tagValue = "AUTO"
+    },
+    {
+      tagType = "SAMPLE_RULE"
+      tagValue = "service_desk"
+    },
+    {
+      tagType = "TEMPLATE_ID"
+      tagValue = "itsm_template_3"
+    },
+  ]
+  writeAccessType = "UNRESTRICTED"
+  collaborators = [
+  ]
+  billingType = "SYSTEM"
+  _alias = "When a customer comments on a closed request → then reopen the request"
+}

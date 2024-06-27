@@ -1,0 +1,7 @@
+jira.ScreenScheme LIOR1__Kanban_Bug_Screen_Scheme@fssss {
+  name = "LIOR1: Kanban Bug Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.LIOR1__Kanban_Bug_Screen@fsss
+  }
+}

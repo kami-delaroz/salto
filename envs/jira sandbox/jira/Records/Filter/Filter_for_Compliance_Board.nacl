@@ -1,0 +1,16 @@
+jira.Filter Filter_for_Compliance_Board@s {
+  name = "Filter for Compliance Board"
+  owner = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.JiraCon_Project@s.key } AND \"${ jira.Field.instance.Compliance_Type__select__c@suuuu.name }[Dropdown]\" in (GDPR, HIPAA, \"ISO 27001\", SOC2) ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.JiraCon_Project@s
+      }
+    },
+  ]
+}

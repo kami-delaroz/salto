@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType ITSBX__Assigned_to@uus {
+  name = "Assigned to"
+  color = "5243AA"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+}

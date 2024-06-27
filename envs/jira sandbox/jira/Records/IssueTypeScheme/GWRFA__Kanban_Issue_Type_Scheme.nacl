@@ -1,0 +1,11 @@
+jira.IssueTypeScheme GWRFA__Kanban_Issue_Type_Scheme@fssss {
+  name = "GWRFA: Kanban Issue Type Scheme"
+  defaultIssueTypeId = jira.IssueType.instance.Story
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Epic,
+  ]
+}
