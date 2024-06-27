@@ -1,0 +1,233 @@
+jira.RequestType Ask_a_question_TES@ssu {
+  name = "Ask a question"
+  description = "Have a question? Submit it here."
+  helpText = ""
+  issueTypeId = jira.IssueType.instance.Ask_a_question@s
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
+  workflowStatuses = [
+    {
+      id = jira.Status.instance.to_do@s
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.done
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      custom = ""
+    },
+  ]
+  requestForm = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Summary__string
+          data = {
+            custom = false
+            global = true
+            required = true
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "What is your question or general request?"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Description__string
+          data = {
+            custom = false
+            global = true
+            required = true
+          }
+        },
+      ]
+    }
+  }
+  avatarId = "10549"
+  issueView = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Satisfaction__sd_request_feedback__c@uubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores request feedback in service project requests. This custom field is created programmatically and required by service project."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Assignee__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Reporter__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_Type__vp_origin__c@suubuu
+          data = {
+            custom = true
+            global = true
+            description = "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_language__sd_request_language__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "The language which a request was raised in."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Due_date__date@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Priority__priority
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Labels__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the users that are participants in service project customer portal requests. This custom field is created programmatically and required by service project."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Approvers__multiuserpicker__c
+          data = {
+            custom = true
+            global = true
+            description = "Contains users needed for approval. This custom field was created by Jira."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Organizations__sd_customer_organizations__c@uubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.AAA_test_custom_field__multicheckboxes__c@sssuuuu
+          data = {
+            custom = true
+            global = true
+            description = "original description"
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Time_tracking__timetracking@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Original_estimate__number@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Components__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+      ]
+    }
+  }
+  _parent = [
+    jira.Project.instance.testProject,
+  ]
+  _alias = "testProject:Ask a question"
+}
