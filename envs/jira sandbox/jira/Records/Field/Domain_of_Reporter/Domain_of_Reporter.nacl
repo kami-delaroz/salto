@@ -1,0 +1,9 @@
+jira.Field Domain_of_Reporter__reporterdomain__c@ssuuuu {
+  name = "Domain of Reporter"
+  description = ""
+  type = "com.atlassian.jira.toolkit:reporterdomain"
+  contexts = [
+    jira.CustomFieldContext.instance.Domain_of_Reporter__reporterdomain__c_ssuuuu_Default_Configuration_Scheme_for_Domain_of_Reporter@uuuuuumussssss,
+  ]
+  _alias = "Domain of Reporter"
+}

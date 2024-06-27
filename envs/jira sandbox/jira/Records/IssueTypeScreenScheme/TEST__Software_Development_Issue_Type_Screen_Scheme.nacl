@@ -1,0 +1,14 @@
+jira.IssueTypeScreenScheme TEST__Software_Development_Issue_Type_Screen_Scheme@fssssss {
+  name = "TEST: Software Development Issue Type Screen Scheme"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Bug
+      screenSchemeId = jira.ScreenScheme.instance.TEST__Software_Development_Bug_Screen_Scheme@fsssss
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.TEST__Software_Development_Default_Screen_Scheme@fsssss
+    },
+  ]
+}

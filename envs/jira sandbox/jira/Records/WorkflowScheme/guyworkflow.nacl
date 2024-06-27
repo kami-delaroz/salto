@@ -1,0 +1,30 @@
+jira.WorkflowScheme guyworkflow {
+  name = "guyworkflow"
+  defaultWorkflow = jira.Workflow.instance.jira
+  items = [
+    {
+      workflow = jira.Workflow.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
+      issueType = jira.IssueType.instance.Bug
+    },
+    {
+      workflow = jira.Workflow.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
+      issueType = jira.IssueType.instance.Custom_issue_type_two@s
+    },
+    {
+      workflow = jira.Workflow.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
+      issueType = jira.IssueType.instance._System__Service_request@hiss
+    },
+    {
+      workflow = jira.Workflow.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
+      issueType = jira.IssueType.instance._System__Problem@his
+    },
+    {
+      workflow = jira.Workflow.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
+      issueType = jira.IssueType.instance.Emailed_request@s
+    },
+    {
+      workflow = jira.Workflow.instance.migrationtest4
+      issueType = jira.IssueType.instance.guytestissuetype
+    },
+  ]
+}

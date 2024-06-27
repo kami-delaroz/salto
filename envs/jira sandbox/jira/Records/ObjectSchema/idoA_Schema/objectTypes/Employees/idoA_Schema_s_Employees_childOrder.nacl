@@ -1,0 +1,14 @@
+jira.ObjectTypeOrder idoA_Schema_s_Employees_childOrder@umuu {
+  objectTypes = [
+    jira.ObjectType.instance.idoA_Schema_s_Employees_umu_Shir@uuumu,
+    jira.ObjectType.instance.idoA_Schema_s_Employees_umu_Segev@uuumu,
+    jira.ObjectType.instance.idoA_Schema_s_Employees_umu_Shay@uuumu,
+    jira.ObjectType.instance.idoA_Schema_s_Employees_umu_IdoA@uuumu,
+    jira.ObjectType.instance.idoA_Schema_s_Employees_umu_Omri@uuumu,
+    jira.ObjectType.instance.idoA_Schema_s_Employees_umu_oneF@uuumu,
+  ]
+  assetsSchema = jira.ObjectSchema.instance.idoA_Schema@s
+  _parent = [
+    jira.ObjectType.instance.idoA_Schema_s_Employees@umu,
+  ]
+}

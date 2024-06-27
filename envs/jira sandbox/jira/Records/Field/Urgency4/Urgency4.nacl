@@ -1,0 +1,12 @@
+jira.Field Urgency4__select__c {
+  name = "Urgency4"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  contexts = [
+    jira.CustomFieldContext.instance.Urgency4__select__c_test,
+    jira.CustomFieldContext.instance.Urgency4__select__c_test2,
+    jira.CustomFieldContext.instance.Urgency4__select__c_test3,
+  ]
+  _alias = "Urgency4"
+}

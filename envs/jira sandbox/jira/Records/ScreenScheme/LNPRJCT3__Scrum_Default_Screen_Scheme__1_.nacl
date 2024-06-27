@@ -1,0 +1,7 @@
+jira.ScreenScheme LNPRJCT3__Scrum_Default_Screen_Scheme__1_@fsssssjk {
+  name = "LNPRJCT3: Scrum Default Screen Scheme (1)"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.LNPRJCT3__Scrum_Default_Issue_Screen__1_@fsssssjk
+  }
+}

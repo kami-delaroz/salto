@@ -1,0 +1,7 @@
+jira.Priority guytestpriority {
+  statusColor = "#2dd2a3"
+  description = ""
+  iconUrl = "/images/icons/priorities/minor.svg"
+  name = "guytestpriority"
+  _alias = "guytestpriority"
+}

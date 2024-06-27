@@ -1,0 +1,9 @@
+jira.Field Restrict_to__issuerestriction@suu {
+  name = "Restrict to"
+  schema = {
+    type = "issuerestriction"
+    system = "issuerestriction"
+  }
+  description = ""
+  _alias = "Restrict to"
+}

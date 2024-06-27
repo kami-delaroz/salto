@@ -1,0 +1,10 @@
+jira.Field Simple_Assets__cmdb_object_cftype__c@suubbuu {
+  name = "Simple Assets"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugins.cmdb:cmdb-object-searcher"
+  type = "com.atlassian.jira.plugins.cmdb:cmdb-object-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Simple_Assets__cmdb_object_cftype__c_suubbuu_Default_Configuration_Scheme_for_Simple_Assets@uuuuuuumusssss,
+  ]
+  _alias = "Simple Assets"
+}

@@ -1,0 +1,17 @@
+jira.Screen FUN__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss {
+  name = "FUN: Simple Issue Tracking Resolve Issue Screen"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Summary__string,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+        jira.Field.instance.Reporter__user,
+        jira.Field.instance.Linked_Issues__array@suu,
+        jira.Field.instance.Resolution__resolution,
+      ]
+      position = 0
+    }
+  }
+}

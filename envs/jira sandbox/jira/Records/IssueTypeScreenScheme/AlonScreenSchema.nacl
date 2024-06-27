@@ -1,0 +1,18 @@
+jira.IssueTypeScreenScheme AlonScreenSchema {
+  name = "AlonScreenSchema"
+  description = "desc"
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Bug
+      screenSchemeId = jira.ScreenScheme.instance.TPT__Scrum_Default_Screen_Scheme@fssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Epic
+      screenSchemeId = jira.ScreenScheme.instance.AP2__Kanban_Bug_Screen_Scheme@fssss
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.TPT__Scrum_Bug_Screen_Scheme@fssss
+    },
+  ]
+}

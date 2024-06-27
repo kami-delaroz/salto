@@ -1,0 +1,13 @@
+jira.Project BatelProject24 {
+  key = "BAA"
+  description = ""
+  name = "BatelProject24"
+  projectTypeKey = "software"
+  entityId = "f0e75471-9bd0-46a6-8f06-1014f2a6dbd2"
+  uuid = "f0e75471-9bd0-46a6-8f06-1014f2a6dbd2"
+  issueSecurityScheme = jira.SecurityScheme.instance.BAA__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+}

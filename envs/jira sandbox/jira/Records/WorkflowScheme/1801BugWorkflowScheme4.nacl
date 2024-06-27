@@ -1,0 +1,31 @@
+jira.WorkflowScheme "1801BugWorkflowScheme4" {
+  name = "1801BugWorkflowScheme4"
+  description = "<SECRET_TOKEN>"
+  defaultWorkflow = jira.Workflow.instance.Software_Simplified_Workflow_for_Project_TP3@s
+  items = [
+    {
+      workflow = jira.Workflow.instance.Software_Simplified_Workflow_for_Project_TP3@s
+      issueType = jira.IssueType.instance.Epic
+    },
+    {
+      workflow = jira.Workflow.instance.Lior_s_Test_Workflow@tss
+      issueType = jira.IssueType.instance.Task
+    },
+    {
+      workflow = jira.Workflow.instance.Software_Simplified_Workflow_for_Project_TP3@s
+      issueType = jira.IssueType.instance.Sub_task@b
+    },
+    {
+      workflow = jira.Workflow.instance.Software_Simplified_Workflow_for_Project_LIORCOMP@s
+      issueType = jira.IssueType.instance.Story
+    },
+    {
+      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_4_2@tssss
+      issueType = jira.IssueType.instance.Bug
+    },
+    {
+      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_4_2@tssss
+      issueType = jira.IssueType.instance.Improvement
+    },
+  ]
+}

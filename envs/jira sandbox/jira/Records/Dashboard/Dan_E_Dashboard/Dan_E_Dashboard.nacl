@@ -1,0 +1,18 @@
+jira.Dashboard Dan_E_Dashboard@s {
+  description = "Dan's Dashboard"
+  name = "Dan E Dashboard"
+  owner = {
+    id = "712020:f12c0bf7-5d75-427b-b149-5ddd2da2ab8e"
+    displayName = "Dan English"
+  }
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.Dan_E_Dashboard_s__Assigned_to_Me_0_0@uumuussuu,
+    jira.DashboardGadget.instance.Dan_E_Dashboard_s__Activity_Stream_0_1@uumuusuu,
+  ]
+  layout = "AA"
+}

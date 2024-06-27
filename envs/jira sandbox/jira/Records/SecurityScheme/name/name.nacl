@@ -1,0 +1,10 @@
+jira.SecurityScheme name {
+  name = "name"
+  description = "description7"
+  levels = [
+    jira.SecurityLevel.instance.name__name,
+    jira.SecurityLevel.instance.name__name2,
+    jira.SecurityLevel.instance.name__name3,
+  ]
+  defaultLevel = jira.SecurityLevel.instance.name__name
+}

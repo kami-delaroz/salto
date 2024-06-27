@@ -1,0 +1,42 @@
+jira.Board DSP_board@s {
+  name = "DSP board"
+  type = "scrum"
+  admins = {
+    users = [
+      {
+        id = "6205b3c7d362410069133701"
+        displayName = "Dan Putman"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.DP___SaaS_Project@sbss
+  }
+  filterId = jira.Filter.instance.Filter_for_DSP_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "To Do"
+        statuses = [
+          jira.Status.instance.to_do@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "none"
+  }
+  estimation = {
+    field = jira.Field.instance.Story_Points__float__c@suuuu
+  }
+}

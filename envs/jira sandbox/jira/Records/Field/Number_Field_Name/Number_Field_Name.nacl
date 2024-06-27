@@ -1,0 +1,10 @@
+jira.Field Number_Field_Name__float__c@ssuuuu {
+  name = "Number Field Name"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:float"
+  contexts = [
+    jira.CustomFieldContext.instance.Number_Field_Name__float__c_ssuuuu_Default_Configuration_Scheme_for_Number_Field_Name@uuuuuumussssss,
+  ]
+  _alias = "Number Field Name"
+}

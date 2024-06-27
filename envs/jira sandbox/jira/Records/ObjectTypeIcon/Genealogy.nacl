@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Genealogy {
+  name = "Genealogy"
+  icon = file("jira/ObjectTypeIcon/Genealogy.png")
+}

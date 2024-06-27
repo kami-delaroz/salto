@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Camera {
+  name = "Camera"
+  icon = file("jira/ObjectTypeIcon/Camera.png")
+}

@@ -1,0 +1,13 @@
+jira.ProjectComponent testFacilities2__Jira2 {
+  description = "Issues related to Jira. Created by Jira Service Management."
+  assigneeType = "UNASSIGNED"
+  name = "Jira2"
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  _parent = [
+    jira.Project.instance.testFacilities2,
+  ]
+  _alias = "testFacilities2:Jira2"
+}

@@ -1,0 +1,6 @@
+jira.Status change_open_name@s {
+  name = "change Open name"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = "The issue is open and ready for the assignee to start work on it."
+  _alias = "change Open name"
+}

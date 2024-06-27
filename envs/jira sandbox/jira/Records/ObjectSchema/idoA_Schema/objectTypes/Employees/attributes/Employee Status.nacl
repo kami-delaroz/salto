@@ -1,0 +1,23 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Employees_umu_Employee_Status@uuumus {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Employees@umu
+  name = "Employee Status"
+  type = 7
+  description = "Employment status of employee"
+  typeValueMulti = [
+    jira.ObjectSchemaStatus.instance.idoA_Schema_s__Exempt@umuu,
+    jira.ObjectSchemaStatus.instance.idoA_Schema_s__Nonexempt@umuu,
+  ]
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  _alias = "Employee Status"
+}

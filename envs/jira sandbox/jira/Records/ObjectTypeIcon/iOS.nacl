@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon iOS {
+  name = "iOS"
+  icon = file("jira/ObjectTypeIcon/iOS.png")
+}

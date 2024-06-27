@@ -1,0 +1,6 @@
+jira.Status int_re_work@sb {
+  name = "int re-work"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "int re-work"
+}

@@ -1,0 +1,6 @@
+jira.Status cancelled3 {
+  name = "Cancelled3"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = "test new api deploy"
+  _alias = "Cancelled3"
+}

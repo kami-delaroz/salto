@@ -1,0 +1,9 @@
+jira.Field Work_Ratio__number@suu {
+  name = "Work Ratio"
+  schema = {
+    type = "number"
+    system = "workratio"
+  }
+  description = ""
+  _alias = "Work Ratio"
+}

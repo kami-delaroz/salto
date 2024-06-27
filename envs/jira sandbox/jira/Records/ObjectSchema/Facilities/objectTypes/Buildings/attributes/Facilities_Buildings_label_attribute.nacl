@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute Facilities_Buildings_label_attribute {
+  labelAttribute = jira.ObjectTypeAttribute.instance.Facilities_Buildings_Name
+  objectType = jira.ObjectType.instance.Facilities_Buildings
+}

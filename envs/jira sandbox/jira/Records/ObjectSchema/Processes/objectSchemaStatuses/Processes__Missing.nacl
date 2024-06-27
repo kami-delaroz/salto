@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus Processes__Missing {
+  name = "Missing"
+  description = "Asset is not found in its expected location"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.Processes,
+  ]
+  _alias = "Processes:Missing"
+}

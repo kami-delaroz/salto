@@ -1,0 +1,34 @@
+jira.Project GWR_JSM3@s {
+  key = "GJ3"
+  description = ""
+  name = "GWR JSM3"
+  projectTypeKey = "service_desk"
+  components = [
+    jira.ProjectComponent.instance.GWR_JSM3_s__Active_Directory@umuus,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Analytics_and_Reporting_Service@umuusss,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Billing_Services@umuus,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Cloud_Storage_Services@umuuss,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Data_Center_Services@umuuss,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Email_and_Collaboration_Services@umuusss,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Financial_Services@umuus,
+    jira.ProjectComponent.instance.GWR_JSM3_s__HR_Services@umuus,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Intranet@umuu,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Jira@umuu,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Office_Network@umuus,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Payroll_Services@umuus,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Printers@umuu,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Public_Website@umuus,
+    jira.ProjectComponent.instance.GWR_JSM3_s__VPN_Server@umuus,
+    jira.ProjectComponent.instance.GWR_JSM3_s__Webstore_Purchasing_Services@umuuss,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_GJ3@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_GJ3@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.GJ3__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.GJ3__Jira_Service_Management_Issue_Type_Scheme@fssssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_GJ3@s
+  leadAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+}
