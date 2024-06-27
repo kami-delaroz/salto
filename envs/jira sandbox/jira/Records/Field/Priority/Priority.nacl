@@ -1,0 +1,9 @@
+jira.Field Priority__priority {
+  name = "Priority"
+  schema = {
+    type = "priority"
+    system = "priority"
+  }
+  description = ""
+  _alias = "Priority"
+}

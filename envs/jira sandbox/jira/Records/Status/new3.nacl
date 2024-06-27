@@ -1,0 +1,6 @@
+jira.Status new3 {
+  name = "new3"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = "test3!"
+  _alias = "new3"
+}

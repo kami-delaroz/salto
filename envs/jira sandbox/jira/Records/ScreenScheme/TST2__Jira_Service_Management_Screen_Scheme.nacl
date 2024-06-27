@@ -1,0 +1,7 @@
+jira.ScreenScheme TST2__Jira_Service_Management_Screen_Scheme@fsssss {
+  name = "TST2: Jira Service Management Screen Scheme"
+  description = "This Jira Service Management Screen Scheme was generated automatically"
+  screens = {
+    default = jira.Screen.instance.TST2__Jira_Service_Management_Screen@fssss
+  }
+}

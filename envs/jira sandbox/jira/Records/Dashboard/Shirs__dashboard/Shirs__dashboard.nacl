@@ -1,0 +1,19 @@
+jira.Dashboard Shirs__dashboard@s {
+  description = "check refs"
+  name = "Shirs  dashboard"
+  owner = {
+    id = "616e3f77e79ff6006f1eca7f"
+    displayName = "Shir Reifenberg"
+  }
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.Shirs__dashboard_s__Assigned_to_Me_0_0@uumuussuu,
+    jira.DashboardGadget.instance.Shirs__dashboard_s__Pie_Chart_1_0@uumuusuu,
+    jira.DashboardGadget.instance.Shirs__dashboard_s__Recently_Created_Chart_1_1@uumuussuu,
+  ]
+  layout = "AA"
+}

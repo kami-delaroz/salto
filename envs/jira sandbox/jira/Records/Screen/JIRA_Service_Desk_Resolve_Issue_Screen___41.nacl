@@ -1,0 +1,14 @@
+jira.Screen JIRA_Service_Desk_Resolve_Issue_Screen___41@ssssssbs {
+  name = "JIRA Service Desk Resolve Issue Screen - 41"
+  description = "Allows to set resolution and linked issues"
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Resolution__resolution,
+        jira.Field.instance.Linked_Issues__array@suu,
+      ]
+      position = 0
+    }
+  }
+}

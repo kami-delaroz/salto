@@ -1,0 +1,430 @@
+jira.Workflow PCP__Process_Management_Workflow@fsss {
+  description = "process-management-workflow5"
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = 173.58804365787094
+        },
+      ]
+    }
+    Start_Progress__From__Open__Directed@sfffsff = {
+      name = "Start Progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 5.242567275110901
+          targetAngle = 176.06853895443763
+        },
+      ]
+      to = jira.Status.instance.in_progress@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Stop_progress__From__In_Progress__Directed@sfffssff = {
+      name = "Stop progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.in_progress@s
+          sourceAngle = 176.06853895443763
+          targetAngle = 3.696030397701435
+        },
+      ]
+      to = jira.Status.instance.cancelled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Reopen__From__Cancelled__Directed@fffsff = {
+      name = "Reopen"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.cancelled
+          sourceAngle = 175.7574896719788
+          targetAngle = 5.242567275110901
+        },
+      ]
+      to = jira.Status.instance.open
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "RESOLVE_ISSUES"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Reject__From__Under_Review__Directed@fffssff = {
+      name = "Reject"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.under_review@s
+          sourceAngle = 176.35442497325423
+          targetAngle = 3.990190478904877
+        },
+      ]
+      to = jira.Status.instance.rejected
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Comment_Screen@fsssss
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Start_progress__From__Rejected__Directed@sfffsff = {
+      name = "Start progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.rejected
+          sourceAngle = 3.990190478904877
+          targetAngle = 176.06853895443763
+        },
+      ]
+      to = jira.Status.instance.in_progress@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "ClearFieldValuePostFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Creator__user
+            }
+          },
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Ready_for_review__From__In_Progress__Directed@ssfffssff = {
+      name = "Ready for review"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.in_progress@s
+          sourceAngle = 3.457613863747836
+          targetAngle = 176.35442497325423
+        },
+      ]
+      to = jira.Status.instance.under_review@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Approve__From__Under_Review__Directed@fffssff = {
+      name = "Approve"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.under_review@s
+          sourceAngle = 176.35442497325423
+          targetAngle = 3.886733949295533
+        },
+      ]
+      to = jira.Status.instance.approved
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Done__From__Approved__Directed@fffsff = {
+      name = "Done"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.approved
+          sourceAngle = 175.50442041538955
+          targetAngle = 5.207302297233845
+        },
+      ]
+      to = jira.Status.instance.done
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "RESOLVE_ISSUES"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.approved
+      name = "Approved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1064.125
+        y = 117.4
+      }
+    },
+    {
+      id = jira.Status.instance.cancelled
+      name = "Cancelled"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1061.078125
+        y = 217.4
+      }
+    },
+    {
+      id = jira.Status.instance.done
+      name = "Done"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1079.109375
+        y = 67.4
+      }
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      name = "In Progress"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1056.796875
+        y = 267.4
+      }
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1079.40625
+        y = -32.599999999999994
+      }
+    },
+    {
+      id = jira.Status.instance.rejected
+      name = "Rejected"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1065.65625
+        y = 167.4
+      }
+    },
+    {
+      id = jira.Status.instance.under_review@s
+      name = "Under Review"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 1052.21875
+        y = 17.400000000000006
+      }
+    },
+  ]
+  name = "PCP: Process Management Workflow"
+  diagramInitialEntry = {
+    x = 1104
+    y = -82.6
+  }
+}

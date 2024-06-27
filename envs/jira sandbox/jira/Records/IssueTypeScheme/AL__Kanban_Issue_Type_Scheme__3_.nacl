@@ -1,0 +1,11 @@
+jira.IssueTypeScheme AL__Kanban_Issue_Type_Scheme__3_@fsssssjk {
+  name = "AL: Kanban Issue Type Scheme (3)"
+  defaultIssueTypeId = jira.IssueType.instance.Story
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Epic,
+  ]
+}

@@ -1,0 +1,12 @@
+jira.PortalGroup Servers_and_Infrastructure_ITSAMPLE@ssu {
+  name = "Servers and Infrastructure"
+  ticketTypeIds = [
+    jira.RequestType.instance.Report_a_system_problem_ITSAMPLE@sssu,
+    jira.RequestType.instance.Report_broken_hardware_ITSAMPLE@ssu,
+    jira.RequestType.instance.Request_a_change_ITSAMPLE@ssu,
+  ]
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Servers and Infrastructure"
+}

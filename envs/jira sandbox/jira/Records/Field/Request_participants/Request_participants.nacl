@@ -1,0 +1,11 @@
+jira.Field Request_participants__sd_request_participants__c@suubbuu {
+  name = "Request participants"
+  description = "Stores the users that are participants in service project customer portal requests. This custom field is created programmatically and required by service project."
+  isLocked = true
+  searcherKey = "com.atlassian.servicedesk:sd-request-participants-searcher"
+  type = "com.atlassian.servicedesk:sd-request-participants"
+  contexts = [
+    jira.CustomFieldContext.instance.Request_participants__sd_request_participants__c_suubbuu_Default_Configuration_Scheme_for_Request_participants@uuuuuuumusssss,
+  ]
+  _alias = "Request participants"
+}

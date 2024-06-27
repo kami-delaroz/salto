@@ -1,0 +1,18 @@
+jira.FieldConfigurationScheme Custom_field_config@s {
+  name = "Custom field config"
+  description = "desc!"
+  items = [
+    {
+      issueTypeId = "default"
+      fieldConfigurationId = jira.FieldConfiguration.instance.Default_Field_Configuration@s
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Custom_issue_type_two@s
+      fieldConfigurationId = jira.FieldConfiguration.instance.Custom_field_config@s
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Story
+      fieldConfigurationId = jira.FieldConfiguration.instance.Custom_field_config@s
+    },
+  ]
+}

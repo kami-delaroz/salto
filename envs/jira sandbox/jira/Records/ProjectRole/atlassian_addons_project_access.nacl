@@ -1,0 +1,156 @@
+jira.ProjectRole atlassian_addons_project_access@b {
+  name = "atlassian-addons-project-access"
+  description = "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions"
+  actors = [
+    {
+      displayName = "Atlas for Jira Cloud"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "630db2cd9796033b256bc349"
+          displayName = "Atlas for Jira Cloud"
+        }
+      }
+    },
+    {
+      displayName = "Atlassian Assist"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "5cb4ae0e4b97ab11a18e00c7"
+          displayName = "Atlassian Assist"
+        }
+      }
+    },
+    {
+      displayName = "Automation for Jira"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077"
+          displayName = "Automation for Jira"
+        }
+      }
+    },
+    {
+      displayName = "Configuration Manager For Jira Cloud"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "5ffe30c134847e006944f3f5"
+          displayName = "Configuration Manager For Jira Cloud"
+        }
+      }
+    },
+    {
+      displayName = "Jira Misc Workflow Extensions"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "557058:472c64c9-2567-4213-839b-86bf21558300"
+          displayName = "Jira Misc Workflow Extensions"
+        }
+      }
+    },
+    {
+      displayName = "Jira Outlook"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "5d53f3cbc6b9320d9ea5bdc2"
+          displayName = "Jira Outlook"
+        }
+      }
+    },
+    {
+      displayName = "Jira Service Management Widget"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "557058:950f9f5b-3d6d-4e1d-954a-21367ae9ac75"
+          displayName = "Jira Service Management Widget"
+        }
+      }
+    },
+    {
+      displayName = "Jira Spreadsheets"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "5cf112d31552030f1e3a5905"
+          displayName = "Jira Spreadsheets"
+        }
+      }
+    },
+    {
+      displayName = "Microsoft Teams for Jira Cloud"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "60e5a86a471e61006a4c51fd"
+          displayName = "Microsoft Teams for Jira Cloud"
+        }
+      }
+    },
+    {
+      displayName = "Proforma Migrator"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "63a22fb348b367d78a14c15b"
+          displayName = "Proforma Migrator"
+        }
+      }
+    },
+    {
+      displayName = "ScriptRunner for Jira"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "557058:d2e5bd5c-dc49-41eb-a6f0-5e01093666c1"
+          displayName = "ScriptRunner for Jira"
+        }
+      }
+    },
+    {
+      displayName = "Slack"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "557058:0867a421-a9ee-4659-801a-bc0ee4a4487e"
+          displayName = "Slack"
+        }
+      }
+    },
+    {
+      displayName = "Statuspage for Jira"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "5b6c7b3afbc68529c6c47967"
+          displayName = "Statuspage for Jira"
+        }
+      }
+    },
+    {
+      displayName = "System"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "5dd64082af96bc0efbe55103"
+          displayName = "System"
+        }
+      }
+    },
+    {
+      displayName = "Trello"
+      type = "atlassian-user-role-actor"
+      actorUser = {
+        accountId = {
+          id = "557058:214cdd6a-ff93-4d8b-838b-62dfcf1a2a71"
+          displayName = "Trello"
+        }
+      }
+    },
+  ]
+}

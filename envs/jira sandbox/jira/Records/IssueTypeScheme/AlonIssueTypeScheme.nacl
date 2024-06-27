@@ -1,0 +1,9 @@
+jira.IssueTypeScheme AlonIssueTypeScheme {
+  name = "AlonIssueTypeScheme"
+  description = "asd"
+  issueTypeIds = [
+    jira.IssueType.instance.Bug5,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Story,
+  ]
+}

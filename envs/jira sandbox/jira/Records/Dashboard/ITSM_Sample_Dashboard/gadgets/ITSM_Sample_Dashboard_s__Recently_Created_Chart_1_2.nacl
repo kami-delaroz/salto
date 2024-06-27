@@ -1,0 +1,40 @@
+jira.DashboardGadget ITSM_Sample_Dashboard_s__Recently_Created_Chart_1_2@uumuussuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.gadgets:recently-created-chart-gadget/gadgets/recently-created-gadget.xml"
+  color = "blue"
+  position = {
+    row = 2
+    column = 1
+  }
+  title = "Recently Created Chart"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+        {
+          key = "periodName"
+          value = "weekly"
+        },
+        {
+          key = "daysprevious"
+          value = "30"
+        },
+        {
+          key = "projectOrFilterId"
+          value = jira.Project.instance.ITSM_sample_space@s
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.ITSM_Sample_Dashboard@s,
+  ]
+  _alias = "Recently Created Chart"
+}

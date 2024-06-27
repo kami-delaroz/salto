@@ -1,0 +1,14 @@
+jira.ObjectType idoA_Schema_s_Department4_umu_SALES@uuumu {
+  name = "SALES"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.idoA_Schema_s_Department4@umu
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Parallel_Tasks@s
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+  _alias = "SALES"
+}

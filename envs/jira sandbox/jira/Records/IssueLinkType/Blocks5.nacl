@@ -1,0 +1,5 @@
+jira.IssueLinkType Blocks5 {
+  name = "Blocks5"
+  inward = "is blocked by5"
+  outward = "blocks5"
+}

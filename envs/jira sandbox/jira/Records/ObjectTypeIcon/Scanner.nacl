@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Scanner {
+  name = "Scanner"
+  icon = file("jira/ObjectTypeIcon/Scanner.png")
+}

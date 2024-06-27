@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus Processes__In_Use@uus {
+  name = "In Use"
+  description = "Asset is deployed and functioning"
+  category = 1
+  _parent = [
+    jira.ObjectSchema.instance.Processes,
+  ]
+  _alias = "Processes:In Use"
+}

@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_lf_logo_url@v {
+  id = "jira.lf.logo.url"
+  value = "/images/icon-jira-logo.png"
+  name = "jira.lf.logo.url"
+  type = "string (url)"
+}

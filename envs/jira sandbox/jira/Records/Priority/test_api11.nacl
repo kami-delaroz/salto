@@ -1,0 +1,7 @@
+jira.Priority test_api11 {
+  statusColor = "#ffff00"
+  description = ""
+  iconUrl = "https://ori-salto-test.atlassian.netimages/icons/priorities/minor.svg"
+  name = "test_api11"
+  _alias = "test_api11"
+}

@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute Facilities_Floors_Floor_Barcode@uus {
+  objectType = jira.ObjectType.instance.Facilities_Floors
+  name = "Floor Barcode"
+  type = 0
+  description = "Barcode for the floor"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "Floor Barcode"
+}

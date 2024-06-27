@@ -1,0 +1,11 @@
+jira.Field Project_overview_key__read_only_string_issue_field__c@ssuubbbbuu {
+  name = "Project overview key"
+  description = "Key of project overview connected via Atlassian Home for Jira Cloud"
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:readonlyissuefieldsearcher"
+  type = "read-only-string-issue-field"
+  contexts = [
+    jira.CustomFieldContext.instance.Project_overview_key__read_only_string_issue_field__c_ssuubbbbuu_Default_Configuration_Scheme_for_Atlas_project_key@uuuuuuuuuumussssss,
+  ]
+  _alias = "Project overview key"
+}

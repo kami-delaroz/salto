@@ -1,0 +1,14 @@
+jira.PortalGroup Common_Requests_ITSAMPLE@su {
+  name = "Common Requests"
+  ticketTypeIds = [
+    jira.RequestType.instance.Get_IT_help_ITSAMPLE@ssu,
+    jira.RequestType.instance.Set_up_VPN_to_the_office_ITSAMPLE@sssssu,
+    jira.RequestType.instance.Request_a_new_account_ITSAMPLE@sssu,
+    jira.RequestType.instance.Report_a_system_problem_ITSAMPLE@sssu,
+    jira.RequestType.instance.Report_broken_hardware_ITSAMPLE@ssu,
+  ]
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Common Requests"
+}

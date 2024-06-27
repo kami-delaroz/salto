@@ -1,0 +1,13 @@
+jira.DashboardGadget Dan_E_Dashboard_s__Activity_Stream_0_1@uumuusuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.streams.streams-jira-plugin:activitystream-gadget/gadgets/activitystream-gadget.xml"
+  color = "blue"
+  position = {
+    row = 1
+    column = 0
+  }
+  title = "Activity Stream"
+  _parent = [
+    jira.Dashboard.instance.Dan_E_Dashboard@s,
+  ]
+  _alias = "Activity Stream"
+}

@@ -1,0 +1,4 @@
+jira.SecurityScheme BIZAPP__Simplified_Issue_Security_Scheme@fssss {
+  name = "BIZAPP: Simplified Issue Security Scheme"
+  description = ""
+}

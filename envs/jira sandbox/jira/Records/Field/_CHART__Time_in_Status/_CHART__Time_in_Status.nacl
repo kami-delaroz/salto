@@ -1,0 +1,10 @@
+jira.Field _CHART__Time_in_Status__timeinstatus__c@hisssuuuu {
+  name = "[CHART] Time in Status"
+  description = ""
+  searcherKey = "com.atlassian.jira.ext.charting:textsearcher"
+  type = "com.atlassian.jira.ext.charting:timeinstatus"
+  contexts = [
+    jira.CustomFieldContext.instance._CHART__Time_in_Status__timeinstatus__c_hisssuuuu_Default_Configuration_Scheme_for__CHART__Time_in_Status@uuuuuuuuumusssshisss,
+  ]
+  _alias = "[CHART] Time in Status"
+}

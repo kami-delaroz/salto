@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Settings {
+  name = "Settings"
+  icon = file("jira/ObjectTypeIcon/Settings.png")
+}

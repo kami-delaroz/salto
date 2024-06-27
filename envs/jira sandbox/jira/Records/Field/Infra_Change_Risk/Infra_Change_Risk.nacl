@@ -1,0 +1,15 @@
+jira.Field Infra_Change_Risk__select__c@ssuuuu {
+  name = "Infra Change Risk"
+  description = '''
+Risk level for infrastructure change.
+Low: confident (as much as we can) that this change won't affect operations.
+Medium: should not affect operations but might cause them.
+High: will probably affect the operations of the app (downtime, customer data, security, etc)
+'''
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  contexts = [
+    jira.CustomFieldContext.instance.Infra_Change_Risk__select__c_ssuuuu_Default_Configuration_Scheme_for_Infra_Change_Risk@uuuuuumussssss,
+  ]
+  _alias = "Infra Change Risk"
+}

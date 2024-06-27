@@ -1,0 +1,20 @@
+jira.Project Website_@s {
+  key = "WWW"
+  description = ""
+  url = "https://www.salto.io"
+  name = "Website "
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.WWW__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.WWW__Software_Development_Issue_Type_Screen_Scheme@fssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.WWW__Software_Development_Issue_Type_Scheme@fsssss
+  leadAccountId = {
+    id = "5c7289009170244d98d8192c"
+    displayName = "Gil Hoffer"
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+    jira.CustomFieldContext.instance.testVersionPicker__multiversion__c_Default_Configuration_Scheme_for_testVersionPicker@uuuuussss,
+  ]
+}
