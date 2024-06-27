@@ -1,0 +1,13 @@
+jira.ObjectType IT_Inventory__s_Hardware_Assets@uumus {
+  name = "Hardware Assets"
+  type = 0
+  inherited = true
+  abstractObjectType = true
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Workstation
+  parentObjectTypeId = jira.ObjectSchema.instance.IT_Inventory_@s
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "Hardware Assets"
+}

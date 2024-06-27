@@ -1,0 +1,7 @@
+jira.ApplicationProperty Use_ISO8601_standard_in_Date_Picker@s {
+  id = "jira.date.time.picker.use.iso8061"
+  value = "false"
+  name = "Use ISO8601 standard in Date Picker"
+  desc = "Turning it on will cause Monday to be the first day of week in the Date Picker, as specified by the ISO8601 standard"
+  type = "boolean"
+}

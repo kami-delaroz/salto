@@ -1,0 +1,94 @@
+jira.NotificationScheme test6 {
+  name = "test6"
+  description = "test"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          type = "ComponentLead"
+        },
+        {
+          type = "CurrentUser"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Commented@s
+    },
+    {
+      notifications = [
+        {
+          type = "ComponentLead"
+        },
+        {
+          type = "CurrentUser"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Created@s
+    },
+    {
+      notifications = [
+        {
+          type = "ComponentLead"
+        },
+        {
+          type = "CurrentUser"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Resolved@s
+    },
+    {
+      notifications = [
+        {
+          parameter = jira.Field.instance.Severity__select__c
+          type = "GroupCustomField"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          parameter = {
+            id = "5fa91999b2633d0076583a61"
+            displayName = "Alon Stern"
+          }
+          type = "User"
+        },
+        {
+          parameter = jira.Field.instance.Who_is_moving___multiuserpicker__c@ssauuuu
+          type = "UserCustomField"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Updated@s
+    },
+    {
+      notifications = [
+        {
+          type = "ComponentLead"
+        },
+        {
+          type = "CurrentUser"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Worklog_Deleted@s
+    },
+    {
+      notifications = [
+        {
+          type = "CurrentAssignee"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Work_Stopped_On_Issue@s
+    },
+  ]
+}

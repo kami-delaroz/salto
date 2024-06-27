@@ -1,0 +1,13 @@
+jira.ProjectComponent GWR_svc_mgt_2_s__Intranet@uuumuu {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Intranet"
+  leadAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+  _parent = [
+    jira.Project.instance.GWR_svc_mgt_2@s,
+  ]
+  _alias = "GWR svc mgt 2:Intranet"
+}

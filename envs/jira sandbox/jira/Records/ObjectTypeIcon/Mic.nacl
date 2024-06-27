@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Mic {
+  name = "Mic"
+  icon = file("jira/ObjectTypeIcon/Mic.png")
+}

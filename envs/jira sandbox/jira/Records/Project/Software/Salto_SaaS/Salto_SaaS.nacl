@@ -1,0 +1,34 @@
+jira.Project Salto_SaaS@s {
+  key = "SAAS"
+  description = ""
+  name = "Salto SaaS"
+  projectTypeKey = "software"
+  components = [
+    jira.ProjectComponent.instance.Salto_SaaS_s__admin@umuu,
+    jira.ProjectComponent.instance.Salto_SaaS_s__BE@umuu,
+    jira.ProjectComponent.instance.Salto_SaaS_s__billing@umuu,
+    jira.ProjectComponent.instance.Salto_SaaS_s__Data@umuu,
+    jira.ProjectComponent.instance.Salto_SaaS_s__editor___BE@umuusbs,
+    jira.ProjectComponent.instance.Salto_SaaS_s__envs___BE@umuusbs,
+    jira.ProjectComponent.instance.Salto_SaaS_s__github@umuu,
+    jira.ProjectComponent.instance.Salto_SaaS_s__gitlab@umuu,
+    jira.ProjectComponent.instance.Salto_SaaS_s__Infra___BE@umuusbs,
+    jira.ProjectComponent.instance.Salto_SaaS_s__operations___BE@umuusbs,
+    jira.ProjectComponent.instance.Salto_SaaS_s__orgs_and_users___BE@umuusssbs,
+    jira.ProjectComponent.instance.Salto_SaaS_s__repos___BE@umuusbs,
+    jira.ProjectComponent.instance.Salto_SaaS_s__tracker@umuu,
+    jira.ProjectComponent.instance.Salto_SaaS_s__UI@umuu,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.SALTO__Software_Simplified_Workflow_Scheme__1_@fsssssjk
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.SALTO__Software_Development_Issue_Type_Screen_Scheme@fssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.SALTO__Software_Development_Issue_Type_Scheme@fsssss
+  leadAccountId = {
+    id = "5c7289009170244d98d8192c"
+    displayName = "Gil Hoffer"
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}

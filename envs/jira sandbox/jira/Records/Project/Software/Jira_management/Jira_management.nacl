@@ -1,0 +1,22 @@
+jira.Project Jira_management@s {
+  key = "JAM"
+  description = ""
+  name = "Jira management"
+  projectTypeKey = "software"
+  components = [
+    jira.ProjectComponent.instance.Jira_management_s__Jira_project_1@umuubb,
+    jira.ProjectComponent.instance.Jira_management_s__Jira_project_2@umuubb,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.JAM__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.JAM_software_permission_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.JAM__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.JAM__Kanban_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "5e5e289fc8ec310c955d2d15"
+    displayName = "Hadas Birin"
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}

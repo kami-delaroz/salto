@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_compass_is_enabled_for_new_project@vvvbbbb {
+  id = "jira.admin.compass.is-enabled-for-new-project"
+  value = "true"
+  name = "jira.admin.compass.is-enabled-for-new-project"
+  type = "boolean"
+}

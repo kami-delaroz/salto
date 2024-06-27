@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute DP___Services_sbs_Models_uuumu_Software_Models_label_attribute@uuuuumusuu {
+  labelAttribute = jira.ObjectTypeAttribute.instance.DP___Services_sbs_Models_uuumu_Software_Models_uuuuumus_Name@uuuuuuuumu
+  objectType = jira.ObjectType.instance.DP___Services_sbs_Models_uuumu_Software_Models@uuuuumus
+}

@@ -1,0 +1,30 @@
+jira.IssueTypeScheme GUYT__Kanban_Issue_Type_Scheme@fssss {
+  name = "GUYT: Kanban Issue Type Scheme"
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Bug5,
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.justfordeleting,
+    jira.IssueType.instance.IT_Help2@s,
+    jira.IssueType.instance.bug6,
+    jira.IssueType.instance.Bug3,
+    jira.IssueType.instance.Emailed_request@s,
+    jira.IssueType.instance._System__Incident@his,
+    jira.IssueType.instance._System__Post_incident_review@hisbs,
+    jira.IssueType.instance._System__Service_request_with_approvals@hissss,
+    jira.IssueType.instance._System__Problem@his,
+    jira.IssueType.instance.Request_a_move@s,
+    jira.IssueType.instance.Questions_for_facilities@s,
+    jira.IssueType.instance.Report_a_maintenance_issue@s,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+    jira.IssueType.instance.Incident,
+    jira.IssueType.instance._System__Service_request@hiss,
+    jira.IssueType.instance.LiorIssueTypeRenamed,
+    jira.IssueType.instance.Request_an_event@s,
+    jira.IssueType.instance.Service_Request@s,
+    jira.IssueType.instance.Ask_a_question@s,
+    jira.IssueType.instance.guytestissuetype,
+  ]
+}

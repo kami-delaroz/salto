@@ -1,0 +1,21 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Department_umu_group_member@uuumus {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Department@umu
+  name = "group member"
+  type = 1
+  description = ""
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.idoA_Schema_s__Member_of@umuus
+  typeValue = jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D_uuumue_Team_Amit@uuuuuumus
+  _alias = "group member"
+}

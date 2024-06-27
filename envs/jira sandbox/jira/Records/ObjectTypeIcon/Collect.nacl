@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Collect {
+  name = "Collect"
+  icon = file("jira/ObjectTypeIcon/Collect.png")
+}

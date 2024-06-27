@@ -1,0 +1,24 @@
+jira.ObjectTypeAttribute Lior_s_IT_Schema_tss_Models_uuumu_Hardware_Models_uuuuumus_Category@uuuuuuuumu {
+  objectType = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Hardware_Models@uuuuumus
+  name = "Category"
+  type = 1
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  suffix = ""
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = true
+  regexValidation = ""
+  qlQuery = ""
+  options = ""
+  iql = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.Lior_s_IT_Schema_tss__Assigned_to@uuumuus
+  typeValue = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Model_Categories@uuuuumus
+  _alias = "Category"
+}

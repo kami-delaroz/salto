@@ -1,0 +1,4 @@
+jira.ProjectRole rrrfffr {
+  name = "rrrfffr"
+  description = "This is second and appears in the UI"
+}

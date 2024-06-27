@@ -1,0 +1,6 @@
+jira.Status resolved {
+  name = "Resolved"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed."
+  _alias = "Resolved"
+}

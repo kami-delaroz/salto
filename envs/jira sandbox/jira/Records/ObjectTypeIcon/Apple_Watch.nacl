@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Apple_Watch@s {
+  name = "Apple Watch"
+  icon = file("jira/ObjectTypeIcon/Apple_Watch.png")
+}

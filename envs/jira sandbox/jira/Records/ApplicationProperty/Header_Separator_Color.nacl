@@ -1,0 +1,6 @@
+jira.ApplicationProperty Header_Separator_Color@s {
+  id = "jira.lf.top.separator.bgcolor"
+  value = "#2E3D54"
+  name = "Header Separator Color"
+  type = "colour"
+}

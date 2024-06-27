@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute ITSBX_Models_label_attribute {
+  labelAttribute = jira.ObjectTypeAttribute.instance.ITSBX_Models_Name
+  objectType = jira.ObjectType.instance.ITSBX_Models
+}

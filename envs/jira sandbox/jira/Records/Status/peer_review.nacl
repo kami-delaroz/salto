@@ -1,0 +1,6 @@
+jira.Status peer_review@s {
+  name = "peer review"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "peer review"
+}

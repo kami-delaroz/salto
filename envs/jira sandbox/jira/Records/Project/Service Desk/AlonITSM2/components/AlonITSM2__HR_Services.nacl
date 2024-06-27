@@ -1,0 +1,13 @@
+jira.ProjectComponent AlonITSM2__HR_Services@uus {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "HR Services"
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  _parent = [
+    jira.Project.instance.AlonITSM2,
+  ]
+  _alias = "AlonITSM2:HR Services"
+}

@@ -1,0 +1,16 @@
+jira.Filter Filter_for_DSP_board@s {
+  name = "Filter for DSP board"
+  owner = {
+    id = "6205b3c7d362410069133701"
+    displayName = "Dan Putman"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.DP___SaaS_Project@sbss.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.DP___SaaS_Project@sbss
+      }
+    },
+  ]
+}

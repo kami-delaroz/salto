@@ -1,0 +1,3 @@
+jira.IssueEvent Issue_Deleted@s {
+  name = "Issue Deleted"
+}

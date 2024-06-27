@@ -1,0 +1,9 @@
+jira.Field Last_Viewed__datetime@suu {
+  name = "Last Viewed"
+  schema = {
+    type = "datetime"
+    system = "lastViewed"
+  }
+  description = ""
+  _alias = "Last Viewed"
+}

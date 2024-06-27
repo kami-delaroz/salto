@@ -1,0 +1,8 @@
+jira.ProjectComponent AlonCompanyProject__test2 {
+  assigneeType = "PROJECT_LEAD"
+  name = "test2"
+  _parent = [
+    jira.Project.instance.AlonCompanyProject,
+  ]
+  _alias = "AlonCompanyProject:test2"
+}

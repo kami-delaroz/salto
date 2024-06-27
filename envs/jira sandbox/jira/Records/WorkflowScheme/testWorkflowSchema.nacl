@@ -1,0 +1,4 @@
+jira.WorkflowScheme testWorkflowSchema {
+  name = "testWorkflowSchema"
+  defaultWorkflow = jira.Workflow.instance.jira
+}

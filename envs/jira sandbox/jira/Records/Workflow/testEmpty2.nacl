@@ -1,0 +1,106 @@
+jira.Workflow testEmpty2 {
+  description = "This is a workflow used for Stories and Tasks"
+  transitions = {
+    Created__From__none__Initial@fffsff = {
+      name = "Created"
+      description = ""
+      to = jira.Status.instance._teststatus_@hi
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    In_progress__From___testStatus___Directed@sfffshiff = {
+      name = "In progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance._teststatus_@hi
+        },
+      ]
+      to = jira.Status.instance.a_shared_status4@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "custom-property"
+          value = "custom-value"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance._teststatus_@hi
+      name = "[testStatus]"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.a_shared_status3@s
+      name = "A shared status3"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.a_shared_status4@s
+      name = "A shared status4"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+  ]
+  name = "testEmpty2"
+}

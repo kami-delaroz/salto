@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus Lior_s_IT_Schema_tss__Missing@uuumuu {
+  name = "Missing"
+  description = "Asset is not found in its expected location"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "Lior's IT Schema:Missing"
+}

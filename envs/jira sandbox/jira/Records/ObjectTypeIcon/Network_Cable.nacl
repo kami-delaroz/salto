@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Network_Cable@s {
+  name = "Network Cable"
+  icon = file("jira/ObjectTypeIcon/Network_Cable.png")
+}

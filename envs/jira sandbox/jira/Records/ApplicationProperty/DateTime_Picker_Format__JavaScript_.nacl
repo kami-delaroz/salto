@@ -1,0 +1,7 @@
+jira.ApplicationProperty DateTime_Picker_Format__JavaScript_@sssjk {
+  id = "jira.date.time.picker.javascript.format"
+  value = "%e/%b/%y %I:%M %p"
+  name = "DateTime Picker Format (JavaScript)"
+  desc = "This part is only for the JavaScript (client side) generated date times. Note that this should correspond to the java datetime picker format (jira.date.time.picker.java.format) setting."
+  type = "string"
+}

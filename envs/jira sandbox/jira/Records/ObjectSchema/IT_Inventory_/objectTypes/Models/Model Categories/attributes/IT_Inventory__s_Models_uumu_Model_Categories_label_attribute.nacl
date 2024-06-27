@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute IT_Inventory__s_Models_uumu_Model_Categories_label_attribute@uuuumusuu {
+  labelAttribute = jira.ObjectTypeAttribute.instance.IT_Inventory__s_Models_uumu_Model_Categories_uuuumus_Name@uuuuuuumu
+  objectType = jira.ObjectType.instance.IT_Inventory__s_Models_uumu_Model_Categories@uuuumus
+}

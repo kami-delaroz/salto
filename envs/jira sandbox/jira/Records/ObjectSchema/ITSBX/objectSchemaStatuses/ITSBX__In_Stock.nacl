@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus ITSBX__In_Stock@uus {
+  name = "In Stock"
+  description = "Asset is in stock but not in use"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "ITSBX:In Stock"
+}

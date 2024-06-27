@@ -1,0 +1,7 @@
+jira.Field Urgency5__select__c {
+  name = "Urgency5"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  _alias = "Urgency5"
+}

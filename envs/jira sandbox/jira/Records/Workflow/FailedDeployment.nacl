@@ -1,0 +1,121 @@
+jira.Workflow FailedDeployment {
+  description = ""
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = 173.58734576006634
+        },
+      ]
+    }
+    CLose__From__Open__Directed@fffsff = {
+      name = "CLose"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = -70.01689347810002
+          targetAngle = 78.11134196037203
+        },
+      ]
+      to = jira.Status.instance.closed
+      type = "directed"
+      rules = {
+        validators = [
+          {
+            type = "FieldRequiredValidator"
+            configuration = {
+              errorMessage = ""
+              ignoreContext = false
+              fieldIds = [
+                jira.Field.instance.missing_customfield_11321,
+              ]
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.closed
+      name = "Closed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 527.017578125
+        y = -93.70000122070311
+      }
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 555.41015625
+        y = 117.4
+      }
+    },
+  ]
+  name = "FailedDeployment"
+  diagramInitialEntry = {
+    x = 580
+    y = 67.4
+  }
+}

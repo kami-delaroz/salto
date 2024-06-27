@@ -1,0 +1,9 @@
+jira.Field __Remaining_Estimate__number@_00931ssuu {
+  name = "Σ Remaining Estimate"
+  schema = {
+    type = "number"
+    system = "aggregatetimeestimate"
+  }
+  description = ""
+  _alias = "Σ Remaining Estimate"
+}

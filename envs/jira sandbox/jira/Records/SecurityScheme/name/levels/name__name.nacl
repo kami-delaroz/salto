@@ -1,0 +1,15 @@
+jira.SecurityLevel name__name {
+  description = "desc2"
+  name = "name"
+  members = [
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+    },
+  ]
+  _parent = [
+    jira.SecurityScheme.instance.name,
+  ]
+}
