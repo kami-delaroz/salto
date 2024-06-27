@@ -1,0 +1,25 @@
+jira.Field Key {
+  name = "Key"
+  description = ""
+  _alias = "Key"
+}
+jira.Field Key__float__c {
+  name = "Key"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:float"
+  contexts = [
+    jira.CustomFieldContext.instance.Key__float__c_Default_Configuration_Scheme_for_Key@uuuuussss,
+  ]
+  _alias = "Key"
+}
+jira.Field Key__labels__c {
+  name = "Key"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:labelsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:labels"
+  contexts = [
+    jira.CustomFieldContext.instance.Key__labels__c_Default_Configuration_Scheme_for_Key@uuuuussss,
+  ]
+  _alias = "Key"
+}

@@ -1,0 +1,15 @@
+jira.WorkflowScheme same1 {
+  name = "same1"
+  description = ""
+  defaultWorkflow = jira.Workflow.instance.jira
+  items = [
+    {
+      workflow = jira.Workflow.instance.migrationtest4
+      issueType = jira.IssueType.instance.Bug
+    },
+    {
+      workflow = jira.Workflow.instance.Copy_of_migrationtest1@s
+      issueType = jira.IssueType.instance.bug6
+    },
+  ]
+}

@@ -1,0 +1,115 @@
+jira.Workflow ScriptReferences {
+  description = ""
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = 173.58734576006634
+        },
+      ]
+    }
+    Close__From__Open__Directed@fffsff = {
+      name = "Close"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 78.11134196037203
+          targetAngle = -70.01689347810002
+        },
+      ]
+      to = jira.Status.instance.in_staging@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+          {
+            type = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            configuration = {
+              value = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw3NywxNDMsMjIxLDc4LDIsNDksMTYsMTMzLDk1LDE2NSwxMDUsNzYsMTE4LDc3LDIxNiw5Myw4Niw2NSwyMywxOCw0NiwxMiw5NCwxMDQsNzYsNDgsMTcsMTg5LDExNCwxMywxNTMsMTA5LDEwMywxODEsOTAsMjE4LDE2Niw2MywzMiwzMywxODgsMTg3LDkzLDY0LDEwMSwxNzQsMjE4LDExNSwyMzAsNTksNTEsMTc5LDE2NSw3NiwxMzAsMTE1LDUxLDg4LDM0LDI5LDgzLDE2NiwxNTEsNTcsMTEyLDQ4LDMwLDg2LDE5NCwyNDksMjIwLDIxNywxNTYsNzMsMjksMTIwLDE5MCwyMTQsMjQ2LDE3MSwxNDksMTIyLDE1Nyw2Myw1LDUzLDEwMyw4NiwyNCw3OSwxMjMsNTIsNCwxOTMsMzUsMjExLDE0LDE3NSwyMTgsNzUsMTg0LDIzOCwxMDMsNDUsMjcsMTgxLDIxNywxNjAsMjUsMTMsMTc4LDE2NiwxMjksNjUsNTQsNDIsMTc3LDE3MywyNDgsMTc2LDQyLDE1NSwxNzAsMTM3LDIyMSwxNjgsMTYwLDE0NSwyNCwxLDExMSwzLDE5OCwyMzksNTUsMTc4LDIyNCwxMzMsODYsNDcsMTQsMTA5LDc2LDE4NSwxODUsMTg5LDkzLDYwLDIwNiw5OCwzMSwyMTEsMTM4LDEzOSwyMDYsMTM2LDk4LDIwMiwxMzAsMjQzLDEyMiwyMTcsMTAsMTQ4LDEyNCw4MSwxNTAsMjMsODUsMjU1LDYwLDk1LDEyOSwxMiw3MiwzOCwxOSw4Miw4MywxNjgsMTA1LDE3MywzNCwxOTQsMjA5LDIzNywxMTksNTgsNjQsODEsMCwxMjYsMTM2LDAsNTcsMjEzLDE4OCwxODcsMTM5LDk5LDc1LDEzMiwxMTUsMSwzMSwxMTIsNjcsMzgsMTM1LDEwMywyNTQsMTMzLDE1NSw5MCwxMTcsNzgsMTg4LDEyMiwxMzcsMjAyLDcxLDM1LDE4NSw2NywxMzksMjA5LDM4LDI0MCwzOSwyMjIsMTksOTksMjA5LDEyOCw2OSw3OCwxNiwxNzIsMjAsMTA0LDE0Nyw5MCwyOSw1NiwxMzksNDYsMjAwLDE0LDUxLDIxOCwyNDksMTgwLDE2Niw2OSwyMCwxMjQsMSw3MCwyMCwyMywxOTcsMTI2LDY4LDExMywxODIsMjUzLDE1NywxODYsNDMsMTQyLDEyOSw1Myw2MSwxNzUsMjEsNTcsODYsMjU0LDEyOSwxOTIsMjA5LDE2NiwyMDEsODQsNDMsMzEsMjA1LDIzNiwxMjEsOTksNDgsMjMzLDE0NSw0LDE0MCwxNDUsMTMwLDY1LDExOSw2OCwyNDEsMjMzLDE4MCw3NCw3OCwxNjEsNzAsMjQzLDc3LDI1MCwyNTAsNDcsMTE2LDIxMywxMDUsMjI3LDIyMywxNjUsMjU1LDE3MywxODMsODMsMTQsMjIwLDIyMCw5MSwxNjEsMjIyLDIxMSw0MCwyMTAsMjIxLDE1LDE0NywxNSw3OSwxLDI1MCwxLDAsMF19"
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.in_staging@s
+      name = "Closed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 539.3203125
+        y = 142.4
+      }
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 555.41015625
+        y = 92.4
+      }
+    },
+  ]
+  name = "ScriptReferences"
+  diagramInitialEntry = {
+    x = 580
+    y = 42.400000000000006
+  }
+}

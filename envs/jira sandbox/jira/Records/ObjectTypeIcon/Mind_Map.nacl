@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Mind_Map@s {
+  name = "Mind Map"
+  icon = file("jira/ObjectTypeIcon/Mind_Map.png")
+}

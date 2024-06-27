@@ -1,0 +1,7 @@
+jira.ScreenScheme TSTPRJ__Kanban_Default_Screen_Scheme@fssss {
+  name = "TSTPRJ: Kanban Default Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.TSTPRJ__Kanban_Default_Issue_Screen@fssss
+  }
+}

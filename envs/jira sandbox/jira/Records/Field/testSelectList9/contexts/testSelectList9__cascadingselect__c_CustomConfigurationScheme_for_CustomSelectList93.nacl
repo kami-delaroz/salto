@@ -1,0 +1,60 @@
+jira.CustomFieldContext testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList93@uuuuuss {
+  name = "CustomConfigurationScheme for CustomSelectList93"
+  description = "CustomConfigurationScheme for CustomSelectList92 desc7"
+  isGlobalContext = false
+  options = {
+    p1 = {
+      value = "p1"
+      disabled = false
+      cascadingOptions = {
+        c11 = {
+          value = "c11"
+          disabled = false
+          position = 0
+        }
+        c12 = {
+          value = "c12"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 1
+    }
+    p2 = {
+      value = "p2"
+      disabled = false
+      cascadingOptions = {
+        c22 = {
+          value = "c22"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 2
+    }
+    p3 = {
+      value = "p3"
+      disabled = true
+      position = 3
+    }
+    p4 = {
+      value = "p4"
+      disabled = false
+      position = 4
+    }
+  }
+  defaultValue = {
+    type = "option.cascading"
+    optionId = jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList93@uuuuuss.options.p1
+    cascadingOptionId = jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList93@uuuuuss.options.p1.cascadingOptions.c11
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+  ]
+  _parent = [
+    jira.Field.instance.testSelectList9__cascadingselect__c,
+  ]
+  _alias = "testSelectList9 context in CustomConfigurationScheme for CustomSelectList93"
+}

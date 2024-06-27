@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus IT_Inventory__s__Ordered@uumuu {
+  name = "Ordered"
+  description = "Asset is deployed but no longer in use"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "IT Inventory :Ordered"
+}

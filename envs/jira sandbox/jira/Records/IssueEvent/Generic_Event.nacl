@@ -1,0 +1,3 @@
+jira.IssueEvent Generic_Event@s {
+  name = "Generic Event"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute Processes_SLA_activation_label_attribute@usuu {
+  labelAttribute = jira.ObjectTypeAttribute.instance.Processes_SLA_activation_us_Name@uumu
+  objectType = jira.ObjectType.instance.Processes_SLA_activation@us
+}

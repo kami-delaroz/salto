@@ -1,0 +1,4 @@
+jira.NotificationScheme My_new_notification_scheme@s {
+  name = "My new notification scheme"
+  description = "My new scheme description"
+}

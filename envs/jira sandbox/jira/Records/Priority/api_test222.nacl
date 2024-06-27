@@ -1,0 +1,7 @@
+jira.Priority api_test222 {
+  statusColor = "#ff00ff"
+  description = ""
+  iconUrl = "/images/icons/priorities/critical.svg"
+  name = "api_test222"
+  _alias = "api_test222"
+}

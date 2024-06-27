@@ -1,0 +1,7 @@
+jira.ScreenScheme DSP__Scrum_Default_Screen_Scheme@fssss {
+  name = "DSP: Scrum Default Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.DSP__Scrum_Default_Issue_Screen@fssss
+  }
+}

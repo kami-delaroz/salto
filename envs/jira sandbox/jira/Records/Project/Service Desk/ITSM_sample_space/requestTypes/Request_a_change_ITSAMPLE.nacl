@@ -1,0 +1,384 @@
+jira.RequestType Request_a_change_ITSAMPLE@ssu {
+  name = "Request a change"
+  description = "For example, upgrade a server (VPN) or an application (Jira)."
+  helpText = ""
+  issueTypeId = jira.IssueType.instance._System__Change@his
+  restrictionStatus = "OPEN"
+  canCreateRequest = true
+  workflowStatuses = [
+    {
+      id = jira.Status.instance.authorize
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.planning
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.failed
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.completed
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.awaiting_implementation@s
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.canceled
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.implementing
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.declined2
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.review
+      custom = ""
+    },
+  ]
+  requestForm = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Summary__string
+          data = {
+            custom = false
+            global = true
+            required = true
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Description__string
+          data = {
+            custom = false
+            global = true
+            required = true
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Change_type__select__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Impact__select__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Urgency__select__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Change_risk__select__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Attachment__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Change_reason__select__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = "Choose the reason for the change request"
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Change_start_date__datetime__c@ssuuuu
+          data = {
+            custom = true
+            global = true
+            description = "Specify the time and date for the start of the change"
+            required = false
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "Actual start"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+          data = {
+            custom = true
+            global = true
+            description = "Specify the completion time for the change request"
+            required = false
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "Actual end"
+              },
+            ]
+          }
+        },
+      ]
+    }
+  }
+  avatarId = "10528"
+  issueView = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Assignee__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Reporter__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_Type__vp_origin__c@suubuu
+          data = {
+            custom = true
+            global = true
+            description = "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_language__sd_request_language__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "The language which a request was raised in."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Priority__priority
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Labels__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Organizations__sd_customer_organizations__c@uubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the users that are participants in service project customer portal requests. This custom field is created programmatically and required by service project."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Approver_groups__multigrouppicker__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = "Contains groups of users needed for approval. This custom field was created by Jira Service Management."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Components__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Time_tracking__timetracking@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Original_estimate__number@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu
+          data = {
+            custom = true
+            global = true
+            description = "Link services from the service registry to an issue."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Planned_start__datetime__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = "Enter when the change is planned to start."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Planned_end__datetime__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = "Enter when the change is planned to end."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "CONTENT"
+          key = jira.Field.instance.Implementation_plan__textarea__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "CONTENT"
+          key = jira.Field.instance.Backout_plan__textarea__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "CONTENT"
+          key = jira.Field.instance.Test_plan__textarea__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+      ]
+    }
+  }
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Request a change"
+}

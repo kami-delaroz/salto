@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Department_umu_R_D_uuumue_shir@uuuuuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D@uuumue
+  name = "shir"
+  type = 0
+  description = ""
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "shir"
+}

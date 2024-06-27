@@ -1,0 +1,10 @@
+jira.ApplicationProperty jira_admin_announcement_banner_visibility@v {
+  id = "jira.admin.announcement.banner.visibility"
+  value = "private"
+  name = "jira.admin.announcement.banner.visibility"
+  type = "enum"
+  allowedValues = [
+    "private",
+    "public",
+  ]
+}

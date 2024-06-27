@@ -1,0 +1,16 @@
+jira.Screen PCP__Simple_Issue_Tracking_Comment_Screen@fsssss {
+  name = "PCP: Simple Issue Tracking Comment Screen"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Summary__string,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+        jira.Field.instance.Reporter__user,
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+  }
+}

@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_confluence_enable_sprint_retros@vvvbb {
+  id = "jira.admin.confluence.enable-sprint-retros"
+  value = "true"
+  name = "jira.admin.confluence.enable-sprint-retros"
+  type = "boolean"
+}

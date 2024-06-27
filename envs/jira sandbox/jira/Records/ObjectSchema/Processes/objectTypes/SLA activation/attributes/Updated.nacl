@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute Processes_SLA_activation_us_Updated@uumu {
+  objectType = jira.ObjectType.instance.Processes_SLA_activation@us
+  name = "Updated"
+  type = 0
+  editable = false
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 6
+  _alias = "Updated"
+}

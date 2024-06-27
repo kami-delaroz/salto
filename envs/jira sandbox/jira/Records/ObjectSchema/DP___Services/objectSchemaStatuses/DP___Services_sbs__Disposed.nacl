@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus DP___Services_sbs__Disposed@uuumuu {
+  name = "Disposed"
+  description = "Asset is disposed and removed from accounting records"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "DP - Services:Disposed"
+}

@@ -1,0 +1,6 @@
+jira.Status in_staging@s {
+  name = "IN STAGING"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = "Ticket was successfully deployed to staging"
+  _alias = "IN STAGING"
+}

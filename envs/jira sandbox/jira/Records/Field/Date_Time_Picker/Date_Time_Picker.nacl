@@ -1,0 +1,10 @@
+jira.Field Date_Time_Picker__datetime__c@ssuuuu {
+  name = "Date Time Picker"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:datetimerange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datetime"
+  contexts = [
+    jira.CustomFieldContext.instance.Date_Time_Picker__datetime__c_ssuuuu_Default_Configuration_Scheme_for_Date_Time_Picker@uuuuuumussssss,
+  ]
+  _alias = "Date Time Picker"
+}

@@ -1,0 +1,7 @@
+jira.ScreenScheme ITSAMPLE__Jira_Service_Management_Screen_Scheme@fsssss {
+  name = "ITSAMPLE: Jira Service Management Screen Scheme"
+  description = "This Jira Service Management Screen Scheme was generated automatically"
+  screens = {
+    default = jira.Screen.instance.ITSAMPLE__Jira_Service_Management_Screen@fssss
+  }
+}

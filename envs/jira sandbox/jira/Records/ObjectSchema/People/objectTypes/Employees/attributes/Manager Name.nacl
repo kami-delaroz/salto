@@ -1,0 +1,21 @@
+jira.ObjectTypeAttribute People_Employees_Manager_Name@uus {
+  objectType = jira.ObjectType.instance.People_Employees
+  name = "Manager Name"
+  type = 1
+  description = "Employee's manager name"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.People__Reports_to@uus
+  typeValue = jira.ObjectType.instance.People_Employees
+  _alias = "Manager Name"
+}

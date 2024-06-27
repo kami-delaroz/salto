@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_announcement_banner_is_enabled@vvvvb {
+  id = "jira.admin.announcement.banner.is-enabled"
+  value = "false"
+  name = "jira.admin.announcement.banner.is-enabled"
+  type = "boolean"
+}

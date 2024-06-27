@@ -1,0 +1,7 @@
+jira.ScreenScheme JIRA__Kanban_Bug_Screen_Scheme@fssss {
+  name = "JIRA: Kanban Bug Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.JIRA__Kanban_Bug_Screen@fsss
+  }
+}

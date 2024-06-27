@@ -1,0 +1,42 @@
+jira.Board LIORCOMP_board@s {
+  name = "LIORCOMP board"
+  type = "scrum"
+  admins = {
+    users = [
+      {
+        id = "60e8b78784c9920071996842"
+        displayName = "Lior Neudorfer"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.LiorCompanyManaged
+  }
+  filterId = jira.Filter.instance.Filter_for_LIORCOMP_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "To Do"
+        statuses = [
+          jira.Status.instance.to_do@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "none"
+  }
+  estimation = {
+    field = jira.Field.instance.Story_Points__float__c@suuuu
+  }
+}

@@ -1,0 +1,11 @@
+jira.Field testSelectList6__cascadingselect__c {
+  name = "testSelectList6"
+  description = "desc!2"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect"
+  contexts = [
+    jira.CustomFieldContext.instance.testSelectList6__cascadingselect__c_Default_Configuration_Scheme_for_CustomTestSelectList@uuuuussss,
+    jira.CustomFieldContext.instance.testSelectList6__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,
+  ]
+  _alias = "testSelectList6"
+}

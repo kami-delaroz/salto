@@ -1,0 +1,18 @@
+jira.Project CloanbleProjectRenamed {
+  key = "CLOAN"
+  description = ""
+  name = "CloanbleProjectRenamed"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.CLOAN__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.CLOAN__Software_Development_Issue_Type_Screen_Scheme@fssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.CLOAN__Software_Development_Issue_Type_Scheme@fsssss
+  leadAccountId = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}

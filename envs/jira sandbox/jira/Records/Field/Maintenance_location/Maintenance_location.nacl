@@ -1,0 +1,9 @@
+jira.Field Maintenance_location__textfield__c@suuuu {
+  name = "Maintenance location"
+  description = ""
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  contexts = [
+    jira.CustomFieldContext.instance.Maintenance_location__textfield__c_suuuu_Default_Configuration_Scheme_for_Maintenance_location@uuuuumusssss,
+  ]
+  _alias = "Maintenance location"
+}

@@ -1,0 +1,9 @@
+jira.ObjectSchemaReferenceType idoA_Schema_s__Member_of@umuus {
+  name = "Member of"
+  description = "group name"
+  color = "57D9A3"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+}

@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute DP___Services_sbs_Models_uuumu_Model_Categories_uuuuumus_Updated@uuuuuuuumu {
+  objectType = jira.ObjectType.instance.DP___Services_sbs_Models_uuumu_Model_Categories@uuuuumus
+  name = "Updated"
+  type = 0
+  editable = false
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 6
+  _alias = "Updated"
+}

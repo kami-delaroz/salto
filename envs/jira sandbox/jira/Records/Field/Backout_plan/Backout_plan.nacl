@@ -1,0 +1,10 @@
+jira.Field Backout_plan__textarea__c@suuuu {
+  name = "Backout plan"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.Backout_plan__textarea__c_suuuu_Default_Configuration_Scheme_for_Backout_plan@uuuuumusssss,
+  ]
+  _alias = "Backout plan"
+}

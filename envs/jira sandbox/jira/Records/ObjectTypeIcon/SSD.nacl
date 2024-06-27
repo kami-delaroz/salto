@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon SSD {
+  name = "SSD"
+  icon = file("jira/ObjectTypeIcon/SSD.png")
+}

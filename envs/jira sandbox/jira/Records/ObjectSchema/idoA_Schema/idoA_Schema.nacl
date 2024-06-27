@@ -1,0 +1,12 @@
+jira.ObjectSchema idoA_Schema@s {
+  name = "idoA Schema"
+  objectSchemaKey = "ISS"
+  status = "Ok"
+  description = "This is for manage people or noise?"
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = false
+    allowOtherObjectSchema = false
+  }
+  _alias = "idoA Schema"
+}

@@ -1,0 +1,9 @@
+jira.Field Maintenance_type__select__c@suuuu {
+  name = "Maintenance type"
+  description = ""
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  contexts = [
+    jira.CustomFieldContext.instance.Maintenance_type__select__c_suuuu_Default_Configuration_Scheme_for_Maintenance_type@uuuuumusssss,
+  ]
+  _alias = "Maintenance type"
+}

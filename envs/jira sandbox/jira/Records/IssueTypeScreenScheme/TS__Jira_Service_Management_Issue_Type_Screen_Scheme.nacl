@@ -1,0 +1,26 @@
+jira.IssueTypeScreenScheme TS__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss {
+  name = "TS: Jira Service Management Issue Type Screen Scheme"
+  description = "This Jira Service Management Issue Type Screen Scheme was generated automatically"
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Questions_for_facilities@s
+      screenSchemeId = jira.ScreenScheme.instance.TS__Jira_Service_Management__Facilities_Questions_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Report_a_maintenance_issue@s
+      screenSchemeId = jira.ScreenScheme.instance.TS__Jira_Service_Management__Maintenance_Request_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Request_a_move@s
+      screenSchemeId = jira.ScreenScheme.instance.TS__Jira_Service_Management__Move_Request_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Request_an_event@s
+      screenSchemeId = jira.ScreenScheme.instance.TS__Jira_Service_Management__Event_Request_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.TS__Jira_Service_Management_Screen_Scheme@fsssss
+    },
+  ]
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Delete {
+  name = "Delete"
+  icon = file("jira/ObjectTypeIcon/Delete.png")
+}

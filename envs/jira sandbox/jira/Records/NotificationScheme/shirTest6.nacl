@@ -1,0 +1,27 @@
+jira.NotificationScheme shirTest6 {
+  name = "shirTest6"
+  description = "change change 3"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          type = "ComponentLead"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "CurrentUser"
+        },
+        {
+          type = "Reporter"
+        },
+        {
+          parameter = jira.Field.instance.userPicker__multiuserpicker__c
+          type = "UserCustomField"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+  ]
+}

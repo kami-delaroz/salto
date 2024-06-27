@@ -1,0 +1,9 @@
+jira.ObjectSchemaReferenceType Lior_s_IT_Schema_tss__Ido_Amit@uuumuus {
+  name = "Ido Amit"
+  description = "what is this"
+  color = "2684FF"
+  removable = true
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+}
