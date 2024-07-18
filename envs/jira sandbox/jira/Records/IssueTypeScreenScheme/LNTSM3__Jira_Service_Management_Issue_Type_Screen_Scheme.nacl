@@ -1,0 +1,42 @@
+jira.IssueTypeScreenScheme LNTSM3__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss {
+  name = "LNTSM3: Jira Service Management Issue Type Screen Scheme"
+  description = "This Jira Service Management Issue Type Screen Scheme was generated automatically"
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Sub_task@b
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management__Request_Fulfilment_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Task
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management__Request_Fulfilment_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance._System__Change@his
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management__Change_Management_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance._System__Incident@his
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management__Incident_Management_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance._System__Post_incident_review@hisbs
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management__Post_Incident_Review_Screen_Scheme@fsssfsbsss
+    },
+    {
+      issueTypeId = jira.IssueType.instance._System__Problem@his
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management__Problem_Management_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance._System__Service_request@hiss
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management__Request_Fulfilment_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance._System__Service_request_with_approvals@hissss
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management__Request_Fulfilment_Screen_Scheme@fsssfssss
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.LNTSM3__Jira_Service_Management_Screen_Scheme@fsssss
+    },
+  ]
+}

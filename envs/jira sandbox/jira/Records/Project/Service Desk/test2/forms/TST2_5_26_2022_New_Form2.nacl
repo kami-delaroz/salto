@@ -1,0 +1,48 @@
+jira.Form TST2_5_26_2022_New_Form2@uddss {
+  publish = {
+  }
+  design = {
+    settings = {
+      name = "5/26/2022 New Form2"
+      submit = {
+        lock = false
+        pdf = false
+      }
+    }
+    layout = [
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              layout = "default"
+              parameters = {
+                id = 1
+              }
+              localId = "bcd9a4f7-8bc8-4f72-8401-519bca20f3c1"
+            }
+          },
+        ]
+      },
+    ]
+    conditions = {
+    }
+    sections = {
+    }
+    questions = {
+      "1@" = {
+        type = "ts"
+        label = "Label2"
+        validation = {
+        }
+      }
+    }
+  }
+  _parent = [
+    jira.Project.instance.test2,
+  ]
+}

@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus IT_Inventory__s__Missing@uumuu {
+  name = "Missing"
+  description = "Asset is not found in its expected location"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "IT Inventory :Missing"
+}

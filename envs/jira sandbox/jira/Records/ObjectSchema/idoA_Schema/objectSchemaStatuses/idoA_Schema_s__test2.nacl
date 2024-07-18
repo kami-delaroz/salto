@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus idoA_Schema_s__test2@umuu {
+  name = "test2"
+  description = "Yo"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+  _alias = "idoA Schema:test2"
+}

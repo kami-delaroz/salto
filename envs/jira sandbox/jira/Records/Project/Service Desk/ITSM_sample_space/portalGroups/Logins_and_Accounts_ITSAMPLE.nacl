@@ -1,0 +1,15 @@
+jira.PortalGroup Logins_and_Accounts_ITSAMPLE@ssu {
+  name = "Logins and Accounts"
+  ticketTypeIds = [
+    jira.RequestType.instance.Fix_an_account_problem_ITSAMPLE@sssu,
+    jira.RequestType.instance.Get_a_guest_wifi_account_ITSAMPLE@ssssu,
+    jira.RequestType.instance.Set_up_VPN_to_the_office_ITSAMPLE@sssssu,
+    jira.RequestType.instance.Request_admin_access_ITSAMPLE@ssu,
+    jira.RequestType.instance.Request_a_new_account_ITSAMPLE@sssu,
+    jira.RequestType.instance.Onboard_new_employees_ITSAMPLE@ssu,
+  ]
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Logins and Accounts"
+}

@@ -1,0 +1,13 @@
+jira.ObjectType DP___Services_sbs_Hardware_Assets@uuumus {
+  name = "Hardware Assets"
+  type = 0
+  inherited = true
+  abstractObjectType = true
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Workstation
+  parentObjectTypeId = jira.ObjectSchema.instance.DP___Services@sbs
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "Hardware Assets"
+}

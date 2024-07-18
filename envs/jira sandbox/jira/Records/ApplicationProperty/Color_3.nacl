@@ -1,0 +1,6 @@
+jira.ApplicationProperty Color_3@s {
+  id = "jira.lf.gadget.color3"
+  value = "#ea632b"
+  name = "Color 3"
+  type = "colour"
+}

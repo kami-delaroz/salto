@@ -1,0 +1,10 @@
+jira.Field kihjk__labels__c {
+  name = "kihjk"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:labelsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:labels"
+  contexts = [
+    jira.CustomFieldContext.instance.kihjk__labels__c_Default_Configuration_Scheme_for_kihjk@uuuuussss,
+  ]
+  _alias = "kihjk"
+}

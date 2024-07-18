@@ -1,0 +1,12 @@
+jira.IssueTypeScheme GTST3__Kanban_Issue_Type_Scheme@fssss {
+  name = "GTST3: Kanban Issue Type Scheme"
+  defaultIssueTypeId = jira.IssueType.instance.Story
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.bug6,
+  ]
+}

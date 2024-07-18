@@ -1,0 +1,13 @@
+jira.ObjectType IT_Inventory__s_Hardware_Assets_uumus_Servers_uuuuumu_Windows_Server@uuuuuuumus {
+  name = "Windows Server"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.IT_Inventory__s_Hardware_Assets_uumus_Servers@uuuuumu
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Windows
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "Windows Server"
+}

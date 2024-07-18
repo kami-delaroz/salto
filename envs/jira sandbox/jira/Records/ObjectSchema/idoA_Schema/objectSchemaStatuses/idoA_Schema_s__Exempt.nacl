@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus idoA_Schema_s__Exempt@umuu {
+  name = "Exempt"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+  _alias = "idoA Schema:Exempt"
+}

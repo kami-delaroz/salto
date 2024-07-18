@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Router {
+  name = "Router"
+  icon = file("jira/ObjectTypeIcon/Router.png")
+}

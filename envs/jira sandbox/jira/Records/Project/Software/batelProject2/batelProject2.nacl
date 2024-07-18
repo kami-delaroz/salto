@@ -1,0 +1,13 @@
+jira.Project batelProject2 {
+  key = "BAT2"
+  description = ""
+  name = "batelProject2"
+  projectTypeKey = "software"
+  entityId = "34aa9925-cc01-44f0-a484-f95216ab77cb"
+  uuid = "34aa9925-cc01-44f0-a484-f95216ab77cb"
+  issueSecurityScheme = jira.SecurityScheme.instance.BAT2__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+}

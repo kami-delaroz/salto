@@ -1,0 +1,24 @@
+jira.SecurityLevel Liors_Private_Stuff_s__PrivateField@uumuu {
+  description = ""
+  name = "PrivateField"
+  members = [
+    {
+      holder = {
+        type = "user"
+        parameter = {
+          id = "60e8b78784c9920071996842"
+          displayName = "Lior Neudorfer"
+        }
+      }
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+    },
+  ]
+  _parent = [
+    jira.SecurityScheme.instance.Liors_Private_Stuff@s,
+  ]
+}

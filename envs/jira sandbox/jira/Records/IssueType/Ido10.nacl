@@ -1,0 +1,7 @@
+jira.IssueType Ido10 {
+  description = "A problem or error.6"
+  name = "Ido10"
+  untranslatedName = "Ido10"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Ido10.png")
+}

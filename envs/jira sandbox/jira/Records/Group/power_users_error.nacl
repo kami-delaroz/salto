@@ -1,0 +1,3 @@
+jira.Group power_users_error@b {
+  name = "power-users-error"
+}

@@ -1,0 +1,12 @@
+jira.ObjectSchema Processes {
+  name = "Processes"
+  objectSchemaKey = "PROC"
+  status = "Ok"
+  description = ""
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = false
+  }
+  _alias = "Processes"
+}

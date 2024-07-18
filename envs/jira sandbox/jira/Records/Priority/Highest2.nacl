@@ -1,0 +1,7 @@
+jira.Priority Highest2 {
+  statusColor = "#d04437"
+  description = "This problem will block progress."
+  iconUrl = "https://ori-salto-test.atlassian.net/images/icons/priorities/highest.svg"
+  name = "Highest2"
+  _alias = "Highest2"
+}

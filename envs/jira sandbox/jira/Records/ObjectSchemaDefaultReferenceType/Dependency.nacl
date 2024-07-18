@@ -1,0 +1,6 @@
+jira.ObjectSchemaDefaultReferenceType Dependency {
+  name = "Dependency"
+  description = "Dependency"
+  color = "e8f00e"
+  removable = false
+}

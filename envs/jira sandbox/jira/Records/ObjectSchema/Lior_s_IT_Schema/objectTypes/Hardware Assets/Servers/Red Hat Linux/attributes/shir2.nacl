@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Red_Hat_Linux_uuuuuuuumuss_shir2@uuuuuuuuuuuumu {
+  objectType = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Red_Hat_Linux@uuuuuuuumuss
+  name = "shir2"
+  type = 0
+  description = ""
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "shir2"
+}

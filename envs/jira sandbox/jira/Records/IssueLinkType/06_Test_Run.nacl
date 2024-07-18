@@ -1,0 +1,5 @@
+jira.IssueLinkType "06_Test_Run@s" {
+  name = "06 Test Run"
+  inward = "is blocked by"
+  outward = "is blocked by"
+}

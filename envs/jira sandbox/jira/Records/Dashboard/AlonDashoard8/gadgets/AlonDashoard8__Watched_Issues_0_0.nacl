@@ -1,0 +1,44 @@
+jira.DashboardGadget AlonDashoard8__Watched_Issues_0_0@uusuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.gadgets:watched-gadget/gadgets/watched-gadget.xml"
+  color = "blue"
+  position = {
+    row = 0
+    column = 0
+  }
+  title = "Watched Issues"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "columnNames"
+          value = "summary|issuetype|issuekey|priority"
+        },
+        {
+          key = "num"
+          value = "5"
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+        {
+          key = "showResolved"
+          value = "false"
+        },
+        {
+          key = "showTotalWatches"
+          value = "false"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.AlonDashoard8,
+  ]
+  _alias = "Watched Issues"
+}

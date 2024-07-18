@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute DP___Services_sbs_Hardware_Assets_uuumus_Last_Scan_Date@uuuuuumuss {
+  objectType = jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets@uuumus
+  name = "Last Scan Date"
+  type = 0
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 4
+  _alias = "Last Scan Date"
+}

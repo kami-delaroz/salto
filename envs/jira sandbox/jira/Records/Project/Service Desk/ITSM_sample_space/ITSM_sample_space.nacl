@@ -1,0 +1,42 @@
+jira.Project ITSM_sample_space@s {
+  key = "ITSAMPLE"
+  description = ""
+  name = "ITSM sample space"
+  projectTypeKey = "service_desk"
+  components = [
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Active_Directory@uumuus,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Analytics_and_Reporting_Service@uumuusss,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Billing_Services@uumuus,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Cloud_Storage_Services@uumuuss,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Data_Center_Services@uumuuss,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Email_and_Collaboration_Services@uumuusss,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Financial_Services@uumuus,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__HR_Services@uumuus,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Intranet@uumuu,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Jira@uumuu,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Office_Network@uumuus,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Payroll_Services@uumuus,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Printers@uumuu,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Public_Website@uumuus,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__VPN_Server@uumuus,
+    jira.ProjectComponent.instance.ITSM_sample_space_s__Webstore_Purchasing_Services@uumuuss,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_ITSAMPLE@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_ITSAMPLE@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.ITSAMPLE__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.ITSAMPLE__Jira_Service_Management_Issue_Type_Scheme@fssssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_ITSAMPLE@s
+  leadAccountId = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  customerPermissions = {
+    manageEnabled = false
+    autocompleteEnabled = false
+    serviceDeskOpenAccess = false
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}

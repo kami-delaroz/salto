@@ -1,0 +1,12 @@
+jira.ObjectSchema DP___Services@sbs {
+  name = "DP - Services"
+  objectSchemaKey = "DS"
+  status = "Ok"
+  description = "DP's Demo Schema"
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = true
+  }
+  _alias = "DP - Services"
+}

@@ -1,0 +1,23 @@
+jira.ObjectTypeAttribute DP___People_sbs_Employees_uuumu_Employee_Status@uuuuumus {
+  objectType = jira.ObjectType.instance.DP___People_sbs_Employees@uuumu
+  name = "Employee Status"
+  type = 7
+  description = "Employment status of employee"
+  typeValueMulti = [
+    jira.ObjectSchemaStatus.instance.DP___People_sbs__Exempt@uuumuu,
+    jira.ObjectSchemaStatus.instance.DP___People_sbs__Nonexempt@uuumuu,
+  ]
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  _alias = "Employee Status"
+}

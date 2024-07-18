@@ -1,0 +1,3 @@
+jira.Group confluence_users_ori_salto_test@b {
+  name = "confluence-users-ori-salto-test"
+}

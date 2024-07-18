@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_favicon_use_projecticon@v {
+  id = "jira.favicon.use.projecticon"
+  value = "false"
+  name = "jira.favicon.use.projecticon"
+  type = "boolean"
+}

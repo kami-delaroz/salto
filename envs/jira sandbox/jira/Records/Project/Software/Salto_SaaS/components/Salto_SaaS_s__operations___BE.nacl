@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto_SaaS_s__operations___BE@umuusbs {
+  assigneeType = "COMPONENT_LEAD"
+  name = "operations - BE"
+  _parent = [
+    jira.Project.instance.Salto_SaaS@s,
+  ]
+  _alias = "Salto SaaS:operations - BE"
+}

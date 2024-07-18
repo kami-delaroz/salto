@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus IT_Inventory__s__In_Stock@uumuus {
+  name = "In Stock"
+  description = "Asset is in stock but not in use"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "IT Inventory :In Stock"
+}

@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus LN___Software_sbs__Inactive@uuumuu {
+  name = "Inactive"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.LN___Software@sbs,
+  ]
+  _alias = "LN - Software:Inactive"
+}

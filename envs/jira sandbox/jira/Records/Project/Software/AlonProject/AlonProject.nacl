@@ -1,0 +1,13 @@
+jira.Project AlonProject {
+  key = "AS"
+  description = "Alon's project"
+  name = "AlonProject"
+  projectTypeKey = "software"
+  entityId = "ee4f7577-08a3-4e83-ac56-004fb227b6eb"
+  uuid = "ee4f7577-08a3-4e83-ac56-004fb227b6eb"
+  issueSecurityScheme = jira.SecurityScheme.instance.AS__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+}

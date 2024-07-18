@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_confluence_enable_content_creation_issue_confluence_content@vvvbbbbb {
+  id = "jira.admin.confluence.enable-content-creation-issue-confluence-content"
+  value = "true"
+  name = "jira.admin.confluence.enable-content-creation-issue-confluence-content"
+  type = "boolean"
+}

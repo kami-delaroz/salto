@@ -1,0 +1,20 @@
+jira.ObjectTypeAttribute ITSBX_Models_Hardware_Models_uus_Category@uuumu {
+  objectType = jira.ObjectType.instance.ITSBX_Models_Hardware_Models@uus
+  name = "Category"
+  type = 1
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.ITSBX__Assigned_to@uus
+  typeValue = jira.ObjectType.instance.ITSBX_Models_Model_Categories@uus
+  _alias = "Category"
+}
