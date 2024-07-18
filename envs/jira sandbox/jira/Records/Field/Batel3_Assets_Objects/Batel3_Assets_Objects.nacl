@@ -4,4 +4,7 @@ jira.Field Batel3_Assets_Objects__cmdb_object_cftype__c@ssuubbuu {
   searcherKey = "com.atlassian.jira.plugins.cmdb:cmdb-object-searcher"
   type = "com.atlassian.jira.plugins.cmdb:cmdb-object-cftype"
   _alias = "Batel3 Assets Objects"
+  contexts = [
+    jira.CustomFieldContext.instance.Batel3_Assets_Objects__cmdb_object_cftype__c_ssuubbuu_Default_Configuration_Scheme_for_Batel3_Assets_Objects@uuuuuuuumussssss,
+  ]
 }
