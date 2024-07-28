@@ -1,0 +1,10 @@
+jira.FieldConfigurationScheme Tamir_Field_Config_Scheme@s {
+  name = "Tamir Field Config Scheme"
+  description = "Test Scheme"
+  items = [
+    {
+      issueTypeId = "default"
+      fieldConfigurationId = jira.FieldConfiguration.instance.Custom_field_config@s
+    },
+  ]
+}

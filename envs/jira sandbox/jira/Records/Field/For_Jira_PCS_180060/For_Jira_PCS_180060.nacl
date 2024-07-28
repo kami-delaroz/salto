@@ -1,0 +1,12 @@
+jira.Field For_Jira_PCS_180060__select__c@ssbuuuu {
+  name = "For Jira PCS-180060"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  contexts = [
+    jira.CustomFieldContext.instance.For_Jira_PCS_180060__select__c_ssbuuuu_Default_Configuration_Scheme_for_For_Jira_PCS_180060@uuuuuuumussssssb,
+    jira.CustomFieldContext.instance.For_Jira_PCS_180060__select__c_ssbuuuu_label@uuuuuuumu,
+    jira.CustomFieldContext.instance.For_Jira_PCS_180060__select__c_ssbuuuu_label2@uuuuuuumu,
+  ]
+  _alias = "For Jira PCS-180060"
+}

@@ -1,0 +1,6 @@
+jira.Status in_fut@s {
+  name = "in fut"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "in fut"
+}

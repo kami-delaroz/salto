@@ -1,0 +1,7 @@
+jira.ScreenScheme GT__Scrum_Default_Screen_Scheme@fssss {
+  name = "GT: Scrum Default Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.GT__Scrum_Default_Issue_Screen@fssss
+  }
+}

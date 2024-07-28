@@ -1,0 +1,19 @@
+jira.Queue Open_tasks_ITSAMPLE@su {
+  name = "Open tasks"
+  jql = "${ jira.Field.instance.Resolution__resolution } = Unresolved AND ${ jira.Field.instance.Issue_Type__issuetype@suu } = ${ jira.IssueType.instance.Task.name } ORDER BY due ASC"
+  columns = [
+    jira.Field.instance.Key,
+    jira.Field.instance.Summary__string,
+    jira.Field.instance.Reporter__user,
+    jira.Field.instance.Assignee__user,
+    jira.Field.instance.Status__status,
+    jira.Field.instance.Created__datetime,
+    jira.Field.instance.Due_date__date@suu,
+  ]
+  canBeHidden = false
+  favourite = false
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Open tasks"
+}

@@ -1,0 +1,6 @@
+jira.Status approved {
+  name = "Approved"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = ""
+  _alias = "Approved"
+}

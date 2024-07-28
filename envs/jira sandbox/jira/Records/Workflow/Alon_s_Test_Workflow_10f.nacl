@@ -1,0 +1,585 @@
+jira.Workflow Alon_s_Test_Workflow_10f@tsss {
+  description = "desc75"
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "AssignToCurrentUserFunction"
+          },
+          {
+            type = "AssignToLeadFunction"
+          },
+          {
+            type = "AssignToReporterFunction"
+          },
+          {
+            type = "ClearFieldValuePostFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Environment__string
+            }
+          },
+          {
+            type = "CopyValueFromOtherFieldPostFunction"
+            configuration = {
+              destinationFieldId = jira.Field.instance.Creator__user
+              copyType = "parent"
+              sourceFieldId = jira.Field.instance.Assignee__user
+            }
+          },
+          {
+            type = "CreateCommentFunction"
+          },
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+          {
+            type = "IssueStoreFunction"
+          },
+          {
+            type = "SetIssueSecurityFromRoleFunction"
+            configuration = {
+              projectRole = {
+                id = jira.ProjectRole.instance.Administrators
+              }
+            }
+          },
+          {
+            type = "UpdateIssueCustomFieldPostFunction"
+            configuration = {
+              fieldValue = "ww"
+              fieldId = jira.Field.instance.Approvers__multiuserpicker__c
+              mode = "replace"
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Assignee__user
+              fieldValue = ""
+            }
+          },
+          {
+            type = "UpdateIssueStatusFunction"
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Build_Broken__From__any_status__Global@sfffssff = {
+      name = "Build Broken"
+      description = ""
+      to = jira.Status.instance.resolved
+      type = "global"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    bbbb__From__any_status__Global@fffssff = {
+      name = "bbbb"
+      description = ""
+      to = jira.Status.instance.in_progress@s
+      type = "global"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    ttttt__From__any_status__Global@fffssff = {
+      name = "ttttt"
+      description = ""
+      to = jira.Status.instance.in_review@s
+      type = "global"
+      rules = {
+        postFunctions = [
+          {
+            type = "AssignToLeadFunction"
+          },
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "AlwaysFalseCondition"
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    TransitionToShared2__From__A_shared_status2_Approved__Directed@fffssszdff = {
+      name = "TransitionToShared2"
+      description = "desc2"
+      from = [
+        {
+          id = jira.Status.instance.a_shared_status3@s
+        },
+        {
+          id = jira.Status.instance.approved
+        },
+      ]
+      to = jira.Status.instance.resolved
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.AL__Kanban_Bug_Screen@fsss
+      }
+      rules = {
+        validators = [
+          {
+            type = "DateFieldValidator"
+            configuration = {
+              comparator = ">"
+              date1 = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+              date2 = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+              includeTime = false
+            }
+          },
+          {
+            type = "FieldHasSingleValueValidator"
+            configuration = {
+              fieldId = jira.Field.instance.Creator__user
+              excludeSubtasks = true
+            }
+          },
+          {
+            type = "FieldHasSingleValueValidator"
+            configuration = {
+              fieldId = jira.Field.instance.Last_Viewed__datetime@suu
+              excludeSubtasks = false
+            }
+          },
+          {
+            type = "FieldRequiredValidator"
+            configuration = {
+              errorMessage = "wwww"
+              ignoreContext = true
+              fieldIds = [
+                jira.Field.instance.Assignee__user,
+                jira.Field.instance.Change_type__select__c@suuuu,
+              ]
+            }
+          },
+          {
+            type = "ParentStatusValidator"
+            configuration = {
+              parentStatuses = [
+                {
+                  id = jira.Status.instance.in_progress@s
+                },
+              ]
+            }
+          },
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "MODIFY_REPORTER"
+            }
+          },
+          {
+            type = "PreviousStatusValidator"
+            configuration = {
+              previousStatus = {
+                id = jira.Status.instance.build_broken@s
+              }
+              mostRecentStatusOnly = false
+            }
+          },
+          {
+            type = "RegexpFieldValidator"
+            configuration = {
+              regExp = "aaa"
+              fieldId = jira.Field.instance.Epic_Status__gh_epic_status__c@suubbuu
+            }
+          },
+          {
+            type = "UserPermissionValidator"
+            configuration = {
+              nullAllowed = true
+              permissionKey = "VIEW_DEV_TOOLS"
+              username = "aaa"
+            }
+          },
+          {
+            type = "WindowsDateValidator"
+            configuration = {
+              windowsDays = 2
+              date2 = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+              date1 = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Priority__priority
+              fieldValue = jira.Priority.instance.High
+            }
+          },
+        ]
+        conditions = {
+          operator = "AND"
+          conditions = [
+            {
+              type = "AlwaysFalseCondition"
+            },
+            {
+              type = "ValueFieldCondition"
+              configuration = {
+                fieldValue = "bbbbb"
+                comparator = ">"
+                fieldId = jira.Field.instance.Affects_versions__array@suu
+                comparisonType = "STRING"
+              }
+            },
+          ]
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.a_shared_status3@s
+      name = "A shared status2"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "jira.permission.assignable.projectrole"
+          value = jira.ProjectRole.instance.Administrators
+        },
+        {
+          key = "jira.permission.edit.applicationRole"
+          value = "jira-servicedesk"
+        },
+        {
+          key = "jira.permission.edit.group"
+          value = "8af8221a-14df-439c-8fd9-f4a388a154a0"
+        },
+        {
+          key = "jira.permission.edit.groupCF"
+          value = jira.Field.instance.Urgency2__select__c
+        },
+        {
+          key = "jira.permission.edit.userCF"
+          value = jira.Field.instance.userPicker__multiuserpicker__c
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.approved
+      name = "Approved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      name = "In Progress"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.in_review@s
+      name = "In Review"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "testKey"
+          value = "testValue"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.reopened
+      name = "Reopened"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.resolved
+      name = "Resolved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+  ]
+  name = "Alon's Test Workflow 10f"
+}

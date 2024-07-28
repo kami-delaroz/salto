@@ -1,0 +1,14 @@
+jira.ObjectType Processes_SLA_activation@us {
+  name = "SLA activation"
+  type = 0
+  description = ""
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.3D_Printer@s
+  parentObjectTypeId = jira.ObjectSchema.instance.Processes
+  _parent = [
+    jira.ObjectSchema.instance.Processes,
+  ]
+  _alias = "SLA activation"
+}

@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute AAAA_Hardware_Assets_us_Refresh_Date@uumus {
+  objectType = jira.ObjectType.instance.AAAA_Hardware_Assets@us
+  name = "Refresh Date"
+  type = 0
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 4
+  _alias = "Refresh Date"
+}

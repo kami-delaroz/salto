@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus LN___Software_sbs__Missing@uuumuu {
+  name = "Missing"
+  description = "Asset is not found in its expected location"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.LN___Software@sbs,
+  ]
+  _alias = "LN - Software:Missing"
+}

@@ -1,0 +1,10 @@
+jira.ObjectTypeOrder DP___Services_childOrder@sbsu {
+  objectTypes = [
+    jira.ObjectType.instance.DP___Services_sbs_Models@uuumu,
+    jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets@uuumus,
+  ]
+  assetsSchema = jira.ObjectSchema.instance.DP___Services@sbs
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+}

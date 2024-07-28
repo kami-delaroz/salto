@@ -1,0 +1,14 @@
+jira.IssueTypeScreenScheme GTST3__Kanban_Issue_Type_Screen_Scheme@fsssss {
+  name = "GTST3: Kanban Issue Type Screen Scheme"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Bug
+      screenSchemeId = jira.ScreenScheme.instance.GTST3__Kanban_Bug_Screen_Scheme@fssss
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.GTST3__Kanban_Default_Screen_Scheme@fssss
+    },
+  ]
+}

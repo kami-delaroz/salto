@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto__Netsuite_Adapter@uus {
+  assigneeType = "PROJECT_LEAD"
+  name = "Netsuite Adapter"
+  _parent = [
+    jira.Project.instance.Salto,
+  ]
+  _alias = "Salto:Netsuite Adapter"
+}

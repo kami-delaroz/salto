@@ -1,0 +1,7 @@
+jira.IssueType Epic {
+  description = "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete."
+  name = "Epic"
+  untranslatedName = "Epic"
+  hierarchyLevel = 1
+  avatar = file("jira/IssueType/Epic.png")
+}

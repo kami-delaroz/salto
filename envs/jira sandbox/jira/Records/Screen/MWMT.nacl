@@ -1,0 +1,10 @@
+jira.Screen MWMT {
+  name = "MWMT"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      position = 0
+    }
+  }
+}

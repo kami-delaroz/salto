@@ -1,0 +1,7 @@
+jira.ApplicationProperty jira_comment_collapsing_minimum_hidden@v {
+  id = "jira.comment.collapsing.minimum.hidden"
+  value = "4"
+  name = "jira.comment.collapsing.minimum.hidden"
+  desc = "The minimum number of comments needing to be hidden for comment collapsing to occur. 0 means there will be no comment collapsing."
+  type = "uint"
+}

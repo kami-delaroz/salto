@@ -1,0 +1,12 @@
+jira.CustomFieldContext Select_List__cascading___cascadingselect__c_ssjkuuuu_second_context@uuuuuuuumus {
+  name = "second context"
+  description = ""
+  isGlobalContext = true
+  defaultValue = {
+    type = "option.cascading"
+  }
+  _parent = [
+    jira.Field.instance.Select_List__cascading___cascadingselect__c@ssjkuuuu,
+  ]
+  _alias = "Select List (cascading) context in second context"
+}

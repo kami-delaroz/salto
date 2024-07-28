@@ -1,0 +1,21 @@
+jira.ObjectTypeAttribute Facilities_Floors_Building_Name@uus {
+  objectType = jira.ObjectType.instance.Facilities_Floors
+  name = "Building Name"
+  type = 1
+  description = "Name of the associated building"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaDefaultReferenceType.instance.Dependency
+  typeValue = jira.ObjectType.instance.Facilities_Buildings
+  _alias = "Building Name"
+}

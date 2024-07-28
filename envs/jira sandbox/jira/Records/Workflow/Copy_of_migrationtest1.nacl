@@ -1,0 +1,109 @@
+jira.Workflow Copy_of_migrationtest1@s {
+  description = "(This copy was automatically generated from a draft, when workflow 'migrationtest1' was made inactive.)"
+  transitions = {
+    dsdsds__From__none__Initial@fffsff = {
+      name = "dsdsds"
+      description = ""
+      to = jira.Status.instance.aaa
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = 172.85772588670653
+        },
+      ]
+    }
+    tans1__From__Open__Directed@fffsff = {
+      name = "tans1"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = -148.8130518337995
+          targetAngle = 38.23282570558455
+        },
+      ]
+      to = jira.Status.instance.aaa
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.aaa
+      name = "aaa"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 566.021484375
+        y = 20.299998779296885
+      }
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 695.40625
+        y = 117.4
+      }
+    },
+  ]
+  name = "Copy of migrationtest1"
+  diagramInitialEntry = {
+    x = 349
+    y = -20.599999999999994
+  }
+}

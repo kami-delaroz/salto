@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_announcement_banner_message@v {
+  id = "jira.admin.announcement.banner.message"
+  value = ""
+  name = "jira.admin.announcement.banner.message"
+  type = "string"
+}

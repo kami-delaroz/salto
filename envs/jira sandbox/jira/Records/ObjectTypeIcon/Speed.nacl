@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Speed {
+  name = "Speed"
+  icon = file("jira/ObjectTypeIcon/Speed.png")
+}

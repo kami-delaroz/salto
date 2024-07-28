@@ -1,0 +1,12 @@
+jira.ObjectTypeOrder AAAA_Hardware_Assets_childOrder@usu {
+  objectTypes = [
+    jira.ObjectType.instance.AAAA_Hardware_Assets_us_Phones@uumu,
+    jira.ObjectType.instance.AAAA_Hardware_Assets_us_Laptops@uumu,
+    jira.ObjectType.instance.AAAA_Hardware_Assets_us_Servers@uumu,
+    jira.ObjectType.instance.AAAA_Hardware_Assets_us_Printers@uumu,
+  ]
+  assetsSchema = jira.ObjectSchema.instance.AAAA
+  _parent = [
+    jira.ObjectType.instance.AAAA_Hardware_Assets@us,
+  ]
+}

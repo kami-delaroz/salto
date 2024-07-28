@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus People__Exempt {
+  name = "Exempt"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.People,
+  ]
+  _alias = "People:Exempt"
+}

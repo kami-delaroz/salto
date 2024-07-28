@@ -1,0 +1,18 @@
+jira.IssueTypeScreenScheme SP__Kanban_Issue_Type_Screen_Scheme@fsssss {
+  name = "SP: Kanban Issue Type Screen Scheme"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Bug
+      screenSchemeId = jira.ScreenScheme.instance.SP__Kanban_Bug_Screen_Scheme@fssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Bug3
+      screenSchemeId = jira.ScreenScheme.instance.Neta_aaa1@s
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.SP__Kanban_Default_Screen_Scheme@fssss
+    },
+  ]
+}

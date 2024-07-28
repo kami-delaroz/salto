@@ -1,0 +1,12 @@
+jira.ProjectComponent Salto__Workato_Adapter@uus {
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Workato Adapter"
+  leadAccountId = {
+    id = "5eea285a41f7000abb1b049d"
+    displayName = "Neta Marcus"
+  }
+  _parent = [
+    jira.Project.instance.Salto,
+  ]
+  _alias = "Salto:Workato Adapter"
+}

@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute Facilities_Buildings_State_Province@uud {
+  objectType = jira.ObjectType.instance.Facilities_Buildings
+  name = "State/Province"
+  type = 0
+  description = "State/Province where building is located"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "State/Province"
+}

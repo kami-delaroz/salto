@@ -1,0 +1,8 @@
+jira.IssueTypeScheme AS2__Simple_Issue_Tracking_Issue_Type_Scheme@fssssss {
+  name = "AS2: Simple Issue Tracking Issue Type Scheme"
+  defaultIssueTypeId = jira.IssueType.instance.Task
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Sub_task@b,
+  ]
+}

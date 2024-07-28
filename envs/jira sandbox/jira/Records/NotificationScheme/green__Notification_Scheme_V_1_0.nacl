@@ -1,0 +1,277 @@
+jira.NotificationScheme green__Notification_Scheme_V_1_0@fssssv {
+  name = "green: Notification Scheme V 1.0"
+  description = ""
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Generic_Event@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Closed@s
+    },
+    {
+      notifications = [
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Comment_Deleted@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Comment_Edited@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Commented@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          parameter = jira.ProjectRole.instance.shay_role@s
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Created@s
+    },
+    {
+      notifications = [
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Deleted@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Moved@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Reopened@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Resolved@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Updated@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Worklog_Deleted@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Worklog_Updated@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Work_Logged_On_Issue@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Work_Started_On_Issue@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Work_Stopped_On_Issue@s
+    },
+  ]
+}

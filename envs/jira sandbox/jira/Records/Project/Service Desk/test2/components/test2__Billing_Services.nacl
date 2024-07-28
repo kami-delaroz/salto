@@ -1,0 +1,13 @@
+jira.ProjectComponent test2__Billing_Services@uus {
+  name = "Billing Services"
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  _parent = [
+    jira.Project.instance.test2,
+  ]
+  _alias = "test2:Billing Services"
+}

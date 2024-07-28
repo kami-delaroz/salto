@@ -1,0 +1,10 @@
+jira.Field Group_Picker__multiple_groups___multigrouppicker__c@ssjskuuuu {
+  name = "Group Picker (multiple groups)"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:grouppickersearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multigrouppicker"
+  contexts = [
+    jira.CustomFieldContext.instance.Group_Picker__multiple_groups___multigrouppicker__c_ssjskuuuu_Default_Configuration_Scheme_for_Group_Picker__multiple_groups_@uuuuuuuuumussssssjsk,
+  ]
+  _alias = "Group Picker (multiple groups)"
+}

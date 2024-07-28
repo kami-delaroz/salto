@@ -1,0 +1,7 @@
+jira.IssueType Bug {
+  description = "<SECRET_TOKEN>"
+  name = "Bug"
+  untranslatedName = "Bug"
+  hierarchyLevel = 2
+  avatar = file("jira/IssueType/Bug.png")
+}
