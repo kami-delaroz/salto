@@ -1,0 +1,12 @@
+jira.ObjectSchema LNIT_restored_at_202403211012 {
+  name = "LNIT_restored_at_202403211012"
+  objectSchemaKey = "ALVJWBB"
+  status = "Ok"
+  description = "No Desc"
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = false
+  }
+  _alias = "LNIT_restored_at_202403211012"
+}
