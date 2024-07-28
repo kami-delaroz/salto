@@ -1,0 +1,9 @@
+jira.Field Description__string {
+  name = "Description"
+  schema = {
+    type = "string"
+    system = "description"
+  }
+  description = ""
+  _alias = "Description"
+}

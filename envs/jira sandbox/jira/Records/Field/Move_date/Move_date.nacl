@@ -1,0 +1,9 @@
+jira.Field Move_date__datepicker__c@suuuu {
+  name = "Move date"
+  description = ""
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datepicker"
+  contexts = [
+    jira.CustomFieldContext.instance.Move_date__datepicker__c_suuuu_Default_Configuration_Scheme_for_Move_date@uuuuumusssss,
+  ]
+  _alias = "Move date"
+}

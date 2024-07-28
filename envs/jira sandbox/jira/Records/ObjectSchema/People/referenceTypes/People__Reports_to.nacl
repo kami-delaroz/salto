@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType People__Reports_to@uus {
+  name = "Reports to"
+  color = "57D9A3"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.People,
+  ]
+}

@@ -1,0 +1,3 @@
+jira.Group shay_testGroup@s {
+  name = "shay testGroup"
+}

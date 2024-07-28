@@ -1,0 +1,13 @@
+jira.Project DeleteTeamProject {
+  key = "DEL"
+  description = ""
+  name = "DeleteTeamProject"
+  projectTypeKey = "software"
+  entityId = "06fe04fc-dd42-4dc7-9daa-8e2a1a5e15a8"
+  uuid = "06fe04fc-dd42-4dc7-9daa-8e2a1a5e15a8"
+  issueSecurityScheme = jira.SecurityScheme.instance.DEL__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "62d20c47a94a6f9c0eff9866"
+    displayName = "Ido Zak"
+  }
+}

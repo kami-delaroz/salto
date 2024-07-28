@@ -1,0 +1,16 @@
+jira.Filter Filter_for_testScrum@s {
+  name = "Filter for testScrum"
+  owner = {
+    id = "62d20c47a94a6f9c0eff9866"
+    displayName = "Ido Zak"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.AlonCompanyProject.key } AND ${ jira.Field.instance.Issue_Type__issuetype@suu } = ${ jira.IssueType.instance.Bug3.name } AND type = Bug4 AND ${ jira.Field.instance.Status__status } = \"${ jira.Status.instance.to_do@s.name }\" AND ${ jira.Field.instance.Priority__priority } = ${ jira.Priority.instance.High.name } AND ${ jira.Field.instance.Resolution__resolution } = ${ jira.Resolution.instance.Done.name } ORDER BY ${ jira.Field.instance.Priority__priority } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.AlonCompanyProject
+      }
+    },
+  ]
+}

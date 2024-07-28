@@ -1,0 +1,6 @@
+jira.Status design {
+  name = "Design"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = "Tickets in the design backlog"
+  _alias = "Design"
+}

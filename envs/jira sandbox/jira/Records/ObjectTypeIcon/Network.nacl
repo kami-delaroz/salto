@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Network {
+  name = "Network"
+  icon = file("jira/ObjectTypeIcon/Network.png")
+}

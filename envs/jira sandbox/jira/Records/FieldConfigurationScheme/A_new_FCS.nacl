@@ -1,0 +1,14 @@
+jira.FieldConfigurationScheme A_new_FCS@s {
+  name = "A new FCS"
+  description = "תיאור"
+  items = [
+    {
+      issueTypeId = "default"
+      fieldConfigurationId = jira.FieldConfiguration.instance.Default_Field_Configuration@s
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Bug
+      fieldConfigurationId = jira.FieldConfiguration.instance.Copy_of_Default_Field_Configuration_for_BUGS@s
+    },
+  ]
+}

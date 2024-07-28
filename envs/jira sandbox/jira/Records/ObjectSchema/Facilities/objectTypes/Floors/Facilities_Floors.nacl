@@ -1,0 +1,13 @@
+jira.ObjectType Facilities_Floors {
+  name = "Floors"
+  type = 0
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.GPS_Device@s
+  parentObjectTypeId = jira.ObjectSchema.instance.Facilities
+  _parent = [
+    jira.ObjectSchema.instance.Facilities,
+  ]
+  _alias = "Floors"
+}

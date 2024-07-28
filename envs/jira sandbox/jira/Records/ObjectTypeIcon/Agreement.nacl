@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Agreement {
+  name = "Agreement"
+  icon = file("jira/ObjectTypeIcon/Agreement.png")
+}

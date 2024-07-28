@@ -1,0 +1,817 @@
+jira.PermissionScheme Jira_Service_Management_Permission_Scheme_for_Project_LNTSM3_1@s {
+  name = "Jira Service Management Permission Scheme for Project LNTSM3 1"
+  description = "This Jira Service Management Permission Scheme was generated for Project LNTSM3"
+  permissions = [
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "ADD_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "ADD_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "ADD_COMMENTS"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "ADD_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "ADMINISTER_PROJECTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "ADMINISTER_PROJECTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "ASSIGNABLE_USER"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "ASSIGNABLE_USER"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "ASSIGNABLE_USER"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "ASSIGN_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "ASSIGN_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "ASSIGN_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "ASSIGN_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectLead"
+      }
+      permission = "BROWSE_PROJECTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "BROWSE_PROJECTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "BROWSE_PROJECTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "BROWSE_PROJECTS"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "BROWSE_PROJECTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "CLOSE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "CLOSE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "CLOSE_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "CLOSE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "CREATE_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "CREATE_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "CREATE_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "CREATE_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "CREATE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "CREATE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "CREATE_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "CREATE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "DELETE_ALL_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "DELETE_ALL_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "DELETE_ALL_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "DELETE_ALL_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "DELETE_ALL_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "DELETE_ALL_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "DELETE_ALL_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "DELETE_ALL_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "DELETE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "DELETE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "DELETE_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "DELETE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "DELETE_OWN_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "DELETE_OWN_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "DELETE_OWN_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "DELETE_OWN_ATTACHMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "DELETE_OWN_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "DELETE_OWN_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "DELETE_OWN_COMMENTS"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "DELETE_OWN_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "DELETE_OWN_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "DELETE_OWN_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "DELETE_OWN_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "EDIT_ALL_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "EDIT_ALL_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "EDIT_ALL_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "EDIT_ALL_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "EDIT_ALL_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "EDIT_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "EDIT_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "EDIT_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "EDIT_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "EDIT_OWN_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "EDIT_OWN_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "EDIT_OWN_COMMENTS"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "EDIT_OWN_COMMENTS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "EDIT_OWN_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "EDIT_OWN_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "EDIT_OWN_WORKLOGS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "LINK_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "LINK_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "LINK_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "LINK_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "MANAGE_SPRINTS_PERMISSION"
+    },
+    {
+      holder = {
+        type = "projectLead"
+      }
+      permission = "MANAGE_WATCHERS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "MANAGE_WATCHERS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "MANAGE_WATCHERS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "MANAGE_WATCHERS"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "MANAGE_WATCHERS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "MODIFY_REPORTER"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "MODIFY_REPORTER"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "MODIFY_REPORTER"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "MODIFY_REPORTER"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "MOVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "MOVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "MOVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "MOVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "RESOLVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "RESOLVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "RESOLVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "RESOLVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "SCHEDULE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "SCHEDULE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "SCHEDULE_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "SCHEDULE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "SERVICEDESK_AGENT"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "SERVICEDESK_AGENT"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "SERVICEDESK_AGENT"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "SET_ISSUE_SECURITY"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "SET_ISSUE_SECURITY"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "SET_ISSUE_SECURITY"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "SET_ISSUE_SECURITY"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "TRANSITION_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "TRANSITION_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "TRANSITION_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "TRANSITION_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "VIEW_AGGREGATED_DATA"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "VIEW_DEV_TOOLS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "VIEW_DEV_TOOLS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "VIEW_READONLY_WORKFLOW"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "VIEW_READONLY_WORKFLOW"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "VIEW_READONLY_WORKFLOW"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "VIEW_VOTERS_AND_WATCHERS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "VIEW_VOTERS_AND_WATCHERS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "VIEW_VOTERS_AND_WATCHERS"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "VIEW_VOTERS_AND_WATCHERS"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Administrators
+      }
+      permission = "WORK_ON_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.Service_Desk_Team@s
+      }
+      permission = "WORK_ON_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "WORK_ON_ISSUES"
+    },
+  ]
+}

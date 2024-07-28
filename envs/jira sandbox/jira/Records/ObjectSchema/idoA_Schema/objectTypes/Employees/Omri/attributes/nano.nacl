@@ -1,0 +1,26 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Employees_umu_Omri_uuumu_nano@uuuuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Employees_umu_Omri@uuumu
+  name = "nano"
+  type = 2
+  description = "check nano neno"
+  typeValueMulti = [
+    jira.Group.instance.administrators,
+  ]
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 5
+  suffix = ""
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = true
+  regexValidation = ""
+  qlQuery = ""
+  options = ""
+  iql = ""
+  defaultTypeId = -1
+  _alias = "nano"
+}

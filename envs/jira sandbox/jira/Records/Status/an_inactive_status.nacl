@@ -1,0 +1,6 @@
+jira.Status an_inactive_status@s {
+  name = "An Inactive Status"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = "This is an inactive status"
+  _alias = "An Inactive Status"
+}

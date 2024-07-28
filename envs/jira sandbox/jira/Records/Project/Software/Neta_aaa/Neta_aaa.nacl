@@ -1,0 +1,18 @@
+jira.Project Neta_aaa@s {
+  key = "NA"
+  description = ""
+  name = "Neta aaa"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.NA__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.NA__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.Neta_aaa1@s
+  leadAccountId = {
+    id = "5eea285a41f7000abb1b049d"
+    displayName = "Neta Marcus"
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}

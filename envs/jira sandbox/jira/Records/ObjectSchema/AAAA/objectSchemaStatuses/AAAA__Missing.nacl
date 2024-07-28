@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus AAAA__Missing {
+  name = "Missing"
+  description = "Asset is not found in its expected location"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+  _alias = "AAAA:Missing"
+}

@@ -1,0 +1,10 @@
+jira.Field Date_of_First_Response__firstresponsedate__c@sssuuuu {
+  name = "Date of First Response"
+  description = ""
+  searcherKey = "com.atlassian.jira.ext.charting:firstreponsedatesearcher"
+  type = "com.atlassian.jira.ext.charting:firstresponsedate"
+  contexts = [
+    jira.CustomFieldContext.instance.Date_of_First_Response__firstresponsedate__c_sssuuuu_Default_Configuration_Scheme_for_Date_of_First_Response@uuuuuuumusssssss,
+  ]
+  _alias = "Date of First Response"
+}

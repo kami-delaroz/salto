@@ -1,0 +1,14 @@
+jira.ObjectType Lior_s_IT_Schema_tss_sub_scheme_uuumub_sub_sub_2@uuuuuumubb {
+  name = "sub-sub-2"
+  type = 0
+  description = "lilo"
+  parentObjectTypeId = jira.ObjectType.instance.Lior_s_IT_Schema_tss_sub_scheme@uuumub
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Astronaut
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "sub-sub-2"
+}

@@ -1,0 +1,14 @@
+jira.Project test_proj_one@b {
+  key = "TPO"
+  description = ""
+  name = "test-proj-one"
+  projectCategory = jira.ProjectCategory.instance.ProjCatOne
+  projectTypeKey = "software"
+  entityId = "03e3aa2c-2ee5-4574-ac67-32fdf8f3dc7e"
+  uuid = "03e3aa2c-2ee5-4574-ac67-32fdf8f3dc7e"
+  issueSecurityScheme = jira.SecurityScheme.instance.TPO__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "5cd027a783de300fe5d4b9b0"
+    displayName = "Ori Moisis"
+  }
+}

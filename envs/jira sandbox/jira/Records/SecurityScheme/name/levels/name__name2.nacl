@@ -1,0 +1,63 @@
+jira.SecurityLevel name__name2 {
+  description = "desc2"
+  name = "name2"
+  members = [
+    {
+      holder = {
+        type = "user"
+        parameter = {
+          id = "5fa91999b2633d0076583a61"
+          displayName = "Alon Stern"
+        }
+      }
+    },
+    {
+      holder = {
+        type = "projectLead"
+      }
+    },
+    {
+      holder = {
+        type = "assignee"
+      }
+    },
+    {
+      holder = {
+        type = "userCustomField"
+        parameter = jira.Field.instance.userPicker__multiuserpicker__c
+      }
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+    },
+    {
+      holder = {
+        type = "groupCustomField"
+        parameter = jira.Field.instance.Urgency2__select__c
+      }
+    },
+    {
+      holder = {
+        type = "group"
+        parameter = jira.Group.instance.atlassian_addons_admin@b
+      }
+    },
+    {
+      holder = {
+        type = "applicationRole"
+        parameter = "jira-servicedesk"
+      }
+    },
+    {
+      holder = {
+        type = "reporter"
+      }
+    },
+  ]
+  _parent = [
+    jira.SecurityScheme.instance.name,
+  ]
+}

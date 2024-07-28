@@ -1,0 +1,13 @@
+jira.ObjectType AAAA_Hardware_Assets_us_Servers_uumu_Red_Hat_Linux@uuuumuss {
+  name = "Red Hat Linux"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.AAAA_Hardware_Assets_us_Servers@uumu
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Red_Hat@s
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+  _alias = "Red Hat Linux"
+}

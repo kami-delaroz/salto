@@ -1,0 +1,6 @@
+jira.ApplicationProperty Indicate_whether_or_not_to_expose_product_suggestions_for_other_Atlassian_Products_within_JIRA@s {
+  id = "xflow.product.suggestions.enabled"
+  value = "true"
+  name = "Indicate whether or not to expose product suggestions for other Atlassian Products within JIRA"
+  type = "boolean"
+}

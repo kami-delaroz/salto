@@ -1,0 +1,7 @@
+jira.ScreenScheme GWRFA__Kanban_Default_Screen_Scheme@fssss {
+  name = "GWRFA: Kanban Default Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.GWRFA__Kanban_Default_Issue_Screen@fssss
+  }
+}

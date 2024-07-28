@@ -1,0 +1,275 @@
+jira.Workflow ITSAMPLE__Jira_Service_Management_default_workflow@fsssss {
+  description = "3This Jira Service Management default workflow was generated for Project ITSAMPLE2"
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueStatusFunction"
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Start_progress__From__Open_Pending_Reopened__Directed@sfffszdzdff = {
+      name = "Start progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.pending
+        },
+        {
+          id = jira.Status.instance.open
+        },
+        {
+          id = jira.Status.instance.reopened
+        },
+      ]
+      to = jira.Status.instance.work_in_progress@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___14@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Pending__From__Open_Reopened_Work_in_progress__Directed@fffszdzdssff = {
+      name = "Pending"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.work_in_progress@s
+        },
+        {
+          id = jira.Status.instance.open
+        },
+        {
+          id = jira.Status.instance.reopened
+        },
+      ]
+      to = jira.Status.instance.pending
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Pending_Reason_screen___13@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_open__From__Pending_Work_in_progress__Directed@ssfffszdssff = {
+      name = "Back to open"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.pending
+        },
+        {
+          id = jira.Status.instance.work_in_progress@s
+        },
+      ]
+      to = jira.Status.instance.open
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Mark_as_done__From__Open_Reopened_Work_in_progress__Directed@ssfffszdzdssff = {
+      name = "Mark as done"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.work_in_progress@s
+        },
+        {
+          id = jira.Status.instance.open
+        },
+        {
+          id = jira.Status.instance.reopened
+        },
+      ]
+      to = jira.Status.instance.done
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___13@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Reopen_issue__From__Done__Directed@sfffsff = {
+      name = "Reopen issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.done
+        },
+      ]
+      to = jira.Status.instance.reopened
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.done
+      name = "Done"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.pending
+      name = "Pending"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.reopened
+      name = "Reopened"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.work_in_progress@s
+      name = "Work in progress"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+  ]
+  name = "ITSAMPLE: Jira Service Management default workflow"
+}

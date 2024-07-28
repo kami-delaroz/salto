@@ -1,0 +1,6 @@
+jira.IssueType Service_Request@s {
+  description = "A request that follows ITSM workflows."
+  name = "Service Request"
+  untranslatedName = "Service Request"
+  hierarchyLevel = 0
+}

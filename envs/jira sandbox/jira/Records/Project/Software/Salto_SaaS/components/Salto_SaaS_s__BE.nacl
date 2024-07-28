@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto_SaaS_s__BE@umuu {
+  assigneeType = "PROJECT_DEFAULT"
+  name = "BE"
+  _parent = [
+    jira.Project.instance.Salto_SaaS@s,
+  ]
+  _alias = "Salto SaaS:BE"
+}

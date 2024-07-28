@@ -1,0 +1,11 @@
+jira.IssueTypeScheme TPT__Scrum_Issue_Type_Scheme@fssss {
+  name = "TPT: Scrum Issue Type Scheme"
+  defaultIssueTypeId = jira.IssueType.instance.Story
+  issueTypeIds = [
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+  ]
+}

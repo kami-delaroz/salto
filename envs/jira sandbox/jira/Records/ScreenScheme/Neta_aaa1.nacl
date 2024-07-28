@@ -1,0 +1,7 @@
+jira.ScreenScheme Neta_aaa1@s {
+  name = "Neta aaa1"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.Neta_aaa1@s
+  }
+}

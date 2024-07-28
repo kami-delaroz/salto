@@ -1,0 +1,21 @@
+jira.ObjectTypeAttribute DP___People_sbs_Employees_uuumu_Job_Role@uuuuumus {
+  objectType = jira.ObjectType.instance.DP___People_sbs_Employees@uuumu
+  name = "Job Role"
+  type = 1
+  description = "Employee's job role"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.DP___People_sbs__Performs_role_of@uuumuuss
+  typeValue = jira.ObjectType.instance.DP___People_sbs_Role@uuumu
+  _alias = "Job Role"
+}

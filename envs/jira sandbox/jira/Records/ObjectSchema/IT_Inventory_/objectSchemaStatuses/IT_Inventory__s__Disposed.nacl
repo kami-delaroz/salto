@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus IT_Inventory__s__Disposed@uumuu {
+  name = "Disposed"
+  description = "Asset is disposed and removed from accounting records"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "IT Inventory :Disposed"
+}

@@ -1,0 +1,8 @@
+jira.Webhook Bad_Webhook_5_@ssl {
+  name = "Bad Webhook 5!"
+  url = "https://staging.salto.com/rest/webhooks/webhook5"
+  description = ""
+  excludeBody = true
+  enabled = true
+  isSigned = false
+}

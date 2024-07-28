@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus DP___Services_sbs__Retired@uuumuu {
+  name = "Retired"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "DP - Services:Retired"
+}

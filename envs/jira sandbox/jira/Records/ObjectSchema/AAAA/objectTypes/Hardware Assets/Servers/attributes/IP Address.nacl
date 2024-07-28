@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute AAAA_Hardware_Assets_us_Servers_uumu_IP_Address@uuuumus {
+  objectType = jira.ObjectType.instance.AAAA_Hardware_Assets_us_Servers@uumu
+  name = "IP Address"
+  type = 0
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "IP Address"
+}

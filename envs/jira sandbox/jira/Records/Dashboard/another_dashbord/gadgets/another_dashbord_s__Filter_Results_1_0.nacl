@@ -1,0 +1,44 @@
+jira.DashboardGadget another_dashbord_s__Filter_Results_1_0@umuusuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.gadgets:filter-results-gadget/gadgets/filter-results-gadget.xml"
+  color = "green"
+  position = {
+    row = 0
+    column = 1
+  }
+  title = "Filter Results"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "filterId"
+          value = jira.Filter.instance.testFilter21
+        },
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "columnNames"
+          value = "summary|priority|testReadOnly[Short text]"
+        },
+        {
+          key = "isPopup"
+          value = "false"
+        },
+        {
+          key = "num"
+          value = "5"
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.another_dashbord@s,
+  ]
+  _alias = "Filter Results"
+}

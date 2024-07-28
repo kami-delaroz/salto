@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Department4_umu_Updated@uuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Department4@umu
+  name = "Updated"
+  type = 0
+  editable = false
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 6
+  _alias = "Updated"
+}

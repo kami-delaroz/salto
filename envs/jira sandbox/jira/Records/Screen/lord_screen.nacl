@@ -1,0 +1,13 @@
+jira.Screen lord_screen@s {
+  name = "lord screen"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+  }
+}
