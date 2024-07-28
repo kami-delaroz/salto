@@ -13,7 +13,7 @@ jira.CustomFieldContext batel_testing__cmdb_object_cftype__c_suubbuu_Default_Con
     attributesDisplayedOnIssue = [
       jira.ObjectTypeAttribute.instance.LNIT_restored_at_202403211012_Models_Jsm2_dkkkol,
     ]
-    multiple = true
+    multiple = false
     shouldSetDefaultValuesFromEmptySearch = true
   }
   _parent = [
