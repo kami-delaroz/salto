@@ -4,7 +4,7 @@ jira.CustomFieldContext batel_testing__cmdb_object_cftype__c_suubbuu_Default_Con
   isGlobalContext = true
   assetsObjectFieldConfiguration = {
     objectSchemaId = jira.ObjectSchema.instance.Lior_s_IT_Schema@tss
-    objectFilterQuery = "${ jira.Field.instance.Issue_Type__issuetype@suu } = AA and ${ jira.Field.instance.Issue_Type__issuetype@suu } = AA"
+    objectFilterQuery = "${ jira.Field.instance.Issue_Type__issuetype@suu } = AA"
     issueScopeFilterQuery = "${ jira.Field.instance.Issue_Type__issuetype@suu } = AL"
     attributesIncludedInAutoCompleteSearch = [
       jira.ObjectTypeAttribute.instance.LNIT_restored_at_202403211012_Models_Jsm2_dkkkol,
