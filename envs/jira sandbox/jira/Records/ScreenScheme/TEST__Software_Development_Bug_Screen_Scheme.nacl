@@ -1,0 +1,7 @@
+jira.ScreenScheme TEST__Software_Development_Bug_Screen_Scheme@fsssss {
+  name = "TEST: Software Development Bug Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.TEST__Software_Development_Bug_Screen@fssss
+  }
+}

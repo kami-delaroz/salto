@@ -1,0 +1,16 @@
+jira.Filter Filter_for_GT_board@s {
+  name = "Filter for GT board"
+  owner = {
+    id = "60a60ff79b362f006919d5ff"
+    displayName = "Guy Hamo"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.guytestmigration.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.guytestmigration
+      }
+    },
+  ]
+}

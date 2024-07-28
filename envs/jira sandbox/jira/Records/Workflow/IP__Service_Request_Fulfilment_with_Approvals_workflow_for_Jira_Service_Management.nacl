@@ -1,0 +1,593 @@
+jira.Workflow IP__Service_Request_Fulfilment_with_Approvals_workflow_for_Jira_Service_Management@fssssssssss {
+  description = "3This Jira Service Management Service Request Fulfilment with Approvals workflow was generated for Project IP2"
+  transitions = {
+    Create_issue__From__none__Initial@sfffsff = {
+      name = "Create issue"
+      description = ""
+      to = jira.Status.instance.waiting_for_approval@s
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueStatusFunction"
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Escalate__From__Waiting_for_support__Directed@fffsssff = {
+      name = "Escalate"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.waiting_for_support@s
+        },
+      ]
+      to = jira.Status.instance.escalated
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___3@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Resolve_this_issue__From__In_Progress_Pending_Waiting_for_customer_Waiting_for_support__Directed@ssfffsszdzdsszdssff = {
+      name = "Resolve this issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.pending
+        },
+        {
+          id = jira.Status.instance.waiting_for_support@s
+        },
+        {
+          id = jira.Status.instance.waiting_for_customer@s
+        },
+        {
+          id = jira.Status.instance.in_progress@s
+        },
+      ]
+      to = jira.Status.instance.resolved
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___2@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Escalate_this_issue__From__Waiting_for_customer__Directed@ssfffsssff = {
+      name = "Escalate this issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.waiting_for_customer@s
+        },
+      ]
+      to = jira.Status.instance.escalated
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___3@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_in_progress__From__Resolved__Directed@sssfffsff = {
+      name = "Back to in progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.resolved
+        },
+      ]
+      to = jira.Status.instance.in_progress@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___3@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Respond_to_customer__From__Pending_Waiting_for_support__Directed@ssfffszdssff = {
+      name = "Respond to customer"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.pending
+        },
+        {
+          id = jira.Status.instance.waiting_for_support@s
+        },
+      ]
+      to = jira.Status.instance.waiting_for_customer@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Pending__From__In_Progress_Waiting_for_support__Directed@fffsszdssff = {
+      name = "Pending"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.waiting_for_support@s
+        },
+        {
+          id = jira.Status.instance.in_progress@s
+        },
+      ]
+      to = jira.Status.instance.pending
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Pending_Reason_screen___2@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    In_progress__From__Escalated_Pending_Waiting_for_support__Directed@sfffszdzdssff = {
+      name = "In progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.pending
+        },
+        {
+          id = jira.Status.instance.waiting_for_support@s
+        },
+        {
+          id = jira.Status.instance.escalated
+        },
+      ]
+      to = jira.Status.instance.in_progress@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___3@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Cancel_request__From__In_Progress_Pending_Waiting_for_approval_Waiting_for_customer_Waiting_for_support__Directed@sfffsszdzdsszdsszdssff = {
+      name = "Cancel request"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.pending
+        },
+        {
+          id = jira.Status.instance.waiting_for_support@s
+        },
+        {
+          id = jira.Status.instance.waiting_for_approval@s
+        },
+        {
+          id = jira.Status.instance.waiting_for_customer@s
+        },
+        {
+          id = jira.Status.instance.in_progress@s
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___2@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Close__From__Canceled_Resolved__Directed@fffszdff = {
+      name = "Close"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.canceled
+        },
+        {
+          id = jira.Status.instance.resolved
+        },
+      ]
+      to = jira.Status.instance.closed
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Respond_to_support__From__Waiting_for_customer__Directed@ssfffsssff = {
+      name = "Respond to support"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.waiting_for_customer@s
+        },
+      ]
+      to = jira.Status.instance.waiting_for_support@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Approved__From__Waiting_for_approval__Directed@fffsssff = {
+      name = "Approved"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.waiting_for_approval@s
+        },
+      ]
+      to = jira.Status.instance.waiting_for_support@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "BlockInProgressApprovalCondition"
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Declined__From__Waiting_for_approval__Directed@fffsssff = {
+      name = "Declined"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.waiting_for_approval@s
+        },
+      ]
+      to = jira.Status.instance.resolved
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___2@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = jira.Resolution.instance.Declined
+            }
+          },
+        ]
+        conditions = {
+          type = "BlockInProgressApprovalCondition"
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.canceled
+      name = "Canceled"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.closed
+      name = "Closed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.escalated
+      name = "Escalated"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      name = "In Progress"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.pending
+      name = "Pending"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.resolved
+      name = "Resolved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.waiting_for_approval@s
+      name = "Waiting for approval"
+      properties = [
+        {
+          key = "approval.active"
+          value = "true"
+        },
+        {
+          key = "approval.condition.type"
+          value = "number"
+        },
+        {
+          key = "approval.condition.value"
+          value = "1"
+        },
+        {
+          key = "approval.field.id"
+          value = "customfield_10003"
+        },
+        {
+          key = "approval.transition.approved"
+          value = "901"
+        },
+        {
+          key = "approval.transition.rejected"
+          value = "911"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.waiting_for_customer@s
+      name = "Waiting for customer"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "sd.step.key"
+          value = "sdWFCustomer"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.waiting_for_support@s
+      name = "Waiting for support"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "sd.step.key"
+          value = "sdWFSupport"
+        },
+      ]
+    },
+  ]
+  name = "IP: Service Request Fulfilment with Approvals workflow for Jira Service Management"
+}

@@ -1,0 +1,14 @@
+jira.Filter "2022Q1_bugfix@b" {
+  name = "2022Q1-bugfix"
+  description = "jnklnfcbc"
+  owner = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+  jql = "${ jira.Field.instance.Labels__array } = 2022Q1-bugfix"
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+}

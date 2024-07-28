@@ -1,0 +1,9 @@
+jira.ObjectTypeOrder ID2_restored_at_202403211012_childOrder {
+  objectTypes = [
+    jira.ObjectType.instance.ID2_restored_at_202403211012_Test1,
+  ]
+  assetsSchema = jira.ObjectSchema.instance.ID2_restored_at_202403211012
+  _parent = [
+    jira.ObjectSchema.instance.ID2_restored_at_202403211012,
+  ]
+}

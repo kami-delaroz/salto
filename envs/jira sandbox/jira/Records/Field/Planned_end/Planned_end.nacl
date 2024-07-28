@@ -1,0 +1,10 @@
+jira.Field Planned_end__datetime__c@suuuu {
+  name = "Planned end"
+  description = "Enter when the change is planned to end."
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:datetimerange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datetime"
+  contexts = [
+    jira.CustomFieldContext.instance.Planned_end__datetime__c_suuuu_Default_Configuration_Scheme_for_Planned_end@uuuuumusssss,
+  ]
+  _alias = "Planned end"
+}

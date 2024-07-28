@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Fax {
+  name = "Fax"
+  icon = file("jira/ObjectTypeIcon/Fax.png")
+}

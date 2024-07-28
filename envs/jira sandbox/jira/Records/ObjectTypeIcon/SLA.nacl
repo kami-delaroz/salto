@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon SLA {
+  name = "SLA"
+  icon = file("jira/ObjectTypeIcon/SLA.png")
+}

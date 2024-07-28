@@ -1,0 +1,14 @@
+jira.IssueTypeScreenScheme Neta_aaa1@s {
+  name = "Neta aaa1"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Neta_aaa1@s
+      screenSchemeId = jira.ScreenScheme.instance.Neta_aaa1@s
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.Neta_aaa1@s
+    },
+  ]
+}

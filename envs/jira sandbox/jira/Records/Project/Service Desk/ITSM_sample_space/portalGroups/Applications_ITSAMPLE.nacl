@@ -1,0 +1,12 @@
+jira.PortalGroup Applications_ITSAMPLE {
+  name = "Applications"
+  ticketTypeIds = [
+    jira.RequestType.instance.Request_new_software_ITSAMPLE@ssu,
+    jira.RequestType.instance.Report_a_system_problem_ITSAMPLE@sssu,
+    jira.RequestType.instance.Request_a_change_ITSAMPLE@ssu,
+  ]
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Applications"
+}

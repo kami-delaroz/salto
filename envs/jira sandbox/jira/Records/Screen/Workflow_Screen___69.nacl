@@ -1,0 +1,13 @@
+jira.Screen Workflow_Screen___69@ssbs {
+  name = "Workflow Screen - 69"
+  description = "This screen is used in the workflow and enables you to assign issues"
+  tabs = {
+    Field_Tab@s = {
+      name = "Field Tab"
+      fields = [
+        jira.Field.instance.Assignee__user,
+      ]
+      position = 0
+    }
+  }
+}

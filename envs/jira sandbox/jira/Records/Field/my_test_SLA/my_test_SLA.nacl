@@ -1,0 +1,11 @@
+jira.Field my_test_SLA__sd_sla_field__c@ssuubbuu {
+  name = "my test SLA"
+  description = "This custom field was created by Jira Service Management."
+  isLocked = true
+  searcherKey = "com.atlassian.servicedesk:sd-sla-field-searcher"
+  type = "com.atlassian.servicedesk:sd-sla-field"
+  contexts = [
+    jira.CustomFieldContext.instance.my_test_SLA__sd_sla_field__c_ssuubbuu_Default_Configuration_Scheme_for_my_test_SLA@uuuuuuuumussssss,
+  ]
+  _alias = "my test SLA"
+}

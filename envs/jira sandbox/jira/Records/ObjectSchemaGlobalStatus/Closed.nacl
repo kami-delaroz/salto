@@ -1,0 +1,5 @@
+jira.ObjectSchemaGlobalStatus Closed {
+  name = "Closed"
+  description = ""
+  category = 0
+}

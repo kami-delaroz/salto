@@ -1,0 +1,7 @@
+jira.Field testSelectList7__cascadingselect__c {
+  name = "testSelectList7"
+  description = "desc!2"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect"
+  _alias = "testSelectList7"
+}

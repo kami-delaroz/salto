@@ -1,0 +1,11 @@
+jira.IssueType Zombo_Plaaugn@s {
+  description = '''
+Hello שלום
+
+what
+'''
+  name = "Zombo Plaaugn"
+  untranslatedName = "Zombo Plaaugn"
+  hierarchyLevel = -1
+  avatar = file("jira/IssueType/Zombo_Plaaugn.png")
+}

@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_announcement_banner_v2_bg_color@vvvvvb {
+  id = "jira.admin.announcement.banner.v2.bg-color"
+  value = "GREY"
+  name = "jira.admin.announcement.banner.v2.bg-color"
+  type = "string"
+}

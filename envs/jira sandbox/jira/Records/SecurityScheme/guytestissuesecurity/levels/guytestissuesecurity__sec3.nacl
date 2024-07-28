@@ -1,0 +1,21 @@
+jira.SecurityLevel guytestissuesecurity__sec3 {
+  description = ""
+  name = "sec3"
+  members = [
+    {
+      holder = {
+        type = "group"
+        parameter = jira.Group.instance.administrators
+      }
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+    },
+  ]
+  _parent = [
+    jira.SecurityScheme.instance.guytestissuesecurity,
+  ]
+}

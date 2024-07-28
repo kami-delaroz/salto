@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Checkbox {
+  name = "Checkbox"
+  icon = file("jira/ObjectTypeIcon/Checkbox.png")
+}

@@ -1,0 +1,13 @@
+jira.ProjectComponent AlonITSM3__Intranet {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Intranet"
+  leadAccountId = {
+    id = "640a4787f00d095406f6727f"
+    displayName = "Ido Amit"
+  }
+  _parent = [
+    jira.Project.instance.AlonITSM3,
+  ]
+  _alias = "AlonITSM3:Intranet"
+}

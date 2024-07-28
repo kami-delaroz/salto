@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Org_Unit@s {
+  name = "Org Unit"
+  icon = file("jira/ObjectTypeIcon/Org_Unit.png")
+}

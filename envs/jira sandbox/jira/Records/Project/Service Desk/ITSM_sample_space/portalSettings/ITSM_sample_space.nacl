@@ -1,0 +1,11 @@
+jira.PortalSettings ITSM_sample_space@s {
+  name = "ITSM sample space"
+  description = "Welcome! You can raise a request for ITSM sample space using the options provided."
+  announcementSettings = {
+    canAgentsManagePortalAnnouncement = false
+  }
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:ITSM sample space"
+}

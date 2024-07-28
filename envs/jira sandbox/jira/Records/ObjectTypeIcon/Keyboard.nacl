@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Keyboard {
+  name = "Keyboard"
+  icon = file("jira/ObjectTypeIcon/Keyboard.png")
+}

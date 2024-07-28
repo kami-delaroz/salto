@@ -1,0 +1,6 @@
+jira.Status object_id_created@s {
+  name = "object id created"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "object id created"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon TV_Antenna@s {
+  name = "TV Antenna"
+  icon = file("jira/ObjectTypeIcon/TV_Antenna.png")
+}

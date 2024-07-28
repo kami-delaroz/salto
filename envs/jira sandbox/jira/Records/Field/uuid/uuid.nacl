@@ -1,0 +1,7 @@
+jira.Field uuid__uuid__c {
+  name = "uuid"
+  description = "Adding both UUID and Location fields to a project, will enable JIRA Mobile Connect for that project."
+  searcherKey = "com.atlassian.jconnect.jconnect-plugin:uuid-searcher"
+  type = "com.atlassian.jconnect.jconnect-plugin:uuid"
+  _alias = "uuid"
+}

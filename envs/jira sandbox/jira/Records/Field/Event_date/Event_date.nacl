@@ -1,0 +1,9 @@
+jira.Field Event_date__datepicker__c@suuuu {
+  name = "Event date"
+  description = ""
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datepicker"
+  contexts = [
+    jira.CustomFieldContext.instance.Event_date__datepicker__c_suuuu_Default_Configuration_Scheme_for_Event_date@uuuuumusssss,
+  ]
+  _alias = "Event date"
+}
