@@ -1,0 +1,13 @@
+jira.ObjectType AAAA_Models_Model_Categories@uus {
+  name = "Model Categories"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.AAAA_Models
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+  _alias = "Model Categories"
+}

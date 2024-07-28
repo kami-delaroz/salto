@@ -1,0 +1,13 @@
+jira.Screen Workflow_Screen@s {
+  name = "Workflow Screen"
+  description = "This screen is used in the workflow and enables you to assign issues"
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Assignee__user,
+      ]
+      position = 0
+    }
+  }
+}

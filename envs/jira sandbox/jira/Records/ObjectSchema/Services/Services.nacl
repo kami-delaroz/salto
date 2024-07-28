@@ -1,0 +1,12 @@
+jira.ObjectSchema Services {
+  name = "Services"
+  objectSchemaKey = "SVC"
+  status = "Ok"
+  description = "Contains the 'Service' object type and services your site uses across projects."
+  properties = {
+    quickCreateObjects = false
+    validateQuickCreate = false
+    allowOtherObjectSchema = true
+  }
+  _alias = "Services"
+}

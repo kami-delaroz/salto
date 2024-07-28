@@ -1,0 +1,7 @@
+jira.ScreenScheme GWRJSM1__Jira_Service_Management_Screen_Scheme@fsssss {
+  name = "GWRJSM1: Jira Service Management Screen Scheme"
+  description = "This Jira Service Management Screen Scheme was generated automatically"
+  screens = {
+    default = jira.Screen.instance.GWRJSM1__Jira_Service_Management_Screen@fssss
+  }
+}

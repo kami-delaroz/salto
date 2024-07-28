@@ -1,0 +1,6 @@
+jira.Status building {
+  name = "Building"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = "Source code has been committed, and JIRA is waiting for the code to be built before moving to the next status."
+  _alias = "Building"
+}

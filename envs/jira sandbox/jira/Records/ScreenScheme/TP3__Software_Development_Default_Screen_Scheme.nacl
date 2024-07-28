@@ -1,0 +1,7 @@
+jira.ScreenScheme TP3__Software_Development_Default_Screen_Scheme@fsssss {
+  name = "TP3: Software Development Default Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.TP3__Software_Development_Default_Issue_Screen@fsssss
+  }
+}

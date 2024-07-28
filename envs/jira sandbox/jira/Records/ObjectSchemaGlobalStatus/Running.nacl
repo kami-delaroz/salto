@@ -1,0 +1,5 @@
+jira.ObjectSchemaGlobalStatus Running {
+  name = "Running"
+  description = ""
+  category = 1
+}

@@ -1,0 +1,11 @@
+jira.Field Start_date__datepicker__c@suuuu {
+  name = "Start date"
+  description = "Allows the planned start date for a piece of work to be set."
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:daterange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datepicker"
+  contexts = [
+    jira.CustomFieldContext.instance.Start_date__datepicker__c_suuuu_Default_Configuration_Scheme_for_Start_date@uuuuumusssss,
+  ]
+  _alias = "Start date"
+}

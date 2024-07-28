@@ -1,0 +1,12 @@
+jira.ObjectSchema People {
+  name = "People"
+  objectSchemaKey = "PEOPSAND"
+  status = "Ok"
+  description = "people's in sabx"
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = false
+  }
+  _alias = "People"
+}

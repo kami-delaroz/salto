@@ -1,0 +1,407 @@
+jira.Workflow GWRJSM1__Incident_Management_workflow_for_Jira_Service_Management@fsssssss {
+  description = "This Jira Service Management Incident Management workflow was generated for Project GWRJSM1"
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueStatusFunction"
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      from = [
+        {
+          sourceAngle = 78.11134196037203
+          targetAngle = -70.01689347810002
+        },
+      ]
+    }
+    Cancel__From__Open_Pending_Work_in_progress__Directed@fffszdzdssff = {
+      name = "Cancel"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 35.98243291001861
+          targetAngle = 175.47605446862056
+        },
+        {
+          id = jira.Status.instance.work_in_progress@s
+          sourceAngle = 2.6898407376428093
+          targetAngle = 175.47605446862056
+        },
+        {
+          id = jira.Status.instance.pending
+          sourceAngle = 78.11134196037203
+          targetAngle = -70.01689347810002
+        },
+      ]
+      to = jira.Status.instance.canceled
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___71@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "sd.workflow.save"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.cancel"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Resolve__From__Open_Work_in_progress__Directed@fffszdssff = {
+      name = "Resolve"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 133.71785379495634
+          targetAngle = 3.660566597512422
+        },
+        {
+          id = jira.Status.instance.work_in_progress@s
+          sourceAngle = 78.11134196037203
+          targetAngle = -70.01689347810002
+        },
+      ]
+      to = jira.Status.instance.completed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___71@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.resolve"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Back_to_work_in_progress__From__Completed__Directed@ssssfffsff = {
+      name = "Back to work in progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.completed
+          sourceAngle = -70.01689347810002
+          targetAngle = 78.11134196037203
+        },
+      ]
+      to = jira.Status.instance.work_in_progress@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___72@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.back.to.work.in.progress"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "sd.resolution.clear"
+          value = ""
+        },
+      ]
+    }
+    Investigate__From__Open_Pending__Directed@fffszdff = {
+      name = "Investigate"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 173.58664771095746
+          targetAngle = -70.01689347810002
+        },
+        {
+          id = jira.Status.instance.pending
+          sourceAngle = 174.92652558324858
+          targetAngle = 2.6898407376428093
+        },
+      ]
+      to = jira.Status.instance.work_in_progress@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen___72@ssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.investigate"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Pending__From__Open_Work_in_progress__Directed@fffszdssff = {
+      name = "Pending"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+          sourceAngle = 5.243501734154274
+          targetAngle = -70.01689347810002
+        },
+        {
+          id = jira.Status.instance.work_in_progress@s
+          sourceAngle = 2.6898407376428093
+          targetAngle = 174.92652558324858
+        },
+      ]
+      to = jira.Status.instance.pending
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.JIRA_Service_Desk_Pending_Reason_screen___71@ssssssbs
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.pending"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Close__From__Canceled_Completed__Directed@fffszdff = {
+      name = "Close"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.canceled
+          sourceAngle = 78.11134196037203
+          targetAngle = 4.492144589704093
+        },
+        {
+          id = jira.Status.instance.completed
+          sourceAngle = 78.11134196037203
+          targetAngle = 174.67487281477946
+        },
+      ]
+      to = jira.Status.instance.closed
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.close"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.canceled
+      name = "Canceled"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 460.33203125
+        y = 129.91222290039065
+      }
+    },
+    {
+      id = jira.Status.instance.closed
+      name = "Closed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      location = {
+        x = 314.0859375
+        y = 214.91222290039065
+      }
+    },
+    {
+      id = jira.Status.instance.completed
+      name = "Completed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 127.421875
+        y = 129.91222290039065
+      }
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 321.4140625
+        y = -106.90000244140623
+      }
+    },
+    {
+      id = jira.Status.instance.pending
+      name = "Pending"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 465.83203125
+        y = -23.90000244140623
+      }
+    },
+    {
+      id = jira.Status.instance.work_in_progress@s
+      name = "Work in progress"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      location = {
+        x = 104.8046875
+        y = -23.90000244140623
+      }
+    },
+  ]
+  name = "GWRJSM1: Incident Management workflow for Jira Service Management"
+  diagramInitialEntry = {
+    x = 346
+    y = -208.90000244140623
+  }
+}

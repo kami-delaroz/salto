@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Globe {
+  name = "Globe"
+  icon = file("jira/ObjectTypeIcon/Globe.png")
+}

@@ -1,0 +1,41 @@
+jira.NotificationScheme shir0 {
+  name = "shir0"
+  description = "new descriptionnn"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          parameter = {
+            id = "5cd027a783de300fe5d4b9b0"
+            displayName = "Ori Moisis"
+          }
+          type = "User"
+        },
+        {
+          parameter = jira.Field.instance.userPicker__multiuserpicker__c
+          type = "UserCustomField"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+    {
+      notifications = [
+        {
+          parameter = jira.Field.instance.Urgency__select__c
+          type = "GroupCustomField"
+        },
+        {
+          type = "ProjectLead"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Created@s
+    },
+  ]
+}

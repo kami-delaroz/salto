@@ -1,0 +1,17 @@
+jira.CustomFieldContext __Progress2__multicheckboxes__c__00931suuuu_testContext1@uuuuuumuu {
+  name = "testContext1"
+  description = "test"
+  isGlobalContext = false
+  defaultValue = {
+    type = "option.multiple"
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+  ]
+  _parent = [
+    jira.Field.instance.__Progress2__multicheckboxes__c@_00931suuuu,
+  ]
+  _alias = "Σ Progress2 context in testContext1"
+}

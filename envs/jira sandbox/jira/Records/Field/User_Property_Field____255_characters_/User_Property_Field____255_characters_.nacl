@@ -1,0 +1,9 @@
+jira.Field User_Property_Field____255_characters___userproperty__c@sssjxsskuuuu {
+  name = "User Property Field (< 255 characters)"
+  description = ""
+  type = "com.atlassian.jira.toolkit:userproperty"
+  contexts = [
+    jira.CustomFieldContext.instance.User_Property_Field____255_characters___userproperty__c_sssjxsskuuuu_Default_Configuration_Scheme_for_User_Property_Field____255_characters_@uuuuuuuuuuuumusssssssjxssk,
+  ]
+  _alias = "User Property Field (< 255 characters)"
+}

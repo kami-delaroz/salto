@@ -1,0 +1,13 @@
+jira.Project TeamManagedIdo {
+  key = "TEAM"
+  description = ""
+  name = "TeamManagedIdo"
+  projectTypeKey = "software"
+  entityId = "c0420154-76f0-411d-b286-d4514a4fcafa"
+  uuid = "c0420154-76f0-411d-b286-d4514a4fcafa"
+  issueSecurityScheme = jira.SecurityScheme.instance.TEAM__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "62d20c47a94a6f9c0eff9866"
+    displayName = "Ido Zak"
+  }
+}

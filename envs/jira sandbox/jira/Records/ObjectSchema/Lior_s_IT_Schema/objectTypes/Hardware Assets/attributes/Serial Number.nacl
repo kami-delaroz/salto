@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Serial_Number@uuuuuumus {
+  objectType = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets@uuumus
+  name = "Serial Number"
+  type = 0
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "Serial Number"
+}

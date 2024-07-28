@@ -1,0 +1,25 @@
+jira.Board TShirSBOARD {
+  name = "TShirSBOARD"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "61d44bf59ee70a00685fa6b6"
+        displayName = "Testing salto"
+      },
+    ]
+  }
+  filterId = jira.Filter.instance.Filter_for_TSTPRJ5_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Backlog"
+        statuses = [
+          jira.Status.instance.backlog,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() AND fixVersion is EMPTY"
+}

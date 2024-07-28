@@ -1,0 +1,595 @@
+jira.Workflow Builds_Workflow@s {
+  description = "Builds Workflow"
+  transitions = {
+    Create_Issue__From__none__Initial@sfffsff = {
+      name = "Create Issue"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "common.forms.create"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Close_Issue__From__Build_Broken_Building_In_Progress_Open_Reopened__Directed@sfffsszdzdszdzdff = {
+      name = "Close Issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+        },
+        {
+          id = jira.Status.instance.in_progress@s
+        },
+        {
+          id = jira.Status.instance.reopened
+        },
+        {
+          id = jira.Status.instance.building
+        },
+        {
+          id = jira.Status.instance.build_broken@s
+        },
+      ]
+      to = jira.Status.instance.closed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Resolve_Issue_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Closed@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          operator = "AND"
+          conditions = [
+            {
+              type = "PermissionCondition"
+              configuration = {
+                permissionKey = "CLOSE_ISSUES"
+              }
+            },
+            {
+              type = "PermissionCondition"
+              configuration = {
+                permissionKey = "RESOLVE_ISSUES"
+              }
+            },
+          ]
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "close"
+        },
+        {
+          key = "jira.i18n.submit"
+          value = "closeissue.close"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "closeissue.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Wait_for_Build__From__Build_Broken_In_Progress_Open_Reopened__Directed@ssfffsszdszdzdff = {
+      name = "Wait for Build"
+      description = "Wait for Bamboo to build the code for this issue"
+      from = [
+        {
+          id = jira.Status.instance.open
+        },
+        {
+          id = jira.Status.instance.in_progress@s
+        },
+        {
+          id = jira.Status.instance.reopened
+        },
+        {
+          id = jira.Status.instance.build_broken@s
+        },
+      ]
+      to = jira.Status.instance.building
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "build"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "com.atlassian.studio.jira.status.waitForBuild.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Build_Passed__From__Build_Broken_Building__Directed@sfffsszdff = {
+      name = "Build Passed"
+      description = "The build has passed"
+      from = [
+        {
+          id = jira.Status.instance.building
+        },
+        {
+          id = jira.Status.instance.build_broken@s
+        },
+      ]
+      to = jira.Status.instance.resolved
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Resolve_Issue_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "OnlyBambooNotificationsCondition"
+        }
+      }
+      properties = [
+        {
+          key = "build.passed.resolution"
+          value = "fixed"
+        },
+        {
+          key = "build.passed.transition"
+          value = "true"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "com.atlassian.studio.jira.status.buildPassed.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Build_Failed__From__Building__Directed@sfffsff = {
+      name = "Build Failed"
+      description = "The build for this issue failed."
+      from = [
+        {
+          id = jira.Status.instance.building
+        },
+      ]
+      to = jira.Status.instance.build_broken@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "OnlyBambooNotificationsCondition"
+        }
+      }
+      properties = [
+        {
+          key = "build.failed.transition"
+          value = "true"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "com.atlassian.studio.jira.status.buildFailed.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Reopen_Issue__From__Closed_Resolved__Directed@sfffszdff = {
+      name = "Reopen Issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.resolved
+        },
+        {
+          id = jira.Status.instance.closed
+        },
+      ]
+      to = jira.Status.instance.reopened
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Reopened@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "RESOLVE_ISSUES"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "reopen"
+        },
+        {
+          key = "jira.i18n.submit"
+          value = "issue.operations.reopen.issue"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "issue.operations.reopen.issue"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Stop_Progress__From__In_Progress__Directed@sfffssff = {
+      name = "Stop Progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.in_progress@s
+        },
+      ]
+      to = jira.Status.instance.open
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Work_Stopped_On_Issue@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+        conditions = {
+          type = "AllowOnlyAssignee"
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "stop"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "stopprogress.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Start_Progress__From__Build_Broken_Open_Reopened__Directed@sfffsszdzdff = {
+      name = "Start Progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+        },
+        {
+          id = jira.Status.instance.reopened
+        },
+        {
+          id = jira.Status.instance.build_broken@s
+        },
+      ]
+      to = jira.Status.instance.in_progress@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Work_Started_On_Issue@s
+              }
+            }
+          },
+          {
+            type = "UpdateIssueFieldFunction"
+            configuration = {
+              fieldId = jira.Field.instance.Resolution__resolution
+              fieldValue = ""
+            }
+          },
+        ]
+        conditions = {
+          type = "AllowOnlyAssignee"
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "start"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "startprogress.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Resolve_Issue__From__Build_Broken_Building_In_Progress_Open_Reopened__Directed@sfffsszdzdszdzdff = {
+      name = "Resolve Issue"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.open
+        },
+        {
+          id = jira.Status.instance.in_progress@s
+        },
+        {
+          id = jira.Status.instance.reopened
+        },
+        {
+          id = jira.Status.instance.building
+        },
+        {
+          id = jira.Status.instance.build_broken@s
+        },
+      ]
+      to = jira.Status.instance.resolved
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Resolve_Issue_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Resolved@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "RESOLVE_ISSUES"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "resolve"
+        },
+        {
+          key = "jira.i18n.submit"
+          value = "resolveissue.resolve"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "resolveissue.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Close_Issue__From__Resolved__Directed@sfffsff = {
+      name = "Close Issue"
+      description = "Closing an issue indicates there is no more work to be done on it, and it has been verified as complete."
+      from = [
+        {
+          id = jira.Status.instance.resolved
+        },
+      ]
+      to = jira.Status.instance.closed
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.Workflow_Screen@s
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Closed@s
+              }
+            }
+          },
+        ]
+        conditions = {
+          type = "PermissionCondition"
+          configuration = {
+            permissionKey = "CLOSE_ISSUES"
+          }
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "close"
+        },
+        {
+          key = "jira.i18n.submit"
+          value = "closeissue.close"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "closeissue.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.build_broken@s
+      name = "Build Broken"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.building
+      name = "Building"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.closed
+      name = "Closed"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      name = "In Progress"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.reopened
+      name = "Reopened"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.resolved
+      name = "Resolved"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+  ]
+  name = "Builds Workflow"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon WiFi {
+  name = "WiFi"
+  icon = file("jira/ObjectTypeIcon/WiFi.png")
+}

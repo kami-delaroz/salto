@@ -1,0 +1,10 @@
+jira.Screen Kiki {
+  name = "Kiki"
+  description = "xs"
+  tabs = {
+    General = {
+      name = "General"
+      position = 0
+    }
+  }
+}

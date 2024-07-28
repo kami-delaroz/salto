@@ -1,0 +1,7 @@
+jira.Priority test_api5 {
+  statusColor = "#ff00ff"
+  description = ""
+  iconUrl = "/images/icons/priorities/minor.svg"
+  name = "test_api5"
+  _alias = "test_api5"
+}

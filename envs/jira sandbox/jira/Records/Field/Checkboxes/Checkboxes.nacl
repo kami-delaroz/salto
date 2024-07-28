@@ -1,0 +1,10 @@
+jira.Field Checkboxes__multicheckboxes__c {
+  name = "Checkboxes"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"
+  contexts = [
+    jira.CustomFieldContext.instance.Checkboxes__multicheckboxes__c_Default_Configuration_Scheme_for_Checkboxes@uuuuussss,
+  ]
+  _alias = "Checkboxes"
+}

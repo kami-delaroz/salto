@@ -1,0 +1,10 @@
+jira.WorkflowScheme workflowMig {
+  name = "workflowMig"
+  defaultWorkflow = jira.Workflow.instance.jira
+  items = [
+    {
+      workflow = jira.Workflow.instance.workflowMig2
+      issueType = jira.IssueType.instance.Bug
+    },
+  ]
+}

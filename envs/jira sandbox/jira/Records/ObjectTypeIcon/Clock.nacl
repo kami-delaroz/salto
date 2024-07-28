@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Clock {
+  name = "Clock"
+  icon = file("jira/ObjectTypeIcon/Clock.png")
+}

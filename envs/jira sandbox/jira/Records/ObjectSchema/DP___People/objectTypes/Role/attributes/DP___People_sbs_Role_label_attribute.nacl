@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute DP___People_sbs_Role_label_attribute@uuumuuu {
+  labelAttribute = jira.ObjectTypeAttribute.instance.DP___People_sbs_Role_uuumu_Name@uuuuumu
+  objectType = jira.ObjectType.instance.DP___People_sbs_Role@uuumu
+}

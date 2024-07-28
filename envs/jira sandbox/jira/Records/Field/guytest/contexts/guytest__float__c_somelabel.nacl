@@ -1,0 +1,14 @@
+jira.CustomFieldContext guytest__float__c_somelabel {
+  name = "somelabel"
+  isGlobalContext = false
+  defaultValue = {
+    type = "float"
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Story,
+  ]
+  _parent = [
+    jira.Field.instance.guytest__float__c,
+  ]
+  _alias = "guytest context in somelabel"
+}

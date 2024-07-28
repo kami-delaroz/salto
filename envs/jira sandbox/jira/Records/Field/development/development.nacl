@@ -1,0 +1,11 @@
+jira.Field development__devsummarycf__c {
+  name = "development"
+  description = "Includes development summary panel information used in JQL"
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarysearcher"
+  type = "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf"
+  contexts = [
+    jira.CustomFieldContext.instance.development__devsummarycf__c_Default_Configuration_Scheme_for_development@uuuuussss,
+  ]
+  _alias = "development"
+}

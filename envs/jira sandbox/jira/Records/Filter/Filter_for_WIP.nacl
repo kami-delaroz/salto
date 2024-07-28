@@ -1,0 +1,22 @@
+jira.Filter Filter_for_WIP@s {
+  name = "Filter for WIP"
+  owner = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+  jql = "${ jira.Field.instance.Project__project } in (${ jira.Project.instance.Salto.key }, ${ jira.Project.instance.Salto_SaaS@s.key }) ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.Salto
+      }
+    },
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.Salto_SaaS@s
+      }
+    },
+  ]
+}

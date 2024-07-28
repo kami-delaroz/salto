@@ -1,0 +1,196 @@
+jira.Workflow Neta_test_workflow_3__1@ssssn {
+  description = ""
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      name = "Create"
+      description = ""
+      to = jira.Status.instance.open
+      type = "initial"
+      rules = {
+        validators = [
+          {
+            type = "PermissionValidator"
+            configuration = {
+              permissionKey = "CREATE_ISSUES"
+            }
+          },
+        ]
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Issue_Created@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    open__From__Planning__Directed@fffsff = {
+      name = "open"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.planning
+        },
+      ]
+      to = jira.Status.instance.open
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    progress_1__From__Planning__Directed@sfffsff = {
+      name = "progress 1"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.planning
+        },
+      ]
+      to = jira.Status.instance.in_progress@s
+      type = "directed"
+      screen = {
+        id = jira.Screen.instance.AL__Kanban_Bug_Screen__3_@fssssjk
+      }
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    quick_progress__From__Planning__Directed@sfffsff = {
+      name = "quick progress"
+      description = ""
+      from = [
+        {
+          id = jira.Status.instance.planning
+        },
+      ]
+      to = jira.Status.instance.in_progress@s
+      type = "directed"
+      rules = {
+        postFunctions = [
+          {
+            type = "FireIssueEventFunction"
+            configuration = {
+              event = {
+                id = jira.IssueEvent.instance.Generic_Event@s
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+  statuses = [
+    {
+      id = jira.Status.instance.configurable_progress@s
+      name = "Configurable Progress"
+      properties = [
+        {
+          key = "aaa"
+          value = "bbb"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "jira.permission.assignable.group"
+          value = "a"
+        },
+        {
+          key = "jira.permission.assignable.group.2"
+          value = "a"
+        },
+        {
+          key = "jira.permission.assignable.projectrole"
+          value = "a"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      name = "In progress test"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.open
+      name = "Open"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.planning
+      name = "Planning"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+    {
+      id = jira.Status.instance.reopened
+      name = "aaaa5"
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    },
+  ]
+  name = "Neta test workflow 3 #1"
+}

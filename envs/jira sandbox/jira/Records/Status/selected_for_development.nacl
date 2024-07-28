@@ -1,0 +1,6 @@
+jira.Status selected_for_development@s {
+  name = "Selected for Development"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "Selected for Development"
+}

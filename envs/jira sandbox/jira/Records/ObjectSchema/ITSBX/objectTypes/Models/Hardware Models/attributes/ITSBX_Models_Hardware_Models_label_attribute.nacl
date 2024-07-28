@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute ITSBX_Models_Hardware_Models_label_attribute@uusuu {
+  labelAttribute = jira.ObjectTypeAttribute.instance.ITSBX_Models_Hardware_Models_uus_Name@uuumu
+  objectType = jira.ObjectType.instance.ITSBX_Models_Hardware_Models@uus
+}

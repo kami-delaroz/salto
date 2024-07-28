@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus IT_Inventory__s__In_transit@uumuus {
+  name = "In transit"
+  description = "Asset is being transported"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "IT Inventory :In transit"
+}

@@ -1,0 +1,9 @@
+jira.Field Comment__comments_page@uub {
+  name = "Comment"
+  schema = {
+    type = "comments-page"
+    system = "comment"
+  }
+  description = ""
+  _alias = "Comment"
+}

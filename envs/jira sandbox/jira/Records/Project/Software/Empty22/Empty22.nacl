@@ -1,0 +1,19 @@
+jira.Project Empty22 {
+  key = "EM"
+  description = "Cloud migration initiative"
+  name = "Empty22"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.EM__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueSecurityScheme = jira.SecurityScheme.instance.name
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.EM__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.EM__Kanban_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "62d20c47a94a6f9c0eff9866"
+    displayName = "Ido Zak"
+  }
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}
