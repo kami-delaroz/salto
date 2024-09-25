@@ -1,0 +1,125 @@
+jira.WorkflowConfiguration DPJSM2__General_request_workflow_for_Jira_Service_Management@fsssssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "DPJSM2: General request workflow for Jira Service Management"
+  description = "This Jira Service Management Service General request workflow was generated for Project DPJSM2"
+  isEditable = true
+  startPointLayout = {
+    x = 119.3125
+    y = 47.487496185302746
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 665.1953125
+        y = 107.80000000000001
+      }
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 424.2890625
+        y = 107.80000000000001
+      }
+      deprecated = false
+      name = "In progress"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      layout = {
+        x = 241.19921875
+        y = 107.80000000000001
+      }
+      deprecated = false
+      name = "To Do"
+    },
+  ]
+  transitions = {
+    Start__From__To_Do__Directed@fffssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.to_do@s
+          port = 3
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.in_progress@s
+        port = 7
+      }
+      name = "Start"
+      description = ""
+    }
+    Resolved__From__In_progress__Directed@fffssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.in_progress@s
+          port = 3
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.done
+        port = 7
+      }
+      name = "Resolved"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Jira_Service_Desk_Resolve_Issue_Screen___7@ssssssbs
+        }
+      }
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.to_do@s
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Reopened__From__Done__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.done
+          port = 1
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.in_progress@s
+        port = 1
+      }
+      name = "Reopened"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "sd.resolution.clear"
+          value = ""
+        },
+      ]
+    }
+  }
+}

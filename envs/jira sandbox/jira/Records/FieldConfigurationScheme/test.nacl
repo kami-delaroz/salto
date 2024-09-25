@@ -1,0 +1,18 @@
+jira.FieldConfigurationScheme test {
+  name = "test"
+  description = ""
+  items = [
+    {
+      issueTypeId = "default"
+      fieldConfigurationId = jira.FieldConfiguration.instance.Custom_field_config@s
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Story
+      fieldConfigurationId = jira.FieldConfiguration.instance.Custom_field_config2@s
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Task
+      fieldConfigurationId = jira.FieldConfiguration.instance.Jira_Service_Management_Field_Configuration_for_Project_IP@s
+    },
+  ]
+}

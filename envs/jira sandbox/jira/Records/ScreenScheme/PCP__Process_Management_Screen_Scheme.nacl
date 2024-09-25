@@ -1,0 +1,8 @@
+jira.ScreenScheme PCP__Process_Management_Screen_Scheme@fssss {
+  name = "PCP: Process Management Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.PCP__Process_Management_Edit_View_Issue_Screen@fsssdss
+    create = jira.Screen.instance.PCP__Process_Management_Create_Issue_Screen@fsssss
+  }
+}

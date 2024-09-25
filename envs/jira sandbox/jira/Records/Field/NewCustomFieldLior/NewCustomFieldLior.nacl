@@ -1,0 +1,10 @@
+jira.Field NewCustomFieldLior__multicheckboxes__c {
+  name = "NewCustomFieldLior"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"
+  contexts = [
+    jira.CustomFieldContext.instance.NewCustomFieldLior__multicheckboxes__c_Default_Configuration_Scheme_for_NewCustomFieldLior@uuuuussss,
+  ]
+  _alias = "NewCustomFieldLior"
+}

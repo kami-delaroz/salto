@@ -1,0 +1,10 @@
+jira.ScreenScheme ITSAMPLE__Jira_Service_Management__Post_Incident_Review_Screen_Scheme@fsssfsbsss {
+  name = "ITSAMPLE: Jira Service Management: Post-Incident Review Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.ITSAMPLE__Jira_Service_Management__Post_Incident_Review_Create_Issue_Screen@fsssfsbssss
+    edit = jira.Screen.instance.ITSAMPLE__Jira_Service_Management__Post_Incident_Review_View_Edit_Screen@fsssfsbssds
+    create = jira.Screen.instance.ITSAMPLE__Jira_Service_Management__Post_Incident_Review_Create_Issue_Screen@fsssfsbssss
+    view = jira.Screen.instance.ITSAMPLE__Jira_Service_Management__Post_Incident_Review_View_Edit_Screen@fsssfsbssds
+  }
+}

@@ -1,0 +1,7 @@
+jira.ApplicationProperty Sort_order_for_view_issue_links@s {
+  id = "jira.view.issue.links.sort.order"
+  value = "type, status, priority"
+  name = "Sort order for view issue links"
+  desc = "Specifies the sort order of the issue links on the 'View Issue' screen."
+  type = "list<string>"
+}

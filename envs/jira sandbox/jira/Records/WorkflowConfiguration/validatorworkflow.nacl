@@ -1,0 +1,97 @@
+jira.WorkflowConfiguration validatorworkflow {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "validatorworkflow"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 826
+    y = 96.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.next
+      layout = {
+        x = 778.65625
+        y = -27.700001220703115
+      }
+      deprecated = false
+      name = "next"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.next
+        port = 5
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    eee__From__next__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.next
+          port = 1
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 3
+      }
+      name = "eee"
+      description = ""
+      validators = [
+        {
+          ruleKey = "connect:expression-validator"
+          parameters = {
+            appKey = "com.innovalog.jmwe.jira-misc-workflow-extensions__UserValidator"
+            config = "{\"problems\":[],\"userField\":\"customfield_10160\",\"fromUserType\":\"userInField\",\"conditionMode\":\"all-user-condition\",\"userCriteria\":{\"usersConditionScript\":\"or\"},\"errorMessage\":\"eeeeeeee\",\"expression\":\"let selectedUser = !!issue && !!issue.customfield_10160 && issue.customfield_10160; ((!!issue && !!issue.customfield_10160 && (false || (issue.customfield_10160.every(selectedUser => or)))))\",\"_modified\":\"2023-05-04T11:33:01.345Z\"}"
+            id = "62c71615-6b7f-4a7f-80e3-f924e48f0f59"
+            disabled = "false"
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              denyUserCustomFields = jira.Field.instance.Affected_hardware__textfield__c@suuuu
+            }
+          },
+          {
+            ruleKey = "system:check-field-value"
+            parameters = {
+              fieldId = jira.Field.instance.a_b__float__c@ruuuu
+              fieldValue = "[\"\"]"
+              comparator = "="
+              comparisonType = "NUMBER"
+            }
+          },
+        ]
+      }
+    }
+  }
+}

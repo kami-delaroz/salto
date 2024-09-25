@@ -1,0 +1,6 @@
+jira.Status submit_for_approvals@s {
+  name = "submit for approvals"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "submit for approvals"
+}

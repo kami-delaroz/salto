@@ -1,0 +1,277 @@
+jira.WorkflowConfiguration ITSAMPLE__Problem_Management_workflow_for_Jira_Service_Management@fsssssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "ITSAMPLE: Problem Management workflow for Jira Service Management"
+  description = "3This Jira Service Management Problem Management workflow was generated for Project ITSAMPLE2"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.canceled
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Canceled"
+    },
+    {
+      statusReference = jira.Status.instance.closed
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.completed
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Completed"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.pending
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Pending"
+    },
+    {
+      statusReference = jira.Status.instance.under_investigation@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Under investigation"
+    },
+    {
+      statusReference = jira.Status.instance.under_review@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Under Review"
+    },
+  ]
+  transitions = {
+    Pending__From__Under_Review_Under_investigation__Directed@fffsszdsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.under_review@s
+        },
+        {
+          statusReference = jira.Status.instance.under_investigation@s
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.pending
+      }
+      name = "Pending"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Pending_Reason_screen___12@ssssssbs
+        }
+      }
+    }
+    Cancel__From__Open_Under_Review_Under_investigation__Directed@fffszdszdsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.under_review@s
+        },
+        {
+          statusReference = jira.Status.instance.under_investigation@s
+        },
+        {
+          statusReference = jira.Status.instance.open
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.canceled
+      }
+      name = "Cancel"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___12@ssssssbs
+        }
+      }
+    }
+    Close__From__Canceled_Completed__Directed@fffszdff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.completed
+        },
+        {
+          statusReference = jira.Status.instance.canceled
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.closed
+      }
+      name = "Close"
+      description = ""
+    }
+    Complete__From__Open_Under_investigation__Directed@fffszdsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.under_investigation@s
+        },
+        {
+          statusReference = jira.Status.instance.open
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.completed
+      }
+      name = "Complete"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___12@ssssssbs
+        }
+      }
+    }
+    Back_to_under_review__From__Pending__Directed@sssfffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.pending
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.under_review@s
+      }
+      name = "Back to under review"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___13@ssbs
+        }
+      }
+    }
+    Review__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.open
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.under_review@s
+      }
+      name = "Review"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___13@ssbs
+        }
+      }
+    }
+    Investigate__From__Pending_Under_Review__Directed@fffszdsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.under_review@s
+        },
+        {
+          statusReference = jira.Status.instance.pending
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.under_investigation@s
+      }
+      name = "Investigate"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___13@ssbs
+        }
+      }
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Back_to_work_in_progress__From__Completed__Directed@ssssfffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.completed
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.under_investigation@s
+      }
+      name = "Back to work in progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___13@ssbs
+        }
+      }
+    }
+  }
+}

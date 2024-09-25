@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon CD {
+  name = "CD"
+  icon = file("jira/ObjectTypeIcon/CD.png")
+}

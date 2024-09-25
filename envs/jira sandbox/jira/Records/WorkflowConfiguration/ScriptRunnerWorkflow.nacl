@@ -1,0 +1,77 @@
+jira.WorkflowConfiguration ScriptRunnerWorkflow {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "ScriptRunnerWorkflow"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 784
+    y = 42.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 562.078125
+        y = 161.4
+      }
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 719.8203125
+        y = 120.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Close__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.open
+          port = 5
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.closed
+        port = 1
+      }
+      name = "Close"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw5Myw4MSw3Nyw3OSwyLDQ5LDE2LDI1Myw0MywxODEsMjQxLDIzMiwyMiwxOTQsMTAsMTEwLDc2LDU2LDI0LDE4NCwxMjAsMTYsNjEsMjMyLDIwMSw1MywxMDIsMTgyLDI5LDE2NCwxNjEsMjE5LDExMCw1OCwxNzMsNzIsOCwyNTUsMjIxLDEyOSwzNyw2Niw2MCwyNDYsMTI1LDExNywyMjIsMjA0LDc4LDEwNiw3LDY4LDExLDEwNCw4MSwyMjIsNzUsMjksOTAsNSw2LDE4Niw0LDIyMywxNTAsMTQ2LDE2MiwxNjgsMTgwLDExLDIxNywxNjgsNzcsMTM2LDIzNSwxNjUsMTEsMjcsMjQ1LDI2LDE5MywxNDcsNzcsNTQsMjQ4LDIzLDEzNiwyMzIsMTQ3LDE4OCwxNDUsNTcsOTEsMTk1LDg2LDI4LDIzNSwxMTMsMTMzLDg1LDg5LDE0MCw3MSw5OSw0MCwxMTAsMjAzLDksMjAsMjEzLDkzLDUsMTk3LDIyMSwxNjgsMTkzLDExNCw4MiwxMDYsMTczLDE3MSwzMywxNzEsMjA5LDY3LDIyNywxNDQsMTMsNDEsMTAyLDIyOCwyMzEsMTUsMjM0LDEyNCwxMzYsMTIzLDM1LDE0MCwxNTYsMjQyLDQ4LDE1OSwxMjcsNjIsNDcsODgsMTY3LDEzMSw1NSwxOTksMTI3LDI0LDE4MCw2OCwyNSwyMTMsMjEwLDE2Miw1MSwxNjQsMTIwLDg4LDI1MSwyMjksMTcsMTk3LDIxMyw4NCwyNDgsMjM2LDI4LDEwNywxMywxNDYsMTQyLDE4Miw1OSwxNjksMjUsMCwyMTEsMTIzLDE5MywyMDUsMTMwLDU3LDI0NCwyNiwxMiw2OCw5MCw4OSwxOCwxOTMsMTg3LDE3Myw1NiwxNDgsMzMsMTc3LDg5LDE2MSwxMDMsMTYsMzUsMTAsMzgsNjQsMTY0LDE5MSwxMDIsMTMwLDIxMSwxNiwxMjUsMjM3LDE1OSwxNjAsMTksMjgsNTMsMTEsMTA5LDIwMyw4NSwxOTcsMjQ0LDY2LDE2MywxMTQsMTAzLDMyLDE2MSwyMTAsNjEsMjQ3LDYyLDI1MiwyMjQsMTg5LDI1LDEsMzYsMjE2LDg0LDI1MSwxNzksNzUsNTMsMTkzLDEwOCwyMTcsOTAsMjAzLDIzNSw5MywyMjMsOTksMTQxLDIxOSwxODksMjA4LDE0NCw5LDc3LDYzLDg0LDEwLDE2MiwxOTMsMTM5LDEwOCw1MiwxODEsMTcyLDI1MywxMTMsNywxOTksMTM2LDE5MCwyMTEsMTUzLDEyNyw1MiwyNTUsMTQ1LDIxMSwyNDUsMTAyLDQ2LDE2LDIwMiwyNTMsNDcsMzYsODQsMjE5LDIxMSwyMTEsMSwwLDBdfQ=="
+            id = "7df4b9fa-98b8-4942-8b51-bd8d3c5b07fd"
+            disabled = "false"
+          }
+        },
+      ]
+    }
+  }
+}

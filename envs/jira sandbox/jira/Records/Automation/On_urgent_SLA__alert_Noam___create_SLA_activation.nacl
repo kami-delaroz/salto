@@ -1,0 +1,107 @@
+jira.Automation On_urgent_SLA__alert_Noam___create_SLA_activation@sszdssszesss {
+  name = "On urgent SLA, alert Noam + create SLA activation"
+  state = "ENABLED"
+  description = ""
+  authorAccountId = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  actor = {
+    type = "ACCOUNT_ID"
+    value = {
+      id = "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077"
+      displayName = "Automation for Jira"
+    }
+  }
+  trigger = {
+    component = "TRIGGER"
+    type = "jira.issue.event.trigger:created"
+    value = {
+      eventKey = "jira:issue_created"
+      issueEvent = "issue_created"
+    }
+    children = [
+    ]
+    conditions = [
+    ]
+  }
+  components = [
+    {
+      component = "CONDITION"
+      type = "jira.issue.condition"
+      value = {
+        selectedField = {
+          type = "NAME"
+          value = jira.Field.instance.SLA_Level__select__c@suuuu.name
+        }
+        selectedFieldType = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+        comparison = "ONE_OF"
+        compareFieldValue = {
+          type = "NAME"
+          multiValue = true
+          values = [
+            "Urgent SLA",
+          ]
+        }
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+    {
+      component = "ACTION"
+      type = "jira.issue.add.watcher"
+      value = {
+        watchers = [
+          {
+            type = "ID"
+            value = "5ddff4e9be8a460cfe2691d5"
+          },
+        ]
+        removeWatchers = [
+        ]
+        removeAll = false
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+    {
+      component = "ACTION"
+      type = "cmdb.object.create"
+      value = {
+        schemaId = jira.ObjectSchema.instance.Processes
+        objectTypeId = jira.ObjectType.instance.Processes_SLA_activation@us
+        attributes = [
+          {
+            name = "Name"
+            value = "SLA Activation"
+            isLabel = true
+          },
+        ]
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+  ]
+  canOtherRuleTrigger = false
+  notifyOnError = "FIRSTERROR"
+  labels = [
+  ]
+  tags = [
+    {
+      ruleIdUuid = "018e3787-398e-7096-af1f-85049092d07e"
+      tagType = "IS_RULE_UPDATED"
+      tagValue = "true"
+    },
+  ]
+  writeAccessType = "UNRESTRICTED"
+  collaborators = [
+  ]
+  billingType = "NORMAL"
+  _alias = "On urgent SLA, alert Noam + create SLA activation"
+}

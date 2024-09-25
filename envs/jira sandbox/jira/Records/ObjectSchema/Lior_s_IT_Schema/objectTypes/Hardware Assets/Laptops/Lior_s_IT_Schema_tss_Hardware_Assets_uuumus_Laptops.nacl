@@ -1,0 +1,13 @@
+jira.ObjectType Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Laptops@uuuuuumu {
+  name = "Laptops"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets@uuumus
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Laptop
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "Laptops"
+}

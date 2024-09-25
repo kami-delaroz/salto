@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Unix {
+  name = "Unix"
+  icon = file("jira/ObjectTypeIcon/Unix.png")
+}

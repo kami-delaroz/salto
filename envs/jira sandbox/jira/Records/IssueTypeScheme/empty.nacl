@@ -1,0 +1,7 @@
+jira.IssueTypeScheme empty {
+  name = "empty"
+  defaultIssueTypeId = jira.IssueType.instance.Story
+  issueTypeIds = [
+    jira.IssueType.instance.Story,
+  ]
+}

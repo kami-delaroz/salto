@@ -1,0 +1,10 @@
+jira.ScreenScheme TEST__Jira_Service_Management__Problem_Management_Screen_Scheme@fsssfssss {
+  name = "TEST: Jira Service Management: Problem Management Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.TEST__Jira_Service_Management__Problem_Create_Issue_Screen@fsssfssss
+    edit = jira.Screen.instance.TEST__Jira_Service_Management__Problem_View_Edit_Screen@fsssfssds
+    create = jira.Screen.instance.TEST__Jira_Service_Management__Problem_Create_Issue_Screen@fsssfssss
+    view = jira.Screen.instance.TEST__Jira_Service_Management__Problem_View_Edit_Screen@fsssfssds
+  }
+}

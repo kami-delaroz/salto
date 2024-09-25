@@ -1,0 +1,10 @@
+jira.Field Root_cause__textarea__c@suuuu {
+  name = "Root cause"
+  description = "Describe the root cause for the problem"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.Root_cause__textarea__c_suuuu_Default_Configuration_Scheme_for_Root_cause@uuuuumusssss,
+  ]
+  _alias = "Root cause"
+}

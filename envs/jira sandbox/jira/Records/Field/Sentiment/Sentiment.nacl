@@ -1,0 +1,11 @@
+jira.Field Sentiment__sd_sentiment__c@uubuu {
+  name = "Sentiment"
+  description = "Sentiment is determined by content in the issue and latest comments from the customer. Content quality may vary"
+  isLocked = true
+  searcherKey = "com.atlassian.servicedesk.sentiment:sd-sentiment-searcher"
+  type = "com.atlassian.servicedesk.sentiment:sd-sentiment"
+  contexts = [
+    jira.CustomFieldContext.instance.Sentiment__sd_sentiment__c_uubuu_Default_Configuration_Scheme_for_Sentiment@uuuuumussss,
+  ]
+  _alias = "Sentiment"
+}

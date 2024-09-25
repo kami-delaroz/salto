@@ -1,0 +1,9 @@
+jira.Field Updated__datetime {
+  name = "Updated"
+  schema = {
+    type = "datetime"
+    system = "updated"
+  }
+  description = ""
+  _alias = "Updated"
+}

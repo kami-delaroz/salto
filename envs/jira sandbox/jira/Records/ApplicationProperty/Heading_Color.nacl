@@ -1,0 +1,6 @@
+jira.ApplicationProperty Heading_Color@s {
+  id = "jira.lf.text.headingcolour"
+  value = "#292929"
+  name = "Heading Color"
+  type = "colour"
+}

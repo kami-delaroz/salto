@@ -1,0 +1,46 @@
+jira.Board GUYT_board@s {
+  name = "GUYT board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "60a60ff79b362f006919d5ff"
+        displayName = "Former user"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.guytestproject
+  }
+  filterId = jira.Filter.instance.Filter_for_GUYT_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Backlog"
+        statuses = [
+          jira.Status.instance.backlog,
+        ]
+      },
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

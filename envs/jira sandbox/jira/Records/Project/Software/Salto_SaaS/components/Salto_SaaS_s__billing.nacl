@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto_SaaS_s__billing@umuu {
+  assigneeType = "PROJECT_DEFAULT"
+  name = "billing"
+  _parent = [
+    jira.Project.instance.Salto_SaaS@s,
+  ]
+  _alias = "Salto SaaS:billing"
+}

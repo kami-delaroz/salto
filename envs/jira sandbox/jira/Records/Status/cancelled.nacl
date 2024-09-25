@@ -1,0 +1,6 @@
+jira.Status cancelled {
+  name = "Cancelled"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = ""
+  _alias = "Cancelled"
+}

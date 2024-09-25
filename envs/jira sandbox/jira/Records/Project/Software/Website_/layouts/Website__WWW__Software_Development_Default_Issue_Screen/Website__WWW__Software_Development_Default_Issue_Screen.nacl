@@ -1,0 +1,172 @@
+jira.IssueLayout Website__WWW__Software_Development_Default_Issue_Screen@sufsssss {
+  extraDefinerId = jira.Screen.instance.WWW__Software_Development_Default_Issue_Screen@fsssss
+  issueLayoutConfig = {
+    items = [
+      {
+        type = "FIELD"
+        sectionType = "PRIMARY"
+        key = jira.Field.instance.Assignee__user
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "PRIMARY"
+        key = jira.Field.instance.Reporter__user
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "PRIMARY"
+        key = jira.Field.instance.Labels__array
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "PRIMARY"
+        key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
+        data = {
+          custom = true
+          global = true
+          description = ""
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Story_Points__float__c@suuuu
+        data = {
+          custom = true
+          global = true
+          description = "Measurement of complexity and/or size of a requirement."
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Original_estimate__number@suu
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Time_tracking__timetracking@suu
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Epic_Link__gh_epic_link__c@suubbuu
+        data = {
+          custom = true
+          global = true
+          description = "Choose an epic to assign this issue to."
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Components__array
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Fix_versions__array@suu
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Due_date__date@suu
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Priority__priority
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Epic_Name__gh_epic_label__c@suubbuu
+        data = {
+          custom = true
+          global = true
+          description = "Provide a short name to identify this epic."
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Parent
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "CONTENT"
+        key = jira.Field.instance.Description__string
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+    ]
+  }
+  _parent = [
+    jira.Project.instance.Website_@s,
+  ]
+}

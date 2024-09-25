@@ -1,0 +1,22 @@
+jira.Project DP_Service_Project@s {
+  key = "DPJSM"
+  description = ""
+  name = "DP Service Project"
+  projectTypeKey = "service_desk"
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_DPJSM@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_DPJSM@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.DPJSM__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.DPJSM__Jira_Service_Management_Issue_Type_Scheme@fssssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_DPJSM@s
+  leadAccountId = {
+    id = "6205b3c7d362410069133701"
+    displayName = "Dan Putman"
+  }
+  assigneeType = "UNASSIGNED"
+  customerPermissions = {
+    manageEnabled = false
+    autocompleteEnabled = false
+    serviceDeskOpenAccess = true
+  }
+}

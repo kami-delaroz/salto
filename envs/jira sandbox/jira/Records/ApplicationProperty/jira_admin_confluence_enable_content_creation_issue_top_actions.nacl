@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_confluence_enable_content_creation_issue_top_actions@vvvbbbbb {
+  id = "jira.admin.confluence.enable-content-creation-issue-top-actions"
+  value = "true"
+  name = "jira.admin.confluence.enable-content-creation-issue-top-actions"
+  type = "boolean"
+}

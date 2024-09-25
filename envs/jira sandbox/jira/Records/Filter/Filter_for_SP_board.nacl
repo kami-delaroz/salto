@@ -1,0 +1,16 @@
+jira.Filter Filter_for_SP_board@s {
+  name = "Filter for SP board"
+  owner = {
+    id = "62ebc187e50f2f2a395557cc"
+    displayName = "Shay Cohen"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.shay_project@s.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.shay_project@s
+      }
+    },
+  ]
+}

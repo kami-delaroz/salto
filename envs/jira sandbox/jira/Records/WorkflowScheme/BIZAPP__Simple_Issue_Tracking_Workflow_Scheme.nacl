@@ -1,0 +1,5 @@
+jira.WorkflowScheme BIZAPP__Simple_Issue_Tracking_Workflow_Scheme@fsssss {
+  name = "BIZAPP: Simple Issue Tracking Workflow Scheme"
+  description = ""
+  defaultWorkflow = jira.WorkflowConfiguration.instance.BIZAPP__Simple_Issue_Tracking_Workflow@fssss
+}

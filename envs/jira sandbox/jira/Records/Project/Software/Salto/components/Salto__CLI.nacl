@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto__CLI {
+  assigneeType = "PROJECT_DEFAULT"
+  name = "CLI"
+  _parent = [
+    jira.Project.instance.Salto,
+  ]
+  _alias = "Salto:CLI"
+}

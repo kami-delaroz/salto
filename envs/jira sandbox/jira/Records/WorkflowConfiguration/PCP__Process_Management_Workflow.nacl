@@ -1,0 +1,314 @@
+jira.WorkflowConfiguration PCP__Process_Management_Workflow@fsss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "PCP: Process Management Workflow"
+  description = "process-management-workflow5"
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = -82.6
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.approved
+      layout = {
+        x = 1064.125
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.cancelled
+      layout = {
+        x = 1061.078125
+        y = 217.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Cancelled"
+    },
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 1079.109375
+        y = 67.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 1056.796875
+        y = 267.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = -32.599999999999994
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.rejected
+      layout = {
+        x = 1065.65625
+        y = 167.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Rejected"
+    },
+    {
+      statusReference = jira.Status.instance.under_review@s
+      layout = {
+        x = 1052.21875
+        y = 17.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Under Review"
+    },
+  ]
+  transitions = {
+    Start_Progress__From__Open__Directed@sfffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.open
+          port = 3
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.in_progress@s
+        port = 7
+      }
+      name = "Start Progress"
+      description = ""
+    }
+    Stop_progress__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.in_progress@s
+          port = 7
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.cancelled
+        port = 3
+      }
+      name = "Stop progress"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss
+        }
+      }
+    }
+    Ready_for_review__From__In_Progress__Directed@ssfffssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.in_progress@s
+          port = 3
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.under_review@s
+        port = 7
+      }
+      name = "Ready for review"
+      description = ""
+    }
+    Start_progress__From__Rejected__Directed@sfffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.rejected
+          port = 3
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.in_progress@s
+        port = 7
+      }
+      name = "Start progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Creator__user
+          }
+        },
+      ]
+    }
+    Reject__From__Under_Review__Directed@fffssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.under_review@s
+          port = 7
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.rejected
+        port = 3
+      }
+      name = "Reject"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Comment_Screen@fsssss
+        }
+      }
+    }
+    Approve__From__Under_Review__Directed@fffssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.under_review@s
+          port = 7
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.approved
+        port = 3
+      }
+      name = "Approve"
+      description = ""
+    }
+    Reopen__From__Cancelled__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.cancelled
+          port = 7
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 3
+      }
+      name = "Reopen"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+    }
+    Done__From__Approved__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.approved
+          port = 7
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.done
+        port = 3
+      }
+      name = "Done"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss
+        }
+      }
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}
