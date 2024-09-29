@@ -1,0 +1,9 @@
+jira.Field Votes__votes {
+  name = "Votes"
+  schema = {
+    type = "votes"
+    system = "votes"
+  }
+  description = ""
+  _alias = "Votes"
+}

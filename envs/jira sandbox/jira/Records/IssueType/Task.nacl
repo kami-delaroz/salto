@@ -1,0 +1,7 @@
+jira.IssueType Task {
+  description = "A small, distinct piece of work."
+  name = "Task"
+  untranslatedName = "Task"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Task.png")
+}

@@ -1,0 +1,13 @@
+jira.ProjectComponent AlonITSM3__Analytics_and_Reporting_Service@uusss {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Analytics and Reporting Service"
+  leadAccountId = {
+    id = "640a4787f00d095406f6727f"
+    displayName = "Ido Amit"
+  }
+  _parent = [
+    jira.Project.instance.AlonITSM3,
+  ]
+  _alias = "AlonITSM3:Analytics and Reporting Service"
+}

@@ -1,0 +1,5 @@
+jira.WorkflowScheme NullWFScheme {
+  name = "NullWFScheme"
+  description = ""
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
+}

@@ -1,0 +1,46 @@
+jira.Board EM_board@s {
+  name = "EM board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "62d20c47a94a6f9c0eff9866"
+        displayName = "Ido Zak"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.Empty22
+  }
+  filterId = jira.Filter.instance.Filter_for_EM_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Backlog"
+        statuses = [
+          jira.Status.instance.backlog,
+        ]
+      },
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

@@ -1,0 +1,62 @@
+jira.WorkflowConfiguration workflow4 {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "workflow4"
+  description = "123"
+  isEditable = true
+  startPointLayout = {
+    x = 784
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 759.41015625
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "Ido"
+          value = "Test1"
+        },
+        {
+          key = "Ido2"
+          value = "Test3"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+}

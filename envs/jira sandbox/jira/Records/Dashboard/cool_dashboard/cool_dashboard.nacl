@@ -1,0 +1,26 @@
+jira.Dashboard cool_dashboard@s {
+  description = ""
+  name = "cool dashboard"
+  owner = {
+    id = "62ebc187e50f2f2a395557cc"
+    displayName = "Shay Cohen"
+  }
+  sharePermissions = [
+    {
+      type = "group"
+      group = {
+        name = jira.Group.instance.jira_software_users@b
+      }
+    },
+    {
+      type = "project-unknown"
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.cool_dashboard_s__Sprint_Health_Gadget_0_0@umuussuu,
+    jira.DashboardGadget.instance.cool_dashboard_s__Workload_Pie_Chart_1_0@umuussuu,
+    jira.DashboardGadget.instance.cool_dashboard_s__Days_Remaining_in_Sprint_Gadget_1_1@umuussssuu,
+    jira.DashboardGadget.instance.cool_dashboard_s__Filter_Results_1_2@umuusuu,
+  ]
+  layout = "AA"
+}

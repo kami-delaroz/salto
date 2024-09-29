@@ -1,0 +1,6 @@
+jira.Status uat_passed@s {
+  name = "uat passed"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "uat passed"
+}

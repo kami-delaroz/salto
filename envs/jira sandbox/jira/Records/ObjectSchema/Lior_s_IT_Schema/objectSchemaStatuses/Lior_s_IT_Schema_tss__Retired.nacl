@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus Lior_s_IT_Schema_tss__Retired@uuumuu {
+  name = "Retired"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "Lior's IT Schema:Retired"
+}

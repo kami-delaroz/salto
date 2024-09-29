@@ -1,0 +1,14 @@
+jira.IssueTypeScreenScheme LNPRJCT3__Scrum_Issue_Type_Screen_Scheme__1_@fssssssjk {
+  name = "LNPRJCT3: Scrum Issue Type Screen Scheme (1)"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Bug
+      screenSchemeId = jira.ScreenScheme.instance.LNPRJCT3__Scrum_Bug_Screen_Scheme__1_@fsssssjk
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.LNPRJCT3__Scrum_Default_Screen_Scheme__1_@fsssssjk
+    },
+  ]
+}

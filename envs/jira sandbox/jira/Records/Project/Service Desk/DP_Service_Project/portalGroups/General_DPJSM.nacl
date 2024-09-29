@@ -1,0 +1,11 @@
+jira.PortalGroup General_DPJSM {
+  name = "General"
+  ticketTypeIds = [
+    jira.RequestType.instance.Get_a_guest_wifi_account_DPJSM@ssssu,
+    jira.RequestType.instance.Emailed_request_DPJSM@su,
+  ]
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+  _alias = "DP Service Project:General"
+}

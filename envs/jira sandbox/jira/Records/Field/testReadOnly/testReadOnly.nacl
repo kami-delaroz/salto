@@ -1,0 +1,10 @@
+jira.Field testReadOnly__readonlyfield__c {
+  name = "testReadOnly"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:readonlyfield"
+  contexts = [
+    jira.CustomFieldContext.instance.testReadOnly__readonlyfield__c_Default_Configuration_Scheme_for_testReadOnly@uuuuussss,
+  ]
+  _alias = "testReadOnly"
+}

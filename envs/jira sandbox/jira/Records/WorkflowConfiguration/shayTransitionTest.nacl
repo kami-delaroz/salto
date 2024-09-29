@@ -1,0 +1,131 @@
+jira.WorkflowConfiguration shayTransitionTest {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "shayTransitionTest"
+  description = "changee"
+  isEditable = true
+  startPointLayout = {
+    x = 688
+    y = 92.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.change_open_name@s
+      layout = {
+        x = 716.328125
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "change Open name"
+    },
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 759.109375
+        y = 208.29999877929689
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+  ]
+  transitions = {
+    global__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.done
+      }
+      name = "global"
+      description = ""
+    }
+    check__From__any_status__Circular@fffssff = {
+      type = "GLOBAL"
+      name = "check"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.change_open_name@s
+        port = 0
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    cool__From__change_Open_name__Directed@fffsssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.change_open_name@s
+          port = 5
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.done
+        port = 1
+      }
+      name = "cool"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              roleIds = [
+                jira.ProjectRole.instance.Administrators,
+              ]
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    loop__From__Done__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.done
+          port = 1
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.done
+        port = 3
+      }
+      name = "loop"
+      description = ""
+    }
+  }
+}

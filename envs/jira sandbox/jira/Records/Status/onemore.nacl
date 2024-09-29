@@ -1,0 +1,6 @@
+jira.Status onemore {
+  name = "OneMore"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "OneMore"
+}

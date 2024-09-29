@@ -1,0 +1,1002 @@
+jira.FieldConfiguration Jira_Service_Management_Field_Configuration_for_Project_TS3@s {
+  name = "Jira Service Management Field Configuration for Project TS3"
+  description = "This Jira Service Management Field Configuration was generated for Project TS3"
+  fields = {
+    Approvers__multiuserpicker__c = {
+      description = "Contains users needed for approval. This custom field was created by Jira Service Desk."
+      isHidden = false
+      isRequired = false
+    }
+    Impact__select__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Change_type__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Change_risk__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Change_reason__select__c@suuuu = {
+      description = "Choose the reason for the change request"
+      isHidden = false
+      isRequired = false
+    }
+    Change_start_date__datetime__c@ssuuuu = {
+      description = "Specify the time and date for the start of the change"
+      isHidden = false
+      isRequired = false
+    }
+    Change_completion_date__datetime__c@ssuuuu = {
+      description = "Specify the completion time for the change request"
+      isHidden = false
+      isRequired = false
+    }
+    _CHART__Date_of_First_Response__firstresponsedate__c@hissssuuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    _CHART__Time_in_Status__timeinstatus__c@hisssuuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    uuid__uuid__c = {
+      description = "Adding both UUID and Location fields to a project, will enable JIRA Mobile Connect for that project."
+      isHidden = false
+      isRequired = false
+    }
+    Location__location__c = {
+      description = "Adding both UUID and Location fields to a project, will enable JIRA Mobile Connect for that project."
+      isHidden = false
+      isRequired = false
+    }
+    Story_Points__float__c@suuuu = {
+      description = "Measurement of complexity and/or size of a requirement."
+      isHidden = false
+      isRequired = false
+    }
+    Custom_multi_line_field__textarea__c@sssuuuu = {
+      description = "the description"
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    CustomMultiSelect__multiselect__c = {
+      description = "Desc"
+      isHidden = false
+      isRequired = false
+    }
+    CustomCheckboxes__multicheckboxes__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    __Progress2__multicheckboxes__c@_00931suuuu = {
+      description = "aaaaa"
+      isHidden = false
+      isRequired = false
+    }
+    testLabel__labels__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList__cascadingselect__c = {
+      description = "desc!"
+      isHidden = false
+      isRequired = false
+    }
+    testVersionPicker__multiversion__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList2__cascadingselect__c = {
+      description = "desc!"
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList4__cascadingselect__c = {
+      description = "desc!"
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList5__cascadingselect__c = {
+      description = "desc!2"
+      isHidden = false
+      isRequired = false
+    }
+    ____________labels__c@_01513_01491_01492s_01489_01506_01489_01512_01497_01514uuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    ________________________________________________datepicker__c@_01513_01491_01492s_01489_01506_01489_01512_01497_01514s_01506_01501sr_01502_01512_01499_01488_01493_01514rs_01493_01491_01489_01512_01497_01501slmnzcpweokjs_01488_01495_01512_01497_01501uuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    ___multicheckboxes__c@_01488uuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    ___multicheckboxes__c@_01489uuuu = {
+      description = "The second Hebrew one"
+      isHidden = false
+      isRequired = false
+    }
+    Incident_Severity__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Related_Customers__labels__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Urgency__select__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Pending_reason__select__c@suuuu = {
+      description = "Specify the reason for moving the issue to the Pending status"
+      isHidden = false
+      isRequired = false
+    }
+    Product_categorization__cascadingselect__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Operational_categorization__cascadingselect__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Approver_groups__multigrouppicker__c@suuuu = {
+      description = "Contains groups of users needed for approval. This custom field was created by Jira Service Management."
+      isHidden = false
+      isRequired = false
+    }
+    Affected_hardware__textfield__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Severity__select__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Source__select__c = {
+      description = "Captures the reporting source for this issue"
+      isHidden = false
+      isRequired = false
+    }
+    Implementation_plan__textarea__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Backout_plan__textarea__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Test_plan__textarea__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Planned_start__datetime__c@suuuu = {
+      description = "Enter when the change is planned to start."
+      isHidden = false
+      isRequired = false
+    }
+    Planned_end__datetime__c@suuuu = {
+      description = "Enter when the change is planned to end."
+      isHidden = false
+      isRequired = false
+    }
+    Investigation_reason__select__c@suuuu = {
+      description = "Reason for problem investigation"
+      isHidden = false
+      isRequired = false
+    }
+    Root_cause__textarea__c@suuuu = {
+      description = "Describe the root cause for the problem"
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Workaround__textarea__c = {
+      description = "Describe the workaround for the problem"
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Urgency2__select__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList9__cascadingselect__c = {
+      description = "desc!2"
+      isHidden = false
+      isRequired = false
+    }
+    Urgency4__select__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Urgency5__select__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Urgency11__select__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    test__textarea__c = {
+      description = "test"
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Publication_date__datepicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Content_type__textfield__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    userPicker__multiuserpicker__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Flagged2__multicheckboxes__c = {
+      description = "Allows to flag issues with impediments."
+      isHidden = false
+      isRequired = false
+    }
+    testField12345__multicheckboxes__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Fieldy_McField__multicheckboxes__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Maintenance_type__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Maintenance_location__textfield__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Move_date__datepicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Move_from__textfield__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Move_to__textfield__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Move_count__textfield__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Who_is_moving___multiuserpicker__c@ssauuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Event_date__datepicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Event_location__textfield__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Event_count__textfield__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Assignee__user = {
+      isHidden = false
+      isRequired = false
+    }
+    Attachment__array = {
+      isHidden = false
+      isRequired = false
+    }
+    Comment__comments_page@uub = {
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Components__array = {
+      isHidden = false
+      isRequired = false
+    }
+    Description__string = {
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Due_date__date@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Environment__string = {
+      description = "For example operating system, software platform and/or hardware specifications (include as appropriate for the issue)."
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Fix_versions__array@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Linked_Issues__array@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Restrict_to__issuerestriction@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Issue_Type__issuetype@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Labels__array = {
+      isHidden = false
+      isRequired = false
+    }
+    Priority__priority = {
+      isHidden = false
+      isRequired = false
+    }
+    Reporter__user = {
+      isHidden = false
+      isRequired = false
+    }
+    Resolution__resolution = {
+      isHidden = false
+      isRequired = false
+    }
+    Security_Level__securitylevel@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Summary__string = {
+      isHidden = false
+      isRequired = true
+    }
+    Time_tracking__timetracking@suu = {
+      description = '''
+An estimate of how much work remains until this issue will be resolved.
+The format of this is ' *w *d *h *m ' (representing weeks, days, hours and minutes - where * can be any number).
+Examples: 4d, 5h 30m, 60m and 3w.
+'''
+      isHidden = false
+      isRequired = false
+    }
+    Affects_versions__array@suu = {
+      isHidden = false
+      isRequired = false
+    }
+    Log_Work__array@suu = {
+      description = "Allows work to be logged whilst creating, editing or transitioning issues."
+      isHidden = false
+      isRequired = false
+      renderer = "wiki-renderer"
+    }
+    Assets__assetfield__c = {
+      isHidden = false
+      isRequired = false
+    }
+    Checkboxes__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    Date_of_First_Response__firstresponsedate__c@sssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Date_Picker__datepicker__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Date_Time_Picker__datetime__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Labels__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    Days_since_last_comment__dayslastcommented__c@sssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Domain_of_Assignee__assigneedomain__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Domain_of_Reporter__reporterdomain__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Global_Rank__gh_lexo_rank__c@suubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Group_Picker__multiple_groups___multigrouppicker__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Group_Picker__single_group___grouppicker__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Last_commented_by_a_User_Flag__lastusercommented__c@sssssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Last_public_comment_date__LastCommentDate__c@sssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Message_Custom_Field__for_edit___message__c@sssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Number_Field__float__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Number_of_attachments__attachments__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Number_of_comments__comments__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Paragraph__supports_rich_text___textarea__c@sjsskuuuu = {
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Participants_of_an_issue__participants__c@sssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Project_Picker__single_project___project__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Radio_Buttons__radiobuttons__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Select_List__cascading___cascadingselect__c@ssjkuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Select_List__multiple_choices___multiselect__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Select_List__single_choice___select__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Short_text__plain_text_only___textfield__c@ssjsskuuuu = {
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Text_Field__read_only_asd__readonlyfield__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Time_in_Status__timeinstatus__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    URL_Field__url__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    User_Picker__multiple_users___multiuserpicker__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    User_Property_Field____255_characters___userproperty__c@sssjxsskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Username_of_last_updater_or_commenter__lastupdaterorcommenter__c@sssssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Version_Picker__multiple_versions___multiversion__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Version_Picker__single_version___version__c@ssjskuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    testDesc1__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testDesc2__multicheckboxes__c = {
+      description = "desc1"
+      isHidden = false
+      isRequired = false
+    }
+    Flagged3__multicheckboxes__c = {
+      description = "Allows to flag issues with impediments."
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList6__cascadingselect__c = {
+      description = "desc!2"
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList7__cascadingselect__c = {
+      description = "desc!2"
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList8__cascadingselect__c = {
+      description = "desc!2"
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList10__cascadingselect__c = {
+      description = "desc!2"
+      isHidden = false
+      isRequired = false
+    }
+    CustomRadioButton2__radiobuttons__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Number_Field_Name__float__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Key__float__c = {
+      isHidden = false
+      isRequired = false
+    }
+    Key__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testSelectList11__cascadingselect__c = {
+      description = "desc!2"
+      isHidden = false
+      isRequired = false
+    }
+    How_many_times_has_this_happened_before__float__c@ssssssuuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    a_b__float__c@ruuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    testNumber2__float__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testNumber2__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testCheckbox4__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testBug__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testDefaultValue__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testGlobalIssues__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    NewCustomFieldLior__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testetst__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    Compliance_Type__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    guytest__float__c = {
+      isHidden = false
+      isRequired = false
+    }
+    guytest__float__c__float__c@ssssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    shay_multiuser_picker__multiuserpicker__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    shay_date_picker__datepicker__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    shay_date_time_picker__datetime__c@sssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    shay_url__url__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    shay_project_picker__project__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    shay_number__float__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    shay_labels__labels__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    test__readonlyfield__c = {
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    testReadOnly__readonlyfield__c = {
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    shay_user_picker__userpicker__c@ssuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    testSingleUser__userpicker__c = {
+      isHidden = false
+      isRequired = false
+    }
+    Change_requires_downtime___select__c@ssauuuu = {
+      description = '''
+Does this change require downtime?
+If the answer is _Yes_, we need to coordinate this change with CS/Sales (in case there are important demos).
+We also need to update StatusPage in advance, and maybe send emails to a subeset (e.g. paying) customers.
+'''
+      isHidden = false
+      isRequired = false
+    }
+    Team__multiselect__c = {
+      isHidden = false
+      isRequired = false
+    }
+    customer_care__radiobuttons__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Infra_Change_Risk__select__c@ssuuuu = {
+      description = '''
+Risk level for infrastructure change.
+Low: confident (as much as we can) that this change won't affect operations.
+Medium: should not affect operations but might cause them.
+High: will probably affect the operations of the app (downtime, customer data, security, etc)
+'''
+      isHidden = false
+      isRequired = false
+    }
+    Ido4__multicheckboxes__c = {
+      isHidden = false
+      isRequired = false
+    }
+    _Program___multicheckboxes__c@hiuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    ido_date__datepicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    guycheck6__multicheckboxes__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    guycheck7__multicheckboxes__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    guycheck8__multicheckboxes__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    guycheck9__multicheckboxes__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Org_Tier__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    CustomRadioButtonZ__radiobuttons__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    For_Jira_PCS_180060__select__c@ssbuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    HUZZAH__datepicker__c = {
+      isHidden = false
+      isRequired = false
+    }
+    testTest__cascadingselect__c = {
+      isHidden = false
+      isRequired = false
+    }
+    IdoA10K__cascadingselect__c = {
+      description = "A field with more than 10K options"
+      isHidden = false
+      isRequired = false
+    }
+    IdoTextArea__textarea__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+      renderer = "text-renderer"
+    }
+    Actual_end__datetime__c@suuuu = {
+      description = "Enter when the change actually ended."
+      isHidden = false
+      isRequired = false
+    }
+    Neta_test__multicheckboxes__c@suuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Team2__multiselect__c = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    field_13_12_23__multicheckboxes__c@bbbuuuu = {
+      description = "new field"
+      isHidden = false
+      isRequired = false
+    }
+    field_13_12_23_2__labels__c@bbbbuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    ABCDEFG__labels__c = {
+      description = "abcdefg dield"
+      isHidden = false
+      isRequired = false
+    }
+    project_A_field__labels__c@bbuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    AEAEAEA__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    HELO__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    kjhyg__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    frfrdf__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    frfr__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    kihjk__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    iljhlhj__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    field_for_check__labels__c@bbuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    ________________________labels__c@_08206s_08206s_08206s_08206s_08206s_08206_08206s_08206s_08206s_08206s_08206s_08206uuuu = {
+      description = "ShirsEmptyField3"
+      isHidden = false
+      isRequired = false
+    }
+    Dan_the_King__multicheckboxes__c@ssuuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Lior1Labels__labels__c = {
+      isHidden = false
+      isRequired = false
+    }
+    For_ACE__datepicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    DP___Severity__select__c@sbsuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    SLA_Level__select__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    DP___Asset_Field_1__cmdb_object_cftype__c@sbsssuubbuu = {
+      description = "For Testing"
+      isHidden = false
+      isRequired = false
+    }
+    Simple_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    AAA_test_custom_field__multicheckboxes__c@sssuuuu = {
+      description = "original description"
+      isHidden = false
+      isRequired = false
+    }
+    shay_assets_object__cmdb_object_cftype__c@ssuubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Batel3_Assets_Objects__cmdb_object_cftype__c@ssuubbuu = {
+      description = "Batel3 testing assets objects"
+      isHidden = false
+      isRequired = false
+    }
+    Batel_Assets_Objects__cmdb_object_cftype__c@ssuubbuu = {
+      description = "Batel testing assets objects"
+      isHidden = false
+      isRequired = false
+    }
+    Ido_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Ido2_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Ido3_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Ido4San_assets__cmdb_object_cftype__c@suubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    ido5San_assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Ido6Sand_assets__cmdb_object_cftype__c@suubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    ido7Sand_assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Batel_new_asset_creation__cmdb_object_cftype__c@sssuubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    batel_testing__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    DP___Priority__float__c@sbsuuuu = {
+      description = "For JSM Forms"
+      isHidden = false
+      isRequired = false
+    }
+    DP___Date__datetime__c@sbsuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+  }
+}

@@ -1,0 +1,83 @@
+jira.WorkflowConfiguration Ido4WF {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Ido4WF"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 784
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 731.017578125
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 759.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Close__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.open
+          port = 1
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.closed
+        port = 5
+      }
+      name = "Close"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.innovalog.jmwe.jira-misc-workflow-extensions__SharedActionFunction"
+            config = "{\"conditionalExecution\":false,\"targetIssue\":\"inward:jira_subtask_link\",\"_modified\":\"2024-02-14T10:20:28.468Z\",\"sharedActionId\":\"b3c80ac2-abcf-4f68-99c6-17c6a89e0b67\",\"stopAtErrors\":true}"
+            id = "12ea7ad0-19cb-4bf8-bfcb-c1c6a7247aeb"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Ido4__multicheckboxes__c
+          }
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Firewall {
+  name = "Firewall"
+  icon = file("jira/ObjectTypeIcon/Firewall.png")
+}

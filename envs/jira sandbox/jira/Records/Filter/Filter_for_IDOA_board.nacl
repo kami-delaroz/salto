@@ -1,0 +1,16 @@
+jira.Filter Filter_for_IDOA_board@s {
+  name = "Filter for IDOA board"
+  owner = {
+    id = "640a4787f00d095406f6727f"
+    displayName = "Ido Amit"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.idoA.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.idoA
+      }
+    },
+  ]
+}

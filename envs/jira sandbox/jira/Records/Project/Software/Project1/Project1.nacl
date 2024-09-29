@@ -1,0 +1,16 @@
+jira.Project Project1 {
+  key = "PROJ"
+  description = ""
+  name = "Project1"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.PROJ__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.PROJ_software_permission_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.PROJ__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.PROJ__Kanban_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "62d20c47a94a6f9c0eff9866"
+    displayName = "Ido Zak"
+  }
+  assigneeType = "PROJECT_LEAD"
+}

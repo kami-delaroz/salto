@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Console {
+  name = "Console"
+  icon = file("jira/ObjectTypeIcon/Console.png")
+}

@@ -1,0 +1,7 @@
+jira.ApplicationProperty Date_Picker_Format__Java_@sssjk {
+  id = "jira.date.picker.java.format"
+  value = "d/MMM/yy"
+  name = "Date Picker Format (Java)"
+  desc = "This part is only for the Java (server side) generated dates. Note that this should correspond to the javascript date picker format (jira.date.picker.javascript.format) setting."
+  type = "string"
+}

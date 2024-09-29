@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_lf_favicon_hires_url@v {
+  id = "jira.lf.favicon.hires.url"
+  value = "/images/64jira.png"
+  name = "jira.lf.favicon.hires.url"
+  type = "string (url)"
+}

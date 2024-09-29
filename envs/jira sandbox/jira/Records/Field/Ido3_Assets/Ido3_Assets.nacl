@@ -1,0 +1,10 @@
+jira.Field Ido3_Assets__cmdb_object_cftype__c@suubbuu {
+  name = "Ido3 Assets"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugins.cmdb:cmdb-object-searcher"
+  type = "com.atlassian.jira.plugins.cmdb:cmdb-object-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Ido3_Assets__cmdb_object_cftype__c_suubbuu_Default_Configuration_Scheme_for_Ido3_Assets@uuuuuuumusssss,
+  ]
+  _alias = "Ido3 Assets"
+}

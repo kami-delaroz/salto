@@ -1,0 +1,14 @@
+jira.ObjectType idoA_Schema_s_Role_umu_Shir@uuumu {
+  name = "Shir"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.idoA_Schema_s_Role@umu
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Puzzle
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+  _alias = "Shir"
+}

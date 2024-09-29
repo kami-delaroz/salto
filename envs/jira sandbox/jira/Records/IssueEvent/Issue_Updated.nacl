@@ -1,0 +1,3 @@
+jira.IssueEvent Issue_Updated@s {
+  name = "Issue Updated"
+}

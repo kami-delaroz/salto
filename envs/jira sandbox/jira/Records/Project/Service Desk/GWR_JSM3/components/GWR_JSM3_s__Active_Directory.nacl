@@ -1,0 +1,13 @@
+jira.ProjectComponent GWR_JSM3_s__Active_Directory@umuus {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Active Directory"
+  leadAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+  _parent = [
+    jira.Project.instance.GWR_JSM3@s,
+  ]
+  _alias = "GWR JSM3:Active Directory"
+}

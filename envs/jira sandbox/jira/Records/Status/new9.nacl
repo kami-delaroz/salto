@@ -1,0 +1,6 @@
+jira.Status new9 {
+  name = "new9"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = "test9"
+  _alias = "new9"
+}

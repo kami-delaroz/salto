@@ -1,0 +1,11 @@
+jira.PortalGroup Problem_Management_DPJSM@su {
+  name = "Problem Management"
+  ticketTypeIds = [
+    jira.RequestType.instance.Emailed_request_DPJSM@su,
+    jira.RequestType.instance.Get_a_guest_wifi_account_DPJSM@ssssu,
+  ]
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+  _alias = "DP Service Project:Problem Management"
+}

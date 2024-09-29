@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Todo_List@s {
+  name = "Todo List"
+  icon = file("jira/ObjectTypeIcon/Todo_List.png")
+}

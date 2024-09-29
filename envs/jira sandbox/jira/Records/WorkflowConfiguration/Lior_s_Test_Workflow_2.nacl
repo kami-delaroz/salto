@@ -1,0 +1,145 @@
+jira.WorkflowConfiguration Lior_s_Test_Workflow_2@tsss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Lior's Test Workflow 2"
+  description = "4"
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = -7.599999999999994
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      layout = {
+        x = 1039.6875
+        y = 192.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "A shared status"
+    },
+    {
+      statusReference = jira.Status.instance.approved
+      layout = {
+        x = 1064.125
+        y = 92.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.build_broken@s
+      layout = {
+        x = 1052.828125
+        y = 142.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Build Broken"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = 42.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Build_Broken__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.build_broken@s
+      }
+      name = "Build Broken"
+      description = ""
+    }
+    TransitionToShared__From__A_shared_status_Approved__Directed@fffssszdff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.approved
+          port = 3
+        },
+        {
+          statusReference = jira.Status.instance.a_shared_status3@s
+          port = 7
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.build_broken@s
+        port = 7
+      }
+      name = "TransitionToShared"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldMatchesRegularExpression"
+            regexp = "A"
+            fieldKey = jira.Field.instance.missing_customfield_11262
+          }
+        },
+      ]
+    }
+    LiorTestTransition__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.open
+          port = 3
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.build_broken@s
+        port = 7
+      }
+      name = "LiorTestTransition"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+jira.Project BatelProject1 {
+  key = "BATEL"
+  description = ""
+  name = "BatelProject1"
+  projectTypeKey = "software"
+  entityId = "f12f1bca-759a-41ae-bcd8-94ac600248a3"
+  uuid = "f12f1bca-759a-41ae-bcd8-94ac600248a3"
+  issueSecurityScheme = jira.SecurityScheme.instance.BATEL__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+  assigneeType = "UNASSIGNED"
+}

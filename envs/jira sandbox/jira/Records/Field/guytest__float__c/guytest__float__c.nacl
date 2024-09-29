@@ -1,0 +1,10 @@
+jira.Field guytest__float__c__float__c@ssssuuuu {
+  name = "guytest  float  c"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:float"
+  contexts = [
+    jira.CustomFieldContext.instance.guytest__float__c__float__c_ssssuuuu_Default_Configuration_Scheme_for_guytest__float__c@uuuuuuuumussssssss,
+  ]
+  _alias = "guytest  float  c"
+}

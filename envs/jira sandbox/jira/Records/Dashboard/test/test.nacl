@@ -1,0 +1,12 @@
+jira.Dashboard test {
+  description = ""
+  name = "test"
+  owner = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+  gadgets = [
+    jira.DashboardGadget.instance.test__Average_Age_Chart_0_0@uussuu,
+  ]
+  layout = "AA"
+}

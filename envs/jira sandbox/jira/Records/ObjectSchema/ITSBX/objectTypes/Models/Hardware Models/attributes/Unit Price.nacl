@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute ITSBX_Models_Hardware_Models_uus_Unit_Price@uuumus {
+  objectType = jira.ObjectType.instance.ITSBX_Models_Hardware_Models@uus
+  name = "Unit Price"
+  type = 0
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 1
+  _alias = "Unit Price"
+}

@@ -1,0 +1,23 @@
+jira.WorkflowScheme "1801BugWorkflowScheme" {
+  name = "1801BugWorkflowScheme"
+  description = "this is a description!1@"
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
+  items = [
+    {
+      workflow = jira.WorkflowConfiguration.instance.shay_workflow@s
+      issueType = jira.IssueType.instance.Epic
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.Software_Simplified_Workflow_for_Project_LIORCOMP@s
+      issueType = jira.IssueType.instance.Task
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.Software_Simplified_Workflow_for_Project_TP3@s
+      issueType = jira.IssueType.instance.Sub_task@b
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.shay_workflow
+      issueType = jira.IssueType.instance.Story
+    },
+  ]
+}

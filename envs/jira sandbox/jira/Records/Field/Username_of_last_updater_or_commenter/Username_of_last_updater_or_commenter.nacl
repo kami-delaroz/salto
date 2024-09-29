@@ -1,0 +1,10 @@
+jira.Field Username_of_last_updater_or_commenter__lastupdaterorcommenter__c@sssssuuuu {
+  name = "Username of last updater or commenter"
+  description = ""
+  searcherKey = "com.atlassian.jira.toolkit:lastparticipantsearcher"
+  type = "com.atlassian.jira.toolkit:lastupdaterorcommenter"
+  contexts = [
+    jira.CustomFieldContext.instance.Username_of_last_updater_or_commenter__lastupdaterorcommenter__c_sssssuuuu_Default_Configuration_Scheme_for_Username_of_last_updater_or_commenter@uuuuuuuuumusssssssss,
+  ]
+  _alias = "Username of last updater or commenter"
+}

@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus Processes__Inactive {
+  name = "Inactive"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.Processes,
+  ]
+  _alias = "Processes:Inactive"
+}

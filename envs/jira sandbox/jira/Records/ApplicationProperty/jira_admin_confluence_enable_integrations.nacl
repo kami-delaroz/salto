@@ -1,0 +1,6 @@
+jira.ApplicationProperty jira_admin_confluence_enable_integrations@vvvb {
+  id = "jira.admin.confluence.enable-integrations"
+  value = "true"
+  name = "jira.admin.confluence.enable-integrations"
+  type = "boolean"
+}

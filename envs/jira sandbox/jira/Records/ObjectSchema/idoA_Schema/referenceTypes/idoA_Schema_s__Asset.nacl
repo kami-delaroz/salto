@@ -1,0 +1,9 @@
+jira.ObjectSchemaReferenceType idoA_Schema_s__Asset@umuu {
+  name = "Asset"
+  description = "reference to objectType"
+  color = "8777D9"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+}

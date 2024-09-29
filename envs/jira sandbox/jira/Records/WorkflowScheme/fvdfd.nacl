@@ -1,0 +1,23 @@
+jira.WorkflowScheme fvdfd {
+  name = "fvdfd"
+  description = ""
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
+  items = [
+    {
+      workflow = jira.WorkflowConfiguration.instance.AL__Jira_Service_Management_default_workflow@fsssss
+      issueType = jira.IssueType.instance.New_Feature@s
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.jira
+      issueType = jira.IssueType.instance._System__Service_request@hiss
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.jira
+      issueType = jira.IssueType.instance._System__Problem@his
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.AL__Jira_Service_Management_default_workflow@fsssss
+      issueType = jira.IssueType.instance.Questions_for_facilities@s
+    },
+  ]
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Doughnut_Chart@s {
+  name = "Doughnut Chart"
+  icon = file("jira/ObjectTypeIcon/Doughnut_Chart.png")
+}

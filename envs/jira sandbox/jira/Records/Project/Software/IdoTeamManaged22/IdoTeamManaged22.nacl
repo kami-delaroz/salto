@@ -1,0 +1,14 @@
+jira.Project IdoTeamManaged22 {
+  key = "DTMMNGD22"
+  description = ""
+  name = "IdoTeamManaged22"
+  projectTypeKey = "software"
+  entityId = "d6af675e-3c7d-4f07-9eb1-ffd4d9c19ff8"
+  uuid = "d6af675e-3c7d-4f07-9eb1-ffd4d9c19ff8"
+  issueSecurityScheme = jira.SecurityScheme.instance.DTMMNGD22__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "62d20c47a94a6f9c0eff9866"
+    displayName = "Ido Zak"
+  }
+  assigneeType = "UNASSIGNED"
+}

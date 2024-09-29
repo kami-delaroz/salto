@@ -1,0 +1,4 @@
+jira.ProjectRole aaa {
+  name = "aaa"
+  description = "bbb"
+}

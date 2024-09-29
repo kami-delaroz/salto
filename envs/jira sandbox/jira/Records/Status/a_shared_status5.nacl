@@ -1,0 +1,6 @@
+jira.Status a_shared_status5@s {
+  name = "A shared status5"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = "A new status created by Lior6"
+  _alias = "A shared status5"
+}

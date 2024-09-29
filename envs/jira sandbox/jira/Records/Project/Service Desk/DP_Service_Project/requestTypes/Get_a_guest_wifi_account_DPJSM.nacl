@@ -1,0 +1,293 @@
+jira.RequestType Get_a_guest_wifi_account_DPJSM@ssssu {
+  name = "Get a guest wifi account"
+  description = "Raise a request to ask for temp wifi access for guests."
+  helpText = ""
+  issueTypeId = jira.IssueType.instance.General_request@s
+  workflowStatuses = [
+    {
+      id = jira.Status.instance.to_do@s
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.done
+      custom = ""
+    },
+    {
+      id = jira.Status.instance.in_progress@s
+      custom = ""
+    },
+  ]
+  requestForm = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Summary__string
+          data = {
+            custom = false
+            global = true
+            required = true
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Due_date__date@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+            properties = [
+              {
+                key = "jsd.field.displayName"
+                value = "Guest arrival date"
+              },
+            ]
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "REQUEST"
+          key = jira.Field.instance.Attachment__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Description__string
+          data = {
+            custom = false
+            global = true
+            required = false
+            defaultValue = {
+              type = "doc"
+              version = 1
+              content = [
+                {
+                  type = "paragraph"
+                  content = [
+                    {
+                      type = "text"
+                      text = "This is preset"
+                    },
+                  ]
+                },
+              ]
+            }
+          }
+        },
+      ]
+    }
+  }
+  avatarId = "10519"
+  issueView = {
+    issueLayoutConfig = {
+      items = [
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Assignee__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Reporter__user
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_Type__vp_origin__c@suubuu
+          data = {
+            custom = true
+            global = true
+            description = "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Request_language__sd_request_language__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "The language which a request was raised in."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "PRIMARY"
+          key = jira.Field.instance.Priority__priority
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "KNOWLEDGE_BASE"
+          data = {
+            name = "Knowledge Base"
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Labels__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu
+          data = {
+            custom = true
+            global = true
+            description = "Stores the users that are participants in service project customer portal requests. This custom field is created programmatically and required by service project."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Time_tracking__timetracking@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Approvers__multiuserpicker__c
+          data = {
+            custom = true
+            global = true
+            description = "Contains users needed for approval. This custom field was created by Jira."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Approver_groups__multigrouppicker__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = "Contains groups of users needed for approval. This custom field was created by Jira Service Management."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Team__atlassian_team__c@uubuu
+          data = {
+            custom = true
+            global = true
+            description = "Associates a team to an issue. You can use this field to search and filter issues by team."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Original_estimate__number@suu
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Components__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Actual_end__datetime__c@suuuu
+          data = {
+            custom = true
+            global = true
+            description = "Enter when the change actually ended."
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.DP___Date__datetime__c@sbsuuuu
+          data = {
+            custom = true
+            global = true
+            description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "CONTENT"
+          key = jira.Field.instance.DP___Priority__float__c@sbsuuuu
+          data = {
+            custom = true
+            global = true
+            description = "For JSM Forms"
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "CONTENT"
+          key = jira.Field.instance.Description__string
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+      ]
+    }
+  }
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+  _alias = "DP Service Project:Get a guest wifi account"
+}

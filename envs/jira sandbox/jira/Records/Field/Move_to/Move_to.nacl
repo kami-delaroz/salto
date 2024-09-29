@@ -1,0 +1,9 @@
+jira.Field Move_to__textfield__c@suuuu {
+  name = "Move to"
+  description = ""
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  contexts = [
+    jira.CustomFieldContext.instance.Move_to__textfield__c_suuuu_Default_Configuration_Scheme_for_Move_to@uuuuumusssss,
+  ]
+  _alias = "Move to"
+}

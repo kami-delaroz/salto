@@ -1,0 +1,10 @@
+jira.Field Workaround__textarea__c {
+  name = "Workaround"
+  description = "Describe the workaround for the problem"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.Workaround__textarea__c_Default_Configuration_Scheme_for_Workaround@uuuuussss,
+  ]
+  _alias = "Workaround"
+}
