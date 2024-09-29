@@ -51,7 +51,7 @@ jira.Automation When_a_change_request_is_created___then_attach_the_default_chang
       type = "jira.proforma.form.add.action"
       value = {
         templateFormsConfig = {
-          projectId = 10204
+          projectId = 10203
           templateFormIds = [
             1,
           ]
