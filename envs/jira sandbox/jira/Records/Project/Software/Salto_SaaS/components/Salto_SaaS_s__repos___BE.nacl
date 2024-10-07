@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto_SaaS_s__repos___BE@umuusbs {
+  assigneeType = "COMPONENT_LEAD"
+  name = "repos - BE"
+  _parent = [
+    jira.Project.instance.Salto_SaaS@s,
+  ]
+  _alias = "Salto SaaS:repos - BE"
+}

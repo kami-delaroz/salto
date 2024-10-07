@@ -1,0 +1,14 @@
+jira.Project LiorTeamManaged {
+  key = "LIORTEAM"
+  description = ""
+  name = "LiorTeamManaged"
+  projectTypeKey = "software"
+  entityId = "52c2d1a4-aa12-49f4-ad08-10f1f0b0d644"
+  uuid = "52c2d1a4-aa12-49f4-ad08-10f1f0b0d644"
+  issueSecurityScheme = jira.SecurityScheme.instance.LIORTEAM__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  assigneeType = "UNASSIGNED"
+}

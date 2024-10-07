@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Switch {
+  name = "Switch"
+  icon = file("jira/ObjectTypeIcon/Switch.png")
+}

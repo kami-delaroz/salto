@@ -1,0 +1,5 @@
+jira.ObjectSchemaGlobalStatus Stopped {
+  name = "Stopped"
+  description = ""
+  category = 0
+}

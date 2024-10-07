@@ -1,0 +1,6 @@
+jira.Status in_uat@s {
+  name = "in uat"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "in uat"
+}

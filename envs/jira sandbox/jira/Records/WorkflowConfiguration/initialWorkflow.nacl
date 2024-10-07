@@ -1,0 +1,66 @@
+jira.WorkflowConfiguration initialWorkflow {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "initialWorkflow"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 720
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.a_shared_status5@s
+      layout = {
+        x = 635.646484375
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "A shared status5"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 695.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    aaa__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.open
+          port = 1
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.a_shared_status5@s
+        port = 5
+      }
+      name = "aaa"
+      description = ""
+    }
+  }
+}

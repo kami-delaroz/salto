@@ -1,0 +1,7 @@
+jira.ScreenScheme Default_Screen_Scheme@s {
+  name = "Default Screen Scheme"
+  description = "Default Screen Scheme"
+  screens = {
+    default = jira.Screen.instance.Default_Screen@s
+  }
+}

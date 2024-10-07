@@ -1,0 +1,8 @@
+jira.ObjectTypeOrder Services_childOrder {
+  objectTypes = [
+    jira.ObjectType.instance.Services_Service,
+  ]
+  _parent = [
+    jira.ObjectSchema.instance.Services,
+  ]
+}

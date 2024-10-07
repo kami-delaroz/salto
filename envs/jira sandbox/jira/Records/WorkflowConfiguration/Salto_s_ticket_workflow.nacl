@@ -1,0 +1,262 @@
+jira.WorkflowConfiguration Salto_s_ticket_workflow@tss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Salto's ticket workflow"
+  description = "5Forked from Jira's Software Simplified Workflow4"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.cannot_reproduce@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "CANNOT REPRODUCE"
+    },
+    {
+      statusReference = jira.Status.instance.closed
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.design
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Design"
+    },
+    {
+      statusReference = jira.Status.instance.done
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_design_review@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "IN DESIGN REVIEW"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.in_review@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Review"
+    },
+    {
+      statusReference = jira.Status.instance.pending
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Pending"
+    },
+    {
+      statusReference = jira.Status.instance.pm
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "PM"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "To Do"
+    },
+    {
+      statusReference = jira.Status.instance.won_t_fix@ts
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Won't Fix"
+    },
+  ]
+  transitions = {
+    CANNOT_REPRODUCE__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.cannot_reproduce@s
+      }
+      name = "CANNOT REPRODUCE"
+      description = ""
+    }
+    Pending__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.pending
+      }
+      name = "Pending"
+      description = ""
+    }
+    Done__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.done
+      }
+      name = "Done"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+            value = jira.Resolution.instance.Done
+          }
+        },
+      ]
+    }
+    Design__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.design
+      }
+      name = "Design"
+      description = ""
+    }
+    Won_t_Fix__2___From__any_status__Global@tssjkfffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.won_t_fix@ts
+      }
+      name = "Won't Fix (2)"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.to_do@s
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    In_Review__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.in_review@s
+      }
+      name = "In Review"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+    }
+    PM__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.pm
+      }
+      name = "PM"
+      description = ""
+    }
+    IN_DESIGN_REVIEW__From__any_status__Global@ssfffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.in_design_review@s
+      }
+      name = "IN DESIGN REVIEW"
+      description = ""
+    }
+    To_Do__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.to_do@s
+      }
+      name = "To Do"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+    }
+    In_Progress__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.in_progress@s
+      }
+      name = "In Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+jira.Filter Filter_for_LIORCOMP_board@s {
+  name = "Filter for LIORCOMP board"
+  owner = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.LiorCompanyManaged.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.LiorCompanyManaged
+      }
+    },
+  ]
+}

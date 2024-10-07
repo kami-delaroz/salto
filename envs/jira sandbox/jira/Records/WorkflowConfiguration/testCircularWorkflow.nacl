@@ -1,0 +1,78 @@
+jira.WorkflowConfiguration testCircularWorkflow {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "testCircularWorkflow"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 720
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance._teststatus_@hi
+      layout = {
+        x = 519.09375
+        y = -100.70000122070311
+      }
+      deprecated = false
+      name = "[testStatus]"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 695.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    _testStatus___From__any_status__Global@hifffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance._teststatus_@hi
+      }
+      name = "[testStatus]"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    asd__From__any_status__Circular@fffssff = {
+      type = "GLOBAL"
+      name = "asd"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Labels__array
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-unassigned"
+          }
+        },
+      ]
+    }
+  }
+}

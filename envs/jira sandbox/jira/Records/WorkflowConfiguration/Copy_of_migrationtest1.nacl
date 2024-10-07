@@ -1,0 +1,66 @@
+jira.WorkflowConfiguration Copy_of_migrationtest1@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Copy of migrationtest1"
+  description = "(This copy was automatically generated from a draft, when workflow 'migrationtest1' was made inactive.)"
+  isEditable = true
+  startPointLayout = {
+    x = 349
+    y = -20.599999999999994
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.aaa
+      layout = {
+        x = 566.021484375
+        y = 20.299998779296885
+      }
+      deprecated = false
+      name = "aaa"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 695.40625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    dsdsds__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.aaa
+        port = 7
+      }
+      name = "dsdsds"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    tans1__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.open
+          port = 0
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.aaa
+        port = 4
+      }
+      name = "tans1"
+      description = ""
+    }
+  }
+}

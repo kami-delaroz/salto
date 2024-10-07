@@ -1,0 +1,14 @@
+jira.Field Change_requires_downtime___select__c@ssauuuu {
+  name = "Change requires downtime?"
+  description = '''
+Does this change require downtime?
+If the answer is _Yes_, we need to coordinate this change with CS/Sales (in case there are important demos).
+We also need to update StatusPage in advance, and maybe send emails to a subeset (e.g. paying) customers.
+'''
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  contexts = [
+    jira.CustomFieldContext.instance.Change_requires_downtime___select__c_ssauuuu_Default_Configuration_Scheme_for_Change_requires_downtime_@uuuuuuumussssssa,
+  ]
+  _alias = "Change requires downtime?"
+}

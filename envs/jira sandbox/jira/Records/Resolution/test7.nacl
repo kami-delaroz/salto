@@ -1,0 +1,4 @@
+jira.Resolution test7 {
+  description = "desc8"
+  name = "test7"
+}

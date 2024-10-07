@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus DP___Services_sbs__In_Use@uuumuus {
+  name = "In Use"
+  description = "Asset is deployed and functioning"
+  category = 1
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "DP - Services:In Use"
+}

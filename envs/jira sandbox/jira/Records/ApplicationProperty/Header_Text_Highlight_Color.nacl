@@ -1,0 +1,6 @@
+jira.ApplicationProperty Header_Text_Highlight_Color@s {
+  id = "jira.lf.top.texthilightcolour"
+  value = "#f0f0f0"
+  name = "Header Text Highlight Color"
+  type = "colour"
+}

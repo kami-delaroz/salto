@@ -1,0 +1,80 @@
+jira.WorkflowConfiguration testEmpty3 {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "testEmpty3"
+  description = "This is a workflow used for Stories and Tasks"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance._teststatus_@hi
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "[testStatus]"
+    },
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      deprecated = false
+      name = "A shared status3"
+    },
+    {
+      statusReference = jira.Status.instance.a_shared_status4@s
+      deprecated = false
+      name = "A shared status4"
+    },
+  ]
+  transitions = {
+    In_progress__From___testStatus___Directed@sfffshiff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance._teststatus_@hi
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.a_shared_status4@s
+      }
+      name = "In progress"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss
+        }
+      }
+      properties = [
+        {
+          key = "custom-property"
+          value = "custom-value"
+        },
+      ]
+    }
+    Created__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance._teststatus_@hi
+      }
+      name = "Created"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

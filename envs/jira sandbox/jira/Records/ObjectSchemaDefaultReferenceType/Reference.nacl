@@ -1,0 +1,6 @@
+jira.ObjectSchemaDefaultReferenceType Reference {
+  name = "Reference"
+  description = "Reference"
+  color = "49a6ed"
+  removable = false
+}

@@ -1,0 +1,6 @@
+jira.Status notused {
+  name = "notUsed"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = "unused status"
+  _alias = "notUsed"
+}

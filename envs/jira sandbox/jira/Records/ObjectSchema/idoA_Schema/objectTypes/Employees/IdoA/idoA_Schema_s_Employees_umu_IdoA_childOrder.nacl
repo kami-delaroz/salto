@@ -1,0 +1,8 @@
+jira.ObjectTypeOrder idoA_Schema_s_Employees_umu_IdoA_childOrder@uuumuu {
+  objectTypes = [
+    jira.ObjectType.instance.idoA_Schema_s_Employees_umu_IdoA_uuumu_idoA1@uuuuumu,
+  ]
+  _parent = [
+    jira.ObjectType.instance.idoA_Schema_s_Employees_umu_IdoA@uuumu,
+  ]
+}

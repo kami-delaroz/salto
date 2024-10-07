@@ -1,0 +1,229 @@
+jira.NotificationScheme Default_Notification_Scheme@s {
+  name = "Default Notification Scheme"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Generic_Event@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Closed@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Comment_Edited@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Commented@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Created@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Deleted@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Moved@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Reopened@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Resolved@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Updated@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Worklog_Deleted@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Worklog_Updated@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Work_Logged_On_Issue@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Work_Started_On_Issue@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Work_Stopped_On_Issue@s
+    },
+  ]
+}

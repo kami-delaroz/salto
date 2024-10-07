@@ -1,0 +1,56 @@
+jira.DashboardGadget Liors_Dashboard_s__Workload_Pie_Chart_0_0@umuussuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.ext.charting:workloadpie-gadget/com/atlassian/jira/ext/charting/gadget/workloadpie-gadget.xml"
+  color = "blue"
+  position = {
+    row = 0
+    column = 0
+  }
+  title = "Workload Pie Chart"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "statistictype"
+          value = jira.Field.instance._Program___multicheckboxes__c@hiuuuu
+        },
+        {
+          key = "issuetimetype"
+          value = "timespent"
+        },
+        {
+          key = "isPopup"
+          value = "false"
+        },
+        {
+          key = "name"
+          value = "The filter you requested does not exist or you do not have permission to view it."
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+        {
+          key = "projectOrFilterId"
+          value = "filter-10084"
+        },
+        {
+          key = "id"
+          value = "10084"
+        },
+        {
+          key = "type"
+          value = "filter"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.Liors_Dashboard@s,
+  ]
+  _alias = "Workload Pie Chart"
+}

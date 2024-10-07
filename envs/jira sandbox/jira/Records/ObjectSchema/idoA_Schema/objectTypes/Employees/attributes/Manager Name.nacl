@@ -1,0 +1,21 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Employees_umu_Manager_Name@uuumus {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Employees@umu
+  name = "Manager Name"
+  type = 1
+  description = "Employee's manager name hi bob"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.idoA_Schema_s__Reports_to@umuus
+  typeValue = jira.ObjectType.instance.idoA_Schema_s_Employees@umu
+  _alias = "Manager Name"
+}

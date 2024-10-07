@@ -1,0 +1,10 @@
+jira.Field Planned_start__datetime__c@suuuu {
+  name = "Planned start"
+  description = "Enter when the change is planned to start."
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:datetimerange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datetime"
+  contexts = [
+    jira.CustomFieldContext.instance.Planned_start__datetime__c_suuuu_Default_Configuration_Scheme_for_Planned_start@uuuuumusssss,
+  ]
+  _alias = "Planned start"
+}

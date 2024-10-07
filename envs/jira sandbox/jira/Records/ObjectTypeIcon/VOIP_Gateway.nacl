@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon VOIP_Gateway@s {
+  name = "VOIP Gateway"
+  icon = file("jira/ObjectTypeIcon/VOIP_Gateway.png")
+}

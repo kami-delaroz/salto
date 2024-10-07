@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus Lior_s_IT_Schema_tss__Ordered@uuumuu {
+  name = "Ordered"
+  description = "Asset is deployed but no longer in use"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "Lior's IT Schema:Ordered"
+}

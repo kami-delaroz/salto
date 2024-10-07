@@ -1,0 +1,12 @@
+jira.ObjectSchema ITSBX {
+  name = "ITSBX"
+  objectSchemaKey = "ITSBX"
+  status = "Ok"
+  description = "IT chece"
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = false
+  }
+  _alias = "ITSBX"
+}

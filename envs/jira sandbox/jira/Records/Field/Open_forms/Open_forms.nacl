@@ -1,0 +1,11 @@
+jira.Field Open_forms__forms_open_field_cftype__c@suubbbuu {
+  name = "Open forms"
+  description = "The number of open forms on the issue"
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber"
+  type = "com.atlassian.jira.plugins.proforma-managed-fields:forms-open-field-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Open_forms__forms_open_field_cftype__c_suubbbuu_Default_Configuration_Scheme_for_Open_forms@uuuuuuuumusssss,
+  ]
+  _alias = "Open forms"
+}

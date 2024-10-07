@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon SUSE {
+  name = "SUSE"
+  icon = file("jira/ObjectTypeIcon/SUSE.png")
+}

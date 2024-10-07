@@ -1,0 +1,56 @@
+jira.DashboardGadget Liors_Dashboard_s__Time_to_First_Response_0_2@umuusssuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.ext.charting:firstresponse-gadget/com/atlassian/jira/ext/charting/gadget/firstresponse-gadget.xml"
+  color = "blue"
+  position = {
+    row = 2
+    column = 0
+  }
+  title = "Time to First Response"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "isPopup"
+          value = "false"
+        },
+        {
+          key = "name"
+          value = "The filter you requested does not exist or you do not have permission to view it."
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+        {
+          key = "periodName"
+          value = "daily"
+        },
+        {
+          key = "projectOrFilterId"
+          value = "filter-10084"
+        },
+        {
+          key = "daysprevious"
+          value = "30"
+        },
+        {
+          key = "id"
+          value = "10084"
+        },
+        {
+          key = "type"
+          value = "filter"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.Liors_Dashboard@s,
+  ]
+  _alias = "Time to First Response"
+}

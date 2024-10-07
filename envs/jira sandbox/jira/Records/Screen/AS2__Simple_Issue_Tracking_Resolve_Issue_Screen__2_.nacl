@@ -1,0 +1,20 @@
+jira.Screen AS2__Simple_Issue_Tracking_Resolve_Issue_Screen__2_@fsssssssjk {
+  name = "AS2: Simple Issue Tracking Resolve Issue Screen (2)"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Summary__string,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+        jira.Field.instance.Reporter__user,
+        jira.Field.instance.Linked_Issues__array@suu,
+        jira.Field.instance.Resolution__resolution,
+        jira.Field.instance.testSelectList4__cascadingselect__c,
+        jira.Field.instance.________________________________________________datepicker__c@_01513_01491_01492s_01489_01506_01489_01512_01497_01514s_01506_01501sr_01502_01512_01499_01488_01493_01514rs_01493_01491_01489_01512_01497_01501slmnzcpweokjs_01488_01495_01512_01497_01501uuuu,
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+  }
+}

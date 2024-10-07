@@ -1,0 +1,61 @@
+jira.SLA Time_to_review_normal_change_ITSAMPLE@ssssu {
+  name = "Time to review normal change"
+  config = {
+    definition = {
+      start = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = "10031"
+          name = "Entered Status: Review"
+        },
+      ]
+      stop = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = "10028"
+          name = "Entered Status: Canceled"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = "10043"
+          name = "Entered Status: Declined2"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = "10032"
+          name = "Entered Status: Implementing"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = "10033"
+          name = "Entered Status: Planning"
+        },
+      ]
+    }
+    goals = [
+      {
+        jqlQuery = "\"Ticket category\" = Changes AND \"${ jira.Field.instance.Change_type__select__c@suuuu.name }\" = Normal"
+        duration = 144000000
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_ITSAMPLE@sbsu
+        defaultGoal = false
+        timeMetricId = 0
+      },
+      {
+        jqlQuery = ""
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_ITSAMPLE@sbsu
+        defaultGoal = true
+        timeMetricId = 0
+      },
+    ]
+    slaDisplayFormat = "NEW_SLA_FORMAT"
+  }
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Time to review normal change"
+}

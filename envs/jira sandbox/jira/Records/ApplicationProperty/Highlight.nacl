@@ -1,0 +1,7 @@
+jira.ApplicationProperty Highlight {
+  id = "jira.lf.navigation.highlightcolour"
+  value = "#0052CC"
+  name = "Highlight"
+  desc = "The color of the create button and highlight color for the selected navigation item"
+  type = "colour"
+}

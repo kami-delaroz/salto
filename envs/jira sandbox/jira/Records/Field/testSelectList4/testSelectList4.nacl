@@ -1,0 +1,10 @@
+jira.Field testSelectList4__cascadingselect__c {
+  name = "testSelectList4"
+  description = "desc!2"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect"
+  contexts = [
+    jira.CustomFieldContext.instance.testSelectList4__cascadingselect__c_Default_Configuration_Scheme_for_CustomTestSelectList@uuuuussss,
+  ]
+  _alias = "testSelectList4"
+}

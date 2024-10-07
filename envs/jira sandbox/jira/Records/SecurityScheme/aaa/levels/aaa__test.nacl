@@ -1,0 +1,26 @@
+jira.SecurityLevel aaa__test {
+  description = "desc"
+  name = "test"
+  members = [
+    {
+      holder = {
+        type = "applicationRole"
+      }
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+    },
+    {
+      holder = {
+        type = "group"
+        parameter = jira.Group.instance.atlassian_addons_admin@b
+      }
+    },
+  ]
+  _parent = [
+    jira.SecurityScheme.instance.aaa,
+  ]
+}

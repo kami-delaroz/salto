@@ -1,0 +1,17 @@
+jira {
+  fetch = {
+    include = [
+      {
+        type = ".*"
+      },
+    ]
+    exclude = [
+    ]
+    enableJSM = true
+    enableJSMPremium = true
+    enableAssetsObjectFieldConfiguration = true
+  }
+  deploy = {
+    forceDelete = false
+  }
+}

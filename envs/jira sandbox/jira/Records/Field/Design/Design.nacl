@@ -1,0 +1,11 @@
+jira.Field Design__designcf__c {
+  name = "Design"
+  description = "Custom field that stores design information"
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf-searcher"
+  type = "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf"
+  contexts = [
+    jira.CustomFieldContext.instance.Design__designcf__c_Default_Configuration_Scheme_for_Design@uuuuussss,
+  ]
+  _alias = "Design"
+}

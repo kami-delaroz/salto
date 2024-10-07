@@ -1,0 +1,10 @@
+jira.ScreenScheme TST2__Jira_Service_Management__Post_Incident_Review_Screen_Scheme@fsssfsbsss {
+  name = "TST2: Jira Service Management: Post-Incident Review Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.TST2__Jira_Service_Management__Post_Incident_Review_Create_Issue_Screen@fsssfsbssss
+    edit = jira.Screen.instance.TST2__Jira_Service_Management__Post_Incident_Review_View_Edit_Screen@fsssfsbssds
+    create = jira.Screen.instance.TST2__Jira_Service_Management__Post_Incident_Review_Create_Issue_Screen@fsssfsbssss
+    view = jira.Screen.instance.TST2__Jira_Service_Management__Post_Incident_Review_View_Edit_Screen@fsssfsbssds
+  }
+}

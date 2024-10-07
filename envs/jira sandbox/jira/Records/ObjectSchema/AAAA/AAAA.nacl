@@ -1,0 +1,12 @@
+jira.ObjectSchema AAAA {
+  name = "AAAA"
+  objectSchemaKey = "AAAA"
+  status = "Ok"
+  description = ""
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = false
+  }
+  _alias = "AAAA"
+}
