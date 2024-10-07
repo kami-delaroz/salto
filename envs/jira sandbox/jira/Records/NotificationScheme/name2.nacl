@@ -1,0 +1,18 @@
+jira.NotificationScheme name2 {
+  name = "name2"
+  description = "new descriptionn"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          parameter = {
+            id = "5fa91999b2633d0076583a61"
+            displayName = "Alon Stern"
+          }
+          type = "User"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Comment_Edited@s
+    },
+  ]
+}

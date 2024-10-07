@@ -1,0 +1,9 @@
+jira.ObjectSchemaReferenceType Lior_s_IT_Schema_tss__Assigned_to@uuumuus {
+  name = "Assigned to"
+  description = ""
+  color = "5243AA"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+}

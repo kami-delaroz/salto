@@ -1,0 +1,10 @@
+jira.Screen screen_19_02@b {
+  name = "screen-19-02"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      position = 0
+    }
+  }
+}

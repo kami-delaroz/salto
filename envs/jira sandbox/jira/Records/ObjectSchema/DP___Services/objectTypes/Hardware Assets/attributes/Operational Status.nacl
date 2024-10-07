@@ -1,0 +1,23 @@
+jira.ObjectTypeAttribute DP___Services_sbs_Hardware_Assets_uuumus_Operational_Status@uuuuuumus {
+  objectType = jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets@uuumus
+  name = "Operational Status"
+  type = 7
+  description = "Health status of asset/CI"
+  typeValueMulti = [
+    jira.ObjectSchemaGlobalStatus.instance.Active,
+    jira.ObjectSchemaStatus.instance.DP___Services_sbs__Inactive@uuumuu,
+  ]
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  _alias = "Operational Status"
+}

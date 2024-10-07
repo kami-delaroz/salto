@@ -1,0 +1,11 @@
+jira.Field Goals__goals__c {
+  name = "Goals"
+  description = "Link goals to issues"
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:goals-searcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:goals"
+  contexts = [
+    jira.CustomFieldContext.instance.Goals__goals__c_Default_Configuration_Scheme_for_Goals@uuuuussss,
+  ]
+  _alias = "Goals"
+}

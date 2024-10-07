@@ -1,0 +1,8 @@
+jira.ObjectTypeOrder Lior_s_IT_Schema_tss_Models_uuumu_Model_Categories_childOrder@uuuuumusu {
+  objectTypes = [
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Model_Categories_uuuuumus_Jsm1@uuuuuuuumu,
+  ]
+  _parent = [
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Model_Categories@uuuuumus,
+  ]
+}

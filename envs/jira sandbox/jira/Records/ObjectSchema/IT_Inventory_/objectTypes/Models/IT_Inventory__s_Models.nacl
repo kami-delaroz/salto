@@ -1,0 +1,13 @@
+jira.ObjectType IT_Inventory__s_Models@uumu {
+  name = "Models"
+  type = 0
+  inherited = false
+  abstractObjectType = true
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.3D_Printer@s
+  parentObjectTypeId = jira.ObjectSchema.instance.IT_Inventory_@s
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "Models"
+}

@@ -1,0 +1,13 @@
+jira.ProjectComponent testFacilities4__Intranet4 {
+  description = "Issues related to the intranet. Created by Jira Service Management."
+  assigneeType = "UNASSIGNED"
+  name = "Intranet4"
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  _parent = [
+    jira.Project.instance.testFacilities4,
+  ]
+  _alias = "testFacilities4:Intranet4"
+}

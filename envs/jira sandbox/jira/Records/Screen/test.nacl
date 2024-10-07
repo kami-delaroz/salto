@@ -1,0 +1,24 @@
+jira.Screen test {
+  name = "test"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Affected_hardware__textfield__c@suuuu,
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+        jira.Field.instance.IdoA10K__cascadingselect__c,
+        jira.Field.instance.Event_date__datepicker__c@suuuu,
+        jira.Field.instance.ido_date__datepicker__c@suuuu,
+      ]
+      position = 0
+    }
+    tab2 = {
+      name = "tab2"
+      fields = [
+        jira.Field.instance.Product_categorization__cascadingselect__c@suuuu,
+      ]
+      position = 1
+    }
+  }
+}

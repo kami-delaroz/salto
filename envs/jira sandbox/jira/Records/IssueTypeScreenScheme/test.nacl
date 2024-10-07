@@ -1,0 +1,18 @@
+jira.IssueTypeScreenScheme test {
+  name = "test"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Bug3
+      screenSchemeId = jira.ScreenScheme.instance.test
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Bug5
+      screenSchemeId = jira.ScreenScheme.instance.test
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.TEST__Jira_Service_Management__Change_Management_Screen_Scheme@fsssfssss
+    },
+  ]
+}

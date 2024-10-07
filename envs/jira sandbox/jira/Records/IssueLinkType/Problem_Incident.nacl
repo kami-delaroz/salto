@@ -1,0 +1,5 @@
+jira.IssueLinkType Problem_Incident@d {
+  name = "Problem/Incident"
+  inward = "is caused by"
+  outward = "causes"
+}

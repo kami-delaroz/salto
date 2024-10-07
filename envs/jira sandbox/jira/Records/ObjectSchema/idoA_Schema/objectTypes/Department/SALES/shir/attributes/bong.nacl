@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Department_umu_SALES_uuumu_shir_uuuuumu_bong@uuuuuuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Department_umu_SALES_uuumu_shir@uuuuumu
+  name = "bong"
+  type = 0
+  description = ""
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "bong"
+}

@@ -1,0 +1,9 @@
+jira.ObjectSchemaReferenceType idoA_Schema_s__Reports_to@umuus {
+  name = "Reports to"
+  description = ""
+  color = "57D9A3"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+}

@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto_SaaS_s__editor___BE@umuusbs {
+  assigneeType = "COMPONENT_LEAD"
+  name = "editor - BE"
+  _parent = [
+    jira.Project.instance.Salto_SaaS@s,
+  ]
+  _alias = "Salto SaaS:editor - BE"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Replica {
+  name = "Replica"
+  icon = file("jira/ObjectTypeIcon/Replica.png")
+}

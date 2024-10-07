@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Application_Shield@s {
+  name = "Application Shield"
+  icon = file("jira/ObjectTypeIcon/Application_Shield.png")
+}

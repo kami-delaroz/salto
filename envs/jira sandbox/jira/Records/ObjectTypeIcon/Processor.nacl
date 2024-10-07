@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Processor {
+  name = "Processor"
+  icon = file("jira/ObjectTypeIcon/Processor.png")
+}

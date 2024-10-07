@@ -1,0 +1,7 @@
+jira.ScreenScheme TSTDPRJCT__Kanban_Bug_Screen_Scheme@fssss {
+  name = "TSTDPRJCT: Kanban Bug Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.TSTDPRJCT__Kanban_Bug_Screen@fsss
+  }
+}

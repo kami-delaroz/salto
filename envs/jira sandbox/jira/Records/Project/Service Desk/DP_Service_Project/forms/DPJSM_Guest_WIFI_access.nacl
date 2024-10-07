@@ -1,0 +1,479 @@
+jira.Form DPJSM_Guest_WIFI_access@uss {
+  design = {
+    conditions = {
+    }
+    layout = [
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "heading"
+            attrs = {
+              level = 2
+              localId = "f25305b9-853a-4c10-af3c-f426a670d97c"
+            }
+            content = [
+              {
+                type = "text"
+                text = "Guest requesting access"
+              },
+            ]
+          },
+          {
+            type = "layoutSection"
+            content = [
+              {
+                type = "layoutColumn"
+                attrs = {
+                  width = 50
+                }
+                content = [
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      parameters = {
+                        id = 85
+                      }
+                      layout = "default"
+                      localId = "f9dfe5eb-8ea2-4afd-a9bc-217de844e59f"
+                    }
+                  },
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      parameters = {
+                        id = 87
+                      }
+                      layout = "default"
+                      localId = "9deb2f0d-1464-4b52-9eea-bae3f82bc25f"
+                    }
+                  },
+                ]
+              },
+              {
+                type = "layoutColumn"
+                attrs = {
+                  width = 50
+                }
+                content = [
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      parameters = {
+                        id = 86
+                      }
+                      layout = "default"
+                      localId = "add3c032-9650-4b23-81e0-20506db62886"
+                    }
+                  },
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      parameters = {
+                        id = 88
+                      }
+                      layout = "default"
+                      localId = "2d8a3c7e-a3e2-4d28-8f2d-67ad54d56370"
+                    }
+                  },
+                ]
+              },
+            ]
+          },
+          {
+            type = "heading"
+            attrs = {
+              level = 2
+              localId = "b1594a83-6be3-4d18-899a-3b7940582089"
+            }
+            content = [
+              {
+                type = "text"
+                text = "Your visit"
+              },
+            ]
+          },
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 78
+              }
+              layout = "default"
+              localId = "cc0f9de4-9520-4760-b840-4350d4a5df33"
+            }
+          },
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 79
+              }
+              layout = "default"
+              localId = "1b3ff9b1-4d97-4fd0-84bf-7f411d490e0b"
+            }
+          },
+          {
+            type = "layoutSection"
+            content = [
+              {
+                type = "layoutColumn"
+                attrs = {
+                  width = 50
+                }
+                content = [
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      parameters = {
+                        id = 91
+                      }
+                      layout = "default"
+                      localId = "604096e3-3a80-4f4a-a71c-dc9b7ef85049"
+                    }
+                  },
+                ]
+              },
+              {
+                type = "layoutColumn"
+                attrs = {
+                  width = 50
+                }
+                content = [
+                  {
+                    type = "extension"
+                    attrs = {
+                      extensionKey = "question"
+                      extensionType = "com.thinktilt.proforma"
+                      parameters = {
+                        id = 92
+                      }
+                      layout = "default"
+                      localId = "45041dde-e94e-4926-b430-9f506af447da"
+                    }
+                  },
+                ]
+              },
+            ]
+          },
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 93
+              }
+              layout = "default"
+              localId = "4d1bfc7a-079f-4b90-8dca-1878ab150809"
+            }
+          },
+          {
+            type = "heading"
+            attrs = {
+              level = 2
+              localId = "5dc3cf9c-5332-43d7-91c7-487398f67379"
+            }
+            content = [
+              {
+                type = "text"
+                text = "Certification"
+              },
+            ]
+          },
+          {
+            type = "panel"
+            attrs = {
+              panelType = "warning"
+            }
+            content = [
+              {
+                type = "paragraph"
+                attrs = {
+                  localId = "b3836ca5-13f3-4c87-b6be-cee55447d6bd"
+                }
+                content = [
+                  {
+                    type = "text"
+                    text = "INTERNET ACCESS POLICY"
+                    marks = [
+                      {
+                        type = "strong"
+                      },
+                    ]
+                  },
+                ]
+              },
+              {
+                type = "paragraph"
+                attrs = {
+                  localId = "5426f0a7-ddd3-413c-b07c-307359da9e72"
+                }
+                content = [
+                  {
+                    type = "text"
+                    text = "Only those persons who are affiliated with the organization are allowed access to our wireless network. If granted, this access is strictly being provided to you for the purpose of conducting the organization's business. The conditions under which you are provided access to the wireless network are as follows:"
+                  },
+                ]
+              },
+              {
+                type = "bulletList"
+                content = [
+                  {
+                    type = "listItem"
+                    content = [
+                      {
+                        type = "paragraph"
+                        attrs = {
+                          localId = "566e9637-e910-4811-9339-3c0430fc8246"
+                        }
+                        content = [
+                          {
+                            type = "text"
+                            text = "Only business associated with the organization is to be conducted on the internet."
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                  {
+                    type = "listItem"
+                    content = [
+                      {
+                        type = "paragraph"
+                        attrs = {
+                          localId = "cf7fd57b-d75f-4df9-9714-5ef1ded8895e"
+                        }
+                        content = [
+                          {
+                            type = "text"
+                            text = "Illegal use of the internet or malicious emails transactions are prohibited."
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                  {
+                    type = "listItem"
+                    content = [
+                      {
+                        type = "paragraph"
+                        attrs = {
+                          localId = "34699987-dd32-498b-891c-f502c89736ce"
+                        }
+                        content = [
+                          {
+                            type = "text"
+                            text = "Downloading of media (music or videos) is prohibited."
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                  {
+                    type = "listItem"
+                    content = [
+                      {
+                        type = "paragraph"
+                        attrs = {
+                          localId = "40abd858-2f9b-4794-9eea-8c1563aad5c3"
+                        }
+                        content = [
+                          {
+                            type = "text"
+                            text = "Viewing of inappropriate or illicit content is prohibited."
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                  {
+                    type = "listItem"
+                    content = [
+                      {
+                        type = "paragraph"
+                        attrs = {
+                          localId = "15f0c9b9-fc4e-43dd-8c72-28d718bae35a"
+                        }
+                        content = [
+                          {
+                            type = "text"
+                            text = "Internet gaming is prohibited."
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                  {
+                    type = "listItem"
+                    content = [
+                      {
+                        type = "paragraph"
+                        attrs = {
+                          localId = "4fd68230-1a89-478c-b6d2-52821821bbd9"
+                        }
+                        content = [
+                          {
+                            type = "text"
+                            text = "Visiting illegal websites is prohibited."
+                          },
+                        ]
+                      },
+                    ]
+                  },
+                ]
+              },
+            ]
+          },
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 64
+              }
+              layout = "default"
+              localId = "bc7007f9-730e-47d3-908b-2555daeeed42"
+            }
+          },
+        ]
+      },
+    ]
+    questions = {
+      "64@" = {
+        choices = [
+          {
+            id = "73"
+            label = "The person sponsoring my visit has provided me with the terms and conditions of WIFI access and I accept those terms of use."
+          },
+        ]
+        description = ""
+        label = ""
+        questionKey = ""
+        type = "cm"
+        validation = {
+          rq = true
+          mns = 1
+        }
+      }
+      "78@" = {
+        choices = [
+        ]
+        description = ""
+        label = "Who is sponsoring your visit?"
+        questionKey = ""
+        type = "us"
+        validation = {
+          rq = false
+        }
+      }
+      "79@" = {
+        label = "Purpose of visit"
+        type = "tl"
+        validation = {
+        }
+      }
+      "85@" = {
+        label = "Name"
+        type = "ts"
+        validation = {
+        }
+      }
+      "86@" = {
+        label = "Organization"
+        type = "ts"
+        validation = {
+        }
+      }
+      "87@" = {
+        label = "Phone"
+        type = "ts"
+        validation = {
+        }
+      }
+      "88@" = {
+        choices = [
+        ]
+        description = ""
+        label = "Email "
+        questionKey = ""
+        type = "te"
+        validation = {
+          rq = false
+        }
+      }
+      "91@" = {
+        label = "Starting date and time when access requested"
+        type = "dt"
+        validation = {
+        }
+      }
+      "92@" = {
+        label = "Ending date and time"
+        type = "dt"
+        validation = {
+        }
+      }
+      "93@" = {
+        description = ""
+        jiraField = jira.Field.instance.DP___Priority__float__c@sbsuuuu
+        label = "DP Priority"
+        questionKey = ""
+        type = "no"
+        validation = {
+          rq = false
+          wh = false
+        }
+      }
+    }
+    sections = {
+    }
+    settings = {
+      name = "Guest WIFI access"
+      submit = {
+        lock = false
+        pdf = false
+      }
+      primaryLocale = "en-US"
+      translatedLocale = "en-US"
+    }
+  }
+  publish = {
+    jira = {
+      recommendedIssueRequestTypeIds = [
+      ]
+      issueCreateIssueTypeIds = [
+      ]
+      issueCreateRequestTypeIds = [
+      ]
+      submitOnCreate = true
+      validateOnCreate = true
+    }
+    portal = {
+      portalRequestTypeIds = [
+        jira.RequestType.instance.Get_a_guest_wifi_account_DPJSM@ssssu,
+      ]
+      submitOnCreate = true
+      validateOnCreate = true
+    }
+  }
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+}

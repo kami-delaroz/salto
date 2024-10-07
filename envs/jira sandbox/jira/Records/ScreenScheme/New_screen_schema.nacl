@@ -1,0 +1,7 @@
+jira.ScreenScheme New_screen_schema@s {
+  name = "New screen schema"
+  description = "desc"
+  screens = {
+    default = jira.Screen.instance.Custom_screen@s
+  }
+}

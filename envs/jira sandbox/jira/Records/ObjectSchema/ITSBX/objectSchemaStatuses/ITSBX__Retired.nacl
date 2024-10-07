@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus ITSBX__Retired {
+  name = "Retired"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "ITSBX:Retired"
+}

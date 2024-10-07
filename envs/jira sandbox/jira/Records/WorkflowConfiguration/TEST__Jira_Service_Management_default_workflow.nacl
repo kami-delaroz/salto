@@ -1,0 +1,195 @@
+jira.WorkflowConfiguration TEST__Jira_Service_Management_default_workflow@fsssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "TEST: Jira Service Management default workflow"
+  description = "This Jira Service Management default workflow was generated for Project TEST2"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.pending
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Pending"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Reopened"
+    },
+    {
+      statusReference = jira.Status.instance.work_in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Work in progress"
+    },
+  ]
+  transitions = {
+    Start_progress__From__Open_Pending_Reopened__Directed@sfffszdzdff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.pending
+        },
+        {
+          statusReference = jira.Status.instance.open
+        },
+        {
+          statusReference = jira.Status.instance.reopened
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.work_in_progress@s
+      }
+      name = "Start progress"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___21@ssbs
+        }
+      }
+    }
+    Pending__From__Open_Reopened_Work_in_progress__Directed@fffszdzdssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.work_in_progress@s
+        },
+        {
+          statusReference = jira.Status.instance.open
+        },
+        {
+          statusReference = jira.Status.instance.reopened
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.pending
+      }
+      name = "Pending"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Pending_Reason_screen___20@ssssssbs
+        }
+      }
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Back_to_open__From__Pending_Work_in_progress__Directed@ssfffszdssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.pending
+        },
+        {
+          statusReference = jira.Status.instance.work_in_progress@s
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.open
+      }
+      name = "Back to open"
+      description = ""
+    }
+    Mark_as_done__From__Open_Reopened_Work_in_progress__Directed@ssfffszdzdssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.work_in_progress@s
+        },
+        {
+          statusReference = jira.Status.instance.open
+        },
+        {
+          statusReference = jira.Status.instance.reopened
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.done
+      }
+      name = "Mark as done"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___20@ssssssbs
+        }
+      }
+    }
+    Reopen_issue__From__Done__Directed@sfffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.done
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.reopened
+      }
+      name = "Reopen issue"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+    }
+  }
+}

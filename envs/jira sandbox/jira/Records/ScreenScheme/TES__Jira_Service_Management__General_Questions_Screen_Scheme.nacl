@@ -1,0 +1,7 @@
+jira.ScreenScheme TES__Jira_Service_Management__General_Questions_Screen_Scheme@fsssfssss {
+  name = "TES: Jira Service Management: General Questions Screen Scheme"
+  description = "This Jira Service Management Screen Scheme was generated automatically"
+  screens = {
+    default = jira.Screen.instance.TES__Jira_Service_Management__General_Questions_Issue_Screen@fsssfssss
+  }
+}

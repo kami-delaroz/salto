@@ -1,0 +1,25 @@
+jira.Screen DPJSM__Jira_Service_Management_Task_and_Subtask_Screen@fsssssss {
+  name = "DPJSM: Jira Service Management Task and Subtask Screen"
+  description = "This Jira Service Management Screen was generated automatically"
+  tabs = {
+    Default = {
+      name = "Default"
+      fields = [
+        jira.Field.instance.Summary__string,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+        jira.Field.instance.Attachment__array,
+        jira.Field.instance.Due_date__date@suu,
+        jira.Field.instance.Description__string,
+        jira.Field.instance.Reporter__user,
+        jira.Field.instance.Linked_Issues__array@suu,
+        jira.Field.instance.Assignee__user,
+        jira.Field.instance.Priority__priority,
+        jira.Field.instance.Team__atlassian_team__c@uubuu,
+        jira.Field.instance.Labels__array,
+        jira.Field.instance.DP___Priority__float__c@sbsuuuu,
+        jira.Field.instance.DP___Date__datetime__c@sbsuuuu,
+      ]
+      position = 0
+    }
+  }
+}

@@ -1,0 +1,11 @@
+jira.Field Affected_services__service_entity_field_cftype__c@suubbbuu {
+  name = "Affected services"
+  description = "Link services from the service registry to an issue."
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugins.service-entity:service-entity-field-searcher"
+  type = "com.atlassian.jira.plugins.service-entity:service-entity-field-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Affected_services__service_entity_field_cftype__c_suubbbuu_Default_Configuration_Scheme_for_Affected_services@uuuuuuuumusssss,
+  ]
+  _alias = "Affected services"
+}

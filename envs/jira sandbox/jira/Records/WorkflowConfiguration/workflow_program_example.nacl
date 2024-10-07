@@ -1,0 +1,43 @@
+jira.WorkflowConfiguration workflow_program_example {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "workflow_program_example"
+  description = ""
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.an_inactive_status@s
+      deprecated = false
+      name = "bzzz"
+    },
+    {
+      statusReference = jira.Status.instance.in_staging@s
+      deprecated = false
+      name = "rrr"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

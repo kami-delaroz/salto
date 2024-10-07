@@ -1,0 +1,10 @@
+jira.Field shay_number__float__c@suuuu {
+  name = "shay number"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:float"
+  contexts = [
+    jira.CustomFieldContext.instance.shay_number__float__c_suuuu_Default_Configuration_Scheme_for_shay_number@uuuuumusssss,
+  ]
+  _alias = "shay number"
+}

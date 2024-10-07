@@ -1,0 +1,6 @@
+jira.ApplicationProperty instance_try_intent@v {
+  id = "instance.try.intent"
+  value = "none"
+  name = "instance.try.intent"
+  type = "string"
+}

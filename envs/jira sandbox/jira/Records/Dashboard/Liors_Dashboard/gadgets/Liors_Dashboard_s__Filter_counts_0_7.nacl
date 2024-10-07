@@ -1,0 +1,56 @@
+jira.DashboardGadget Liors_Dashboard_s__Filter_counts_0_7@umuusuu {
+  moduleKey = "com.atlassian.servicedesk.dashboard-items-plugin:filter-count-dashboard-item"
+  color = "blue"
+  position = {
+    row = 7
+    column = 0
+  }
+  title = "Filter counts"
+  properties = [
+    {
+      key = "countOptions"
+      value = [
+        {
+          hasTrigger = false
+          trigger = {
+            display = "warning"
+            triggerEquality = "above"
+            triggerOn = "undefined"
+          }
+          id = "c368"
+          name = "fsdfsd"
+          jql = ""
+        },
+      ]
+    },
+    {
+      key = "isConfigured"
+      value = true
+    },
+    {
+      key = "projectFilterDetails"
+      values = [
+        {
+          key = "name"
+          value = "Test saved filter liorus"
+        },
+        {
+          key = "type"
+          value = "filter"
+        },
+        {
+          key = "id"
+          value = "10084"
+        },
+      ]
+    },
+    {
+      key = "refresh"
+      value = "15"
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.Liors_Dashboard@s,
+  ]
+  _alias = "Filter counts"
+}

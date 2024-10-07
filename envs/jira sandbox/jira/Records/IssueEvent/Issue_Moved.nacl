@@ -1,0 +1,3 @@
+jira.IssueEvent Issue_Moved@s {
+  name = "Issue Moved"
+}

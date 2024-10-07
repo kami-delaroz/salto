@@ -1,0 +1,112 @@
+jira.WorkflowConfiguration Alon_s_Test_Workflow_4_2@tssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Alon's Test Workflow 4 2"
+  description = "desc19"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.approved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+      }
+      name = "Create"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-unassigned"
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Approvers__multiuserpicker__c
+            value = "ww"
+            mode = "replace"
+          }
+        },
+        {
+          ruleKey = "system:set-security-level-from-role"
+          parameters = {
+            roleId = jira.ProjectRole.instance.Administrators
+            issueSecurityLevelId = "none"
+          }
+        },
+        {
+          ruleKey = "system:copy-value-from-other-field"
+          parameters = {
+            sourceFieldKey = jira.Field.instance.Assignee__user
+            targetFieldKey = jira.Field.instance.Creator__user
+            issueSource = "PARENT"
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Environment__string
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-lead"
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-reporter"
+          }
+        },
+        {
+          ruleKey = "system:unsupported"
+          parameters = {
+            class.name = "com.atlassian.jira.workflow.function.issue.IssueStoreFunction"
+            full.module.key = "com.atlassian.jira.plugin.system.workflowissue-store-function"
+          }
+        },
+      ]
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

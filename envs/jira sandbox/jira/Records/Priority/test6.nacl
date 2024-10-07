@@ -1,0 +1,7 @@
+jira.Priority test6 {
+  statusColor = "#ffffff"
+  description = "Serious problem that could block progress.3aaa3"
+  iconUrl = "/images/icons/priorities/medium.svg"
+  name = "test6"
+  _alias = "test6"
+}

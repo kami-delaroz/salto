@@ -1,0 +1,14 @@
+jira.Project testFieldConfigScheme {
+  key = "TSTFLDCNFG"
+  description = ""
+  name = "testFieldConfigScheme"
+  projectTypeKey = "software"
+  entityId = "4cc779f6-37f1-4f4f-b896-512f753fba19"
+  uuid = "4cc779f6-37f1-4f4f-b896-512f753fba19"
+  issueSecurityScheme = jira.SecurityScheme.instance.TSTFLDCNFG__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  assigneeType = "UNASSIGNED"
+}

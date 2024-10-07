@@ -1,0 +1,11 @@
+jira.Field Version_Picker__single_version___version__c@ssjskuuuu {
+  name = "Version Picker (single version)"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:versionsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:version"
+  contexts = [
+    jira.CustomFieldContext.instance.Version_Picker__single_version___version__c_ssjskuuuu_Default_Configuration_Scheme_for_Version_Picker__single_version_@uuuuuuuuumussssssjsk,
+    jira.CustomFieldContext.instance.Version_Picker__single_version___version__c_ssjskuuuu_second@uuuuuuuuumu,
+  ]
+  _alias = "Version Picker (single version)"
+}

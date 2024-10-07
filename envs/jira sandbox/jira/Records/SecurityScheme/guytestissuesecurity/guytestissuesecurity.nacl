@@ -1,0 +1,9 @@
+jira.SecurityScheme guytestissuesecurity {
+  name = "guytestissuesecurity"
+  description = ""
+  levels = [
+    jira.SecurityLevel.instance.guytestissuesecurity__sec1,
+    jira.SecurityLevel.instance.guytestissuesecurity__sec2,
+    jira.SecurityLevel.instance.guytestissuesecurity__sec3,
+  ]
+}

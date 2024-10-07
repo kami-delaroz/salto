@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Control_Panel@s {
+  name = "Control Panel"
+  icon = file("jira/ObjectTypeIcon/Control_Panel.png")
+}

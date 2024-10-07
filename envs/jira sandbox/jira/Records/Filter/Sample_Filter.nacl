@@ -1,0 +1,16 @@
+jira.Filter Sample_Filter@s {
+  name = "Sample Filter"
+  owner = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  jql = "${ jira.Field.instance.Project__project }=\"ITSM sample space\""
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.ITSM_sample_space@s
+      }
+    },
+  ]
+}

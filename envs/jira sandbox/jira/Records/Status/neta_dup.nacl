@@ -1,0 +1,6 @@
+jira.Status neta_dup@b {
+  name = "neta-dup"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "neta-dup"
+}

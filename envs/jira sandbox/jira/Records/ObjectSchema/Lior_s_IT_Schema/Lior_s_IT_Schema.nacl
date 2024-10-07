@@ -1,0 +1,12 @@
+jira.ObjectSchema Lior_s_IT_Schema@tss {
+  name = "Lior's IT Schema"
+  objectSchemaKey = "LNIT"
+  status = "Ok"
+  description = "No Desc"
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = false
+  }
+  _alias = "Lior's IT Schema"
+}

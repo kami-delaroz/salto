@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon RFID_Signal@s {
+  name = "RFID Signal"
+  icon = file("jira/ObjectTypeIcon/RFID_Signal.png")
+}

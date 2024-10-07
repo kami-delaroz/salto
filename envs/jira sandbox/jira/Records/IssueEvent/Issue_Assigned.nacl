@@ -1,0 +1,3 @@
+jira.IssueEvent Issue_Assigned@s {
+  name = "Issue Assigned"
+}

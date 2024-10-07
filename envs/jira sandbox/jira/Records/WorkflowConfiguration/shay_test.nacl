@@ -1,0 +1,133 @@
+jira.WorkflowConfiguration shay_test@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "shay test"
+  description = "Quack!"
+  isEditable = true
+  startPointLayout = {
+    x = 617
+    y = 92.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.build_broken@s
+      layout = {
+        x = 732.828125
+        y = 202.29999877929689
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Build Broken"
+    },
+    {
+      statusReference = jira.Status.instance.change_open_name@s
+      layout = {
+        x = 731.328125
+        y = 141.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "change Open name"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.change_open_name@s
+        port = 0
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    first__From__change_Open_name__Directed@fffsssff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.change_open_name@s
+          port = 5
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.build_broken@s
+        port = 1
+      }
+      name = "first"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:copy-value-from-other-field"
+          parameters = {
+            sourceFieldKey = jira.Field.instance.Assignee__user
+            targetFieldKey = jira.Field.instance.Creator__user
+            issueSource = "SAME"
+          }
+        },
+      ]
+      validators = [
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldHasSingleValue"
+            fieldKey = jira.Field.instance.Description__string
+            excludeSubtasks = "false"
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              accountIds = "allow-assignee"
+            }
+          },
+        ]
+      }
+      triggers = [
+        {
+          ruleKey = "system:development-triggers"
+          parameters = {
+            enabledTriggers = [
+              "branch-created-trigger",
+              "commit-created-trigger",
+              "pull-request-created-trigger",
+            ]
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+}

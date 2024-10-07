@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Individual_Server@s {
+  name = "Individual Server"
+  icon = file("jira/ObjectTypeIcon/Individual_Server.png")
+}

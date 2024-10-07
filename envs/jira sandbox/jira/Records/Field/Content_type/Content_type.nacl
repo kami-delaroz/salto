@@ -1,0 +1,10 @@
+jira.Field Content_type__textfield__c@suuuu {
+  name = "Content type"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  contexts = [
+    jira.CustomFieldContext.instance.Content_type__textfield__c_suuuu_Default_Configuration_Scheme_for_Content_type@uuuuumusssss,
+  ]
+  _alias = "Content type"
+}

@@ -1,0 +1,5 @@
+jira.ObjectSchemaGlobalStatus Active {
+  name = "Active"
+  description = ""
+  category = 1
+}

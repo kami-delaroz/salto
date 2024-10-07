@@ -1,0 +1,18 @@
+jira.IssueTypeScreenScheme TPT__Scrum_Issue_Type_Screen_Scheme@fsssss {
+  name = "TPT: Scrum Issue Type Screen Scheme"
+  description = ""
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Bug
+      screenSchemeId = jira.ScreenScheme.instance.TPT__Scrum_Bug_Screen_Scheme@fssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Custom_issue_type_two@s
+      screenSchemeId = jira.ScreenScheme.instance.TP3__Software_Development_Default_Screen_Scheme@fsssss
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.TPT__Scrum_Default_Screen_Scheme@fssss
+    },
+  ]
+}

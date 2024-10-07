@@ -1,0 +1,13 @@
+jira.ProjectComponent Sagi_s_JSM_ts__Billing_Services@uumuus {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Billing Services"
+  leadAccountId = {
+    id = "605c3da2109af10068b38c4e"
+    displayName = "Sagi Bracha"
+  }
+  _parent = [
+    jira.Project.instance.Sagi_s_JSM@ts,
+  ]
+  _alias = "Sagi's JSM:Billing Services"
+}
