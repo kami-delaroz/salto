@@ -1084,5 +1084,10 @@ High: will probably affect the operations of the app (downtime, customer data, s
       isHidden = false
       isRequired = false
     }
+    DP_User__multiuserpicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
   }
 }

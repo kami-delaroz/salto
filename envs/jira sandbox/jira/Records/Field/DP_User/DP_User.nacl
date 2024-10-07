@@ -1,0 +1,10 @@
+jira.Field DP_User__multiuserpicker__c@suuuu {
+  name = "DP User"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:userpickergroupsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker"
+  contexts = [
+    jira.CustomFieldContext.instance.DP_User__multiuserpicker__c_suuuu_Default_Configuration_Scheme_for_DP_User@uuuuumusssss,
+  ]
+  _alias = "DP User"
+}

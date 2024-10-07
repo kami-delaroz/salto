@@ -1073,5 +1073,10 @@ Examples: 4d, 5h 30m, 60m and 3w.
       isHidden = false
       isRequired = false
     }
+    DP_User__multiuserpicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
   }
 }

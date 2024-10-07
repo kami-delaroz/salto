@@ -1083,5 +1083,10 @@ We also need to update StatusPage in advance, and maybe send emails to a subeset
       isHidden = false
       isRequired = false
     }
+    DP_User__multiuserpicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
   }
 }
