@@ -285,6 +285,13 @@ jira.PermissionScheme Default_Permission_Scheme@s {
     },
     {
       holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "EDIT_WORKFLOW"
+    },
+    {
+      holder = {
         type = "applicationRole"
       }
       permission = "LINK_ISSUES"
