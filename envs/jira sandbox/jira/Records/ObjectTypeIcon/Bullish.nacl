@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Bullish {
+  name = "Bullish"
+  icon = file("jira/ObjectTypeIcon/Bullish.png")
+}

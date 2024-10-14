@@ -1,0 +1,552 @@
+jira.WorkflowConfiguration Copy_3_of_Alon_s_Test_Workflow_10@ssstsss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Copy 3 of Alon's Test Workflow 10"
+  description = "desc75 (This copy was automatically generated from a draft, when workflow 'Alon's Test Workflow 10' was made inactive.)"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      properties = [
+        {
+          key = "jira.field.resolution.include"
+          value = "10023,10023"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "jira.permission.assignable.projectrole"
+          value = jira.ProjectRole.instance.Administrators
+        },
+        {
+          key = "jira.permission.edit.applicationRole"
+          value = "jira-servicedesk"
+        },
+        {
+          key = "jira.permission.edit.group"
+          value = "8af8221a-14df-439c-8fd9-f4a388a154a0"
+        },
+        {
+          key = "jira.permission.edit.groupCF"
+          value = jira.Field.instance.Urgency2__select__c
+        },
+        {
+          key = "jira.permission.edit.userCF"
+          value = jira.Field.instance.userPicker__multiuserpicker__c
+        },
+      ]
+      deprecated = false
+      name = "A shared status2"
+    },
+    {
+      statusReference = jira.Status.instance.approved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.in_review@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "testKey"
+          value = "testValue"
+        },
+      ]
+      deprecated = false
+      name = "In Review"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Reopened"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Resolved"
+    },
+  ]
+  transitions = {
+    TransitionToShared2__From__A_shared_status2_Approved__Directed@fffssszdff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.a_shared_status3@s
+        },
+        {
+          statusReference = jira.Status.instance.approved
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.resolved
+      }
+      name = "TransitionToShared2"
+      description = "desc2"
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Priority__priority
+            value = jira.Priority.instance.High
+          }
+        },
+      ]
+      validators = [
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "dateFieldComparison"
+            date1FieldKey = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            date2FieldKey = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            includeTime = "false"
+            conditionSelected = ">"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldHasSingleValue"
+            fieldKey = jira.Field.instance.Creator__user
+            excludeSubtasks = "true"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldHasSingleValue"
+            fieldKey = jira.Field.instance.Last_Viewed__datetime@suu
+            excludeSubtasks = "false"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldRequired"
+            fieldsRequired = [
+              jira.Field.instance.Assignee__user,
+              jira.Field.instance.Change_type__select__c@suuuu,
+            ]
+            ignoreContext = "true"
+            errorMessage = "wwww"
+          }
+        },
+        {
+          ruleKey = "system:parent-or-child-blocking-validator"
+          parameters = {
+            blocker = "PARENT"
+            statusIds = [
+              jira.Status.instance.in_progress@s,
+            ]
+          }
+        },
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "MODIFY_REPORTER"
+          }
+        },
+        {
+          ruleKey = "system:previous-status-validator"
+          parameters = {
+            previousStatusIds = jira.Status.instance.build_broken@s
+            mostRecentStatusOnly = "false"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldMatchesRegularExpression"
+            regexp = "aaa"
+            fieldKey = jira.Field.instance.Epic_Status__gh_epic_status__c@suubbuu
+          }
+        },
+        {
+          ruleKey = "system:unsupported"
+          parameters = {
+            class.name = "com.atlassian.jira.workflow.validator.UserPermissionValidator"
+            nullallowed = "true"
+            permissionKey = "VIEW_DEV_TOOLS"
+            vars.key = "aaa"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "windowDateComparison"
+            date1FieldKey = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            date2FieldKey = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            numberOfDays = "2"
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-from-all-users"
+            parameters = {
+              restrictMode = "usersAndAPI"
+            }
+          },
+          {
+            ruleKey = "system:check-field-value"
+            parameters = {
+              fieldId = jira.Field.instance.Affects_versions__array@suu
+              fieldValue = "[\"bbbbb\"]"
+              comparator = ">"
+              comparisonType = "STRING"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.AL__Kanban_Bug_Screen@fsss
+        }
+      }
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+      }
+      name = "Create"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Environment__string
+          }
+        },
+        {
+          ruleKey = "system:copy-value-from-other-field"
+          parameters = {
+            sourceFieldKey = jira.Field.instance.Assignee__user
+            targetFieldKey = jira.Field.instance.Creator__user
+            issueSource = "PARENT"
+          }
+        },
+        {
+          ruleKey = "system:set-security-level-from-role"
+          parameters = {
+            roleId = jira.ProjectRole.instance.Administrators
+            issueSecurityLevelId = "none"
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Approvers__multiuserpicker__c
+            value = "ww"
+            mode = "replace"
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-unassigned"
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-lead"
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-reporter"
+          }
+        },
+        {
+          ruleKey = "system:unsupported"
+          parameters = {
+            class.name = "com.atlassian.jira.workflow.function.issue.IssueStoreFunction"
+            full.module.key = "com.atlassian.jira.plugin.system.workflowissue-store-function"
+          }
+        },
+      ]
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Build_Broken__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.resolved
+      }
+      name = "Build Broken"
+      description = ""
+    }
+    bbbb__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.in_progress@s
+      }
+      name = "bbbb"
+      description = ""
+    }
+    ttttt__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      to = {
+        statusReference = jira.Status.instance.in_review@s
+      }
+      name = "ttttt"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-lead"
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-from-all-users"
+            parameters = {
+              restrictMode = "usersAndAPI"
+            }
+          },
+        ]
+      }
+    }
+  }
+}

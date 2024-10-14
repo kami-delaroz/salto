@@ -1,0 +1,32 @@
+jira.Filter testGroup {
+  name = "testGroup"
+  description = "edited4"
+  owner = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  jql = "ORDER BY ${ jira.Field.instance.Created__datetime } DESC"
+  sharePermissions = [
+    {
+      type = "group"
+      group = {
+        name = jira.Group.instance.site_admins@b
+      }
+    },
+  ]
+  editPermissions = [
+    {
+      type = "user"
+      user = {
+        id = "5fa91999b2633d0076583a61"
+        displayName = "Alon Stern"
+      }
+    },
+    {
+      type = "group"
+      group = {
+        name = jira.Group.instance.jira_software_users@b
+      }
+    },
+  ]
+}

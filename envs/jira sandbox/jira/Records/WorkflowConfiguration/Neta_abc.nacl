@@ -1,0 +1,110 @@
+jira.WorkflowConfiguration Neta_abc@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Neta abc"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 720
+    y = 42.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 672.796875
+        y = 142.4
+      }
+      deprecated = false
+      name = "a"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 695.41015625
+        y = 92.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      layout = {
+        x = 1064.125
+        y = 67.4
+      }
+      deprecated = false
+      name = "c"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      layout = {
+        x = 1065.1484375
+        y = 117.4
+      }
+      deprecated = false
+      name = "d"
+    },
+  ]
+  transitions = {
+    x__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.open
+          port = 3
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.in_progress@s
+        port = 7
+      }
+      name = "x"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw4NSwxNDMsMjA1LDExMCwxOTQsNDgsMTYsMTMyLDIyMywxOTcsMjMxLDE5OCwzNCwxNiwyMjUsMjA4LDkxLDUsMjMsNDYsMTI5LDY3LDEyMywxNzQsNTQsMTg3LDI3LDIwMSwxOTQsMTc3LDM1LDI1NSwwLDE4LDIzNCwxODcsMTE5LDE5LDgwLDE2NSwzMCwyMzEsMjExLDIwNCwyMzYsMjM2LDY3LDE2MSwxMzEsMTQ4LDU4LDI0LDg5LDE4OSw0MywxMiwxNjMsNiwxMzAsNDEsMTk1LDIxMywxNjYsMTcyLDgzLDIxMiwyMzIsNjYsMzMsMTI1LDExLDI0MSw1MCwxODQsMTEyLDIxMSwxNTksMTcsMTI0LDE3OCwyMTcsNiwxMjcsMTM0LDIwMCw2MiwxNzEsNTUsODUsMTM4LDM3LDEzNyw2NiwyMjEsMTc1LDE3NiwyMjIsODAsNTMsMjQ0LDIwNSwxNzQsMTA2LDIxNCwxMTcsOTEsMjM3LDAsMTg1LDIxOCw1NCwxMDIsMzIsOTksMjE0LDQzLDEwOCw4MSwyMjAsMjM2LDE2MSwxMTksNDQsMTI5LDI4LDExLDEzOSwxODgsNTEsMTUwLDE4NSwyMzgsNDMsMTEzLDE0OCwxNTAsMTQzLDE5NSwyMjUsMjUxLDIxMiwxMzcsMTUsMTMxLDE2NywyMjksMTQyLDY0LDE0NSwxOTYsOSwxNjMsMTU3LDk0LDAsMCwxMzIsMSw2MSwyOSwyMjQsMjQ2LDEyOSwyNDgsMjMzLDE0Nyw3LDE5OCwxMjEsMjE0LDM0LDI0MiwyMjMsMjE2LDIyNywxODgsMjA4LDE1MiwxMjcsMjM2LDI0NSwxNzgsMjUwLDI0OSw1LDI1LDIwNSwxNDUsMTkxLDMsMSwwLDBdfQ=="
+            id = "a501f1a8-03ae-45a3-b00a-6fa2b51fe662"
+            disabled = "false"
+          }
+        },
+      ]
+    }
+    x__From__a__Directed@fffsff = {
+      type = "DIRECTED"
+      from = [
+        {
+          statusReference = jira.Status.instance.in_progress@s
+          port = 1
+        },
+      ]
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 5
+      }
+      name = "x"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      to = {
+        statusReference = jira.Status.instance.open
+        port = 7
+      }
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

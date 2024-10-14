@@ -1,0 +1,13 @@
+jira.ProjectComponent AlonITSM__Billing_Services@uus {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Billing Services"
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  _parent = [
+    jira.Project.instance.AlonITSM,
+  ]
+  _alias = "AlonITSM:Billing Services"
+}

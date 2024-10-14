@@ -1,0 +1,13 @@
+jira.ObjectType People_Employees {
+  name = "Employees"
+  type = 0
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.User
+  parentObjectTypeId = jira.ObjectSchema.instance.People
+  _parent = [
+    jira.ObjectSchema.instance.People,
+  ]
+  _alias = "Employees"
+}

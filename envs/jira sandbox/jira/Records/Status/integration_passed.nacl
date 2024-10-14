@@ -1,0 +1,6 @@
+jira.Status integration_passed@s {
+  name = "integration passed"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "integration passed"
+}

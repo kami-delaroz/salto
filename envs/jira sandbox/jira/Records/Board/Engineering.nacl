@@ -1,0 +1,48 @@
+jira.Board Engineering {
+  name = "Engineering"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "61d44bf59ee70a00685fa6b6"
+        displayName = "Testing salto"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.AlonCompanyProject
+  }
+  filterId = jira.Filter.instance.Filter_for_WIP@s
+  columnConfig = {
+    columns = [
+      {
+        name = "To Do"
+        statuses = [
+          jira.Status.instance.pm,
+          jira.Status.instance.design,
+          jira.Status.instance.to_do@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_design_review@s,
+          jira.Status.instance.in_review@s,
+          jira.Status.instance.in_progress@s,
+          jira.Status.instance.pending,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.won_t_fix@ts,
+          jira.Status.instance.closed,
+          jira.Status.instance.cannot_reproduce@s,
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

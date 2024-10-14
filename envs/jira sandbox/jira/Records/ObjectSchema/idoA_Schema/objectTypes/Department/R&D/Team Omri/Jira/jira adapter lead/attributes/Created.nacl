@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus_Jira_uuuuuuuuumu_jira_adapter_lead_uuuuuuuuuuumuss_Created@uuuuuuuuuuuuuuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus_Jira_uuuuuuuuumu_jira_adapter_lead@uuuuuuuuuuumuss
+  name = "Created"
+  type = 0
+  editable = false
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 6
+  _alias = "Created"
+}

@@ -1,0 +1,5 @@
+jira.Field Status_Category@s {
+  name = "Status Category"
+  description = ""
+  _alias = "Status Category"
+}

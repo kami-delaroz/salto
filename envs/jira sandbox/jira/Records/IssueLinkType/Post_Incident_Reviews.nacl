@@ -1,0 +1,5 @@
+jira.IssueLinkType Post_Incident_Reviews@bs {
+  name = "Post-Incident Reviews"
+  inward = "is reviewed by"
+  outward = "reviews"
+}

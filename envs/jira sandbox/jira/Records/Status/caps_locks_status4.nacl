@@ -1,0 +1,6 @@
+jira.Status caps_locks_status4@s {
+  name = "CAPS LOCKS STATUS4"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = "change description"
+  _alias = "CAPS LOCKS STATUS4"
+}

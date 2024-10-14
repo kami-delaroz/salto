@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Skydrive {
+  name = "Skydrive"
+  icon = file("jira/ObjectTypeIcon/Skydrive.png")
+}

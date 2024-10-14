@@ -1,0 +1,8 @@
+jira.ObjectTypeOrder Processes_childOrder {
+  objectTypes = [
+    jira.ObjectType.instance.Processes_SLA_activation@us,
+  ]
+  _parent = [
+    jira.ObjectSchema.instance.Processes,
+  ]
+}

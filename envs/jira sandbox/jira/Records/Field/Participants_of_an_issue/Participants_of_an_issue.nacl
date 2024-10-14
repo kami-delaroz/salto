@@ -1,0 +1,10 @@
+jira.Field Participants_of_an_issue__participants__c@sssuuuu {
+  name = "Participants of an issue"
+  description = ""
+  searcherKey = "com.atlassian.jira.toolkit:participantsearcher"
+  type = "com.atlassian.jira.toolkit:participants"
+  contexts = [
+    jira.CustomFieldContext.instance.Participants_of_an_issue__participants__c_sssuuuu_Default_Configuration_Scheme_for_Participants_of_an_issue@uuuuuuumusssssss,
+  ]
+  _alias = "Participants of an issue"
+}

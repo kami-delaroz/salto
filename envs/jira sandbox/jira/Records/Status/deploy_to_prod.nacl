@@ -1,0 +1,6 @@
+jira.Status deploy_to_prod@s {
+  name = "deploy to prod"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "deploy to prod"
+}

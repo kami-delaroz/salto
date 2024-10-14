@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Blueprint {
+  name = "Blueprint"
+  icon = file("jira/ObjectTypeIcon/Blueprint.png")
+}

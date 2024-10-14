@@ -1,0 +1,24 @@
+jira.NotificationScheme name {
+  name = "name"
+  description = "desc"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          parameter = jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu
+          type = "UserCustomField"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+    {
+      notifications = [
+        {
+          parameter = jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu
+          type = "UserCustomField"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Comment_Edited@s
+    },
+  ]
+}

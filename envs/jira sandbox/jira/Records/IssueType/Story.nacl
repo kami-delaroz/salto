@@ -1,0 +1,7 @@
+jira.IssueType Story {
+  description = "Functionality or a feature expressed as a user goal."
+  name = "Story"
+  untranslatedName = "Story"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Story.png")
+}

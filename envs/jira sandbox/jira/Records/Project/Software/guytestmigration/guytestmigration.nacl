@@ -1,0 +1,19 @@
+jira.Project guytestmigration {
+  key = "GT"
+  description = ""
+  name = "guytestmigration"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.migrationtestscheme2
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.GT__Scrum_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.GUYT__Kanban_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "60a60ff79b362f006919d5ff"
+    displayName = "Former user"
+  }
+  assigneeType = "UNASSIGNED"
+  fieldContexts = [
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+  ]
+}

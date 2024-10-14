@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Free_BSD@s {
+  name = "Free BSD"
+  icon = file("jira/ObjectTypeIcon/Free_BSD.png")
+}

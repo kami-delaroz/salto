@@ -1,0 +1,6 @@
+jira.Status closed {
+  name = "Closed"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened."
+  _alias = "Closed"
+}

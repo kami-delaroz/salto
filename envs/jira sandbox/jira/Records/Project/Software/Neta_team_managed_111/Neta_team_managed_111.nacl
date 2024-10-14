@@ -1,0 +1,14 @@
+jira.Project Neta_team_managed_111@sbs {
+  key = "NTM1"
+  description = ""
+  name = "Neta team-managed 111"
+  projectTypeKey = "software"
+  entityId = "09c7fe48-5371-4492-bb8f-476f5aa84fec"
+  uuid = "09c7fe48-5371-4492-bb8f-476f5aa84fec"
+  issueSecurityScheme = jira.SecurityScheme.instance.NTM1__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "5eea285a41f7000abb1b049d"
+    displayName = "Neta Marcus"
+  }
+  assigneeType = "UNASSIGNED"
+}

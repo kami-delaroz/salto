@@ -1,0 +1,330 @@
+jira.Form DPJSM_DP___Sections_Bug@usbss {
+  design = {
+    conditions = {
+      "8@" = {
+        i = {
+          co = {
+            cIds = {
+              "1@" = [
+                "1",
+              ]
+            }
+          }
+        }
+        o = {
+          sIds = [
+            "1",
+          ]
+          t = "sh"
+        }
+      }
+      "9@" = {
+        i = {
+          co = {
+            cIds = {
+              "1@" = [
+                "2",
+              ]
+            }
+          }
+        }
+        o = {
+          sIds = [
+            "2",
+          ]
+          t = "sh"
+        }
+      }
+      "10@" = {
+        i = {
+          co = {
+            cIds = {
+              "1@" = [
+                "5",
+              ]
+            }
+          }
+        }
+        o = {
+          sIds = [
+            "3",
+          ]
+          t = "sh"
+        }
+      }
+      "13@" = {
+        i = {
+          co = {
+            cIds = {
+              "12@" = [
+                "1",
+              ]
+            }
+          }
+        }
+        o = {
+          sIds = [
+            "4",
+          ]
+          t = "sh"
+        }
+      }
+    }
+    layout = [
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 1
+              }
+              layout = "default"
+              localId = "191f3e06-92f6-4e78-b192-7ba64d2e9f52"
+            }
+          },
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 12
+              }
+              layout = "default"
+              localId = "bfb7b2cb-eb9a-4482-be11-b9ffa1451bca"
+            }
+          },
+        ]
+      },
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 4
+              }
+              layout = "default"
+              localId = "294572fd-ec0b-408d-aa18-4a80c55acc8c"
+            }
+          },
+        ]
+      },
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 5
+              }
+              layout = "default"
+              localId = "c479b8af-c6e8-48ed-bd1c-c0a1aa929cfe"
+            }
+          },
+        ]
+      },
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 6
+              }
+              layout = "default"
+              localId = "3153fcd8-07b4-4c62-97ce-3ac0b2159d0d"
+            }
+          },
+        ]
+      },
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "extension"
+            attrs = {
+              extensionKey = "question"
+              extensionType = "com.thinktilt.proforma"
+              parameters = {
+                id = 14
+              }
+              layout = "default"
+              localId = "f65ff1c1-24d2-443a-952b-e88b3d579147"
+            }
+          },
+          {
+            type = "paragraph"
+            content = [
+            ]
+          },
+          {
+            type = "paragraph"
+            content = [
+            ]
+          },
+        ]
+      },
+    ]
+    questions = {
+      "1@" = {
+        choices = [
+          {
+            id = "1"
+            label = "Show BR Section One"
+            other = false
+          },
+          {
+            id = "2"
+            label = "Show BR Section Two"
+            other = false
+          },
+          {
+            id = "3"
+            label = "Show BR Section Three - OLD"
+            other = false
+          },
+          {
+            id = "5"
+            label = "Show BR Section Three - NEW!"
+            other = false
+          },
+        ]
+        description = ""
+        label = "Bio Rad Options"
+        questionKey = ""
+        type = "cm"
+        validation = {
+          rq = false
+        }
+      }
+      "4@" = {
+        choices = [
+        ]
+        description = ""
+        label = "In Section One"
+        questionKey = ""
+        type = "ts"
+        validation = {
+          rq = false
+        }
+      }
+      "5@" = {
+        choices = [
+        ]
+        description = ""
+        label = "In Section Two"
+        questionKey = ""
+        type = "ts"
+        validation = {
+          rq = false
+        }
+      }
+      "6@" = {
+        choices = [
+        ]
+        description = ""
+        label = "In Section Three"
+        questionKey = ""
+        type = "ts"
+        validation = {
+          rq = false
+        }
+      }
+      "12@" = {
+        choices = [
+          {
+            id = "1"
+            label = "Show BR Section Four"
+            other = false
+          },
+          {
+            id = "2"
+            label = "Show BR Section Five -Newly added"
+            other = false
+          },
+        ]
+        description = ""
+        label = "Additional Section Options"
+        questionKey = ""
+        type = "cm"
+        validation = {
+          rq = false
+        }
+      }
+      "14@" = {
+        choices = [
+        ]
+        description = ""
+        label = "In Section Four"
+        questionKey = ""
+        type = "ts"
+        validation = {
+          rq = false
+        }
+      }
+    }
+    sections = {
+      "1@" = {
+        sectionType = "b"
+        name = "Bio Rad Section One"
+        conditions = [
+          "8",
+        ]
+      }
+      "2@" = {
+        sectionType = "b"
+        name = "Bio Rad Section Two"
+        conditions = [
+          "9",
+        ]
+      }
+      "3@" = {
+        sectionType = "b"
+        name = "Bio Rad Section Three"
+        conditions = [
+          "10",
+        ]
+      }
+      "4@" = {
+        sectionType = "b"
+        name = "Bio Rad Section Four"
+        conditions = [
+          "13",
+        ]
+      }
+    }
+    settings = {
+      name = "DP - Sections Bug"
+      submit = {
+        lock = false
+        pdf = false
+      }
+      primaryLocale = "en-US"
+      translatedLocale = "en-US"
+    }
+  }
+  publish = {
+  }
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+}

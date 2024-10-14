@@ -1,0 +1,76 @@
+jira.SLA Time_to_first_response_DPJSM@sssu {
+  name = "Time to first response"
+  config = {
+    definition = {
+      start = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "issue-created-sla-condition-factory"
+          conditionId = "issue-created-hit-condition"
+          name = "Issue Created"
+        },
+      ]
+      stop = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "comment-sla-condition-factory"
+          conditionId = "comment-for-reporter-hit-condition"
+          name = "Comment: For Customers"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "resolution-sla-condition-factory"
+          conditionId = "resolution-set-hit-condition"
+          name = "Resolution: Set"
+        },
+      ]
+    }
+    goals = [
+      {
+        jqlQuery = "${ jira.Field.instance.Status__status } = \"${ jira.Status.instance.in_staging@s.name }\""
+        duration = 115200000
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_DPJSM@sbsu
+        defaultGoal = false
+        timeMetricId = 0
+        subGoals = [
+          {
+            jqlQuery = "${ jira.Field.instance.Priority__priority } = ${ jira.Priority.instance.Highest.name }"
+            duration = 7200000
+            calendarId = jira.Calendar.instance.Sample_9_5_Calendar_DPJSM@sbsu
+            defaultGoal = false
+          },
+          {
+            jqlQuery = "${ jira.Field.instance.Priority__priority } = ${ jira.Priority.instance.High.name }"
+            duration = 14400000
+            calendarId = jira.Calendar.instance.Sample_9_5_Calendar_DPJSM@sbsu
+            defaultGoal = false
+          },
+          {
+            jqlQuery = "${ jira.Field.instance.Priority__priority } = ${ jira.Priority.instance.Medium.name }"
+            duration = 28800000
+            calendarId = jira.Calendar.instance.Sample_9_5_Calendar_DPJSM@sbsu
+            defaultGoal = false
+          },
+          {
+            jqlQuery = "${ jira.Field.instance.Priority__priority } = ${ jira.Priority.instance.Low.name }"
+            duration = 57600000
+            calendarId = jira.Calendar.instance.Sample_9_5_Calendar_DPJSM@sbsu
+            defaultGoal = false
+          },
+        ]
+      },
+      {
+        jqlQuery = ""
+        duration = 28800000
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_DPJSM@sbsu
+        defaultGoal = true
+        timeMetricId = 0
+      },
+    ]
+    slaDisplayFormat = "NEW_SLA_FORMAT"
+  }
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+  _alias = "DP Service Project:Time to first response"
+}

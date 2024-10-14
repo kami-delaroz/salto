@@ -1,0 +1,5 @@
+jira.WorkflowScheme testDeletion {
+  name = "testDeletion"
+  description = ""
+  defaultWorkflow = jira.WorkflowConfiguration.instance.testDeletion2
+}

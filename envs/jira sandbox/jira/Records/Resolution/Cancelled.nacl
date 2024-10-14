@@ -1,0 +1,4 @@
+jira.Resolution Cancelled {
+  description = ""
+  name = "Cancelled"
+}

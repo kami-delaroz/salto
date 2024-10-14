@@ -1,0 +1,10 @@
+jira.Field Last_public_comment_date__LastCommentDate__c@sssuuuu {
+  name = "Last public comment date"
+  description = ""
+  searcherKey = "com.atlassian.jira.toolkit:LastCommentDateSearcher"
+  type = "com.atlassian.jira.toolkit:LastCommentDate"
+  contexts = [
+    jira.CustomFieldContext.instance.Last_public_comment_date__LastCommentDate__c_sssuuuu_Default_Configuration_Scheme_for_Last_public_comment_date@uuuuuuumusssssss,
+  ]
+  _alias = "Last public comment date"
+}

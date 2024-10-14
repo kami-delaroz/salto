@@ -1,0 +1,13 @@
+jira.Screen shay_screen@s {
+  name = "shay screen"
+  description = "desc"
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+  }
+}

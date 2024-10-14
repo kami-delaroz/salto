@@ -1,0 +1,9 @@
+jira.ObjectTypeOrder AAAA_childOrder {
+  objectTypes = [
+    jira.ObjectType.instance.AAAA_Hardware_Assets@us,
+    jira.ObjectType.instance.AAAA_Models,
+  ]
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+}

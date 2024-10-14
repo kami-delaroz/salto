@@ -1,0 +1,6 @@
+jira.Status rejected2 {
+  name = "Rejected2"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = ""
+  _alias = "Rejected2"
+}

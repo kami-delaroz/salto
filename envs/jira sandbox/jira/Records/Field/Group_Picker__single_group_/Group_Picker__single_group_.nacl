@@ -1,0 +1,10 @@
+jira.Field Group_Picker__single_group___grouppicker__c@ssjskuuuu {
+  name = "Group Picker (single group)"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:grouppickersearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:grouppicker"
+  contexts = [
+    jira.CustomFieldContext.instance.Group_Picker__single_group___grouppicker__c_ssjskuuuu_Default_Configuration_Scheme_for_Group_Picker__single_group_@uuuuuuuuumussssssjsk,
+  ]
+  _alias = "Group Picker (single group)"
+}

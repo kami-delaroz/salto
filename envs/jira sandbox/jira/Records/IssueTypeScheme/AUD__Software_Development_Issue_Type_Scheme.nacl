@@ -1,0 +1,12 @@
+jira.IssueTypeScheme AUD__Software_Development_Issue_Type_Scheme@fsssss {
+  name = "AUD: Software Development Issue Type Scheme"
+  defaultIssueTypeId = jira.IssueType.instance.Bug
+  issueTypeIds = [
+    jira.IssueType.instance.Improvement,
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.New_Feature@s,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Epic,
+  ]
+}

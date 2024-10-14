@@ -1,0 +1,16 @@
+jira.Filter Filter_for_JAM_board@s {
+  name = "Filter for JAM board"
+  owner = {
+    id = "5e5e289fc8ec310c955d2d15"
+    displayName = "Hadas Birin"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.Jira_management@s.key } AND ${ jira.Field.instance.Status__status } in (${ jira.Status.instance.backlog.name }, ${ jira.Status.instance.done.name }) ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.Jira_management@s
+      }
+    },
+  ]
+}

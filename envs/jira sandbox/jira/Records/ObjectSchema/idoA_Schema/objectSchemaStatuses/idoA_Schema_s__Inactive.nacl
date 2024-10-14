@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus idoA_Schema_s__Inactive@umuu {
+  name = "Inactive"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+  _alias = "idoA Schema:Inactive"
+}

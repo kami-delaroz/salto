@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute AAAA_Models_label_attribute {
+  labelAttribute = jira.ObjectTypeAttribute.instance.AAAA_Models_Name
+  objectType = jira.ObjectType.instance.AAAA_Models
+}

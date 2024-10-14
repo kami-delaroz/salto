@@ -1,0 +1,4 @@
+jira.ProjectCategory ProjCatOne {
+  description = "first project category"
+  name = "ProjCatOne"
+}

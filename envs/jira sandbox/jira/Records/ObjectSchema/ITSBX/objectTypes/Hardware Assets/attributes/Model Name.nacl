@@ -1,0 +1,20 @@
+jira.ObjectTypeAttribute ITSBX_Hardware_Assets_us_Model_Name@uumus {
+  objectType = jira.ObjectType.instance.ITSBX_Hardware_Assets@us
+  name = "Model Name"
+  type = 1
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaDefaultReferenceType.instance.Reference
+  typeValue = jira.ObjectType.instance.ITSBX_Models_Hardware_Models@uus
+  _alias = "Model Name"
+}

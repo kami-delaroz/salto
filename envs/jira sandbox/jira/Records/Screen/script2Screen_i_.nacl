@@ -1,0 +1,28 @@
+jira.Screen script2Screen_i_@_00123_00125 {
+  name = "script2Screen{i}"
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+    testTab = {
+      name = "testTab"
+      fields = [
+        jira.Field.instance.Assignee__user,
+        jira.Field.instance.Attachment__array,
+        jira.Field.instance.Components__array,
+        jira.Field.instance.Created__datetime,
+        jira.Field.instance.Creator__user,
+        jira.Field.instance.Description__string,
+        jira.Field.instance.Due_date__date@suu,
+        jira.Field.instance.Environment__string,
+        jira.Field.instance.Fix_versions__array@suu,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+      ]
+      position = 1
+    }
+  }
+}

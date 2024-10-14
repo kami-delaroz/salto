@@ -1,0 +1,46 @@
+jira.Board KP_board@s {
+  name = "KP board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "605c3da2109af10068b38c4e"
+        displayName = "Sagi Bracha"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.Kanban_Project__@s
+  }
+  filterId = jira.Filter.instance.Filter_for_KP_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Backlog"
+        statuses = [
+          jira.Status.instance.backlog,
+        ]
+      },
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

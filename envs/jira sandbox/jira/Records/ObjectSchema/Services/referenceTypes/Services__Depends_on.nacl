@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType Services__Depends_on@uus {
+  name = "Depends on"
+  color = "42526E"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.Services,
+  ]
+}

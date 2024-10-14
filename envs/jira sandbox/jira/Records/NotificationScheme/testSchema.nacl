@@ -1,0 +1,4 @@
+jira.NotificationScheme testSchema {
+  name = "testSchema"
+  description = "test"
+}

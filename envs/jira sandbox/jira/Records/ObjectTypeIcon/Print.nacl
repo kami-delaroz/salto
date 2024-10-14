@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Print {
+  name = "Print"
+  icon = file("jira/ObjectTypeIcon/Print.png")
+}

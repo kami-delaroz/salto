@@ -1,0 +1,13 @@
+jira.ProjectComponent Salto__Solution_Engineering@uus {
+  description = "For scripts or other solutions that we build and are not part of the product"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Solution Engineering"
+  leadAccountId = {
+    id = "5e5e289fc8ec310c955d2d15"
+    displayName = "Hadas Birin"
+  }
+  _parent = [
+    jira.Project.instance.Salto,
+  ]
+  _alias = "Salto:Solution Engineering"
+}
