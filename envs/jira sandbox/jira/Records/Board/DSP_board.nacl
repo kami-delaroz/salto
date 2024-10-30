@@ -39,4 +39,5 @@ jira.Board DSP_board@s {
   estimation = {
     field = jira.Field.instance.Story_Points__float__c@suuuu
   }
+  isPrivate = false
 }

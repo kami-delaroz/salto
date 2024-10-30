@@ -16,4 +16,5 @@ jira.Project LiorCompanyManaged {
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]
+  assigneeType = "UNASSIGNED"
 }

@@ -1,0 +1,321 @@
+jira.WorkflowConfiguration ITSAMPLE__Service_Request_Fulfilment_workflow_for_Jira_Service_Management@fssssssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "ITSAMPLE: Service Request Fulfilment workflow for Jira Service Management"
+  description = "3This Jira Service Management Service Request Fulfilment workflow was generated for Project ITSAMPLE"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.canceled
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Canceled"
+    },
+    {
+      statusReference = jira.Status.instance.closed
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.escalated
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Escalated"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.pending
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Pending"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Resolved"
+    },
+    {
+      statusReference = jira.Status.instance.waiting_for_customer@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "sd.step.key"
+          value = "sdWFCustomer"
+        },
+      ]
+      deprecated = false
+      name = "Waiting for customer"
+    },
+    {
+      statusReference = jira.Status.instance.waiting_for_support@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "sd.step.key"
+          value = "sdWFSupport"
+        },
+      ]
+      deprecated = false
+      name = "Waiting for support"
+    },
+  ]
+  transitions = {
+    In_progress__From__Escalated_Pending_Waiting_for_support__Directed@sfffszdzdssff = {
+      type = "DIRECTED"
+      name = "In progress"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___9@ssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.pending
+        },
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_support@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.escalated
+        },
+      ]
+    }
+    Cancel_request__From__In_Progress_Pending_Waiting_for_customer_Waiting_for_support__Directed@sfffsszdzdsszdssff = {
+      type = "DIRECTED"
+      name = "Cancel request"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___8@ssssssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.pending
+        },
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_support@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_customer@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+    }
+    Pending__From__In_Progress_Waiting_for_support__Directed@fffsszdssff = {
+      type = "DIRECTED"
+      name = "Pending"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Pending_Reason_screen___8@ssssssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.pending
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_support@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+    }
+    Close__From__Canceled_Resolved__Directed@fffszdff = {
+      type = "DIRECTED"
+      name = "Close"
+      description = ""
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.canceled
+        },
+        {
+          fromStatusReference = jira.Status.instance.resolved
+        },
+      ]
+    }
+    Back_to_in_progress__From__Resolved__Directed@sssfffsff = {
+      type = "DIRECTED"
+      name = "Back to in progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___9@ssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.resolved
+        },
+      ]
+    }
+    Create_issue__From__none__Initial@sfffsff = {
+      type = "INITIAL"
+      name = "Create issue"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.waiting_for_support@s
+    }
+    Respond_to_support__From__Waiting_for_customer__Directed@ssfffsssff = {
+      type = "DIRECTED"
+      name = "Respond to support"
+      description = ""
+      toStatusReference = jira.Status.instance.waiting_for_support@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_customer@s
+        },
+      ]
+    }
+    Respond_to_customer__From__Pending_Waiting_for_support__Directed@ssfffszdssff = {
+      type = "DIRECTED"
+      name = "Respond to customer"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___9@ssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.waiting_for_customer@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.pending
+        },
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_support@s
+        },
+      ]
+    }
+    Escalate_this_issue__From__Waiting_for_customer__Directed@ssfffsssff = {
+      type = "DIRECTED"
+      name = "Escalate this issue"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___9@ssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.escalated
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_customer@s
+        },
+      ]
+    }
+    Resolve_this_issue__From__In_Progress_Pending_Waiting_for_customer_Waiting_for_support__Directed@ssfffsszdzdsszdssff = {
+      type = "DIRECTED"
+      name = "Resolve this issue"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___8@ssssssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.resolved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.pending
+        },
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_support@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_customer@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+    }
+    Escalate__From__Waiting_for_support__Directed@fffsssff = {
+      type = "DIRECTED"
+      name = "Escalate"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___9@ssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.escalated
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.waiting_for_support@s
+        },
+      ]
+    }
+  }
+}

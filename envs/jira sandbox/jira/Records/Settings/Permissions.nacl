@@ -258,5 +258,29 @@ jira.Permissions {
       type = "GLOBAL"
       description = "Enables the Atlassian Home for Jira Cloud issue glance field in issue sidebars, for connecting a Jira issue to a project overview"
     }
+    ARCHIVE_ISSUES = {
+      key = "ARCHIVE_ISSUES"
+      name = "Archive Issues"
+      type = "PROJECT"
+      description = "Ability to archive issues."
+    }
+    EDIT_ISSUE_LAYOUT = {
+      key = "EDIT_ISSUE_LAYOUT"
+      name = "Manage Issue Layouts"
+      type = "PROJECT"
+      description = "Ability to modify issue layouts and discover and utilize new fields within an issue layout."
+    }
+    EDIT_WORKFLOW = {
+      key = "EDIT_WORKFLOW"
+      name = "Edit Workflows"
+      type = "PROJECT"
+      description = "Ability to edit workflows."
+    }
+    UNARCHIVE_ISSUES = {
+      key = "UNARCHIVE_ISSUES"
+      name = "Restore Archived Issues"
+      type = "PROJECT"
+      description = "Ability to restore archived issues."
+    }
   }
 }

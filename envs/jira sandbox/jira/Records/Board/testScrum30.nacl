@@ -46,4 +46,5 @@ jira.Board testScrum30 {
   estimation = {
     field = jira.Field.instance.Original_estimate__number@suu
   }
+  isPrivate = false
 }

@@ -4,7 +4,6 @@ jira.ObjectTypeOrder People_childOrder {
     jira.ObjectType.instance.People_Employees,
     jira.ObjectType.instance.People_Role,
   ]
-  assetsSchema = jira.ObjectSchema.instance.People
   _parent = [
     jira.ObjectSchema.instance.People,
   ]

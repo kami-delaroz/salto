@@ -9,6 +9,7 @@ jira {
     ]
     enableJSM = true
     enableJSMPremium = true
+    enableAssetsObjectFieldConfiguration = true
   }
   deploy = {
     forceDelete = false

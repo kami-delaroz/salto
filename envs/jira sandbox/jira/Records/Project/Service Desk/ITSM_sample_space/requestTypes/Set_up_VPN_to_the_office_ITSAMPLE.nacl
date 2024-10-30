@@ -3,8 +3,6 @@ jira.RequestType Set_up_VPN_to_the_office_ITSAMPLE@sssssu {
   description = "Want to access work stuff from outside? Let us know."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
-  restrictionStatus = "OPEN"
-  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending
@@ -79,6 +77,14 @@ jira.RequestType Set_up_VPN_to_the_office_ITSAMPLE@sssssu {
   issueView = {
     issueLayoutConfig = {
       items = [
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
         {
           type = "FIELD"
           sectionType = "PRIMARY"
@@ -260,6 +266,14 @@ jira.RequestType Set_up_VPN_to_the_office_ITSAMPLE@sssssu {
           }
         },
         {
+          type = "PANEL"
+          sectionType = "SECONDARY"
+          key = "devSummary"
+          data = {
+            name = "Development"
+          }
+        },
+        {
           type = "FIELD"
           sectionType = "SECONDARY"
           key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
@@ -267,6 +281,16 @@ jira.RequestType Set_up_VPN_to_the_office_ITSAMPLE@sssssu {
             custom = true
             global = true
             description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Parent
+          data = {
+            custom = false
+            global = true
             required = false
           }
         },

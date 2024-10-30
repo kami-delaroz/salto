@@ -45,4 +45,5 @@ jira.Board Neta_test_board@s {
     constraintType = "issueCount"
   }
   subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+  isPrivate = false
 }

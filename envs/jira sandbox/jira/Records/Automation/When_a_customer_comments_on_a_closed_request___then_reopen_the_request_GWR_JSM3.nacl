@@ -101,14 +101,17 @@ jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_r
     {
       tagType = "CREATION_TYPE"
       tagValue = "AUTO"
+      ruleIdUuid = "018f113e-99a3-7d95-988b-b305d6b34a4e"
     },
     {
       tagType = "SAMPLE_RULE"
       tagValue = "service_desk"
+      ruleIdUuid = "018f113e-99a3-7d95-988b-b305d6b34a4e"
     },
     {
       tagType = "TEMPLATE_ID"
       tagValue = "itsm_template_3"
+      ruleIdUuid = "018f113e-99a3-7d95-988b-b305d6b34a4e"
     },
   ]
   writeAccessType = "UNRESTRICTED"

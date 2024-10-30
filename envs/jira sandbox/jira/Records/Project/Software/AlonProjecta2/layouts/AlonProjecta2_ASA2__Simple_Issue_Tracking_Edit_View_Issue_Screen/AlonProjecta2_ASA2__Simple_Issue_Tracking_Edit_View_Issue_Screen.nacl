@@ -23,6 +23,14 @@ jira.IssueLayout AlonProjecta2_ASA2__Simple_Issue_Tracking_Edit_View_Issue_Scree
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

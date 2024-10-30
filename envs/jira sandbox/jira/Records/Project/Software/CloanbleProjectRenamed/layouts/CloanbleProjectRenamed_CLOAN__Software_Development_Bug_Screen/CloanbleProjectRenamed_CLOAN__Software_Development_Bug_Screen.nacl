@@ -23,6 +23,14 @@ jira.IssueLayout CloanbleProjectRenamed_CLOAN__Software_Development_Bug_Screen@u
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

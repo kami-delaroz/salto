@@ -2,7 +2,6 @@ jira.ObjectTypeOrder Services_childOrder {
   objectTypes = [
     jira.ObjectType.instance.Services_Service,
   ]
-  assetsSchema = jira.ObjectSchema.instance.Services
   _parent = [
     jira.ObjectSchema.instance.Services,
   ]

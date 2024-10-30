@@ -32,6 +32,7 @@ jira.Screen TEST__Jira_Service_Management__Change_View_Edit_Screen@fsssfssds {
         jira.Field.instance.Change_start_date__datetime__c@ssuuuu,
         jira.Field.instance.Change_completion_date__datetime__c@ssuuuu,
         jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+        jira.Field.instance.Parent,
       ]
       position = 0
     }

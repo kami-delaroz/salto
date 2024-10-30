@@ -2,7 +2,7 @@ jira.Filter Filter_for_GTST3_board@s {
   name = "Filter for GTST3 board"
   owner = {
     id = "60a60ff79b362f006919d5ff"
-    displayName = "Guy Hamo"
+    displayName = "Former user"
   }
   jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.guytest3.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
   sharePermissions = [

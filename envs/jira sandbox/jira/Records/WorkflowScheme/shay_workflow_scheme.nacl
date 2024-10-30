@@ -1,9 +1,9 @@
 jira.WorkflowScheme shay_workflow_scheme@s {
   name = "shay workflow scheme"
-  defaultWorkflow = jira.Workflow.instance.jira
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
   items = [
     {
-      workflow = jira.Workflow.instance.shay_another_workflow@s
+      workflow = jira.WorkflowConfiguration.instance.shay_another_workflow@s
       issueType = jira.IssueType.instance.Bug
     },
   ]

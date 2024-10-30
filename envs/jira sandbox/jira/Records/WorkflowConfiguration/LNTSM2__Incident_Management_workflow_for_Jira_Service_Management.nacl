@@ -1,0 +1,285 @@
+jira.WorkflowConfiguration LNTSM2__Incident_Management_workflow_for_Jira_Service_Management@fsssssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "LNTSM2: Incident Management workflow for Jira Service Management"
+  description = "This Jira Service Management Incident Management workflow was generated for Project LNTSM2"
+  isEditable = true
+  startPointLayout = {
+    x = 346
+    y = -208.90000244140623
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.canceled
+      layout = {
+        x = 460.33203125
+        y = 129.91222290039065
+      }
+      deprecated = false
+      name = "Canceled"
+    },
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 314.0859375
+        y = 214.91222290039065
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.completed
+      layout = {
+        x = 127.421875
+        y = 129.91222290039065
+      }
+      deprecated = false
+      name = "Completed"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 321.4140625
+        y = -106.90000244140623
+      }
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.pending
+      layout = {
+        x = 465.83203125
+        y = -23.90000244140623
+      }
+      deprecated = false
+      name = "Pending"
+    },
+    {
+      statusReference = jira.Status.instance.work_in_progress@s
+      layout = {
+        x = 104.8046875
+        y = -23.90000244140623
+      }
+      deprecated = false
+      name = "Work in progress"
+    },
+  ]
+  transitions = {
+    Back_to_work_in_progress__From__Completed__Directed@ssssfffsff = {
+      type = "DIRECTED"
+      name = "Back to work in progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___51@ssbs
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.back.to.work.in.progress"
+        },
+        {
+          key = "sd.resolution.clear"
+          value = ""
+        },
+      ]
+      toStatusReference = jira.Status.instance.work_in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.completed
+          fromPort = 1
+          toPort = 5
+        },
+      ]
+    }
+    Pending__From__Open_Work_in_progress__Directed@fffszdssff = {
+      type = "DIRECTED"
+      name = "Pending"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Pending_Reason_screen___50@ssssssbs
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.pending"
+        },
+      ]
+      toStatusReference = jira.Status.instance.pending
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 1
+        },
+        {
+          fromStatusReference = jira.Status.instance.work_in_progress@s
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+    }
+    Resolve__From__Open_Work_in_progress__Directed@fffszdssff = {
+      type = "DIRECTED"
+      name = "Resolve"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___50@ssssssbs
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.resolve"
+        },
+      ]
+      toStatusReference = jira.Status.instance.completed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 6
+          toPort = 3
+        },
+        {
+          fromStatusReference = jira.Status.instance.work_in_progress@s
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 1
+        },
+      ]
+    }
+    Cancel__From__Open_Pending_Work_in_progress__Directed@fffszdzdssff = {
+      type = "DIRECTED"
+      name = "Cancel"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___50@ssssssbs
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "sd.workflow.save"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.cancel"
+        },
+      ]
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 4
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.work_in_progress@s
+          fromPort = 3
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.pending
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+    }
+    Close__From__Canceled_Completed__Directed@fffszdff = {
+      type = "DIRECTED"
+      name = "Close"
+      description = ""
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.close"
+        },
+      ]
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.canceled
+          fromPort = 5
+          toPort = 3
+        },
+        {
+          fromStatusReference = jira.Status.instance.completed
+          fromPort = 5
+          toPort = 7
+        },
+      ]
+    }
+    Investigate__From__Open_Pending__Directed@fffszdff = {
+      type = "DIRECTED"
+      name = "Investigate"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen___51@ssbs
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "sd.workflow.investigate"
+        },
+      ]
+      toStatusReference = jira.Status.instance.work_in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 7
+          toPort = 1
+        },
+        {
+          fromStatusReference = jira.Status.instance.pending
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+    }
+  }
+}

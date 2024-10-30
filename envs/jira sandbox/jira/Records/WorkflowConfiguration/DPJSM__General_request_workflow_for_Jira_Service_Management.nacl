@@ -1,0 +1,184 @@
+jira.WorkflowConfiguration DPJSM__General_request_workflow_for_Jira_Service_Management@fsssssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "DPJSM: General request workflow for Jira Service Management"
+  description = "This Jira Service Management Service General request workflow was generated for Project DPJSM"
+  isEditable = true
+  startPointLayout = {
+    x = 119.3125
+    y = 47.487496185302746
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 742.1953125
+        y = 155.8
+      }
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 424.2890625
+        y = 107.80000000000001
+      }
+      properties = [
+        {
+          key = "approval.active"
+          value = "true"
+        },
+        {
+          key = "approval.condition.type"
+          value = "percent"
+        },
+        {
+          key = "approval.condition.value"
+          value = "100"
+        },
+        {
+          key = "approval.exclude"
+          value = ""
+        },
+        {
+          key = "approval.field.id"
+          value = jira.Field.instance.Approver_groups__multigrouppicker__c@suuuu
+        },
+        {
+          key = "approval.pre-populated.field.id"
+          value = ""
+        },
+        {
+          key = "approval.transition.approved"
+          value = jira.WorkflowConfiguration.instance.DPJSM__General_request_workflow_for_Jira_Service_Management@fsssssss.transitions.Resolved__From__In_progress__Directed@fffssff
+        },
+        {
+          key = "approval.transition.rejected"
+          value = jira.WorkflowConfiguration.instance.DPJSM__General_request_workflow_for_Jira_Service_Management@fsssssss.transitions.Closed__From__In_progress__Directed@fffssff
+        },
+      ]
+      deprecated = false
+      name = "In progress"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      layout = {
+        x = 241.19921875
+        y = 107.80000000000001
+      }
+      deprecated = false
+      name = "To Do"
+    },
+  ]
+  transitions = {
+    Start__From__To_Do__Directed@fffssff = {
+      type = "DIRECTED"
+      name = "Start"
+      description = ""
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    Reopened__From__Done__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "Reopened"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "sd.resolution.clear"
+          value = ""
+        },
+      ]
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.done
+          fromPort = 1
+          toPort = 1
+        },
+      ]
+    }
+    Closed__From__In_progress__Directed@fffssff = {
+      type = "DIRECTED"
+      name = "Closed"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:block-in-progress-approval"
+          },
+        ]
+      }
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+    }
+    Resolved__From__In_progress__Directed@fffssff = {
+      type = "DIRECTED"
+      name = "Resolved"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:block-in-progress-approval"
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Jira_Service_Desk_Resolve_Issue_Screen___6@ssssssbs
+        }
+      }
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+    }
+  }
+}

@@ -23,6 +23,14 @@ jira.IssueLayout Move_me_to_prod_2_MOV2__Kanban_Bug_Screen@ssssufsss {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

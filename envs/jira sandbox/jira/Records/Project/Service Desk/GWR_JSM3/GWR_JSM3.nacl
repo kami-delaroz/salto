@@ -31,4 +31,5 @@ jira.Project GWR_JSM3@s {
     id = "61980f073618cd006f48823b"
     displayName = "Geoffrey Routledge"
   }
+  assigneeType = "UNASSIGNED"
 }

@@ -1,0 +1,78 @@
+jira.WorkflowConfiguration TestProperties555 {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "TestProperties555"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 580
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 527.017578125
+        y = -93.70000122070311
+      }
+      properties = [
+        {
+          key = "AAA"
+          value = "CCCC"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 555.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "AABB"
+          value = "ddd"
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    Close__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "Close"
+      description = ""
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 1
+          toPort = 5
+        },
+      ]
+    }
+  }
+}

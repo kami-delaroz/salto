@@ -1,5 +1,5 @@
 jira.WorkflowScheme testArchive {
   name = "testArchive"
   description = ""
-  defaultWorkflow = jira.Workflow.instance.jira
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
 }

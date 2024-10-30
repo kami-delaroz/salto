@@ -5,4 +5,5 @@ jira.Webhook Bad_Webhook_5_@ssl {
   excludeBody = true
   enabled = true
   isSigned = false
+  lastUpdatedString = "05/Jun/24 11:45 AM"
 }

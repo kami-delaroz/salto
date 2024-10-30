@@ -26,4 +26,5 @@ jira.Project AlonCompanyProject {
     jira.CustomFieldContext.instance.guytest__float__c_qqqqq,
     jira.CustomFieldContext.instance.testVersionPicker__multiversion__c_Default_Configuration_Scheme_for_testVersionPicker@uuuuussss,
   ]
+  assigneeType = "UNASSIGNED"
 }

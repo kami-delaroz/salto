@@ -1,0 +1,250 @@
+jira.WorkflowConfiguration WorkflowScriptRunnerCloud {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "WorkflowScriptRunnerCloud"
+  description = "sss"
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = 17.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 1072.078125
+        y = 167.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Close"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 1056.796875
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = 67.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Start__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "Start"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw4NSw4MiwxOTMsMTEwLDIxOSw0OCwxMiwyNTMsMjEsMTk0LDIzLDE4Nyw2NCwxMDgsMTk5LDcwLDE1NCwxNzQsNiwxMTQsMjE2LDE1NCwyOSwyLDEyLDI5LDE3NiwxMTgsMTkyLDEzNCw1OCw0MCwyNCwxMzcsOTQsMTgwLDQwLDE0NiwzMyw4MSwyMDUsMTMwLDk3LDI1NSw2MiwyMTcsNDYsMjE0LDY5LDM5LDI0MiwyNDEsMTg5LDcxLDE4LDIxMiwyMzksNjgsMTA0LDI0NCwyNTQsMzAsMTQzLDE0OCw1MiwxMzcsMTc2LDE5OSwyLDM3LDI0NiwxNDAsNDcsMjAyLDExNSwyMjUsOTMsMzMsMTgwLDEzLDE3OCw1Niw4OSwxMTksMjMyLDE4MCw2MSwyMSw5NSwxMzAsMTIxLDE2LDc4LDI0NSwxNTYsMjA0LDE0NiwxNiwxNDgsMTQwLDE1NCwxNTUsMTk3LDExNCwxNzcsMjM1LDExMCwxMDEsNDYsMjI4LDI0NSw1MCw5NSwxMzYsMjM4LDM4LDE5MSwxOTcsNzQsMjMwLDE4NywxODYsOTAsOTQsMjA3LDE1MSw4OCw0NywxODcsNDYsMTc4LDIwMSwyMjQsNzgsODMsMjAsMTc2LDExLDIwLDIxMSw5NSwzNiwyLDQzLDEwNywxOTAsMTIyLDExNCwyMDksMjI5LDI1MywxMjIsMjUzLDI1MiwyNDksNjIsMjQyLDEzMiw1Myw4MiwxMywxMzMsOCwxMDIsMzQsMTIwLDE4MiwxOTksNzgsMTQ1LDE1MCwyMDcsODUsODUsMTkxLDE1NSw5NSwyMSw0NywxNjgsMywxOTMsMTA2LDEzMywxNDUsNDMsMjAxLDE0MywxOTUsNzYsMjM2LDE0MSwxMjksNDEsNSw3MSwyOSw1Nyw1MCwxMzAsMzQsNywyMjksMTAwLDEzNSwyNTAsMjA2LDIwMiw5Nyw3MSw3MywyOSw0MCwyMzksMywxMDksMzYsMTcyLDE2NiwxNjgsODAsMTc4LDUzLDE3MywyNSw0Miw5MCwxNTMsNjcsMTMyLDEyMywyMzUsNTcsNzUsNzUsNzEsMTU4LDc1LDIzNiw4NSw4OSwxNTEsMzUsMjQxLDgzLDE3MiwxNjYsODcsMTczLDEyOSwyMTUsODcsMjM2LDksMzcsMTg1LDQ0LDE4OSwxNzksMTM0LDIwMSwxMTIsMjU0LDEyMCwyMzgsNDEsMTU3LDY1LDEzOCwxMjUsMTc1LDE0OSwxOTIsMTYxLDExMywyNDksMjExLDkxLDExNSwzMywyMTgsODksMTIxLDIwNiwxNTgsMjIyLDEyOCwyMjUsMTEzLDIwLDU0LDI0MCw0LDM4LDMwLDE2MiwxMjksNTQsMjQ5LDE2MCwxNzMsNTYsMjQ4LDU0LDEyOSwyMzcsMjM2LDE0NiwxMDQsMywxNTksMjA4LDIwMSwyMDUsNDgsMjA2LDMyLDgwLDE3OCwyNDksMTgzLDIwNiwxMTgsNiw4MCwxNTAsMjQwLDE4NCw4Nyw2Miw5OCwxOTIsMTIzLDE1NCw3NCw0OSw2NiwzMCwyMTEsMTEzLDE4OSwyMTIsNTEsNTgsMjQ2LDQxLDMyLDk1LDEyMiw0MywxMTUsOTcsMTI1LDE2MCwxMTUsMywyMzMsMTk5LDExMSwxMjEsMTQ5LDE5NCwxMTgsMTE2LDI1NCwxMTAsNjcsMTcwLDUzLDI0LDM0LDksMTA4LDE5MywyNDcsMzYsODQsMTE5LDYsNTIsMTc1LDEyNSw1NCwxMDcsMTc2LDExMCwyMDgsMTkzLDYyLDMwLDIyNCwyMDUsMTI0LDI1MSwyNTUsMjUwLDIzMiwzMSwyMTYsNDEsMjQzLDM1LDEzOSw5NiwyNTIsMTIyLDIyOCwxMjAsMjgsMTcxLDEzNiw4MywxMTMsMjQwLDI0MSwxODAsODAsMjA3LDE3MSwyMTQsMzYsMTI3LDI1NCwyLDQsMTM5LDc4LDIzMiwxNTYsMiwwLDBdfQ=="
+            id = "d49e1bdc-2bbe-4f20-8d8e-235e5961cfbb"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw0NSwxNDMsNjUsNzUsMyw0OSwxNiwxMzMsMjU1LDIwMiwxNDYsNzUsOTEsNDgsMzMsOTcsNjEsODgsMTYxLDcyLDE2MSwzMiwxMjMsMTc2LDk0LDIzNCw4OSwxMDIsMTQ3LDIxNywxOCwxNTQsNzcsNjYsMzgsMTc3LDEzOCwyNDgsMjIzLDE1NywyMTMsMzAsMjIzLDE4OCwyNDcsNjEsMjIyLDEyNCwxMSwyNywxMjgsMjMyLDgsNTEsMTM4LDcxLDk3LDIxMSwxNzIsMTkyLDY1LDE3NCwyNDAsMjI1LDE2OSw0Miw0MiwyMDIsMTM0LDIxMiwxNTYsMTg2LDE2NiwxMTQsMTUzLDY2LDE4NiwxNzAsNjEsMTQ1LDYzLDE5OSw4MywxMjIsMzUsNDQsNjcsMTI0LDQ2LDE2OSwxMDEsMTEzLDM5LDkwLDI0MywxNDIsMTA1LDIyMCwyMTgsMjIyLDEwNSwxODAsODIsMTg3LDE3MywxNDcsMjQ3LDE2MywxNTMsMjI4LDE2OCwxNDEsMTUwLDE4OSwyMTMsMjE2LDEzMSwxMjEsNDgsMTk4LDAsMTY3LDQ5LDE5NCwyNCwxNDQsMTI5LDkwLDI2LDE3OCwyNTIsNjgsMjE5LDE3MCw3OSwxMTMsMjMzLDIyOCwxNTAsMjUzLDIyNSwyNDAsMjU0LDEyMiwyMjgsMTU2LDc3LDIwOSwyNDksMTk3LDIyNCwyMjcsMTIyLDI1MywyLDEyMSwyMTEsMTIxLDE2MiwxMzQsMTA2LDI0MiwyNCwyOCwxNjksNjMsODEsMTkxLDUwLDExMCwxNTgsODQsMjI4LDI1MywyMjEsMTEwLDIxNSwxNzMsNzgsNjQsMTUxLDIxLDE5NSwxNCwyMDEsMjIsMTU5LDExMSwyNDgsMjU1LDIzNiwxMTAsODgsOCw1NCwyMDcsMjAzLDIzOCwyMTksMjAzLDIyOCw0Myw3NCwxMTIsMTc5LDE0MywxOTYsNzgsNzMsMSw3LDE1OCwxMDIsMTgwLDIxNCwyNTMsMjA3LDQ3LDkwLDE4NiwzMywxMzgsMjksMSwwLDBdfQ=="
+            id = "45a6798a-7be7-471a-b4d6-0fecbcbe5d94"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw0NSwxNDMsNjUsMTA3LDIsNDksMTYsMTMzLDI1NSw3NCwyMDAsNjksNSw1NSwxNjAsMjIxLDE3MywxNzEsMzIsMzQsMTIwLDIzMywxNjEsMjQ2LDgwLDEyMyw0NiwxNzksNTEsMTc5LDE2LDIwNCwzOCw3NSwzOCwyMDksMTUwLDIxMCwyNTUsMjIyLDEwNCw2MSw2MiwyNDgsMjIyLDU1LDI0MywxMjYsNTIsNTgsMTYsNTcsMTk0LDE5MiwxMjIsMTYzLDQ5LDEyLDYsOCwxOTgsNCwyMyw0MywyMDEsNzIsNTIsMjMyLDY2LDM4LDExNSwxMywyNDEsMjIwLDE4NywxMTIsNTMsMjM5LDk5LDE4MCw2MiwxNTcsMzQsMTIwLDE3NywyMDEsNiwxNzUsMjMxLDU4LDEwMyw3NSwxODMsNDIsMjA5LDEyMiwxNzcsOTIsODIsNjksNDMsMTA4LDE3MCwxODYsMTk5LDE3NCwxMDYsMTU5LDIzLDc3LDIxMywxNzIsMjM1LDI2LDE0NSwxNTksMTY4LDE5Nyw4NSwxNjEsMjE3LDY3LDIzMSwxODQsMjAsODIsMjA0LDkyLDIyNiwyMyw5OSwxOTAsMTM3LDYyLDEzMiw5OSwxNzcsMjM2LDE1LDEzNSwyMDcsMTgzLDk5LDIyNSwxODYsMCwxNDUsOTQsMTAsMjE1LDIwNiwyMDMsODcsMTU4LDI1NCwxNzUsMTA5LDI0NCwxMTYsMjUwLDEwLDIyNyw3Niw4OSwxNDUsMjA0LDE2NiwxODMsMjM2LDcyLDIwNCw2MSwxNjQsMjM5LDE0NSwxMDMsNTksMjI3LDIwMywxNiwxODEsMjIxLDE3MCwyMDEsOSwyMjgsNjAsNDEsMzQsOTgsMTkzLDEwNCwxOTksNzEsMTI1LDc5LDE2NCwzNCwxNSwyMjUsMTk0LDE3MCwxNDMsOTcsODAsMTE0LDIyMyw4Myw0OCwxOTIsNywxLDY4LDI1MCwyNDcsMTUsMzMsMTUwLDEyMSwxMDIsMjIsMSwwLDBdfQ=="
+            id = "e76dda11-94e8-4783-917f-d7b9299d1714"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw1MywxNDMsMjAzLDc4LDE5NSw0OCwxNiw2OSwxMjcsMTk3LDEyMCw3NywxNzIsNTYsMTQ4LDE0Niw4NCwyMzQsMiwzMywxMzIsMTg4LDMyLDExLDEwNCw4Niw3NywxMzMsMzgsMjQ2LDg4LDE3OCwxMTIsMjM2LDIwMCwxNDMsMjIsMTMyLDI0OCwxMTksOTIsNDAsMjAzLDIwOSwxNTYsMTIzLDEwMiwyMzgsMjMsMTQ5LDIyLDk4LDIzNiw5Nyw3MCwxODYsMTYxLDIxMCwyMDcsMTIsMjAsNDQsOSwxNDIsMzgsMzgsMjIsMywxNDcsMjE0LDEwMywxOTcsNzgsNjIsMTg4LDEwNywyMzUsNzksMTA4LDg4LDIwLDM2LDIwLDQ5LDEwMiwxNjQsMjE1LDUyLDEwMywxNjMsNzQsNzQsMTE1LDE4NSwxOTAsMTU3LDU4LDE3MiwxNTQsMjUwLDExMCw4NSwxNzMsMTQ0LDE4MywyMTMsODQsNTUsMTg4LDEwNiwxODYsMTc0LDE1NywyNDQsMTMsMTc1LDkxLDE5MCw0Niw1Miw1OCwxNTIsNDQsMTUwLDY0LDEwLDI1LDIwMywyNDgsMTI5LDUwLDM5LDIyNywyMjEsMTYsNDksMjAsMTM5LDIzMiwxOTcsNzgsMjIwLDIzOSw2OCwyNTUsMjQ0LDU0LDE4OCw2MiwxOTAsMTQ4LDEyOCwyNDQsNzgsMTUzLDUxLDgxLDE4MiwyMzAsMTI0LDE0NiwxMDUsMTMxLDg2LDY5LDIyLDExMiwyNDEsMzMsOTcsMzIsODcsOTEsMjI2LDE3OCwxODEsMTMzLDg1LDI0LDEwMSw0OCwyMDMsMTMzLDEyNiwyNDYsMjAyLDIzMiw3OSw5OCw0NiwxMjcsMTMwLDI1MCwyNDMsMTI4LDEyNSwyNDAsMTAsMjU1LDEwOSwxOTQsNDUsNTcsMTc3LDI1MiwyMTksMTM2LDg5LDE1MiwyMDgsNzAsMTc4LDM3LDI1MSwxMjUsMTkyLDIxNywzMSwxMTMsNjcsNzAsMTcwLDE0MSwzLDM5LDExMywxNjQsMTM1LDE5NSwyMzIsMjMyLDI0NywxNSwyMDksMzYsNjcsMTE3LDQ0LDEsMCwwXX0="
+            id = "ad98c78f-fc28-4630-8785-6b39c1f5571b"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw2MSwxNDMsNjUsNzksMTk1LDQ4LDEyLDEzMywyNTUsNzQsMTQ5LDUxLDE0MSw4MiwxMDUsOTMsNCwxOCwxMzUsMTE4LDE4NywxMTIsMjUsNyw2NCwxMDYsNzksMjAwLDczLDkyLDQxLDkwLDIxOCw4NCwxMTMsMTc4LDQ5LDMzLDI1NCw1OSw0NiwzMiwxNDIsMjM5LDEyMywyMDcsMjQ2LDI0MywxNjcsMTc2LDEsMTM2LDc4LDQ4LDE2MywxMjAsMTYsNTQsMjA2LDE4LDI4LDE3MiwyNSw0NiwxNTgsMTc4LDE2NCwzNiwxMDksMTM2LDE5NywyMDEsMTA3LDc2LDIzMSw0MSwxOTYsMTcxLDYwLDM2LDEzMiwxNDAsNDcsMTk3LDEwMCwxNjAsMTc5LDE4NCwxOSwxNjUsMTIwLDE5OSwxMTUsMTIyLDEwNiwyNyw1OSw1MywxMDksMTczLDI2LDEwOSwyMzQsMjIxLDQsODgsMTU1LDEyMywyMTMsMjE0LDIxOCw1NiwyMzAsNzgsMjM5LDgxLDE4MywxNTYsMTk4LDUsNzYsNjQsMzAsMjAwLDE2OSwzMiwyMDMsMTUsMTgwLDM3LDI1MSwxODQsMTg4LDE3LDM4LDIyMiwyMTAsMjksMTQzLDIzOSwyMDcsMzksMjA2LDIxNywxODQsNTYsMTkxLDI1LDI3LDIzNiwxODYsMjM0LDE3NywyMzQsMjUxLDE1OCwxODUsNjcsMTc4LDIwMSwxNzUsMTI3LDE0MiwyNTMsMjMzLDgyLDIwOSwxMjcsMjUsNzksODQsMjQwLDI0NSwxODIsMjI2LDIxMSwyMTQsMTY5LDgxLDc0LDEwNSwxNjYsODQsMjMwLDI1LDIxMCwxNDEsMTM3LDksMTkyLDI2LDIyMCwyMzksMTEwLDgsMTM1LDIzMiwxODIsMTY3LDEzNSw5NywyMjQsMTEsMjI3LDU2LDEzOCwxNzUsMTExLDEyLDIxOSwxMTksMTQ1LDE0LDEsMCwwXX0="
+            id = "ed0d2526-f3bd-4947-9ab8-8b9c97150986"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw3NywxNDMsNjUsNzksMTk1LDQ4LDEyLDEzMywyNTUsNzQsMjAxLDEyMSwxNDEsMjE0LDE0LDg4LDU1LDEzNywxOTUsMTQsMTA0LDIwMiwxNjUsNjYsMjA4LDE1NywxNDUsMTUxLDE4NCw4Myw2OCwyNiw4NywxMTMsMTk0LDE0NCwxNiwyNTUsMjksMjMsMjM3LDEyOCwxMjQsMTc2LDEwOCwxMjcsMjM5LDIzMywyNDksOTEsMjE3LDAsMjA0LDYxLDc2LDE2OCwyNDYsMjAyLDIxMCwxNjQsMTkzLDE5MywxNTYsMjI1LDIxMSwxMTUsMjE0LDE1NiwxODAsMTMsODQsMTU2LDE5MCw4MiwyNTAsMjQsMyw5MywyNDUsMTI5LDIxNyw5NSwyMjYsNjQsMzksMTk4LDEwMCwyMjYsNDksODEsMTUzLDIxMyw3NCwxNDksMjI2LDE1NywxNjgsNTUsMTQzLDE4NCw1Nyw1NSw5MSwxNzIsMjcsMjM1LDE4MiwyNDUsMjUzLDIxNiwxODIsMTE3LDI0NywxMjgsMjM1LDEyMiwyMTUsNjQsMjExLDE0MSwzNSwyMzYsMTY0LDEzMiwxOTgsOCwyMzEsMTI4LDM0LDIwMCwxNjksMTYwLDE0MCw5NSwxMDQsNzUsMjQ2LDIwLDIzLDc5LDExMyw0OSwxODksMjUsMjA0LDk3LDQ4LDI1MywyNDEsMjUzLDI0NCwyNDYsMjUyLDQyLDIsNzUsMjA5LDI0OSwxMzMsMTQ0LDE3MSwxMDMsNDYsMTY4LDcxLDE0MywxOTMsMTc3LDEzNCwxOTEsNTIsMTM2LDIxMywyMjEsODMsMjEsNzUsOCwxOTQsNTgsMTAwLDE1NSwyNTIsMTI0LDE2Myw5NSwxMzYsMTE1LDI0NSwxMjcsMTgxLDgyLDE1MSwzNywyNDMsMjM3LDkzLDIwMCwyMDMsMjM5LDMwLDk4LDEzLDIwNiw4MSwxMDAsMTA1LDE0Nyw5NSwxNjAsNjgsMSwxNDEsMzYsMTA4LDIxNCwyMzUsMTgyLDI1MSwyNDksNSwxMTYsMjIyLDE4OSwxNjAsMzYsMSwwLDBdfQ=="
+            id = "e16e3280-d426-4e16-bdd2-ebf5546bdff3"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw4NSwxNDUsMTExLDEwNywxOTQsNDgsMTYsMTk4LDE5MSw3NCw4LDMsMjEsMTA4LDE3Niw0MiwyNTQsMjUsMjAwLDI0LDIwMiwxOTIsMjMsMTE1LDE3NiwxODUsODcsMjM1LDI0LDIxNSwyMjgsMTAsMTY1LDEwOSw4MiwxNTQsMTAwLDE3NCwxMzYsMjIzLDEyNSwyMTUsODQsMTEyLDEyMywxOSwxNDYsMTg3LDI1MSwyMjEsMjQzLDIyOCwyMzgsMjA0LDEwMSw5LDIxNCwzMCwxNjAsNjYsMTI2LDIwNywxNjUsMTY5LDQsNDAsMTY4LDI5LDEyNCwyMzEsMjE0LDksMjE5LDgsODksMjYsMTc1LDE5NiwyMDEsNTIsNjksODYsMTU0LDE0NywxMjAsMiwyMzUsMTQyLDEzLDIwMCw5OCwxMTEsMTczLDcxLDYyLDIzMCwyMjIsMjMxLDEzOCwxOTIsMTY5LDIwNCwxMDIsMjE3LDEyMiw1MCwxMzksMTUwLDQxLDE5OCwyMDksMjgsMjI2LDEyMSwxODAsNzgsMjI3LDEwNSwxODAsMTM4LDEwMywxMSw1Nyw4OSw0Niw4NiwxNzcsOTIsODAsNTMsMTA2LDcyLDc1LDM2LDE5Miw1MywzMCwyMzMsMjQ5LDEzMSwyMTAsMTg3LDIyMCwyMzIsMTE5LDEzOSwxMywxMTcsMTIxLDIyMCwyMzcsMTkwLDk0LDE0LDg0LDM5LDE0MSw4NiwxMjEsMTUxLDE2MCwyMjQsMTEyLDI0OCwxMiwyNDUsMTM2LDIyOSwxNTcsMTYwLDIwMCwxMTQsNDQsMTQ5LDIxLDIyNSwyMjUsMjE4LDI2LDcxLDE1LDY2LDE0NywxMTcsMTgyLDIxNywxNzYsMTkzLDE3LDEwOCw0OSwzMiw4OCwxNjEsMTQ5LDc3LDk0LDk1LDI0MSwyMDYsNDksMTE1LDE1NywyMjksMjM4LDIxMiw1NCwxODAsMjM3LDE4Nyw4MSw0NSwxNjgsOTQsNywyMDIsMTczLDgxLDIyMSw0LDcyLDEzOSw4MSwxMTIsMTA3LDE3MCwxMCwxODEsOTksMTU1LDYzLDE0NCwyNDAsMTgxLDIsMTM1LDY2LDI0NiwxODUsMTQzLDIwMSwzOSwyMDUsNzQsNDksMTc2LDE0MCwxNjAsNjgsMjIzLDQwLDE0NSwyNiwyMTMsMTgsMTU0LDI0MCwxODcsMTE1LDExMSwxODcsMTkyLDI0NiwxOTQsMTIyLDkyLDE3NywxODAsMTAxLDExMSwxOTMsMjI0LDE3MSwyMTUsMjYsMTU1LDEzMiwzOSw1OCwxMjQsNTcsMTc2LDI1MywxOCwxOTQsMTA5LDIwNCwxMTEsMjE4LDI1MSw0OCwyMjgsMjQ4LDk1LDIzNiwxODYsNTEsMTI2LDI0OSw1LDY5LDIwMywxODQsMjQ4LDE5NiwxLDAsMF19"
+            id = "e8a9daf5-2047-4141-b690-dc73ec42baec"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw4NSwxNDUsMjAzLDc4LDE5NSw0OCwxNiw2OSwxMjcsMTAxLDE3Niw4OCwxOCwyNDcsMTY5LDE0NiwzNCwxMTcsMTI5LDIxOCwxMywxMSwxMCwxMSw4OCwxNywxMzIsMjgsMTIzLDY2LDE3Myw1OCwxMTgsMjI4LDcsMTY1LDE3MCwyNTAsMjM5LDc2LDE0Niw3NCw0MSw3NSwxNDMsMjM5LDYxLDExNSwxMDMsMjMwLDE5NiwxNjQsMTcsMzMsMTA4LDY5LDE0MSwyMzYsMTI5LDczLDg3LDExNSwxNjEsNjgsMTksMTk3LDE0MywxNCwxNDUsNywyMDcsMTY1LDExMyw3MywyNDEsMTMxLDI0MywyNTEsMjAyLDE4NCwzLDEyNywyNDMsMTk0LDYsMjksMTgxLDE3OSwxNzUsMTk0LDE2MywxNDEsMjM2LDE0MiwxNjUsMTY0LDIxLDg5LDg1LDEyNiw2Myw5MSwyMDQsMTAzLDE1MiwyMjksMTA2LDU0LDIwNSwyMzAsMTE0LDU3LDIwNiwxNTAsMTE0LDE4NSwyMDAsMjI4LDE2NCwxNzAsMjQyLDEyNCw5MCwyMzAsODgsMTUwLDE2NCw3MCw0Myw3NCwxMzEsMTAwLDEzNiw2MiwzMyw2MSwxMjcsODEsMTY2LDIyLDI0NywzMCwyMDgsMTksMjI5LDExMywxNzksMjQ5LDEyMiwyMTcsMTQ2LDc4LDU4LDE3MSwxODYsNjIsODQsMjEyLDMzLDM2LDIyOCwxNDksNzAsMTYzLDIsMTY3LDE3NiwyNTAsMjE5LDM0LDE5NCwyMDUsMTAsMTA4LDUwLDEzNCwxODAsMTAsMTMxLDI0NCwxODYsMTg1LDE2OCwxMzUsMTM2LDIwOCwxMTYsMjUsMTYxLDI0MywxNDcsNzgsMTY4LDMwLDQxLDIwNCwyMTgsMTY5LDExOCwyMjAsMjA5LDgsMjI2LDc4LDcsMTEyLDIxNCwyOCwxNjEsMTU3LDQ5LDE5Miw5NywxMzUsMTUwLDEzOCwyMzIsMTQ1LDEwOCwzMiwzMiwxNCw1MiwxMDYsMTMwLDEwNCwxMSwyNTEsNDQsMjYsMzIsMjEyLDIxOCwyMTMsMTE3LDc1LDk1LDkzLDEwNSwxMjAsMTA2LDE0OCwxMzYsMjAwLDEwMSwyNTUsMjQ3LDQ5LDI1NCwxNjQsMTE3LDQyLDE2LDEsMjAwLDg0LDIxNiwxOTMsMTk3LDc1LDE2NywxNDIsMTAwLDQ1LDIxNiwyMzcsMTY5LDMxLDExMSwxNDMsMTk5LDUxLDcyLDE0NSwyLDE3MCw2Miw4NCwxMTYsODAsMjI2LDIxLDI3LDg1LDE5MywxMCwyMTksMTczLDE2Niw2Nyw4MCwyNTQsMTEsMTQwLDEwNiwxMzEsMjM2LDE2OSw2MSwxOTgsMTE2LDI0MiwxNzUsMTE4LDE4NSwyMzgsMjE4LDE4NCwxMjgsMjM2LDI1Miw3LDExNywxNTEsMzQsMTMzLDI0MywxLDAsMF19"
+            id = "05984590-a52a-4d73-80ae-764b1deeabca"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMyw5MywxNDQsMjA1LDc4LDE5NSw0OCwxNiwxMzIsOTUsMTk3LDI0OCwxMCw3MywxNDcsNTQsMTYxLDE2OCw4MiwxMzIsODAsMTIzLDEzNyw4NCwxNDksMTEsMTU2LDgsNjYsMTQyLDE4OSw0NiwxNjYsMTc0LDI5LDI0OSwxMzUsMTI4LDE2LDIzOSwyMDYsMzgsNzcsMTUsMjI5LDE4NCw1MSwyMjMsMjM2LDE0MiwyNDYsMTM1LDExNCwyMDUsMTg4LDIyMywxNzcsMzUsMjA4LDIxLDIyOSwyNDYsMTUyLDUwLDE5MywxODYsMTkyLDYyLDE0OSwxNSwxNjksMTE5LDQxLDIxNSw1NCwxMzgsMTgwLDE4MywyMzgsMzIsMTgxLDIzNywyMTEsMTgxLDE4Miw2LDEwNiwyMzksMzUsMjA4LDI3LDI2LDE2MywxOCwyNCwxNDYsNzYsMTAyLDExNSw4OSw2NiwyMTAsMTgyLDE5MiwxNDcsMTYyLDEzMiw1MCwxODUsNDMsOTYsMTUzLDcyLDU3LDEwMywxMzksMTk3LDEwOSw5NCwxNzYsMTAxLDEzOSw1MiwyNCwyMTQsMTA2LDE5Miw2NCwxMTIsMTcsMTEyLDI1MiwyLDMwLDEzMSwxNzgsMjMwLDIxNywxMzEsMTk1LDQ1LDE1LDE1NSwyMDUsMjE5LDIyNywxNCw1NywxMTAsMTQxLDgwLDEzMSwxMjksMTYyLDI2LDQ2LDE2NSw4MiwxMjksMjIsNjIsMTk3LDE1NCwxMDYsMTExLDAsMjAwLDg1LDY5LDc2LDIxMiwyNiw4OSwxLDE1OCw1OSwyMTMsNzcsMjQ0LDg4LDE0MiwxNTYsMjE5LDE0MSwyMTcsMTY3LDIzOSwxNCwyMzQsMTYxLDEwMCwxNTgsMTAxLDIxNywxOCw4NSwxNzMsMjA0LDk3LDE2MywyOCwyNDAsNDEsODMsMTU1LDE1OCw1Nyw0OSwyNSwyMywxMTYsMTQyLDk4LDIzMSwyMzYsNywxNjIsMTAzLDE3Myw0NCw4MCw5OSwyMjYsODQsMTQzLDIzMywxODEsMjEsMTk1LDIxMSwxODIsMjQ4LDQyLDE2Miw4OSwxMSwyMTgsMTQ3LDEzOCw5Miw4NCwxNTgsMjEyLDI1MSwyMSwxMjEsMTIxLDM3LDE3OSwyNSwyMTcsNjcsMzIsMjI1LDI5LDIwNiwxODAsMTgwLDExMCwyOCwxMjEsMTE2LDE0LDc2LDU2LDEwMSwyNyw1MSwxODUsMjE1LDIxLDEwNSwxNjgsMTI5LDEyNiw1OSwxNDAsMTMsMTA5LDIwNCwxMDQsMjE1LDE2NiwxMzksMjI1LDIyMywyNTQsMTA2LDkwLDIxNiwyNCwyNTAsMjUxLDcsMTY0LDk1LDExMCwyMiwyMDksMSwwLDBdfQ=="
+            id = "efd60739-1567-45a7-8dd4-6c60882be497"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMywxMDEsODMsMTA5LDExMSwyMTgsNDgsMTYsMjU0LDQzLDg2LDUyLDksNTgsMTI5LDE5LDI0LDUsMTMwLDIxNCwxNjEsMTczLDEwNCw4MiwxNjUsMTczLDE0OSwyMTQsMTEwLDk1LDc0LDU1LDU3LDI0Niw1LDIyMCwzOCwxMTgsMjMwLDE1MSwyMTAsMTY4LDk4LDE5MSwxMjUsMjMxLDQsODYsMjAyLDE0NiwxMjQsMjAwLDI0OSwyMzgsMTg1LDE4NywyMzEsMTg1LDI0MywxMTUsMTk2LDExLDEwMiwyMzcsMzcsNDMsMzMsMTU0LDY5LDkyLDE1MSwxNDgsOSw4Niw1NywyNDYsNDAsMTczLDE2MywyMTQsODAsOTQsMTA0LDQ3LDIzMiw3MCwxNTUsMTM1LDE4OCwyMDgsMjcsMTIyLDEzLDc0LDkyLDEwNiwzOSwxMTUsMjAxLDE1MywxNDcsOTAsNjksMTg5LDIwMCwxMjMsNDEsMTYsMTAsMTQ3LDE2MSw3MiwxNjYsMTA1LDIxOCw2MywxNTcsMTQyLDE3OCwyNTQsNDAsMjAzLDI0Myw2MiwyNywxNTYsMzgsMjUzLDE5MywxNDQsMTY1LDE2OSw3MiwyMTYsMTAwLDE1NiwxOTAsMTk1LDEwNCw4MCw0NCw0MywwLDEsMjA2LDEyMCw2NCwyNDMsOSwxODQsMTUsMTM3LDE5MCw5MSw0OCwxNTIsMjI5LDIyNyw5OCwyNDEsMjM1LDIzNCwxOCwyMjcsNCw4OCwxMTAsMTAwLDIxMywyMTIsMTUyLDY5LDE2MSw0NCw1NywxNzIsMTA3LDQ5LDE5NiwyNTAsMjM2LDMwLDE4NCwxMSwyMzgsMjIxLDk1LDQ3LDk4LDY2LDIwMCwyMjQsMTAzLDE5NywxODUsMjIsMTI5LDgxLDI4LDE0NywxNTUsNTMsMjQsMzIsMTY1LDE4MywxNDIsMTAwLDY0LDYwLDIyLDE3OCw2OCw0MiwyMjYsMjE0LDIxMCwxNDYsMTQ5LDIwOSwxOTAsMzQsMTg1LDU0LDE3MywxNjksNjYsMTM3LDE1NCwyNCwyNDgsMjM3LDEsMTk1LDE1NywzOCwyMTQsMTE1LDE0LDMyLDE1MCw3NCwyOSw4NCwxNjcsNiwxODksNzAsMTE0LDcxLDIwNiwyMDAsMjM3LDgyLDE0NSwyMjEsMjExLDM2LDE3OSwxNzksMTk1LDE2MywyNTMsMTE1LDE3MSw4MCwyMjQsMjUsODksNzAsMjQ3LDIxMCwxNzYsNjIsMTksMTY1LDg0LDQwLDE3Niw5Nyw3OCwyNywxODcsMTQwLDIzOCw5NCwwLDI0OCwxMzksMzEsNTAsMjI1LDkwLDE4MSw4NCwxNDQsMTMyLDE4MCwyMTQsMywyMDUsMzcsMjAsMTk0LDgyLDIzNSwyMDMsMTQ2LDE1MywxNTQsMTU2LDE1NywyNTMsMzMsMjQxLDIwNywyMzgsOTIsMTU4LDIyOCw5MCwyMTEsMTgzLDExMyw5NiwyMDcsMTg1LDI0NiwyMDIsOTMsOCwxMzksMTYwLDExMywyLDIxMSwxMDgsNTAsMTU3LDc2LDcxLDYwLDc3LDEzNSw3Myw1MCwyNSwxNjQsMjMzLDEyMCw1OCwyNiwyNDYsMTk4LDksMjcsMzksMTIxLDYyLDczLDE3OSwxMTksMjI3LDk3LDE1OCwzNiwyMjcsMTE2LDE0NCwxMzgsMjExLDYwLDE1LDksMTcyLDE0OSw0Myw1LDE3NiwzMSwxNDMsMTI5LDc0LDI3LDIzLDM4LDIxMSwyMTgsMTQzLDI2LDEzLDE4NywxODMsNTQsMjA0LDI0MSwyNDUsMTI5LDIyMSwyNDAsMjIzLDEwOSwxNDYsMTQ5LDE0LDkwLDE1OCwxODIsMTk5LDkyLDg4LDQ5LDIwMSwyMCwzMCw4LDE1Niw5MywxMjMsMzAsMTUwLDE2MSwxMDAsMTE0LDYzLDQwLDEsNTcsMTA1LDI1LDE2MiwxNjgsNDMsMTEyLDIyMSw3OCwyOCw4NCwxNDIsODksMzcsMjI3LDk3LDIyMCwxMjAsNTgsMzksNDcsNTgsODEsMTAyLDE3NSwxNTQsMTYxLDExOSwxOTEsMTYwLDE0NCwxMzUsMTQyLDc2LDEzOSwxNTQsNDgsNzUsMTk0LDI0OSwyNTEsMTc1LDE3MiwyNTAsMTc2LDg0LDc1LDIxLDE3OCwxMTUsMjIwLDAsOTMsMTI2LDE0LDE1Myw0Niw0LDIyLDIxNywyMzMsMTUzLDc1LDIyMCwxNzMsMTAzLDM0LDI5LDEzLDUxLDY2LDg5LDczLDIzMSw2LDE1OCw5MiwxOSwyNDcsMTY5LDY3LDE4Miw4NCwxMzgsMTQ0LDIzOCwyNiw3LDE3NCw4NiwyNTUsMTAxLDI1MCwxOTMsMTAsMTQzLDMyLDIxMCw2MSwxNTYsMjA5LDIzNywxNzEsODIsMTE5LDEsMTQyLDE0MSwxNTYsMjA0LDIzMyw5OSwxMzYsMTQsMjUzLDQ0LDE2MywyNDAsNDYsMTI4LDI1LDI0MiwyMzAsMjQ5LDIxMywxMjAsMjQ3LDM1LDE1Miw4MywzMywxMDksODUsMTc2LDU4LDgsMTg2LDIzNyw1LDE2LDQ2LDI0MiwxMTMsMTE2LDk5LDE4NCwxODYsMTMwLDE2NiwyNDksMjM3LDYzLDI0NywzLDIxMiw5MSwxNzgsMTQ1LDExMCw3Nyw0MiwzNSwxODEsMTQ1LDE3NCw2Miw3MCwyMzgsMjA3LDIzMSw1OSwyMjgsMjYsMTU1LDIwNCwwLDIwLDIxNyw1MywzMiwxOTQsMjQ2LDIxNSwyMTgsMjExLDgwLDEyMSwyNDEsMTE0LDI3LDEwMywxOTksMTM3LDE0LDExMCwyMzQsNTQsMTk2LDE1OCw1NSwyMjAsOTEsMTE3LDczLDY3LDU2LDY0LDE0MiwzNywxMDcsNjYsMTkxLDE5MywxMzgsMjUsOTcsMTQ1LDIyMCw4MSwyMDYsMjUzLDIyMiwxODksMjIsMTYxLDIxLDEzLDExMSwxOTksMjQ2LDQ3LDMzLDM1LDExMSw0MiwxODIsNCwwLDBdfQ=="
+            id = "4ab09da4-ebac-4617-892e-062a19e3fc63"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            config = "eyJjb21wcmVzc2VkIjpbMzEsMTM5LDgsMCwwLDAsMCwwLDAsMywxMDksODAsMTA5LDEwNywxOTQsNDgsMTYsMjU0LDQzLDE2MSwxMiw5MCwxMzUsNzcsMjEzLDIxMywyMyw0LDI1LDY3LDE5MSwxMywyOCwyMDQsMjQ5LDEwNSwxMTcsMjI3LDE1NCwxNTYsOTEsMTAyLDc3LDc0LDk0LDIzMCwyMDIsMTEyLDE5MSwxMjUsMTY5LDg1LDIwLDE4MiwyNTEsMTQ4LDYwLDI0NywxODgsMjIwLDIyMSwxMTksMTkyLDEwLDQ4LDEwMiwxNCw5MSwxMiwxOTgsMSw4Myw5MSwxMCwyOCw3NCwxMSwxNTksMTk0LDg4LDEwNiw1MiwxMDEsMTMzLDExNCwxNTYsMjM4LDE0OCwyMjIsMTcyLDExLDE4MSwxNjMsMTQzLDc4LDQ2LDE1MiwyMiwxNjUsMTMsMjE4LDEyOSwxMTUsMTMwLDEyMyw3NywzOSwxODksMjUsOTYsMTE5LDIwMCw5OSw3MiwyNTEsNDQsNzgsNTksMTYzLDc4LDYwLDc0LDI0MywxMTAsMTU2LDI0NywyNSwyMzUsMjQxLDk3LDEyNywyMDgsMTMzLDE1OCwxMDMsMTYzLDEzMiwxODgsNjQsNDcsMTc2LDIxOCwxNjEsMjU1LDEyNiwzMywxMTUsODYsNDAsMTg1LDUyLDE2OCwxODksMjAzLDIyMSwxMDgsMjQ2LDI1MCw0OCwyNDcsNjAsMTY2LDM2LDIzLDExNywxOTUsMTMxLDE5NCwyNCwxMzUsMTE2LDQ1LDE3NiwyMjQsMTM0LDI2LDE4MywyMjEsMTMwLDE3NCwyMDAsMTAwLDI0Miw2NywxNDYsMTUxLDIzMiw4NiwxODAsMjE0LDc0LDIwOSwyMzUsMTk2LDEwNyw1NiwxNTQsMTk1LDgwLDE0MSwyMDIsMjA3LDcyLDE1NCwzMywyMzUsOTIsMjI0LDE0MSwyOSwyMCw4MywxOTcsMjM1LDI5LDU3LDE3NCwyMDEsMTkzLDI0OCwzMCwxODksODksMjQzLDE2NCwyNywxNzIsNTAsODksMTE5LDM2LDIzOCwyMiwxNjcsMzIsMTgsNDYsNzUsMTQsMjIsNTcsMjAxLDQzLDIsMTY0LDIwMSw4LDUxLDIxNyw0OCw1MywyNiw4Nyw4OCwyMDcsNDIsMTU3LDE0MSwxNzgsMzIsMjQxLDEyNywxNTUsNjQsNDEsMTQ2LDk0LDExNCwyNDAsNzYsMTc0LDE5MCw3OSw0OSwyNTEsNDQsMTA0LDEwMSwxNDYsMjgsMTM5LDE5MCwzNSwxMTIsMjEyLDgxLDU2LDg1LDIxMCwxNjIsMTgwLDI0MSw4Myw4NSw5OCwyMTYsMzgsMzMsMTQ4LDEwMSwzMywyNCwyMTIsMjExLDM4LDMxLDcwLDIwMSwyNDAsODIsMTQ4LDQzLDk0LDY5LDIwNywxMDMsMjI0LDg0LDIwNSwxMTcsMTk4LDIyOCwxNTksMjE0LDE2OSwxNDIsMTUxLDI3LDk1LDQ0LDI0NywxNTEsMTg4LDU4LDY3LDE3MSwyMDMsOTIsNDgsMTEsMTcxLDEzMywxMjQsMTM5LDYwLDI0LDIzNiwxMjcsMSwxNTAsMjYsMjM1LDIzOCw0NywyLDAsMF19"
+            id = "cc0aa277-4272-4ca7-b7b2-959c959dd23d"
+            disabled = "false"
+          }
+        },
+      ]
+      validators = [
+        {
+          ruleKey = "connect:expression-validator"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            config = "{\"uuid\":\"b8de9e66-8248-4c6f-9160-0fad129ea88d\",\"enabled\":true,\"description\":\"Validator123\",\"expression\":\"List labels = issue.fields.labels ?: [] // get the labels for the current issue\\nlabels += \\\"newLabel\\\"\\nissueInput.fields.labels = labels\",\"errorMessage\":\"A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information.\"}"
+            id = "851b02b9-524a-4676-a1fc-c2d3fea4806b"
+            disabled = "false"
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "connect:expression-condition"
+            parameters = {
+              appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-conditions"
+              config = "{\"uuid\":\"45f3701c-5682-4ff1-ad8d-403dd4d2b3d6\",\"enabled\":true,\"description\":\"Condition123\",\"expression\":\"issue.fields.assignee != null\"}"
+              id = "e2ae0003-bb75-4040-b0f0-20080c10b49b"
+              disabled = "false"
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    Close__From__In_Progress__Directed@fffssff = {
+      type = "DIRECTED"
+      name = "Close"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+    }
+  }
+}

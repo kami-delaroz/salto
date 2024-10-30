@@ -1,0 +1,99 @@
+jira.WorkflowConfiguration testCoordinates {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "testCoordinates"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 720
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance._teststatus_@hi
+      layout = {
+        x = 651.033203125
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "[testStatus]"
+    },
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      layout = {
+        x = 839.646484375
+        y = -11.700001220703115
+      }
+      deprecated = false
+      name = "A shared status3"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 460.41015625
+        y = 170.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    test2__From___testStatus___Directed@fffshiff = {
+      type = "DIRECTED"
+      name = "test2"
+      description = ""
+      toStatusReference = jira.Status.instance.a_shared_status3@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance._teststatus_@hi
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+    }
+    test__From__Open__testStatus___Directed@fffszdhiff = {
+      type = "DIRECTED"
+      name = "test"
+      description = ""
+      toStatusReference = jira.Status.instance._teststatus_@hi
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 1
+          toPort = 5
+        },
+        {
+          fromStatusReference = jira.Status.instance._teststatus_@hi
+          fromPort = 1
+          toPort = 0
+        },
+      ]
+    }
+    A_shared_status3__From__any_status__Global@ssfffssff = {
+      type = "GLOBAL"
+      name = "A shared status3"
+      description = ""
+      toStatusReference = jira.Status.instance.a_shared_status3@s
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 3
+        },
+      ]
+    }
+  }
+}

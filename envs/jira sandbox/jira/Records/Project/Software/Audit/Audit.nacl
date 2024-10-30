@@ -12,4 +12,5 @@ jira.Project Audit {
     id = "5c7289009170244d98d8192c"
     displayName = "Gil Hoffer"
   }
+  assigneeType = "PROJECT_LEAD"
 }

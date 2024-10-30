@@ -34,4 +34,5 @@ jira.Project test2 {
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]
+  assigneeType = "UNASSIGNED"
 }

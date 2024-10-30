@@ -1,0 +1,275 @@
+jira.WorkflowConfiguration Lior_s_Test_Workflow@tss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Lior's Test Workflow"
+  description = "desc3"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      properties = [
+        {
+          key = "PropKey"
+          value = "PropValue"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "פרופ קי"
+          value = "פרופ    וליו"
+        },
+      ]
+      deprecated = false
+      name = "A shared status"
+    },
+    {
+      statusReference = jira.Status.instance.approved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.backlog
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Backlog"
+    },
+    {
+      statusReference = jira.Status.instance.build_broken@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Build Broken"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Resolved"
+    },
+  ]
+  transitions = {
+    AnotherTestTransition__From__Approved__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "AnotherTestTransition"
+      description = ""
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.approved
+        },
+      ]
+    }
+    LiorTestTransition__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "LiorTestTransition"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldRequired"
+            fieldsRequired = [
+              jira.Field.instance.Change_risk__select__c@suuuu,
+            ]
+            ignoreContext = "false"
+          }
+        },
+        {
+          ruleKey = "connect:expression-validator"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            config = "{\"uuid\":\"bd1aaa25-00ad-49b5-9423-b03e425d8df4\",\"enabled\":true,\"description\":\"Lior Test ScriptRunner Validator \",\"expression\":\"!config['enabled'] ? true : (true)\",\"errorMessage\":\"A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information.\"}"
+            id = "f128b532-4748-486d-9214-c513c8dba7d9"
+            disabled = "false"
+          }
+        },
+        {
+          ruleKey = "connect:expression-validator"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            config = "{\"uuid\":\"8e4ba219-4715-495a-b854-203ba8ca2af5\",\"enabled\":true,\"description\":\"Another ScriptRunner validator\",\"expression\":\"!config['enabled'] ? true : (issue.getResolution() == \\\"Fixed\\\")\",\"errorMessage\":\"A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information.\"}"
+            id = "be4e2876-8999-4c64-b606-49b9cb5be1f8"
+            disabled = "false"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+      ]
+    }
+    ImportantTransition__From__A_shared_status__Directed@fffsssff = {
+      type = "DIRECTED"
+      name = "ImportantTransition"
+      description = ""
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.a_shared_status3@s
+        },
+      ]
+    }
+    TransitionToSharedStatus__From__A_shared_status__Directed@fffsssff = {
+      type = "DIRECTED"
+      name = "TransitionToSharedStatus"
+      description = ""
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.a_shared_status3@s
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+    }
+    Build_Broken__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      name = "Build Broken"
+      description = ""
+      toStatusReference = jira.Status.instance.build_broken@s
+    }
+    Hello_Yuri__From__Approved__Directed@sfffsff = {
+      type = "DIRECTED"
+      name = "Hello Yuri"
+      description = ""
+      conditions = {
+        operation = "ANY"
+        conditions = [
+          {
+            ruleKey = "system:restrict-from-all-users"
+            parameters = {
+              restrictMode = "usersAndAPI"
+            }
+          },
+          {
+            ruleKey = "system:block-in-progress-approval"
+          },
+          {
+            ruleKey = "system:check-field-value"
+            parameters = {
+              fieldId = jira.Field.instance.Story_point_estimate__jsw_story_points__c@ssuubbuu
+              fieldValue = "[\"500\"]"
+              comparator = "="
+              comparisonType = "NUMBER"
+            }
+          },
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              groupIds = [
+                jira.Group.instance.jira_administrators@b,
+                jira.Group.instance.system_administrators@b,
+              ]
+            }
+          },
+        ]
+      }
+      triggers = [
+        {
+          ruleKey = "system:development-triggers"
+          parameters = {
+            enabledTriggers = [
+              "review-summarized-trigger",
+            ]
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.approved
+        },
+      ]
+    }
+    Wow__From__Backlog__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "Wow"
+      description = ""
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.backlog
+        },
+      ]
+    }
+    BackLogToSharedStatus__From__Backlog__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "BackLogToSharedStatus"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:check-field-value"
+            parameters = {
+              fieldId = jira.Field.instance.missing_customfield_14201
+              fieldValue = "[\"Critical\"]"
+              comparator = "="
+              comparisonType = "STRING"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.AP2__Kanban_Bug_Screen@fsss
+        }
+      }
+      toStatusReference = jira.Status.instance.a_shared_status3@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.backlog
+        },
+      ]
+    }
+  }
+}

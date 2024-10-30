@@ -1,0 +1,66 @@
+jira.WorkflowConfiguration testIssueEdited {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "testIssueEdited"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 739
+    y = 27.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance._teststatus_@hi
+      layout = {
+        x = 1035.03125
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "[testStatus]"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 985.40625
+        y = 182.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    asdasd__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "asdasd"
+      description = ""
+      toStatusReference = jira.Status.instance._teststatus_@hi
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 3
+        },
+      ]
+    }
+  }
+}

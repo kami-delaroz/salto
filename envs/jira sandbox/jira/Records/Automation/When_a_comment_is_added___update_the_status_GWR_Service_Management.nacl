@@ -198,7 +198,7 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
   notifyOnError = "FIRSTERROR"
   projects = [
     {
-      projectId = jira.Project.instance.GWR_Service_Management@s
+      projectId = jira.Project.instance.missing_10202
     },
   ]
   labels = [
@@ -207,14 +207,17 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_Service_Manageme
     {
       tagType = "CREATION_TYPE"
       tagValue = "AUTO"
+      ruleIdUuid = "018f10fc-3f5d-7d61-ada3-c4d56ce00a2a"
     },
     {
       tagType = "SAMPLE_RULE"
       tagValue = "service_desk"
+      ruleIdUuid = "018f10fc-3f5d-7d61-ada3-c4d56ce00a2a"
     },
     {
       tagType = "TEMPLATE_ID"
       tagValue = "itsm_template_6"
+      ruleIdUuid = "018f10fc-3f5d-7d61-ada3-c4d56ce00a2a"
     },
   ]
   writeAccessType = "UNRESTRICTED"

@@ -30,6 +30,7 @@ jira.Screen IP__Jira_Service_Management__Incident_View_Edit_Screen@fsssfssds {
         jira.Field.instance.Responders__responders_entity_field_cftype__c@uubbbuu,
         jira.Field.instance.Major_incident__major_incident_entity_field_cftype__c@suubbbbuu,
         jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+        jira.Field.instance.Parent,
       ]
       position = 0
     }

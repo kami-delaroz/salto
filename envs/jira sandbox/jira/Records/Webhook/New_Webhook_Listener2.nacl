@@ -5,4 +5,5 @@ jira.Webhook New_Webhook_Listener2@s {
   excludeBody = true
   enabled = true
   isSigned = false
+  lastUpdatedString = "05/Jun/24 9:44 AM"
 }

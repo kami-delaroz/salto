@@ -16,4 +16,5 @@ jira.Project AlonCompanyProject37 {
   fieldContexts = [
     jira.CustomFieldContext.instance.a_b__float__c_ruuuu_Default_Configuration_Scheme_for_a_b@uuuuumussssr,
   ]
+  assigneeType = "PROJECT_LEAD"
 }

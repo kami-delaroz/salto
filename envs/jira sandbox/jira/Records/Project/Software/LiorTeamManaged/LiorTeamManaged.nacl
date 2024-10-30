@@ -10,4 +10,5 @@ jira.Project LiorTeamManaged {
     id = "60e8b78784c9920071996842"
     displayName = "Lior Neudorfer"
   }
+  assigneeType = "UNASSIGNED"
 }

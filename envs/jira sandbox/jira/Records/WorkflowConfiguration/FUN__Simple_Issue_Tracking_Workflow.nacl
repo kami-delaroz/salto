@@ -1,0 +1,193 @@
+jira.WorkflowConfiguration FUN__Simple_Issue_Tracking_Workflow@fssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "FUN: Simple Issue Tracking Workflow"
+  description = ""
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      deprecated = false
+      name = "To Do"
+    },
+  ]
+  transitions = {
+    Reopen__From__Done__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "Reopen"
+      description = ""
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "jira.issuetracking.simple.workflow.action.reopen.name"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "jira.issuetracking.simple.workflow.action.reopen.name"
+        },
+      ]
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.done
+        },
+      ]
+    }
+    Start_Progress__From__To_Do__Directed@sfffssff = {
+      type = "DIRECTED"
+      name = "Start Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "startprogress.title"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "startprogress.title"
+        },
+      ]
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+      ]
+    }
+    Reopen_and_start_progress__From__Done__Directed@sssfffsff = {
+      type = "DIRECTED"
+      name = "Reopen and start progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "jira.issuetracking.simple.workflow.action.reopenandstartprogress.name"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "jira.issuetracking.simple.workflow.action.reopenandstartprogress.name"
+        },
+      ]
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.done
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "common.forms.create"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "common.forms.create"
+        },
+      ]
+      toStatusReference = jira.Status.instance.to_do@s
+    }
+    Stop_Progress__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      name = "Stop Progress"
+      description = ""
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "stopprogress.title"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "stopprogress.title"
+        },
+      ]
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+    }
+    Done__From__To_Do__Directed@fffssff = {
+      type = "DIRECTED"
+      name = "Done"
+      description = ""
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "jira.issuetracking.simple.workflow.action.done.name"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "jira.issuetracking.simple.workflow.action.done.name"
+        },
+      ]
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+      ]
+    }
+    Done__From__In_Progress__Directed@fffssff = {
+      type = "DIRECTED"
+      name = "Done"
+      description = ""
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "jira.issuetracking.simple.workflow.action.done.name"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "jira.issuetracking.simple.workflow.action.done.name"
+        },
+      ]
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+    }
+  }
+}

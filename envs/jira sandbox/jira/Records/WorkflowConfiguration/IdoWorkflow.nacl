@@ -1,0 +1,106 @@
+jira.WorkflowConfiguration IdoWorkflow {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "IdoWorkflow"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 580
+    y = 17.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 555.109375
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 555.41015625
+        y = 65.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    ToDone__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      name = "ToDone"
+      description = ""
+      toStatusReference = jira.Status.instance.done
+    }
+    ToOpen__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      name = "ToOpen"
+      description = ""
+      toStatusReference = jira.Status.instance.open
+    }
+    self2__From__any_status__Circular@fffssff = {
+      type = "GLOBAL"
+      name = "self2"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    Self__From__any_status__Circular@fffssff = {
+      type = "GLOBAL"
+      name = "Self"
+      description = ""
+    }
+    Close__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "Close"
+      description = ""
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+    }
+  }
+}

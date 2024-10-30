@@ -10,4 +10,5 @@ jira.Project batel_1_1_24@b {
     id = "61d44bf59ee70a00685fa6b6"
     displayName = "Testing salto"
   }
+  assigneeType = "UNASSIGNED"
 }

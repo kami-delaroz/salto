@@ -1,0 +1,10 @@
+jira.Field Batel_new_asset_creation__cmdb_object_cftype__c@sssuubbuu {
+  name = "Batel new asset creation"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugins.cmdb:cmdb-object-searcher"
+  type = "com.atlassian.jira.plugins.cmdb:cmdb-object-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.Batel_new_asset_creation__cmdb_object_cftype__c_sssuubbuu_Default_Configuration_Scheme_for_Batel_new_asset_creation@uuuuuuuuumusssssss,
+  ]
+  _alias = "Batel new asset creation"
+}

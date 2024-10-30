@@ -22,4 +22,5 @@ jira.Board TShirSBOARD {
     constraintType = "issueCount"
   }
   subQuery = "fixVersion in unreleasedVersions() AND fixVersion is EMPTY"
+  isPrivate = false
 }

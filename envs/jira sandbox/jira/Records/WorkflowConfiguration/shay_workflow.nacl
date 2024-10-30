@@ -1,0 +1,255 @@
+jira.WorkflowConfiguration shay_workflow {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "shay_workflow"
+  description = "la"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      layout = {
+        x = 624.70703125
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "my key"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "A shared status2"
+    },
+    {
+      statusReference = jira.Status.instance.a_shared_status4@s
+      layout = {
+        x = 624.70703125
+        y = 67.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "A shared status4"
+    },
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 659.6945556640625
+        y = -93.70000122070311
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 640.796875
+        y = 217.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "first"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 663.41015625
+        y = 17.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      layout = {
+        x = 648.12890625
+        y = 167.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "second"
+    },
+  ]
+  transitions = {
+    open_to_first__From__Open__Directed@ssfffsff = {
+      type = "DIRECTED"
+      name = "open to first"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    first_to_second__From__first__Directed@ssfffsff = {
+      type = "DIRECTED"
+      name = "first to second"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      toStatusReference = jira.Status.instance.reopened
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+    }
+  }
+}
+jira.WorkflowConfiguration shay_workflow@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "shay workflow"
+  description = "s"
+  isEditable = true
+  startPointLayout = {
+    x = 784
+    y = 17.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 561.078125
+        y = 114.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 488.986328125
+        y = -95.70000122070311
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 759.41015625
+        y = 67.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+  }
+}

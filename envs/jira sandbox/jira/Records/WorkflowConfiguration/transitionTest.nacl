@@ -1,0 +1,122 @@
+jira.WorkflowConfiguration transitionTest {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "transitionTest"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 617
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.aaa
+      layout = {
+        x = 506.021484375
+        y = 202.29999877929689
+      }
+      deprecated = false
+      name = "aaa"
+    },
+    {
+      statusReference = jira.Status.instance.approved
+      layout = {
+        x = 384.033203125
+        y = 117.4
+      }
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 592.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    first__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "first"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              roleIds = [
+                jira.ProjectRole.instance.IdoTeamRole,
+              ]
+            }
+          },
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              roleIds = [
+                jira.ProjectRole.instance.shay_role@s,
+              ]
+            }
+          },
+        ]
+      }
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    s__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "s"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              roleIds = [
+                jira.ProjectRole.instance.aaa,
+              ]
+            }
+          },
+        ]
+      }
+      toStatusReference = jira.Status.instance.aaa
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 6
+          toPort = 2
+        },
+      ]
+    }
+  }
+}

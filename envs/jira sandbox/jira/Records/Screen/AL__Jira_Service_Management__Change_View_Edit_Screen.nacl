@@ -36,6 +36,8 @@ jira.Screen AL__Jira_Service_Management__Change_View_Edit_Screen@fsssfssds {
         jira.Field.instance.Backout_plan__textarea__c@suuuu,
         jira.Field.instance.Test_plan__textarea__c@suuuu,
         jira.Field.instance.Change_reason__select__c@suuuu,
+        jira.Field.instance.Batel_new_asset_creation__cmdb_object_cftype__c@sssuubbuu,
+        jira.Field.instance.Parent,
       ]
       position = 0
     }

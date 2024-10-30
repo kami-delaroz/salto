@@ -5,7 +5,6 @@ jira.ObjectTypeOrder DP___Services_sbs_Hardware_Assets_childOrder@uuumusu {
     jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets_uuumus_Servers@uuuuuumu,
     jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets_uuumus_Printers@uuuuuumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.DP___Services@sbs
   _parent = [
     jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets@uuumus,
   ]

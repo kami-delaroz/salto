@@ -40,4 +40,5 @@ jira.Board Compliance_Board@s {
   estimation = {
     field = jira.Field.instance.Story_Points__float__c@suuuu
   }
+  isPrivate = false
 }

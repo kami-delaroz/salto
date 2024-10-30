@@ -5,7 +5,6 @@ jira.ObjectTypeOrder IT_Inventory__s_Hardware_Assets_childOrder@uumusu {
     jira.ObjectType.instance.IT_Inventory__s_Hardware_Assets_uumus_Servers@uuuuumu,
     jira.ObjectType.instance.IT_Inventory__s_Hardware_Assets_uumus_Printers@uuuuumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.IT_Inventory_@s
   _parent = [
     jira.ObjectType.instance.IT_Inventory__s_Hardware_Assets@uumus,
   ]

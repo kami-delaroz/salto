@@ -1,0 +1,76 @@
+jira.WorkflowConfiguration GlobalTransitions {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "GlobalTransitions"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 1051.015625
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    Global__From__any_status__Circular__1@fffssffff = {
+      type = "GLOBAL"
+      name = "Global"
+      description = ""
+    }
+    Close__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "Close"
+      description = ""
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 1
+          toPort = 5
+        },
+      ]
+    }
+    Global__From__any_status__Circular__2@fffssffff = {
+      type = "GLOBAL"
+      name = "Global"
+      description = ""
+    }
+  }
+}

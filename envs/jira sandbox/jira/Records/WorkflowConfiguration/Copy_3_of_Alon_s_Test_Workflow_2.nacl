@@ -1,0 +1,331 @@
+jira.WorkflowConfiguration Copy_3_of_Alon_s_Test_Workflow_2@ssstsss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Copy 3 of Alon's Test Workflow 2"
+  description = "5(This copy was automatically generated from a draft, when workflow 'Alon's Test Workflow 2' was made inactive.)2"
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = -57.599999999999994
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      layout = {
+        x = 1040.703125
+        y = 142.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "A shared status"
+    },
+    {
+      statusReference = jira.Status.instance.an_inactive_status@s
+      layout = {
+        x = 1037.140625
+        y = 242.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "testKey"
+          value = "testValue"
+        },
+      ]
+      deprecated = false
+      name = "An Inactive Status"
+    },
+    {
+      statusReference = jira.Status.instance.approved
+      layout = {
+        x = 1064.125
+        y = 42.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.awaiting_approval@s
+      layout = {
+        x = 1036.328125
+        y = 192.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Awaiting approval"
+    },
+    {
+      statusReference = jira.Status.instance.build_broken@s
+      layout = {
+        x = 1052.828125
+        y = 92.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Build Broken"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = -7.599999999999994
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    TransitionToShared__From__A_shared_status_Approved__Directed@fffssszdff = {
+      type = "DIRECTED"
+      name = "TransitionToShared"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "dateFieldComparison"
+            date1FieldKey = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            date2FieldKey = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            includeTime = "false"
+            conditionSelected = ">"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "windowDateComparison"
+            date1FieldKey = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            date2FieldKey = jira.Field.instance.Change_completion_date__datetime__c@ssuuuu
+            numberOfDays = "2"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldHasSingleValue"
+            fieldKey = jira.Field.instance.Last_Viewed__datetime@suu
+            excludeSubtasks = "false"
+          }
+        },
+        {
+          ruleKey = "system:parent-or-child-blocking-validator"
+          parameters = {
+            blocker = "PARENT"
+            statusIds = [
+              jira.Status.instance.in_progress@s,
+            ]
+          }
+        },
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "MODIFY_REPORTER"
+          }
+        },
+        {
+          ruleKey = "system:previous-status-validator"
+          parameters = {
+            previousStatusIds = jira.Status.instance.build_broken@s
+            mostRecentStatusOnly = "false"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldMatchesRegularExpression"
+            regexp = "aaa"
+            fieldKey = jira.Field.instance.Epic_Status__gh_epic_status__c@suubbuu
+          }
+        },
+        {
+          ruleKey = "system:unsupported"
+          parameters = {
+            class.name = "com.atlassian.jira.workflow.validator.UserPermissionValidator"
+            nullallowed = "true"
+            permissionKey = "VIEW_DEV_TOOLS"
+            vars.key = "aaa"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldRequired"
+            fieldsRequired = [
+              jira.Field.instance.Assignee__user,
+              jira.Field.instance.Change_type__select__c@suuuu,
+            ]
+            ignoreContext = "true"
+            errorMessage = "wwww"
+          }
+        },
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldHasSingleValue"
+            fieldKey = jira.Field.instance.Creator__user
+            excludeSubtasks = "true"
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-from-all-users"
+            parameters = {
+              restrictMode = "usersAndAPI"
+            }
+          },
+        ]
+      }
+      triggers = [
+        {
+          ruleKey = "system:development-triggers"
+          parameters = {
+            enabledTriggers = [
+              "pull-request-created-trigger",
+              "commit-created-trigger",
+            ]
+          }
+        },
+      ]
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JAM__Kanban_Bug_Screen@fsss
+        }
+      }
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.approved
+          fromPort = 3
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.a_shared_status3@s
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-unassigned"
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Approvers__multiuserpicker__c
+            value = "ww"
+            mode = "replace"
+          }
+        },
+        {
+          ruleKey = "system:set-security-level-from-role"
+          parameters = {
+            roleId = jira.ProjectRole.instance.Administrators
+            issueSecurityLevelId = "none"
+          }
+        },
+        {
+          ruleKey = "system:copy-value-from-other-field"
+          parameters = {
+            sourceFieldKey = jira.Field.instance.Assignee__user
+            targetFieldKey = jira.Field.instance.Creator__user
+            issueSource = "PARENT"
+          }
+        },
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Environment__string
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-lead"
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-reporter"
+          }
+        },
+        {
+          ruleKey = "system:unsupported"
+          parameters = {
+            class.name = "com.atlassian.jira.workflow.function.issue.IssueStoreFunction"
+            full.module.key = "com.atlassian.jira.plugin.system.workflowissue-store-function"
+          }
+        },
+      ]
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    Build_Broken__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      name = "Build Broken"
+      description = ""
+      toStatusReference = jira.Status.instance.build_broken@s
+    }
+  }
+}

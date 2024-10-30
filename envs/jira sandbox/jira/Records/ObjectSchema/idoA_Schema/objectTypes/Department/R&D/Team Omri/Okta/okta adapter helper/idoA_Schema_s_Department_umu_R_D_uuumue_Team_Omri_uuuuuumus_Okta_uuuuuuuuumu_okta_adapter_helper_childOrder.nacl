@@ -2,7 +2,6 @@ jira.ObjectTypeOrder idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus
   objectTypes = [
     jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus_Okta_uuuuuuuuumu_okta_adapter_helper_uuuuuuuuuuumuss_tusday@uuuuuuuuuuuuuuumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.idoA_Schema@s
   _parent = [
     jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus_Okta_uuuuuuuuumu_okta_adapter_helper@uuuuuuuuuuumuss,
   ]

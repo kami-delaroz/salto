@@ -24,6 +24,7 @@ jira.Screen ITSAMPLE__Jira_Service_Management__Request_Fulfilment_View_Edit_Scre
         jira.Field.instance.Product_categorization__cascadingselect__c@suuuu,
         jira.Field.instance.Operational_categorization__cascadingselect__c@suuuu,
         jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+        jira.Field.instance.Parent,
       ]
       position = 0
     }

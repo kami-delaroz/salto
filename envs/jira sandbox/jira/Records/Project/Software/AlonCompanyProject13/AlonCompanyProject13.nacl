@@ -16,4 +16,5 @@ jira.Project AlonCompanyProject13 {
   fieldContexts = [
     jira.CustomFieldContext.instance.Urgency4__select__c_test3,
   ]
+  assigneeType = "PROJECT_LEAD"
 }

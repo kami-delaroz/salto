@@ -20,4 +20,5 @@ jira.Project AlonCompanyProject11 {
     jira.CustomFieldContext.instance.Version_Picker__single_version___version__c_ssjskuuuu_Default_Configuration_Scheme_for_Version_Picker__single_version_@uuuuuuuuumussssssjsk,
     jira.CustomFieldContext.instance.testGlobalIssues__multicheckboxes__c_testContext,
   ]
+  assigneeType = "PROJECT_LEAD"
 }

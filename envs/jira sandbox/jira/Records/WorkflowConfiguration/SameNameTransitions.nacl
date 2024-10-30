@@ -1,0 +1,120 @@
+jira.WorkflowConfiguration SameNameTransitions {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "SameNameTransitions"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 1051.015625
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 1306.046875
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.done2
+      layout = {
+        x = 830.984375
+        y = -206.2499992675781
+      }
+      deprecated = false
+      name = "Done2"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Change__From__Done_Open__Directed__1@fffszdffff = {
+      type = "DIRECTED"
+      name = "Change"
+      description = ""
+      toStatusReference = jira.Status.instance.done2
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 1
+          toPort = 5
+        },
+        {
+          fromStatusReference = jira.Status.instance.done
+          fromPort = 0
+          toPort = 4
+        },
+      ]
+    }
+    Change__From__Done_Open__Directed__2@fffszdffff = {
+      type = "DIRECTED"
+      name = "Change"
+      description = ""
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 1
+          toPort = 5
+        },
+        {
+          fromStatusReference = jira.Status.instance.done
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+    Change__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      name = "Change"
+      description = ""
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 2
+          toPort = 6
+        },
+      ]
+    }
+  }
+}

@@ -53,6 +53,19 @@ jira.PermissionScheme AlonPermissionScheme2 {
       holder = {
         type = "applicationRole"
       }
+      permission = "ARCHIVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "ARCHIVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "applicationRole"
+      }
       permission = "ASSIGNABLE_USER"
     },
     {
@@ -407,6 +420,19 @@ jira.PermissionScheme AlonPermissionScheme2 {
         parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
       }
       permission = "TRANSITION_ISSUES"
+    },
+    {
+      holder = {
+        type = "applicationRole"
+      }
+      permission = "UNARCHIVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "UNARCHIVE_ISSUES"
     },
     {
       holder = {

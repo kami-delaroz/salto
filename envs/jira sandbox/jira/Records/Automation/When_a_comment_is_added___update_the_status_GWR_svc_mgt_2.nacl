@@ -207,14 +207,17 @@ jira.Automation When_a_comment_is_added___update_the_status_GWR_svc_mgt_2@sssss_
     {
       tagType = "CREATION_TYPE"
       tagValue = "AUTO"
+      ruleIdUuid = "018f1130-47ef-7e94-9544-2a0506a78775"
     },
     {
       tagType = "SAMPLE_RULE"
       tagValue = "service_desk"
+      ruleIdUuid = "018f1130-47ef-7e94-9544-2a0506a78775"
     },
     {
       tagType = "TEMPLATE_ID"
       tagValue = "itsm_template_6"
+      ruleIdUuid = "018f1130-47ef-7e94-9544-2a0506a78775"
     },
   ]
   writeAccessType = "UNRESTRICTED"

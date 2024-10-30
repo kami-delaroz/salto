@@ -31,4 +31,5 @@ jira.Project Salto_SaaS@s {
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]
+  assigneeType = "PROJECT_LEAD"
 }

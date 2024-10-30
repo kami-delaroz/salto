@@ -1,0 +1,481 @@
+jira.WorkflowConfiguration Builds_Workflow@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Builds Workflow"
+  description = "Builds Workflow"
+  isEditable = false
+  statuses = [
+    {
+      statusReference = jira.Status.instance.build_broken@s
+      deprecated = false
+      name = "Build Broken"
+    },
+    {
+      statusReference = jira.Status.instance.building
+      deprecated = false
+      name = "Building"
+    },
+    {
+      statusReference = jira.Status.instance.closed
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      deprecated = false
+      name = "Reopened"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      deprecated = false
+      name = "Resolved"
+    },
+  ]
+  transitions = {
+    Stop_Progress__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      name = "Stop Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              accountIds = "allow-assignee"
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "stop"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "stopprogress.title"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Work_Stopped_On_Issue@s
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+    }
+    Close_Issue__From__Resolved__Directed@sfffsff = {
+      type = "DIRECTED"
+      name = "Close Issue"
+      description = "Closing an issue indicates there is no more work to be done on it, and it has been verified as complete."
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "CLOSE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "close"
+        },
+        {
+          key = "jira.i18n.submit"
+          value = "closeissue.close"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "closeissue.title"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Issue_Closed@s
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.resolved
+        },
+      ]
+    }
+    Start_Progress__From__Build_Broken_Open_Reopened__Directed@sfffsszdzdff = {
+      type = "DIRECTED"
+      name = "Start Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              accountIds = "allow-assignee"
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "start"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "startprogress.title"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Work_Started_On_Issue@s
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+        },
+        {
+          fromStatusReference = jira.Status.instance.build_broken@s
+        },
+      ]
+    }
+    Create_Issue__From__none__Initial@sfffsff = {
+      type = "INITIAL"
+      name = "Create Issue"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "common.forms.create"
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+    }
+    Close_Issue__From__Build_Broken_Building_In_Progress_Open_Reopened__Directed@sfffsszdzdszdzdff = {
+      type = "DIRECTED"
+      name = "Close Issue"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "CLOSE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Resolve_Issue_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "close"
+        },
+        {
+          key = "jira.i18n.submit"
+          value = "closeissue.close"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "closeissue.title"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Issue_Closed@s
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+        },
+        {
+          fromStatusReference = jira.Status.instance.building
+        },
+        {
+          fromStatusReference = jira.Status.instance.build_broken@s
+        },
+      ]
+    }
+    Reopen_Issue__From__Closed_Resolved__Directed@sfffszdff = {
+      type = "DIRECTED"
+      name = "Reopen Issue"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "reopen"
+        },
+        {
+          key = "jira.i18n.submit"
+          value = "issue.operations.reopen.issue"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "issue.operations.reopen.issue"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Issue_Reopened@s
+      toStatusReference = jira.Status.instance.reopened
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.resolved
+        },
+        {
+          fromStatusReference = jira.Status.instance.closed
+        },
+      ]
+    }
+    Resolve_Issue__From__Build_Broken_Building_In_Progress_Open_Reopened__Directed@sfffsszdzdszdzdff = {
+      type = "DIRECTED"
+      name = "Resolve Issue"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Resolve_Issue_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "resolve"
+        },
+        {
+          key = "jira.i18n.submit"
+          value = "resolveissue.resolve"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "resolveissue.title"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Issue_Resolved@s
+      toStatusReference = jira.Status.instance.resolved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+        },
+        {
+          fromStatusReference = jira.Status.instance.building
+        },
+        {
+          fromStatusReference = jira.Status.instance.build_broken@s
+        },
+      ]
+    }
+    Wait_for_Build__From__Build_Broken_In_Progress_Open_Reopened__Directed@ssfffsszdszdzdff = {
+      type = "DIRECTED"
+      name = "Wait for Build"
+      description = "Wait for Bamboo to build the code for this issue"
+      properties = [
+        {
+          key = "commit.command.mapping"
+          value = "build"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "com.atlassian.studio.jira.status.waitForBuild.title"
+        },
+      ]
+      toStatusReference = jira.Status.instance.building
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+        },
+        {
+          fromStatusReference = jira.Status.instance.build_broken@s
+        },
+      ]
+    }
+    Build_Passed__From__Build_Broken_Building__Directed@sfffsszdff = {
+      type = "DIRECTED"
+      name = "Build Passed"
+      description = "The build has passed"
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:unsupported"
+            parameters = {
+              class.name = "com.atlassian.studio.jira.workflow.OnlyBambooNotificationsCondition"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Resolve_Issue_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "build.passed.resolution"
+          value = "fixed"
+        },
+        {
+          key = "build.passed.transition"
+          value = "true"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "com.atlassian.studio.jira.status.buildPassed.title"
+        },
+      ]
+      toStatusReference = jira.Status.instance.resolved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.building
+        },
+        {
+          fromStatusReference = jira.Status.instance.build_broken@s
+        },
+      ]
+    }
+    Build_Failed__From__Building__Directed@sfffsff = {
+      type = "DIRECTED"
+      name = "Build Failed"
+      description = "The build for this issue failed."
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:unsupported"
+            parameters = {
+              class.name = "com.atlassian.studio.jira.workflow.OnlyBambooNotificationsCondition"
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "build.failed.transition"
+          value = "true"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "com.atlassian.studio.jira.status.buildFailed.title"
+        },
+      ]
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.building
+        },
+      ]
+    }
+  }
+}

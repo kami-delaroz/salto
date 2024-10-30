@@ -2,7 +2,6 @@ jira.ObjectTypeOrder Lior_s_IT_Schema_tss_Models_uuumu_Model_Categories_childOrd
   objectTypes = [
     jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Model_Categories_uuuuumus_Jsm1@uuuuuuuumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.Lior_s_IT_Schema@tss
   _parent = [
     jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Model_Categories@uuuuumus,
   ]

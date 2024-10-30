@@ -5,7 +5,7 @@ jira.Board GUYT_board@s {
     users = [
       {
         id = "60a60ff79b362f006919d5ff"
-        displayName = "Guy Hamo"
+        displayName = "Former user"
       },
     ]
   }
@@ -43,4 +43,5 @@ jira.Board GUYT_board@s {
     constraintType = "issueCount"
   }
   subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+  isPrivate = false
 }

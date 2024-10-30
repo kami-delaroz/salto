@@ -5,7 +5,6 @@ jira.ObjectTypeOrder Lior_s_IT_Schema_tss_Hardware_Assets_childOrder@uuumusu {
     jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Laptops@uuuuuumu,
     jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Printers@uuuuuumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.Lior_s_IT_Schema@tss
   _parent = [
     jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets@uuumus,
   ]

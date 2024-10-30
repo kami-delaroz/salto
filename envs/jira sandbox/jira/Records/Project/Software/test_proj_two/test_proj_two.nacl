@@ -25,4 +25,5 @@ jira.Project test_proj_two@b {
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
     jira.CustomFieldContext.instance.testSelectList__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,
   ]
+  assigneeType = "UNASSIGNED"
 }

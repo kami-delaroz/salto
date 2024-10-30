@@ -12,4 +12,5 @@ jira.Project idoA {
     id = "640a4787f00d095406f6727f"
     displayName = "Ido Amit"
   }
+  assigneeType = "UNASSIGNED"
 }

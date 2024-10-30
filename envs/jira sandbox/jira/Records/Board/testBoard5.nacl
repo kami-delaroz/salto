@@ -47,4 +47,5 @@ jira.Board testBoard5 {
     constraintType = "issueCount"
   }
   subQuery = "fixVersion in unreleasedVersions() AND ${ jira.Field.instance.Status__status } = ${ jira.Status.instance.done.name }"
+  isPrivate = false
 }

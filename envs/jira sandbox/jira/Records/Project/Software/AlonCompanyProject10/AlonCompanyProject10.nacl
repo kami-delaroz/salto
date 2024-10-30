@@ -19,4 +19,5 @@ jira.Project AlonCompanyProject10 {
     jira.CustomFieldContext.instance.Select_List__cascading___cascadingselect__c_ssjkuuuu_Default_Configuration_Scheme_for_Select_List__cascading_@uuuuuuuumussssssjk,
     jira.CustomFieldContext.instance.testBug__multicheckboxes__c_NewContext,
   ]
+  assigneeType = "PROJECT_LEAD"
 }

@@ -30,6 +30,19 @@ jira.PermissionScheme guy_permission_scheme@s {
     },
     {
       holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "ARCHIVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "ARCHIVE_ISSUES"
+    },
+    {
+      holder = {
         type = "anyone"
       }
       permission = "ASSIGNABLE_USER"
@@ -295,6 +308,19 @@ jira.PermissionScheme guy_permission_scheme@s {
         parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
       }
       permission = "TRANSITION_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "UNARCHIVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "sd.customer.portal.only"
+      }
+      permission = "UNARCHIVE_ISSUES"
     },
     {
       holder = {

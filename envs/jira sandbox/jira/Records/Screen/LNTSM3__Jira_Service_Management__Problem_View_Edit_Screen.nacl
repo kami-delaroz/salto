@@ -31,6 +31,7 @@ jira.Screen LNTSM3__Jira_Service_Management__Problem_View_Edit_Screen@fsssfssds 
         jira.Field.instance.Investigation_reason__select__c@suuuu,
         jira.Field.instance.Root_cause__textarea__c@suuuu,
         jira.Field.instance.Workaround__textarea__c,
+        jira.Field.instance.Parent,
       ]
       position = 0
     }

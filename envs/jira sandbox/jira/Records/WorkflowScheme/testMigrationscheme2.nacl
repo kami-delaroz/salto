@@ -1,9 +1,9 @@
 jira.WorkflowScheme testMigrationscheme2 {
   name = "testMigrationscheme2"
-  defaultWorkflow = jira.Workflow.instance.jira
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
   items = [
     {
-      workflow = jira.Workflow.instance.migrationtest3
+      workflow = jira.WorkflowConfiguration.instance.migrationtest3
       issueType = jira.IssueType.instance.Bug
     },
   ]

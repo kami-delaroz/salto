@@ -17,4 +17,5 @@ jira.Webhook New_Webhook_Listene3@s {
   ]
   enabled = true
   isSigned = false
+  lastUpdatedString = "05/Jun/24 9:35 AM"
 }

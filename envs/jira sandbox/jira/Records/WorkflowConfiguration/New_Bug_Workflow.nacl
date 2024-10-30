@@ -1,0 +1,147 @@
+jira.WorkflowConfiguration New_Bug_Workflow@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "New Bug Workflow"
+  description = "A description!"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.omg_horrible_bug_____@ssls_01488_01493_01497
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "OMG Horrible Bug! אוי"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "To Do"
+    },
+  ]
+  transitions = {
+    OK_we_ll_do_it_anyway__From__OMG_Horrible_Bug_______Directed@stsssfffsssls_01488_01493_01497ff = {
+      type = "DIRECTED"
+      name = "OK we'll do it anyway"
+      description = ""
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.omg_horrible_bug_____@ssls_01488_01493_01497
+        },
+      ]
+    }
+    We_should_do_this__From__Open__Directed@sssfffsff = {
+      type = "DIRECTED"
+      name = "We should do this"
+      description = ""
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+      ]
+    }
+    Done__From__In_Progress_To_Do__Directed@fffsszdsff = {
+      type = "DIRECTED"
+      name = "Done"
+      description = ""
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+    }
+    Working_on_it__From__To_Do__Directed@ssfffssff = {
+      type = "DIRECTED"
+      name = "Working on it"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "MOVE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+    }
+    It_s_horrible__From__Open__Directed@tsfffsff = {
+      type = "DIRECTED"
+      name = "It's horrible"
+      description = ""
+      toStatusReference = jira.Status.instance.omg_horrible_bug_____@ssls_01488_01493_01497
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+      ]
+    }
+  }
+}

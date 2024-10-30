@@ -3,8 +3,6 @@ jira.RequestType Investigate_a_problem_ITSAMPLE@ssu {
   description = "Create a problem to track the cause of one or more incidents."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Problem@his
-  restrictionStatus = "OPEN"
-  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.under_review@s
@@ -97,6 +95,14 @@ jira.RequestType Investigate_a_problem_ITSAMPLE@ssu {
   issueView = {
     issueLayoutConfig = {
       items = [
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
         {
           type = "FIELD"
           sectionType = "PRIMARY"
@@ -234,6 +240,14 @@ jira.RequestType Investigate_a_problem_ITSAMPLE@ssu {
           }
         },
         {
+          type = "PANEL"
+          sectionType = "SECONDARY"
+          key = "devSummary"
+          data = {
+            name = "Development"
+          }
+        },
+        {
           type = "FIELD"
           sectionType = "SECONDARY"
           key = jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu
@@ -263,6 +277,16 @@ jira.RequestType Investigate_a_problem_ITSAMPLE@ssu {
             custom = true
             global = true
             description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Parent
+          data = {
+            custom = false
+            global = true
             required = false
           }
         },

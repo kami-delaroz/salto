@@ -5,7 +5,7 @@ jira.Board GT_board@s {
     users = [
       {
         id = "60a60ff79b362f006919d5ff"
-        displayName = "Guy Hamo"
+        displayName = "Former user"
       },
     ]
   }
@@ -27,4 +27,5 @@ jira.Board GT_board@s {
   estimation = {
     field = jira.Field.instance.Story_Points__float__c@suuuu
   }
+  isPrivate = false
 }

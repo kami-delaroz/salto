@@ -1,0 +1,11 @@
+jira.PortalSettings DP_Service_Project@s {
+  name = "DP Service Project"
+  description = "Welcome! You can raise a request for DP Service Project using the options provided."
+  announcementSettings = {
+    canAgentsManagePortalAnnouncement = false
+  }
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+  _alias = "DP Service Project:DP Service Project"
+}

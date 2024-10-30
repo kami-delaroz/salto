@@ -3,8 +3,6 @@ jira.RequestType Report_broken_hardware_ITSAMPLE@ssu {
   description = "Report hardware that might be faulty or broken e.g. a broken computer screen or a damaged server."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Incident@his
-  restrictionStatus = "OPEN"
-  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.completed
@@ -118,6 +116,14 @@ jira.RequestType Report_broken_hardware_ITSAMPLE@ssu {
     issueLayoutConfig = {
       items = [
         {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
+        {
           type = "FIELD"
           sectionType = "PRIMARY"
           key = jira.Field.instance.Assignee__user
@@ -210,6 +216,54 @@ jira.RequestType Report_broken_hardware_ITSAMPLE@ssu {
             global = true
             description = "Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk."
             required = false
+          }
+        },
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "LINKED_ALERTS"
+          data = {
+            name = "Linked Alerts"
+          }
+        },
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "CHAT_CHANNEL"
+          data = {
+            name = "Chat Channel"
+          }
+        },
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "MSTEAMS_CHANNEL"
+          data = {
+            name = "MS Teams Channel"
+          }
+        },
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "ZOOM_MEETING"
+          data = {
+            name = "Zoom"
+          }
+        },
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "CONFERENCE_CALL"
+          data = {
+            name = "Conference Call"
+          }
+        },
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "MANAGE_STAKEHOLDERS"
+          data = {
+            name = "Stakeholders"
           }
         },
         {
@@ -338,6 +392,16 @@ jira.RequestType Report_broken_hardware_ITSAMPLE@ssu {
             custom = true
             global = true
             description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Parent
+          data = {
+            custom = false
+            global = true
             required = false
           }
         },

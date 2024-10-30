@@ -46,4 +46,5 @@ jira.Board testScrum {
     field = jira.Field.instance.Original_estimate__number@suu
     timeTracking = jira.Field.instance.Remaining_Estimate__number@suu
   }
+  isPrivate = false
 }

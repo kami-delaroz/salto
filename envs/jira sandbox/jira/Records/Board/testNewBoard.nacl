@@ -25,4 +25,5 @@ jira.Board testNewBoard {
     constraintType = "issueCount"
   }
   subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+  isPrivate = false
 }

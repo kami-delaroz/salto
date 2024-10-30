@@ -90,6 +90,7 @@ jira.Automation DP___Update_Priority_DP___SaaS_Project@sbssusbss {
     {
       tagType = "IS_RULE_UPDATED"
       tagValue = "true"
+      ruleIdUuid = "018e2b8a-64da-70c4-841d-eb1a6304fba7"
     },
   ]
   writeAccessType = "UNRESTRICTED"

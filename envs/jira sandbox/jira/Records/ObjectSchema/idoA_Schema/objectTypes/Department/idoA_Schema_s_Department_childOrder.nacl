@@ -4,7 +4,6 @@ jira.ObjectTypeOrder idoA_Schema_s_Department_childOrder@umuu {
     jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D@uuumue,
     jira.ObjectType.instance.idoA_Schema_s_Department_umu_shir@uuumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.idoA_Schema@s
   _parent = [
     jira.ObjectType.instance.idoA_Schema_s_Department@umu,
   ]

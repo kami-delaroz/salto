@@ -11,10 +11,11 @@ jira.Project guytestproject {
   issueTypeScheme = jira.IssueTypeScheme.instance.GUYT__Kanban_Issue_Type_Scheme@fssss
   leadAccountId = {
     id = "60a60ff79b362f006919d5ff"
-    displayName = "Guy Hamo"
+    displayName = "Former user"
   }
   fieldContexts = [
     jira.CustomFieldContext.instance.guytest__float__c_somelabel,
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]
+  assigneeType = "UNASSIGNED"
 }

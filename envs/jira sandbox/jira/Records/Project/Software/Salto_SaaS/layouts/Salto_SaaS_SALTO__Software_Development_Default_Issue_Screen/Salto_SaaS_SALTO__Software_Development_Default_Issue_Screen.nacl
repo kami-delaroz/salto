@@ -23,6 +23,14 @@ jira.IssueLayout Salto_SaaS_SALTO__Software_Development_Default_Issue_Screen@suf
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

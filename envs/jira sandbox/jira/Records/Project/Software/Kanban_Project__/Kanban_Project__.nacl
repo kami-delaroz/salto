@@ -12,4 +12,5 @@ jira.Project Kanban_Project__@s {
     id = "605c3da2109af10068b38c4e"
     displayName = "Sagi Bracha"
   }
+  assigneeType = "UNASSIGNED"
 }

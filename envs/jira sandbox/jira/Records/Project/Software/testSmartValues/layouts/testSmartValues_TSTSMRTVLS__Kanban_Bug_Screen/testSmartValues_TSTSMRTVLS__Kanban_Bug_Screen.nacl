@@ -23,6 +23,14 @@ jira.IssueLayout testSmartValues_TSTSMRTVLS__Kanban_Bug_Screen@ufsss {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array
@@ -140,6 +148,26 @@ jira.IssueLayout testSmartValues_TSTSMRTVLS__Kanban_Bug_Screen@ufsss {
         type = "FIELD"
         sectionType = "SECONDARY"
         key = jira.Field.instance.Parent
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "CONTENT"
+        key = jira.Field.instance.Description__string
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "CONTENT"
+        key = jira.Field.instance.Environment__string
         data = {
           custom = false
           global = true

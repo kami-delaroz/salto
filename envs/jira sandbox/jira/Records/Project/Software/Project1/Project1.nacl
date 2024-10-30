@@ -12,4 +12,5 @@ jira.Project Project1 {
     id = "62d20c47a94a6f9c0eff9866"
     displayName = "Ido Zak"
   }
+  assigneeType = "PROJECT_LEAD"
 }

@@ -23,6 +23,14 @@ jira.IssueLayout testProj22_TSTPRJ2__Kanban_Default_Issue_Screen@ufssss {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

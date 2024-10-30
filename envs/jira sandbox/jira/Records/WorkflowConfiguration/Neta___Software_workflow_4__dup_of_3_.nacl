@@ -1,0 +1,67 @@
+jira.WorkflowConfiguration Neta___Software_workflow_4__dup_of_3_@sbssssjssk {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Neta - Software workflow 4 (dup of 3)"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = -100.00030899047852
+    y = -153.00020599365234
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done_10@s
+      layout = {
+        x = 508.000244140625
+        y = -16
+      }
+      deprecated = false
+      name = "Done 10"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress_10@s
+      layout = {
+        x = 317.0000915527344
+        y = -16
+      }
+      deprecated = false
+      name = "In Progress 10"
+    },
+    {
+      statusReference = jira.Status.instance.to_do_10@s
+      layout = {
+        x = 114.99993896484375
+        y = -16
+      }
+      deprecated = false
+      name = "To Do 10"
+    },
+  ]
+  transitions = {
+    Done__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      name = "Done"
+      description = ""
+      toStatusReference = jira.Status.instance.done_10@s
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      toStatusReference = jira.Status.instance.to_do_10@s
+    }
+    To_Do__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      name = "To Do"
+      description = ""
+      toStatusReference = jira.Status.instance.to_do_10@s
+    }
+    In_Progress__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      name = "In Progress"
+      description = ""
+      toStatusReference = jira.Status.instance.in_progress_10@s
+    }
+  }
+}

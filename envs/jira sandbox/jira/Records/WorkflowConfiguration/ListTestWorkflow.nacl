@@ -1,0 +1,94 @@
+jira.WorkflowConfiguration ListTestWorkflow {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "ListTestWorkflow"
+  description = "Check Guy's stuff"
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = -82.6
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.build_broken@s
+      layout = {
+        x = 1052.828125
+        y = 267.4
+      }
+      deprecated = false
+      name = "A new step7"
+    },
+    {
+      statusReference = jira.Status.instance.building
+      layout = {
+        x = 1068.4140625
+        y = 217.4
+      }
+      deprecated = false
+      name = "Step6"
+    },
+    {
+      statusReference = jira.Status.instance.cancelled2
+      layout = {
+        x = 1056.796875
+        y = 17.400000000000006
+      }
+      deprecated = false
+      name = "Step2"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = -32.599999999999994
+      }
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      layout = {
+        x = 1064.125
+        y = 67.4
+      }
+      deprecated = false
+      name = "Step3"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      layout = {
+        x = 1064.7421875
+        y = 117.4
+      }
+      deprecated = false
+      name = "Step4"
+    },
+    {
+      statusReference = jira.Status.instance.under_review@s
+      deprecated = false
+      name = "ANewFinalStep"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+    }
+  }
+}
