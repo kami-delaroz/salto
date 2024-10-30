@@ -12,6 +12,7 @@ jira.Board IDOA_board@s {
   location = {
     projectId = jira.Project.instance.idoA
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_IDOA_board@s
   columnConfig = {
     columns = [

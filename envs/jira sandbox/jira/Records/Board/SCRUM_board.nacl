@@ -12,6 +12,7 @@ jira.Board SCRUM_board@s {
   location = {
     projectId = jira.Project.instance.ScrumProject
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_EM_board@s
   columnConfig = {
     columns = [

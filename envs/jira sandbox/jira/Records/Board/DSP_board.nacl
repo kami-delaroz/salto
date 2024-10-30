@@ -12,6 +12,7 @@ jira.Board DSP_board@s {
   location = {
     projectId = jira.Project.instance.DP___SaaS_Project@sbss
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_DSP_board@s
   columnConfig = {
     columns = [

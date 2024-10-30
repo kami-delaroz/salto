@@ -12,6 +12,7 @@ jira.Board LIORCOMP_board@s {
   location = {
     projectId = jira.Project.instance.LiorCompanyManaged
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_LIORCOMP_board@s
   columnConfig = {
     columns = [

@@ -12,6 +12,7 @@ jira.Project guytestmigration {
     id = "60a60ff79b362f006919d5ff"
     displayName = "Former user"
   }
+  assigneeType = "UNASSIGNED"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

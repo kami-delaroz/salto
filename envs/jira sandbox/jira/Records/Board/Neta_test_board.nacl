@@ -12,6 +12,7 @@ jira.Board Neta_test_board@s {
   location = {
     projectId = jira.Project.instance.Neta_aaa@s
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_NA_board@s
   columnConfig = {
     columns = [

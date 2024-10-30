@@ -12,6 +12,7 @@ jira.Board Engineering {
   location = {
     projectId = jira.Project.instance.AlonCompanyProject
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_WIP@s
   columnConfig = {
     columns = [

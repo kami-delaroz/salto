@@ -12,6 +12,7 @@ jira.Board TSTSMRTVLS_board@s {
   location = {
     projectId = jira.Project.instance.testSmartValues
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_TSTSMRTVLS_board@s
   columnConfig = {
     columns = [

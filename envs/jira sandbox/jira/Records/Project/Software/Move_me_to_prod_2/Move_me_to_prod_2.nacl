@@ -12,6 +12,7 @@ jira.Project Move_me_to_prod_2@s {
     id = "60e8b78784c9920071996842"
     displayName = "Lior Neudorfer"
   }
+  assigneeType = "PROJECT_LEAD"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

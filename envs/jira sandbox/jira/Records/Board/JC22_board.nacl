@@ -12,6 +12,7 @@ jira.Board JC22_board@s {
   location = {
     projectId = jira.Project.instance.JiraCon_Project@s
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_JC22_board@s
   columnConfig = {
     columns = [

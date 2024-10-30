@@ -12,6 +12,7 @@ jira.Board TSTPRJ3_board@s {
   location = {
     projectId = jira.Project.instance.testProj3
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_TSTPRJ3_board@s
   columnConfig = {
     columns = [

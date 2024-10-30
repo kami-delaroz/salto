@@ -16,6 +16,7 @@ jira.Project test_proj_two@b {
     id = "5cd027a783de300fe5d4b9b0"
     displayName = "Ori Moisis"
   }
+  assigneeType = "UNASSIGNED"
   fieldContexts = [
     jira.CustomFieldContext.instance.Custom_multi_line_field__textarea__c_sssuuuu_Default_Configuration_Scheme_for_Custom_multi_line_field@uuuuuuumusssssss,
     jira.CustomFieldContext.instance.testSelectList2__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,

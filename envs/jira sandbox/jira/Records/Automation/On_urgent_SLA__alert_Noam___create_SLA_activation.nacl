@@ -94,6 +94,7 @@ jira.Automation On_urgent_SLA__alert_Noam___create_SLA_activation@sszdssszesss {
   ]
   tags = [
     {
+      ruleIdUuid = "018e3787-398e-7096-af1f-85049092d07e"
       tagType = "IS_RULE_UPDATED"
       tagValue = "true"
       ruleIdUuid = "018e3787-398e-7096-af1f-85049092d07e"

@@ -18,6 +18,12 @@ jira.Permissions {
       type = "PROJECT"
       description = "Ability to administer a project in Jira."
     }
+    ARCHIVE_ISSUES = {
+      key = "ARCHIVE_ISSUES"
+      name = "Archive Issues"
+      type = "PROJECT"
+      description = "Ability to archive issues."
+    }
     ASSIGNABLE_USER = {
       key = "ASSIGNABLE_USER"
       name = "Assignable User"
@@ -132,6 +138,12 @@ jira.Permissions {
       type = "PROJECT"
       description = "Ability to edit issues."
     }
+    EDIT_ISSUE_LAYOUT = {
+      key = "EDIT_ISSUE_LAYOUT"
+      name = "Manage Issue Layouts"
+      type = "PROJECT"
+      description = "Ability to modify issue layouts and discover and utilize new fields within an issue layout."
+    }
     EDIT_OWN_COMMENTS = {
       key = "EDIT_OWN_COMMENTS"
       name = "Edit Own Comments"
@@ -143,6 +155,12 @@ jira.Permissions {
       name = "Edit Own Worklogs"
       type = "PROJECT"
       description = "Ability to edit own worklogs made on issues."
+    }
+    EDIT_WORKFLOW = {
+      key = "EDIT_WORKFLOW"
+      name = "Edit Workflows"
+      type = "PROJECT"
+      description = "Ability to edit workflows."
     }
     LINK_ISSUES = {
       key = "LINK_ISSUES"
@@ -215,6 +233,12 @@ jira.Permissions {
       name = "Transition Issues"
       type = "PROJECT"
       description = "Ability to transition issues."
+    }
+    UNARCHIVE_ISSUES = {
+      key = "UNARCHIVE_ISSUES"
+      name = "Restore Archived Issues"
+      type = "PROJECT"
+      description = "Ability to restore archived issues."
     }
     USER_PICKER = {
       key = "USER_PICKER"

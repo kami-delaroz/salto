@@ -12,6 +12,7 @@ jira.Board Compliance_Board@s {
   location = {
     projectId = jira.Project.instance.JiraCon_Project@s
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_Compliance_Board@s
   columnConfig = {
     columns = [

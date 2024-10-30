@@ -132,6 +132,31 @@ jira.WorkflowConfiguration AS2__Simple_Issue_Tracking_Workflow__4_@fsssssjk {
         },
       ]
     }
+    Done__From__To_Do__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+      ]
+      name = "Done"
+      description = ""
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "jira.issuetracking.simple.workflow.action.done.name"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "jira.issuetracking.simple.workflow.action.done.name"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
     Stop_Progress__From__In_Progress__Directed@sfffssff = {
       type = "DIRECTED"
       name = "Stop Progress"

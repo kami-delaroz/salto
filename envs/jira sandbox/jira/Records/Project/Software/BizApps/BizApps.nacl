@@ -12,6 +12,7 @@ jira.Project BizApps {
     id = "5e5e289fc8ec310c955d2d15"
     displayName = "Hadas Birin"
   }
+  assigneeType = "PROJECT_LEAD"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

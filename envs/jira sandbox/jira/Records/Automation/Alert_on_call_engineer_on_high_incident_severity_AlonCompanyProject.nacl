@@ -90,6 +90,7 @@ jira.Automation Alert_on_call_engineer_on_high_incident_severity_AlonCompanyProj
   ]
   tags = [
     {
+      ruleIdUuid = "018eeacd-8efa-777e-9033-cf614f5fb4fa"
       tagType = "IS_RULE_UPDATED"
       tagValue = "true"
       ruleIdUuid = "018eeacd-8efa-777e-9033-cf614f5fb4fa"

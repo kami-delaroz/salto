@@ -13,6 +13,7 @@ jira.Project test_proj_three@b {
     id = "5cd027a783de300fe5d4b9b0"
     displayName = "Ori Moisis"
   }
+  assigneeType = "UNASSIGNED"
   fieldContexts = [
     jira.CustomFieldContext.instance.__Progress2__multicheckboxes__c__00931suuuu_testContext1@uuuuuumuu,
     jira.CustomFieldContext.instance.testSelectList2__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,

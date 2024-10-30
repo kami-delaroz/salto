@@ -15,6 +15,7 @@ jira.Project process_control_project@b {
     id = "5cd027a783de300fe5d4b9b0"
     displayName = "Ori Moisis"
   }
+  assigneeType = "UNASSIGNED"
   fieldContexts = [
     jira.CustomFieldContext.instance.Category__jwm_category__c_uubuu_Category_Field_Config_Scheme_for_Project__process_control_project@uuuuumusssssfsbb,
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,

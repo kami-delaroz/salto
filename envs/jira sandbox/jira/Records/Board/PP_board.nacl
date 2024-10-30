@@ -12,6 +12,7 @@ jira.Board PP_board@s {
   location = {
     projectId = jira.Project.instance.Project_Playground@s
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_PP_board@s
   columnConfig = {
     columns = [

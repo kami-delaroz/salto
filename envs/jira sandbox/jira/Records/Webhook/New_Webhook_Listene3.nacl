@@ -16,6 +16,7 @@ jira.Webhook New_Webhook_Listene3@s {
     "sprint_created",
   ]
   enabled = true
+  lastUpdatedString = "05/Jun/24 9:35 AM"
   isSigned = false
   lastUpdatedString = "05/Jun/24 9:35 AM"
 }

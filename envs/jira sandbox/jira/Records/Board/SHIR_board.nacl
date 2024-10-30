@@ -12,6 +12,7 @@ jira.Board SHIR_board@s {
   location = {
     projectId = jira.Project.instance.ShirTest1
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_SHIR_board@s
   columnConfig = {
     columns = [
