@@ -9,6 +9,7 @@ jira.Board TShirSBOARD {
       },
     ]
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_TSTPRJ5_board@s
   columnConfig = {
     columns = [

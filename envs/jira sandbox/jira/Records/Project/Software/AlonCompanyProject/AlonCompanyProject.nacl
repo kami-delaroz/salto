@@ -20,6 +20,7 @@ jira.Project AlonCompanyProject {
     id = "5fa91999b2633d0076583a61"
     displayName = "Alon Stern"
   }
+  assigneeType = "UNASSIGNED"
   fieldContexts = [
     jira.CustomFieldContext.instance.For_Jira_PCS_180060__select__c_ssbuuuu_label@uuuuuuumu,
     jira.CustomFieldContext.instance.Version_Picker__single_version___version__c_ssjskuuuu_second@uuuuuuuuumu,

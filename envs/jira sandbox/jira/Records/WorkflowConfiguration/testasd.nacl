@@ -1,0 +1,97 @@
+jira.WorkflowConfiguration testasd {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "testasd"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance._teststatus_@hi
+      layout = {
+        x = 488.03125
+        y = -59.700001220703115
+      }
+      deprecated = false
+      name = "[testStatus]"
+    },
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      layout = {
+        x = 1025.703125
+        y = -67.70000122070311
+      }
+      deprecated = false
+      name = "A shared status3"
+    },
+    {
+      statusReference = jira.Status.instance.a_shared_status4@s
+      layout = {
+        x = 352.640625
+        y = 119.4
+      }
+      deprecated = false
+      name = "A shared status4"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 913.40625
+        y = 174.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    a__From__A_shared_status3__Directed@fffsssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.a_shared_status3@s
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "a"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    a__From___testStatus___Directed@fffshiff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance._teststatus_@hi
+          fromPort = 4
+          toPort = 0
+        },
+      ]
+      name = "a"
+      description = ""
+    }
+  }
+}

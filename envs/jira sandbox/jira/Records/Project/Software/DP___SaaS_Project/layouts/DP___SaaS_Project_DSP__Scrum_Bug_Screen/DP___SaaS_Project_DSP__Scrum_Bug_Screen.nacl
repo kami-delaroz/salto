@@ -23,6 +23,14 @@ jira.IssueLayout DP___SaaS_Project_DSP__Scrum_Bug_Screen@sbssufsss {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array
@@ -51,6 +59,17 @@ jira.IssueLayout DP___SaaS_Project_DSP__Scrum_Bug_Screen@sbssufsss {
           custom = true
           global = true
           description = "For Testing"
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "PRIMARY"
+        key = jira.Field.instance.DP___Date__datetime__c@sbsuuuu
+        data = {
+          custom = true
+          global = true
+          description = ""
           required = false
         }
       },

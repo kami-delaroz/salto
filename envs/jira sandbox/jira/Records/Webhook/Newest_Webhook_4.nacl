@@ -13,5 +13,6 @@ jira.Webhook Newest_Webhook_4@s {
     "project_deleted",
   ]
   enabled = true
+  lastUpdatedString = "05/Jun/24 10:57 AM"
   isSigned = false
 }

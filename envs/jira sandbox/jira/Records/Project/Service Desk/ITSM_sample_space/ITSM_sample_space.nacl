@@ -31,6 +31,7 @@ jira.Project ITSM_sample_space@s {
     id = "60e8b78784c9920071996842"
     displayName = "Lior Neudorfer"
   }
+  assigneeType = "UNASSIGNED"
   customerPermissions = {
     manageEnabled = false
     autocompleteEnabled = false

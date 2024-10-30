@@ -5,7 +5,6 @@ jira.ObjectTypeOrder ITSBX_Hardware_Assets_childOrder@usu {
     jira.ObjectType.instance.ITSBX_Hardware_Assets_us_Servers@uumu,
     jira.ObjectType.instance.ITSBX_Hardware_Assets_us_Printers@uumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.ITSBX
   _parent = [
     jira.ObjectType.instance.ITSBX_Hardware_Assets@us,
   ]

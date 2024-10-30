@@ -10,4 +10,5 @@ jira.Project Neta_team_managed_111@sbs {
     id = "5eea285a41f7000abb1b049d"
     displayName = "Neta Marcus"
   }
+  assigneeType = "UNASSIGNED"
 }

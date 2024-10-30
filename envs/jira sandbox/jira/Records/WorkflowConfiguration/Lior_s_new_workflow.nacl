@@ -1,0 +1,173 @@
+jira.WorkflowConfiguration Lior_s_new_workflow@tss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Lior's new workflow"
+  description = "GO SHAY ZOMG"
+  isEditable = true
+  startPointLayout = {
+    x = 494
+    y = -141
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 833.859619140625
+        y = 104.60000244140623
+      }
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.idotest555
+      layout = {
+        x = 997.9364013671875
+        y = 134.60000244140622
+      }
+      deprecated = false
+      name = "IdoTest555"
+    },
+    {
+      statusReference = jira.Status.instance.in_fut@s
+      layout = {
+        x = 750.406494140625
+        y = -12.599999999999994
+      }
+      deprecated = false
+      name = "Futty"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 619.40625
+        y = -77.6
+      }
+      properties = [
+        {
+          key = "Li"
+          value = "Or"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    CLANGZ__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_fut@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 5
+          toPort = 7
+        },
+      ]
+      name = "CLANGZ"
+      description = "Shloop"
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.shay_date_time_picker__datetime__c@sssuuuu
+            value = "fsd"
+            mode = "append"
+          }
+        },
+      ]
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "DELETE_ISSUES"
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:check-field-value"
+            parameters = {
+              fieldId = jira.Field.instance.Comment__comments_page@uub
+              fieldValue = "[\"fdsds\"]"
+              comparator = ">"
+              comparisonType = "OPTIONID"
+            }
+          },
+        ]
+      }
+      triggers = [
+        {
+          ruleKey = "system:development-triggers"
+          parameters = {
+            enabledTriggers = [
+              "review-closed-trigger",
+            ]
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "Prop1"
+          value = "ProppppValue"
+        },
+      ]
+    }
+    IdoTest555__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.idotest555
+      name = "IdoTest555"
+      description = ""
+    }
+    New555__From__Closed_Futty__Directed@fffszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.idotest555
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_fut@s
+          fromPort = 4
+          toPort = 0
+        },
+        {
+          fromStatusReference = jira.Status.instance.closed
+          fromPort = 5
+          toPort = 7
+        },
+      ]
+      name = "New555"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 1
+        },
+      ]
+      name = "Create"
+      description = ""
+    }
+    Boko__From__Futty__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_fut@s
+          fromPort = 5
+          toPort = 7
+        },
+      ]
+      name = "Boko"
+      description = "CRONGS"
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.IdoFailThis
+        }
+      }
+    }
+  }
+}

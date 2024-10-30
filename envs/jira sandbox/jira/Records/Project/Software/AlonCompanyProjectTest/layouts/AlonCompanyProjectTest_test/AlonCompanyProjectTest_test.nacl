@@ -23,6 +23,14 @@ jira.IssueLayout AlonCompanyProjectTest_test {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Affected_hardware__textfield__c@suuuu

@@ -12,6 +12,7 @@ jira.Board MIG_board@s {
   location = {
     projectId = jira.Project.instance.Mig
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_MIG_board@s
   columnConfig = {
     columns = [

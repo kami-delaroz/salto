@@ -105,5 +105,7 @@ jira.IssueTypeScheme Default_Issue_Type_Scheme@s {
     jira.IssueType.instance.testIssueType2,
     jira.IssueType.instance.Zombo_Plaaugn@s,
     jira.IssueType.instance.Bug4,
+    jira.IssueType.instance.General_request@s,
+    jira.IssueType.instance.Email_Issue_Type@s,
   ]
 }

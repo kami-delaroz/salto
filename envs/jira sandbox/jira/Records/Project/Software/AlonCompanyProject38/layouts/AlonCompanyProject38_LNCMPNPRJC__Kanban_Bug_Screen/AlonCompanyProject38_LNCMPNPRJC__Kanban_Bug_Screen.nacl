@@ -23,6 +23,14 @@ jira.IssueLayout AlonCompanyProject38_LNCMPNPRJC__Kanban_Bug_Screen@ufsss {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

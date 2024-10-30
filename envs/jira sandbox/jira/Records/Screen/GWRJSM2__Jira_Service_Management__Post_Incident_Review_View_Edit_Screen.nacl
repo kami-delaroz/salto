@@ -26,6 +26,7 @@ jira.Screen GWRJSM2__Jira_Service_Management__Post_Incident_Review_View_Edit_Scr
         jira.Field.instance.Approvers__multiuserpicker__c,
         jira.Field.instance.Organizations__sd_customer_organizations__c@uubbuu,
         jira.Field.instance.Approver_groups__multigrouppicker__c@suuuu,
+        jira.Field.instance.Parent,
       ]
       position = 0
     }

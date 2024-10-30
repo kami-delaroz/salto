@@ -12,6 +12,7 @@ jira.Board COM_board@s {
   location = {
     projectId = jira.Project.instance.Combo
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_COM_board@s
   columnConfig = {
     columns = [

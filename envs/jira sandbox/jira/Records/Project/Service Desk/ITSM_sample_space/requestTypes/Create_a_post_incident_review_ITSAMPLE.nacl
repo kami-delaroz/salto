@@ -3,8 +3,6 @@ jira.RequestType Create_a_post_incident_review_ITSAMPLE@ssbsu {
   description = "Document and share learnings from an incident so that it doesn't happen again"
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Post_incident_review@hisbs
-  restrictionStatus = "OPEN"
-  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.closed
@@ -61,6 +59,14 @@ jira.RequestType Create_a_post_incident_review_ITSAMPLE@ssbsu {
   issueView = {
     issueLayoutConfig = {
       items = [
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
         {
           type = "FIELD"
           sectionType = "PRIMARY"
@@ -204,6 +210,16 @@ jira.RequestType Create_a_post_incident_review_ITSAMPLE@ssbsu {
           type = "FIELD"
           sectionType = "SECONDARY"
           key = jira.Field.instance.Components__array
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Parent
           data = {
             custom = false
             global = true

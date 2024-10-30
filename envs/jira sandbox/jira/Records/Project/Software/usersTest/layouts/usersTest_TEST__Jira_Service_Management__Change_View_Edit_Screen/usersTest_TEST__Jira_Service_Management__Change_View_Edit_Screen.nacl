@@ -23,6 +23,14 @@ jira.IssueLayout usersTest_TEST__Jira_Service_Management__Change_View_Edit_Scree
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array
@@ -231,6 +239,16 @@ jira.IssueLayout usersTest_TEST__Jira_Service_Management__Change_View_Edit_Scree
         type = "FIELD"
         sectionType = "SECONDARY"
         key = jira.Field.instance.Priority__priority
+        data = {
+          custom = false
+          global = true
+          required = false
+        }
+      },
+      {
+        type = "FIELD"
+        sectionType = "SECONDARY"
+        key = jira.Field.instance.Parent
         data = {
           custom = false
           global = true

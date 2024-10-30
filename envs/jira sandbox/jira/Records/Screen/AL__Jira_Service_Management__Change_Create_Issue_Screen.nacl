@@ -36,6 +36,7 @@ jira.Screen AL__Jira_Service_Management__Change_Create_Issue_Screen@fsssfssss {
         jira.Field.instance.Backout_plan__textarea__c@suuuu,
         jira.Field.instance.Test_plan__textarea__c@suuuu,
         jira.Field.instance.Change_reason__select__c@suuuu,
+        jira.Field.instance.Batel_new_asset_creation__cmdb_object_cftype__c@sssuubbuu,
       ]
       position = 0
     }

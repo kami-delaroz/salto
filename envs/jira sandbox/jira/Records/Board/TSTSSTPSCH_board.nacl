@@ -12,6 +12,7 @@ jira.Board TSTSSTPSCH_board@s {
   location = {
     projectId = jira.Project.instance.testIssueTypeScheme
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_TSTSSTPSCH_board@s
   columnConfig = {
     columns = [

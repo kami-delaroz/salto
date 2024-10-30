@@ -12,6 +12,7 @@ jira.Board testBoard7 {
   location = {
     projectId = jira.Project.instance.AlonCompanyProject
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_testBoard@s
   columnConfig = {
     columns = [

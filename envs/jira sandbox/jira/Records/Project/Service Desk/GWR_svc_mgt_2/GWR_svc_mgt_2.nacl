@@ -31,4 +31,5 @@ jira.Project GWR_svc_mgt_2@s {
     id = "61980f073618cd006f48823b"
     displayName = "Geoffrey Routledge"
   }
+  assigneeType = "UNASSIGNED"
 }

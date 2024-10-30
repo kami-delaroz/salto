@@ -1,5 +1,5 @@
 jira.WorkflowScheme FUN__Simple_Issue_Tracking_Workflow_Scheme@fsssss {
   name = "FUN: Simple Issue Tracking Workflow Scheme"
   description = ""
-  defaultWorkflow = jira.Workflow.instance.FUN__Simple_Issue_Tracking_Workflow@fssss
+  defaultWorkflow = jira.WorkflowConfiguration.instance.FUN__Simple_Issue_Tracking_Workflow@fssss
 }

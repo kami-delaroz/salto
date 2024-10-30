@@ -4,7 +4,6 @@ jira.ObjectTypeOrder DP___Services_sbs_Models_childOrder@uuumuu {
     jira.ObjectType.instance.DP___Services_sbs_Models_uuumu_Model_Categories@uuuuumus,
     jira.ObjectType.instance.DP___Services_sbs_Models_uuumu_Software_Models@uuuuumus,
   ]
-  assetsSchema = jira.ObjectSchema.instance.DP___Services@sbs
   _parent = [
     jira.ObjectType.instance.DP___Services_sbs_Models@uuumu,
   ]

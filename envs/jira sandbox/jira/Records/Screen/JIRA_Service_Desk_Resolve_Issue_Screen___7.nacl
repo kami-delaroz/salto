@@ -13,3 +13,16 @@ jira.Screen JIRA_Service_Desk_Resolve_Issue_Screen___7@ssssssbs {
     }
   }
 }
+jira.Screen Jira_Service_Desk_Resolve_Issue_Screen___7@ssssssbs {
+  name = "Jira Service Desk Resolve Issue Screen - 7"
+  description = "Allows to set resolution"
+  tabs = {
+    Field_Tab@s = {
+      name = "Field Tab"
+      fields = [
+        jira.Field.instance.Resolution__resolution,
+      ]
+      position = 0
+    }
+  }
+}

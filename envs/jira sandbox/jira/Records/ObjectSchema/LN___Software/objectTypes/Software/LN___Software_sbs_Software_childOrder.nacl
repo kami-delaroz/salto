@@ -3,7 +3,6 @@ jira.ObjectTypeOrder LN___Software_sbs_Software_childOrder@uuumuu {
     jira.ObjectType.instance.LN___Software_sbs_Software_uuumu_Licenses@uuuuumu,
     jira.ObjectType.instance.LN___Software_sbs_Software_uuumu_PhysicalCopies@uuuuumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.LN___Software@sbs
   _parent = [
     jira.ObjectType.instance.LN___Software_sbs_Software@uuumu,
   ]

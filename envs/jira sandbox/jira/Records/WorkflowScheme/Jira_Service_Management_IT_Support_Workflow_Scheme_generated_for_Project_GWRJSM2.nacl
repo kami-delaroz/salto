@@ -1,38 +1,38 @@
 jira.WorkflowScheme Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_GWRJSM2@s {
   name = "Jira Service Management IT Support Workflow Scheme generated for Project GWRJSM2"
   description = "This Jira Service Management IT Support Workflow Scheme was generated for Project GWRJSM2"
-  defaultWorkflow = jira.Workflow.instance.jira
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
   items = [
     {
-      workflow = jira.Workflow.instance.GWRJSM2__Jira_Service_Management_default_workflow@fsssss
+      workflow = jira.WorkflowConfiguration.instance.GWRJSM2__Jira_Service_Management_default_workflow@fsssss
       issueType = jira.IssueType.instance.Task
     },
     {
-      workflow = jira.Workflow.instance.GWRJSM2__Jira_Service_Management_default_workflow@fsssss
+      workflow = jira.WorkflowConfiguration.instance.GWRJSM2__Jira_Service_Management_default_workflow@fsssss
       issueType = jira.IssueType.instance.Sub_task@b
     },
     {
-      workflow = jira.Workflow.instance.GWRJSM2__Incident_Management_workflow_for_Jira_Service_Management@fsssssss
+      workflow = jira.WorkflowConfiguration.instance.GWRJSM2__Incident_Management_workflow_for_Jira_Service_Management@fsssssss
       issueType = jira.IssueType.instance._System__Incident@his
     },
     {
-      workflow = jira.Workflow.instance.GWRJSM2__Post_Incident_Review_workflow_for_Jira_Service_Management@fsbssssss
+      workflow = jira.WorkflowConfiguration.instance.GWRJSM2__Post_Incident_Review_workflow_for_Jira_Service_Management@fsbssssss
       issueType = jira.IssueType.instance._System__Post_incident_review@hisbs
     },
     {
-      workflow = jira.Workflow.instance.GWRJSM2__Service_Request_Fulfilment_workflow_for_Jira_Service_Management@fssssssss
+      workflow = jira.WorkflowConfiguration.instance.GWRJSM2__Service_Request_Fulfilment_workflow_for_Jira_Service_Management@fssssssss
       issueType = jira.IssueType.instance._System__Service_request@hiss
     },
     {
-      workflow = jira.Workflow.instance.GWRJSM2__Service_Request_Fulfilment_with_Approvals_workflow_for_Jira_Service_Management@fssssssssss
+      workflow = jira.WorkflowConfiguration.instance.GWRJSM2__Service_Request_Fulfilment_with_Approvals_workflow_for_Jira_Service_Management@fssssssssss
       issueType = jira.IssueType.instance._System__Service_request_with_approvals@hissss
     },
     {
-      workflow = jira.Workflow.instance.GWRJSM2__Change_Management_workflow_for_Jira_Service_Management@fsssssss
+      workflow = jira.WorkflowConfiguration.instance.GWRJSM2__Change_Management_workflow_for_Jira_Service_Management@fsssssss
       issueType = jira.IssueType.instance._System__Change@his
     },
     {
-      workflow = jira.Workflow.instance.GWRJSM2__Problem_Management_workflow_for_Jira_Service_Management@fsssssss
+      workflow = jira.WorkflowConfiguration.instance.GWRJSM2__Problem_Management_workflow_for_Jira_Service_Management@fsssssss
       issueType = jira.IssueType.instance._System__Problem@his
     },
   ]

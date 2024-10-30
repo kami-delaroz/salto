@@ -23,6 +23,14 @@ jira.IssueLayout Back_Office_FUN__Simple_Issue_Tracking_Edit_View_Issue_Screen@s
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

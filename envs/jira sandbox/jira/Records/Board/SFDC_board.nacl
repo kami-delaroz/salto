@@ -12,6 +12,7 @@ jira.Board SFDC_board@s {
   location = {
     projectId = jira.Project.instance.SalesforceLiorDemo
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_SFDC_board@s
   columnConfig = {
     columns = [

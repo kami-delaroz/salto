@@ -1,0 +1,19 @@
+jira.Dashboard DP___JSM_Dashboard@sbss {
+  description = ""
+  name = "DP - JSM Dashboard"
+  owner = {
+    id = "6205b3c7d362410069133701"
+    displayName = "Dan Putman"
+  }
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.DP___JSM_Dashboard_sbss__Assigned_to_Me_0_0@uuuumuussuu,
+    jira.DashboardGadget.instance.DP___JSM_Dashboard_sbss__Activity_Stream_1_0@uuuumuusuu,
+    jira.DashboardGadget.instance.DP___JSM_Dashboard_sbss__Filter_Results_1_1@uuuumuusuu,
+  ]
+  layout = "AA"
+}

@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus AAAA__Inactive {
+  name = "Inactive"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+  _alias = "AAAA:Inactive"
+}

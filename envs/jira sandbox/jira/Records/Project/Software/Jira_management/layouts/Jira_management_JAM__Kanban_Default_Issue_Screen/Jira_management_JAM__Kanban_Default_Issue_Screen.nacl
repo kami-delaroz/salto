@@ -23,6 +23,14 @@ jira.IssueLayout Jira_management_JAM__Kanban_Default_Issue_Screen@sufssss {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

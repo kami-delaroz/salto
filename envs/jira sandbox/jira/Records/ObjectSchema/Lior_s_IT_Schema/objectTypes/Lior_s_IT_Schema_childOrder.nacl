@@ -5,7 +5,6 @@ jira.ObjectTypeOrder Lior_s_IT_Schema_childOrder@tssu {
     jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models@uuumu,
     jira.ObjectType.instance.Lior_s_IT_Schema_tss_sub_scheme@uuumub,
   ]
-  assetsSchema = jira.ObjectSchema.instance.Lior_s_IT_Schema@tss
   _parent = [
     jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
   ]

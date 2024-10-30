@@ -263,18 +263,22 @@ jira.Automation When_a_deployment_is_completed__failed_or_canceled___then_transi
   ]
   tags = [
     {
+      ruleIdUuid = "018f113e-8e7e-72bf-b8e3-12ce6b63cf2d"
       tagType = "CREATION_TYPE"
       tagValue = "AUTO"
     },
     {
+      ruleIdUuid = "018f113e-8e7e-72bf-b8e3-12ce6b63cf2d"
       tagType = "SAMPLE_RULE"
       tagValue = "service_desk"
     },
     {
+      ruleIdUuid = "018f113e-8e7e-72bf-b8e3-12ce6b63cf2d"
       tagType = "SAMPLE_RULE_INTENT"
       tagValue = "change_management_deployment_state"
     },
     {
+      ruleIdUuid = "018f113e-8e7e-72bf-b8e3-12ce6b63cf2d"
       tagType = "TEMPLATE_ID"
       tagValue = "cm_template_2"
     },

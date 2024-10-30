@@ -10,4 +10,5 @@ jira.Project Batel_project_10_02_24@ssbb {
     id = "61d44bf59ee70a00685fa6b6"
     displayName = "Testing salto"
   }
+  assigneeType = "UNASSIGNED"
 }

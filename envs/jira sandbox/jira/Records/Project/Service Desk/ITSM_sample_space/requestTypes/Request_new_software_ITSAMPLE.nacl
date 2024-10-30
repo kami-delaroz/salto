@@ -3,8 +3,6 @@ jira.RequestType Request_new_software_ITSAMPLE@ssu {
   description = "If you need a software license, raise a request here."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
-  restrictionStatus = "OPEN"
-  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending
@@ -91,6 +89,14 @@ jira.RequestType Request_new_software_ITSAMPLE@ssu {
   issueView = {
     issueLayoutConfig = {
       items = [
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
         {
           type = "FIELD"
           sectionType = "PRIMARY"
@@ -272,6 +278,14 @@ jira.RequestType Request_new_software_ITSAMPLE@ssu {
           }
         },
         {
+          type = "PANEL"
+          sectionType = "SECONDARY"
+          key = "devSummary"
+          data = {
+            name = "Development"
+          }
+        },
+        {
           type = "FIELD"
           sectionType = "SECONDARY"
           key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
@@ -279,6 +293,16 @@ jira.RequestType Request_new_software_ITSAMPLE@ssu {
             custom = true
             global = true
             description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Parent
+          data = {
+            custom = false
+            global = true
             required = false
           }
         },

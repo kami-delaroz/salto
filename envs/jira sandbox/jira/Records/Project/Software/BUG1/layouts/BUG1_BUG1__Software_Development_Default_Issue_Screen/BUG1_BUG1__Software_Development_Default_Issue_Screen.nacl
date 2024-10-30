@@ -23,6 +23,14 @@ jira.IssueLayout BUG1_BUG1__Software_Development_Default_Issue_Screen@ufsssss {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

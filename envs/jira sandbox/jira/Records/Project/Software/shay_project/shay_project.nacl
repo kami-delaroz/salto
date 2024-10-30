@@ -12,6 +12,7 @@ jira.Project shay_project@s {
     id = "62ebc187e50f2f2a395557cc"
     displayName = "Shay Cohen"
   }
+  assigneeType = "UNASSIGNED"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

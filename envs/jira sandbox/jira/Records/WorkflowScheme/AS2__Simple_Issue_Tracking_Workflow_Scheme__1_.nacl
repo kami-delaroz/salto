@@ -1,4 +1,4 @@
 jira.WorkflowScheme AS2__Simple_Issue_Tracking_Workflow_Scheme__1_@fssssssjk {
   name = "AS2: Simple Issue Tracking Workflow Scheme (1)"
-  defaultWorkflow = jira.Workflow.instance.AS2__Simple_Issue_Tracking_Workflow__1_@fsssssjk
+  defaultWorkflow = jira.WorkflowConfiguration.instance.AS2__Simple_Issue_Tracking_Workflow__1_@fsssssjk
 }

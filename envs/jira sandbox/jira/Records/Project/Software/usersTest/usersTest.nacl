@@ -14,6 +14,7 @@ jira.Project usersTest {
     id = "5fa91999b2633d0076583a61"
     displayName = "Alon Stern"
   }
+  assigneeType = "PROJECT_LEAD"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

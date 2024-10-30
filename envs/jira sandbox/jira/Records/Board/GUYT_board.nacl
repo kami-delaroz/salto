@@ -5,13 +5,14 @@ jira.Board GUYT_board@s {
     users = [
       {
         id = "60a60ff79b362f006919d5ff"
-        displayName = "Guy Hamo"
+        displayName = "Former user"
       },
     ]
   }
   location = {
     projectId = jira.Project.instance.guytestproject
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_GUYT_board@s
   columnConfig = {
     columns = [

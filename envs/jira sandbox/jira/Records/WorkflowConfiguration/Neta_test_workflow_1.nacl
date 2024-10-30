@@ -1,0 +1,140 @@
+jira.WorkflowConfiguration Neta_test_workflow_1@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Neta test workflow 1"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 720
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.configurable_progress@s
+      layout = {
+        x = 633.9921875
+        y = 92.4
+      }
+      properties = [
+        {
+          key = "aaa"
+          value = "bbb"
+        },
+        {
+          key = "jira.permission.assignable.group"
+          value = "jira-group-developers"
+        },
+        {
+          key = "jira.permission.assignable.group.2"
+          value = "8af8221a-14df-439c-8fd9-f4a388a154a0"
+        },
+        {
+          key = "jira.permission.assignable.projectrole"
+          value = "Administrators"
+        },
+      ]
+      deprecated = false
+      name = "configurable progress"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 672.796875
+        y = 92.4
+      }
+      deprecated = false
+      name = "In progress test"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 695.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.planning
+      layout = {
+        x = 661.216796875
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "Planning"
+    },
+  ]
+  transitions = {
+    progress_1__From__Planning__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.planning
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "progress 1"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.AL__Kanban_Bug_Screen__3_@fssssjk
+        }
+      }
+    }
+    quick_progress__From__Planning__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.planning
+          fromPort = 6
+          toPort = 0
+        },
+      ]
+      name = "quick progress"
+      description = ""
+      properties = [
+        {
+          key = "abc"
+          value = "def"
+        },
+      ]
+    }
+    open__From__Planning__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.planning
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "open"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

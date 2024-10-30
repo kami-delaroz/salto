@@ -25,6 +25,7 @@ jira.Screen IP__Jira_Service_Management__Request_Fulfilment_View_Edit_Screen@fss
         jira.Field.instance.Operational_categorization__cascadingselect__c@suuuu,
         jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
         jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu,
+        jira.Field.instance.Parent,
       ]
       position = 0
     }

@@ -1,10 +1,10 @@
 jira.WorkflowScheme GlobalTransitions {
   name = "GlobalTransitions"
   description = ""
-  defaultWorkflow = jira.Workflow.instance.jira
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
   items = [
     {
-      workflow = jira.Workflow.instance.SameNameTransitions
+      workflow = jira.WorkflowConfiguration.instance.SameNameTransitions
       issueType = jira.IssueType.instance.Bug
     },
   ]

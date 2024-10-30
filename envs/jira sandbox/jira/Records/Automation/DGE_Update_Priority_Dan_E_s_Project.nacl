@@ -4,7 +4,7 @@ jira.Automation DGE_Update_Priority_Dan_E_s_Project@ssubts {
   description = ""
   authorAccountId = {
     id = "712020:f12c0bf7-5d75-427b-b149-5ddd2da2ab8e"
-    displayName = "Dan English"
+    displayName = "Former user"
   }
   actor = {
     type = "ACCOUNT_ID"
@@ -100,6 +100,7 @@ jira.Automation DGE_Update_Priority_Dan_E_s_Project@ssubts {
   ]
   tags = [
     {
+      ruleIdUuid = "018f19d8-3b3e-708a-af72-ba927b1ba15a"
       tagType = "IS_RULE_UPDATED"
       tagValue = "true"
     },

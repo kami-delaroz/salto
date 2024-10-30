@@ -1,41 +1,41 @@
 jira.WorkflowScheme migrationtestscheme2 {
   name = "migrationtestscheme2"
-  defaultWorkflow = jira.Workflow.instance.migrationtest4
+  defaultWorkflow = jira.WorkflowConfiguration.instance.migrationtest4
   items = [
     {
-      workflow = jira.Workflow.instance.jira
+      workflow = jira.WorkflowConfiguration.instance.jira
       issueType = jira.IssueType.instance.Bug
     },
     {
-      workflow = jira.Workflow.instance.jira
+      workflow = jira.WorkflowConfiguration.instance.jira
       issueType = jira.IssueType.instance._System__Incident@his
     },
     {
-      workflow = jira.Workflow.instance.jira
+      workflow = jira.WorkflowConfiguration.instance.jira
       issueType = jira.IssueType.instance._System__Post_incident_review@hisbs
     },
     {
-      workflow = jira.Workflow.instance.migrationtest3
+      workflow = jira.WorkflowConfiguration.instance.migrationtest3
       issueType = jira.IssueType.instance._System__Service_request@hiss
     },
     {
-      workflow = jira.Workflow.instance.migrationtest3
+      workflow = jira.WorkflowConfiguration.instance.migrationtest3
       issueType = jira.IssueType.instance._System__Service_request_with_approvals@hissss
     },
     {
-      workflow = jira.Workflow.instance.jira
+      workflow = jira.WorkflowConfiguration.instance.jira
       issueType = jira.IssueType.instance._System__Problem@his
     },
     {
-      workflow = jira.Workflow.instance.migrationtest4
+      workflow = jira.WorkflowConfiguration.instance.migrationtest4
       issueType = jira.IssueType.instance.LiorIssueTypeRenamed
     },
     {
-      workflow = jira.Workflow.instance.migrationtest1
+      workflow = jira.WorkflowConfiguration.instance.migrationtest1
       issueType = jira.IssueType.instance.Report_a_maintenance_issue@s
     },
     {
-      workflow = jira.Workflow.instance.migrationtest4
+      workflow = jira.WorkflowConfiguration.instance.migrationtest4
       issueType = jira.IssueType.instance.Request_a_move@s
     },
   ]

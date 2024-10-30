@@ -3,8 +3,6 @@ jira.RequestType Get_a_guest_wifi_account_ITSAMPLE@ssssu {
   description = "Raise a request to ask for temp wifi access for guests."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
-  restrictionStatus = "OPEN"
-  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending
@@ -79,6 +77,14 @@ jira.RequestType Get_a_guest_wifi_account_ITSAMPLE@ssssu {
   issueView = {
     issueLayoutConfig = {
       items = [
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
         {
           type = "FIELD"
           sectionType = "PRIMARY"
@@ -260,6 +266,14 @@ jira.RequestType Get_a_guest_wifi_account_ITSAMPLE@ssssu {
           }
         },
         {
+          type = "PANEL"
+          sectionType = "SECONDARY"
+          key = "devSummary"
+          data = {
+            name = "Development"
+          }
+        },
+        {
           type = "FIELD"
           sectionType = "SECONDARY"
           key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
@@ -267,6 +281,16 @@ jira.RequestType Get_a_guest_wifi_account_ITSAMPLE@ssssu {
             custom = true
             global = true
             description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Parent
+          data = {
+            custom = false
+            global = true
             required = false
           }
         },

@@ -13,6 +13,7 @@ jira.Project Empty22 {
     id = "62d20c47a94a6f9c0eff9866"
     displayName = "Ido Zak"
   }
+  assigneeType = "UNASSIGNED"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

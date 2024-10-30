@@ -12,6 +12,7 @@ jira.Board EM_board@s {
   location = {
     projectId = jira.Project.instance.Empty22
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_EM_board@s
   columnConfig = {
     columns = [

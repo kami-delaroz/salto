@@ -1014,5 +1014,80 @@ High: will probably affect the operations of the app (downtime, customer data, s
       isHidden = false
       isRequired = false
     }
+    shay_assets_object__cmdb_object_cftype__c@ssuubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Batel3_Assets_Objects__cmdb_object_cftype__c@ssuubbuu = {
+      description = "Batel3 testing assets objects"
+      isHidden = false
+      isRequired = false
+    }
+    Batel_Assets_Objects__cmdb_object_cftype__c@ssuubbuu = {
+      description = "Batel testing assets objects"
+      isHidden = false
+      isRequired = false
+    }
+    Ido_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Ido2_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Ido3_Assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Ido4San_assets__cmdb_object_cftype__c@suubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    ido5San_assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Ido6Sand_assets__cmdb_object_cftype__c@suubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    ido7Sand_assets__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    Batel_new_asset_creation__cmdb_object_cftype__c@sssuubbuu = {
+      isHidden = false
+      isRequired = false
+    }
+    batel_testing__cmdb_object_cftype__c@suubbuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
+    DP___Priority__float__c@sbsuuuu = {
+      description = "For JSM Forms"
+      isHidden = false
+      isRequired = false
+    }
+    DP___Date__datetime__c@sbsuuuu = {
+      isHidden = false
+      isRequired = false
+    }
+    Customer_Actual_start__datetime__c@ssuuuu = {
+      description = "Enter when the change actually started."
+      isHidden = false
+      isRequired = false
+    }
+    DP_User__multiuserpicker__c@suuuu = {
+      description = ""
+      isHidden = false
+      isRequired = false
+    }
   }
 }

@@ -12,4 +12,5 @@ jira.Project shir_project_s@um {
     id = "62ebc187e50f2f2a395557cc"
     displayName = "Shay Cohen"
   }
+  assigneeType = "PROJECT_LEAD"
 }

@@ -23,6 +23,14 @@ jira.IssueLayout A_test_project_for_Lior_LIOR1__Kanban_Bug_Screen@ssssufsss {
         }
       },
       {
+        type = "PANEL"
+        sectionType = "PRIMARY"
+        key = "devSummary"
+        data = {
+          name = "Development"
+        }
+      },
+      {
         type = "FIELD"
         sectionType = "PRIMARY"
         key = jira.Field.instance.Labels__array

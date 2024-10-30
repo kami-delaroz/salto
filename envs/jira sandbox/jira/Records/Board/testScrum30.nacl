@@ -12,6 +12,7 @@ jira.Board testScrum30 {
   location = {
     projectId = jira.Project.instance.AlonCompanyProject2
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_testScrum@s
   columnConfig = {
     columns = [

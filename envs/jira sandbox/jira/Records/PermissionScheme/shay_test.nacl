@@ -20,6 +20,13 @@ jira.PermissionScheme shay_test@s {
         type = "projectRole"
         parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
       }
+      permission = "ARCHIVE_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
       permission = "ASSIGNABLE_USER"
     },
     {
@@ -217,6 +224,13 @@ jira.PermissionScheme shay_test@s {
         parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
       }
       permission = "TRANSITION_ISSUES"
+    },
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+      permission = "UNARCHIVE_ISSUES"
     },
     {
       holder = {

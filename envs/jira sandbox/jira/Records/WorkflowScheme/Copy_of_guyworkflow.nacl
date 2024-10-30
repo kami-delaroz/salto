@@ -1,58 +1,58 @@
 jira.WorkflowScheme Copy_of_guyworkflow@s {
   name = "Copy of guyworkflow"
   description = "(This copy was automatically generated from a draft, when workflow scheme 'guyworkflow' was made inactive.)"
-  defaultWorkflow = jira.Workflow.instance.jira
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
   items = [
     {
-      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_10@tsss
+      workflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10@tsss
       issueType = jira.IssueType.instance.Epic
     },
     {
-      workflow = jira.Workflow.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
+      workflow = jira.WorkflowConfiguration.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
       issueType = jira.IssueType.instance.Task
     },
     {
-      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_10@tsss
+      workflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10@tsss
       issueType = jira.IssueType.instance.Bug
     },
     {
-      workflow = jira.Workflow.instance.guyworkflow
+      workflow = jira.WorkflowConfiguration.instance.guyworkflow
       issueType = jira.IssueType.instance.Incident
     },
     {
-      workflow = jira.Workflow.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
+      workflow = jira.WorkflowConfiguration.instance.Copy_3_of_Alon_s_Test_Workflow_2@ssstsss
       issueType = jira.IssueType.instance._System__Incident@his
     },
     {
-      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_10@tsss
+      workflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10@tsss
       issueType = jira.IssueType.instance._System__Post_incident_review@hisbs
     },
     {
-      workflow = jira.Workflow.instance.guyworkflow
+      workflow = jira.WorkflowConfiguration.instance.guyworkflow
       issueType = jira.IssueType.instance._System__Service_request@hiss
     },
     {
-      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_10_12704dfa_00ea_4dcb_b75a_73601c425c3f@tsssbbbbb
+      workflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10_12704dfa_00ea_4dcb_b75a_73601c425c3f@tsssbbbbb
       issueType = jira.IssueType.instance._System__Service_request_with_approvals@hissss
     },
     {
-      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_10@tsss
+      workflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10@tsss
       issueType = jira.IssueType.instance._System__Change@his
     },
     {
-      workflow = jira.Workflow.instance.guyworkflow
+      workflow = jira.WorkflowConfiguration.instance.guyworkflow
       issueType = jira.IssueType.instance._System__Problem@his
     },
     {
-      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_10_12704dfa_00ea_4dcb_b75a_73601c425c3f@tsssbbbbb
+      workflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10_12704dfa_00ea_4dcb_b75a_73601c425c3f@tsssbbbbb
       issueType = jira.IssueType.instance.Report_a_maintenance_issue@s
     },
     {
-      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_10@tsss
+      workflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10@tsss
       issueType = jira.IssueType.instance.Bug5
     },
     {
-      workflow = jira.Workflow.instance.Alon_s_Test_Workflow_10@tsss
+      workflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10@tsss
       issueType = jira.IssueType.instance.IT_Help2@s
     },
   ]

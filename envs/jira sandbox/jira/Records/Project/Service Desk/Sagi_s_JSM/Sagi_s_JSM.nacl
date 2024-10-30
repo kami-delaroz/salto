@@ -31,4 +31,5 @@ jira.Project Sagi_s_JSM@ts {
     id = "605c3da2109af10068b38c4e"
     displayName = "Sagi Bracha"
   }
+  assigneeType = "UNASSIGNED"
 }

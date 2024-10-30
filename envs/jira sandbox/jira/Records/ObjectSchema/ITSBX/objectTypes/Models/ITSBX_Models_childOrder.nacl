@@ -4,7 +4,6 @@ jira.ObjectTypeOrder ITSBX_Models_childOrder {
     jira.ObjectType.instance.ITSBX_Models_Model_Categories@uus,
     jira.ObjectType.instance.ITSBX_Models_Software_Models@uus,
   ]
-  assetsSchema = jira.ObjectSchema.instance.ITSBX
   _parent = [
     jira.ObjectType.instance.ITSBX_Models,
   ]

@@ -92,21 +92,24 @@ jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_r
   notifyOnError = "FIRSTERROR"
   projects = [
     {
-      projectId = jira.Project.instance.GWR_Service_Management@s
+      projectId = jira.Project.instance.missing_10202
     },
   ]
   labels = [
   ]
   tags = [
     {
+      ruleIdUuid = "018f10fc-41f0-7e14-8805-e229aedc57fc"
       tagType = "CREATION_TYPE"
       tagValue = "AUTO"
     },
     {
+      ruleIdUuid = "018f10fc-41f0-7e14-8805-e229aedc57fc"
       tagType = "SAMPLE_RULE"
       tagValue = "service_desk"
     },
     {
+      ruleIdUuid = "018f10fc-41f0-7e14-8805-e229aedc57fc"
       tagType = "TEMPLATE_ID"
       tagValue = "itsm_template_3"
     },

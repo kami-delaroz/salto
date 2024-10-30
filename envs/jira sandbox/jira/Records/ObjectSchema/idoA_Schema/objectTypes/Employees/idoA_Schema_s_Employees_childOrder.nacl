@@ -7,7 +7,6 @@ jira.ObjectTypeOrder idoA_Schema_s_Employees_childOrder@umuu {
     jira.ObjectType.instance.idoA_Schema_s_Employees_umu_Omri@uuumu,
     jira.ObjectType.instance.idoA_Schema_s_Employees_umu_oneF@uuumu,
   ]
-  assetsSchema = jira.ObjectSchema.instance.idoA_Schema@s
   _parent = [
     jira.ObjectType.instance.idoA_Schema_s_Employees@umu,
   ]

@@ -13,6 +13,7 @@ jira.Project BUG1 {
     id = "5b8ed5177a33352bf10f7a48"
     displayName = "Lior Neudorfer"
   }
+  assigneeType = "PROJECT_LEAD"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

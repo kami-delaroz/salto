@@ -12,6 +12,7 @@ jira.Board LNCMPNPRJC_board@s {
   location = {
     projectId = jira.Project.instance.AlonCompanyProject
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_LNCMPNPRJC_board@s
   columnConfig = {
     columns = [

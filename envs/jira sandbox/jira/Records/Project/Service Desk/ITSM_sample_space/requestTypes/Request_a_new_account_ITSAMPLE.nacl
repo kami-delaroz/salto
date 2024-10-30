@@ -3,8 +3,6 @@ jira.RequestType Request_a_new_account_ITSAMPLE@sssu {
   description = "Request a new account for a system."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
-  restrictionStatus = "OPEN"
-  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending
@@ -107,6 +105,14 @@ jira.RequestType Request_a_new_account_ITSAMPLE@sssu {
   issueView = {
     issueLayoutConfig = {
       items = [
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
         {
           type = "FIELD"
           sectionType = "PRIMARY"
@@ -278,6 +284,14 @@ jira.RequestType Request_a_new_account_ITSAMPLE@sssu {
           }
         },
         {
+          type = "PANEL"
+          sectionType = "SECONDARY"
+          key = "devSummary"
+          data = {
+            name = "Development"
+          }
+        },
+        {
           type = "FIELD"
           sectionType = "SECONDARY"
           key = jira.Field.instance.NewCustomFieldLior__multicheckboxes__c
@@ -285,6 +299,16 @@ jira.RequestType Request_a_new_account_ITSAMPLE@sssu {
             custom = true
             global = true
             description = ""
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
+          key = jira.Field.instance.Parent
+          data = {
+            custom = false
+            global = true
             required = false
           }
         },

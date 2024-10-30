@@ -5,13 +5,14 @@ jira.Board GT_board@s {
     users = [
       {
         id = "60a60ff79b362f006919d5ff"
-        displayName = "Guy Hamo"
+        displayName = "Former user"
       },
     ]
   }
   location = {
     projectId = jira.Project.instance.guytestmigration
   }
+  isPrivate = false
   filterId = jira.Filter.instance.Filter_for_GT_board@s
   columnConfig = {
     columns = [

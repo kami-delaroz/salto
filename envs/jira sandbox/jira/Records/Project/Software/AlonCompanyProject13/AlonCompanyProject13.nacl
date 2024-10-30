@@ -13,6 +13,7 @@ jira.Project AlonCompanyProject13 {
     id = "5fa91999b2633d0076583a61"
     displayName = "Alon Stern"
   }
+  assigneeType = "PROJECT_LEAD"
   fieldContexts = [
     jira.CustomFieldContext.instance.Urgency4__select__c_test3,
   ]

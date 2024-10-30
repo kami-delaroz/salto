@@ -13,6 +13,7 @@ jira.Project Website_@s {
     id = "5c7289009170244d98d8192c"
     displayName = "Gil Hoffer"
   }
+  assigneeType = "PROJECT_LEAD"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
     jira.CustomFieldContext.instance.testVersionPicker__multiversion__c_Default_Configuration_Scheme_for_testVersionPicker@uuuuussss,

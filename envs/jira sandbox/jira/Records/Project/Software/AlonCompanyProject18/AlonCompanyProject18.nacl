@@ -13,4 +13,5 @@ jira.Project AlonCompanyProject18 {
     id = "5fa91999b2633d0076583a61"
     displayName = "Alon Stern"
   }
+  assigneeType = "PROJECT_LEAD"
 }

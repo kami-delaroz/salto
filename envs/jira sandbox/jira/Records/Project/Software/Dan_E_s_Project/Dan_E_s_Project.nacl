@@ -8,6 +8,7 @@ jira.Project Dan_E_s_Project@bts {
   issueSecurityScheme = jira.SecurityScheme.instance.DGE__Simplified_Issue_Security_Scheme@fssss
   leadAccountId = {
     id = "712020:f12c0bf7-5d75-427b-b149-5ddd2da2ab8e"
-    displayName = "Dan English"
+    displayName = "Former user"
   }
+  assigneeType = "UNASSIGNED"
 }

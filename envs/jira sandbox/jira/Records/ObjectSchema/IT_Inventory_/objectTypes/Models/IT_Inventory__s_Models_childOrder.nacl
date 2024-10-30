@@ -4,7 +4,6 @@ jira.ObjectTypeOrder IT_Inventory__s_Models_childOrder@uumuu {
     jira.ObjectType.instance.IT_Inventory__s_Models_uumu_Model_Categories@uuuumus,
     jira.ObjectType.instance.IT_Inventory__s_Models_uumu_Software_Models@uuuumus,
   ]
-  assetsSchema = jira.ObjectSchema.instance.IT_Inventory_@s
   _parent = [
     jira.ObjectType.instance.IT_Inventory__s_Models@uumu,
   ]

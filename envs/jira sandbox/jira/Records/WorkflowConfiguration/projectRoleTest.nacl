@@ -1,0 +1,66 @@
+jira.WorkflowConfiguration projectRoleTest {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "projectRoleTest"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 617
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.almost_done2@s
+      layout = {
+        x = 728.240234375
+        y = 117.4
+      }
+      deprecated = false
+      name = "almost done2"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 592.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    first__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.almost_done2@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "first"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

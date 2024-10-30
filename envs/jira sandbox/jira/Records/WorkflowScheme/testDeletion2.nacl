@@ -1,4 +1,4 @@
 jira.WorkflowScheme testDeletion2 {
   name = "testDeletion2"
-  defaultWorkflow = jira.Workflow.instance.testDeletion3
+  defaultWorkflow = jira.WorkflowConfiguration.instance.testDeletion3
 }

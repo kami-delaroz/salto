@@ -30,6 +30,7 @@ jira.Screen TST2__Jira_Service_Management__Problem_View_Edit_Screen@fsssfssds {
         jira.Field.instance.Product_categorization__cascadingselect__c@suuuu,
         jira.Field.instance.Operational_categorization__cascadingselect__c@suuuu,
         jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+        jira.Field.instance.Parent,
       ]
       position = 0
     }

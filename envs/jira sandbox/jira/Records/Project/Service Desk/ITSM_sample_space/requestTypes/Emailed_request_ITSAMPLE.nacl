@@ -3,8 +3,6 @@ jira.RequestType Emailed_request_ITSAMPLE@su {
   description = "Request received from your email support channel."
   helpText = ""
   issueTypeId = jira.IssueType.instance._System__Service_request@hiss
-  restrictionStatus = "OPEN"
-  canCreateRequest = true
   workflowStatuses = [
     {
       id = jira.Status.instance.pending
@@ -81,6 +79,14 @@ jira.RequestType Emailed_request_ITSAMPLE@su {
   issueView = {
     issueLayoutConfig = {
       items = [
+        {
+          type = "PANEL"
+          sectionType = "PRIMARY"
+          key = "SLA_PANEL"
+          data = {
+            name = "SLAs"
+          }
+        },
         {
           type = "FIELD"
           sectionType = "PRIMARY"
@@ -266,6 +272,16 @@ jira.RequestType Emailed_request_ITSAMPLE@su {
         {
           type = "FIELD"
           sectionType = "SECONDARY"
+          key = jira.Field.instance.Parent
+          data = {
+            custom = false
+            global = true
+            required = false
+          }
+        },
+        {
+          type = "FIELD"
+          sectionType = "SECONDARY"
           key = jira.Field.instance.Time_tracking__timetracking@suu
           data = {
             custom = false
@@ -281,6 +297,14 @@ jira.RequestType Emailed_request_ITSAMPLE@su {
             custom = false
             global = true
             required = false
+          }
+        },
+        {
+          type = "PANEL"
+          sectionType = "SECONDARY"
+          key = "devSummary"
+          data = {
+            name = "Development"
           }
         },
       ]

@@ -10,8 +10,9 @@ jira.Project guytestmigration {
   issueTypeScheme = jira.IssueTypeScheme.instance.GUYT__Kanban_Issue_Type_Scheme@fssss
   leadAccountId = {
     id = "60a60ff79b362f006919d5ff"
-    displayName = "Guy Hamo"
+    displayName = "Former user"
   }
+  assigneeType = "UNASSIGNED"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

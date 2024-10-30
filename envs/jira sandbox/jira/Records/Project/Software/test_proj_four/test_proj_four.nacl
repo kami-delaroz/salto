@@ -13,6 +13,7 @@ jira.Project test_proj_four@b {
     id = "5cd027a783de300fe5d4b9b0"
     displayName = "Ori Moisis"
   }
+  assigneeType = "PROJECT_LEAD"
   fieldContexts = [
     jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
   ]

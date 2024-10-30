@@ -99,14 +99,17 @@ jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_r
   ]
   tags = [
     {
+      ruleIdUuid = "018f1130-4aa6-7409-ae93-8ff0c3e9b6d9"
       tagType = "CREATION_TYPE"
       tagValue = "AUTO"
     },
     {
+      ruleIdUuid = "018f1130-4aa6-7409-ae93-8ff0c3e9b6d9"
       tagType = "SAMPLE_RULE"
       tagValue = "service_desk"
     },
     {
+      ruleIdUuid = "018f1130-4aa6-7409-ae93-8ff0c3e9b6d9"
       tagType = "TEMPLATE_ID"
       tagValue = "itsm_template_3"
     },

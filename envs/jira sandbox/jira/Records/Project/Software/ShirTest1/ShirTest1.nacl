@@ -12,4 +12,5 @@ jira.Project ShirTest1 {
     id = "616e3f77e79ff6006f1eca7f"
     displayName = "Shir Reifenberg"
   }
+  assigneeType = "UNASSIGNED"
 }

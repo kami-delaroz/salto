@@ -14,6 +14,7 @@ jira.Project AlonCompanyProject10 {
     id = "5fa91999b2633d0076583a61"
     displayName = "Alon Stern"
   }
+  assigneeType = "PROJECT_LEAD"
   fieldContexts = [
     jira.CustomFieldContext.instance.Flagged2__multicheckboxes__c_name,
     jira.CustomFieldContext.instance.Select_List__cascading___cascadingselect__c_ssjkuuuu_Default_Configuration_Scheme_for_Select_List__cascading_@uuuuuuuumussssssjk,
