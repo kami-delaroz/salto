@@ -1,0 +1,14 @@
+jira.ObjectType idoA_Schema_s_Employees_umu_IdoA_uuumu_idoA1@uuuuumu {
+  name = "idoA1"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.idoA_Schema_s_Employees_umu_IdoA@uuumu
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.User
+  _parent = [
+    jira.ObjectSchema.instance.idoA_Schema@s,
+  ]
+  _alias = "idoA1"
+}

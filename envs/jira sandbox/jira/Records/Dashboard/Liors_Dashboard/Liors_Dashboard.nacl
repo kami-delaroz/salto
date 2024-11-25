@@ -1,0 +1,26 @@
+jira.Dashboard Liors_Dashboard@s {
+  description = ""
+  name = "Liors Dashboard"
+  owner = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Workload_Pie_Chart_0_0@umuussuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Two_Dimensional_Filter_Statistics_0_1@umuusssuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Time_to_First_Response_0_2@umuusssuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Time_Since_Chart_0_3@umuussuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Resolution_Time_0_4@umuusuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Pie_Chart_0_5@umuusuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Heat_Map_0_6@umuusuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Filter_counts_0_7@umuusuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Created_vs__Resolved_Chart_0_8@umuusvssuu,
+    jira.DashboardGadget.instance.Liors_Dashboard_s__Filter_Results_0_9@umuusuu,
+  ]
+  layout = "AA"
+}

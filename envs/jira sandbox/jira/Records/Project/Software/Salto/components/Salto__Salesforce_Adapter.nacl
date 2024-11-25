@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto__Salesforce_Adapter@uus {
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Salesforce Adapter"
+  _parent = [
+    jira.Project.instance.Salto,
+  ]
+  _alias = "Salto:Salesforce Adapter"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Mouse {
+  name = "Mouse"
+  icon = file("jira/ObjectTypeIcon/Mouse.png")
+}

@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus ITSBX__Inactive {
+  name = "Inactive"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "ITSBX:Inactive"
+}

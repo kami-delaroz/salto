@@ -1,0 +1,11 @@
+jira.IssueTypeScheme TSTPRJ4__Kanban_Issue_Type_Scheme@fssss {
+  name = "TSTPRJ4: Kanban Issue Type Scheme"
+  defaultIssueTypeId = jira.IssueType.instance.Story
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Epic,
+  ]
+}

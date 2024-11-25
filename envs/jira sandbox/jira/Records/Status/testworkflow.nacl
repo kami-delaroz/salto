@@ -1,0 +1,6 @@
+jira.Status testworkflow {
+  name = "testWorkflow"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = "descriptionn"
+  _alias = "testWorkflow"
+}

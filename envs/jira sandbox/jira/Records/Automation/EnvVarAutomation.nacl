@@ -1,0 +1,81 @@
+jira.Automation EnvVarAutomation {
+  name = "EnvVarAutomation"
+  state = "ENABLED"
+  description = ""
+  authorAccountId = {
+    id = "6160b007a707100069ce5ed3"
+    displayName = "Daniel Tal"
+  }
+  actor = {
+    type = "ACCOUNT_ID"
+    value = {
+      id = "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077"
+      displayName = "Automation for Jira"
+    }
+  }
+  trigger = {
+    component = "TRIGGER"
+    type = "jira.version.event.trigger:deleted"
+    value = {
+      versionNameFilter = ""
+    }
+    children = [
+    ]
+    conditions = [
+    ]
+  }
+  components = [
+    {
+      component = "ACTION"
+      type = "jira.issue.outgoing.webhook"
+      value = {
+        url = "http://salto-sandbox.com/bla/bla"
+        headers = [
+          {
+            id = "_header_1730891329507"
+            name = "f"
+            value = "{{triggerIssue.changelog.status}}"
+            headerSecure = false
+          },
+          {
+            id = "_header_1730891330324"
+            name = "44"
+            value = "3"
+            headerSecure = false
+          },
+          {
+            id = "_header_1730891331191"
+            name = "fsdf"
+            value = "{{object.objectType}}"
+            headerSecure = false
+          },
+        ]
+        sendIssue = false
+        contentType = "empty"
+        method = "POST"
+        responseEnabled = false
+        continueOnErrorEnabled = false
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+  ]
+  canOtherRuleTrigger = false
+  notifyOnError = "FIRSTERROR"
+  labels = [
+  ]
+  tags = [
+    {
+      ruleIdUuid = "0192e1be-d03c-775c-aa83-8535a92f3d4f"
+      tagType = "IS_RULE_UPDATED"
+      tagValue = "true"
+    },
+  ]
+  writeAccessType = "UNRESTRICTED"
+  collaborators = [
+  ]
+  billingType = "NORMAL"
+  _alias = "EnvVarAutomation"
+}

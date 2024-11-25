@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute Services_Applications_label_attribute {
+  labelAttribute = jira.ObjectTypeAttribute.instance.Services_Applications_Name
+  objectType = jira.ObjectType.instance.Services_Applications
+}

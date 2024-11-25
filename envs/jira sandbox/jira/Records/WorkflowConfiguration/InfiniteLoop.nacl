@@ -1,0 +1,112 @@
+jira.WorkflowConfiguration InfiniteLoop {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "InfiniteLoop"
+  description = "a"
+  isEditable = true
+  startPointLayout = {
+    x = 580
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.canceled
+      layout = {
+        x = 519.380859375
+        y = -93.70000122070311
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Canceled"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 555.41015625
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Cancel__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 1
+          toPort = 5
+        },
+      ]
+      name = "Cancel"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "4974912f-ff22-4017-874c-61b383fd5748"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.FastTrackIssue"
+              uuid = "e7addf06-7189-4739-a5e9-47566f2885cb"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "issue.fields.assignee != null"
+              description = ""
+              additionalCode = ""
+              comment = ""
+              transitionId = ""
+              transitionName = ""
+            }
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+}

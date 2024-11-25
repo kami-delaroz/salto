@@ -1,0 +1,10 @@
+jira.Field Global_Rank__gh_lexo_rank__c@suubbuu {
+  name = "Global Rank"
+  description = ""
+  searcherKey = "com.pyxis.greenhopper.jira:gh-lexo-rank-searcher"
+  type = "com.pyxis.greenhopper.jira:gh-lexo-rank"
+  contexts = [
+    jira.CustomFieldContext.instance.Global_Rank__gh_lexo_rank__c_suubbuu_Default_Configuration_Scheme_for_Global_Rank@uuuuuuumusssss,
+  ]
+  _alias = "Global Rank"
+}

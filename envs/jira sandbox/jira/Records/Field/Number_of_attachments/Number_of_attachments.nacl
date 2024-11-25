@@ -1,0 +1,10 @@
+jira.Field Number_of_attachments__attachments__c@ssuuuu {
+  name = "Number of attachments"
+  description = ""
+  searcherKey = "com.atlassian.jira.toolkit:attachmentcountsearcher"
+  type = "com.atlassian.jira.toolkit:attachments"
+  contexts = [
+    jira.CustomFieldContext.instance.Number_of_attachments__attachments__c_ssuuuu_Default_Configuration_Scheme_for_Number_of_attachments@uuuuuumussssss,
+  ]
+  _alias = "Number of attachments"
+}

@@ -1,0 +1,20 @@
+jira.Webhook New_Webhook_Listener@s {
+  name = "New Webhook Listener"
+  url = "https://example.com/rest/webhooks/webhook1"
+  description = ""
+  excludeBody = true
+  filters = {
+    issue_related_events_section = "${ jira.Field.instance.Status__status } = ${ jira.Status.instance.done.name }"
+  }
+  events = [
+    "user_updated",
+    "issuelink_created",
+    "option_unassigned_issues_changed",
+    "project_restored_deleted",
+    "jira:version_moved",
+    "project_deleted",
+    "sprint_created",
+  ]
+  enabled = true
+  isSigned = false
+}

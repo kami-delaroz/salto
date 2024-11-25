@@ -1,0 +1,12 @@
+jira.CustomFieldContext guytest__float__c_qqqqq {
+  name = "qqqqq"
+  description = "wwwww"
+  isGlobalContext = false
+  defaultValue = {
+    type = "float"
+  }
+  _parent = [
+    jira.Field.instance.guytest__float__c,
+  ]
+  _alias = "guytest context in qqqqq"
+}

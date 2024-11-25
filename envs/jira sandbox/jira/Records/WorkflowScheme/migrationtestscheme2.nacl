@@ -1,0 +1,42 @@
+jira.WorkflowScheme migrationtestscheme2 {
+  name = "migrationtestscheme2"
+  defaultWorkflow = jira.WorkflowConfiguration.instance.migrationtest4
+  items = [
+    {
+      workflow = jira.WorkflowConfiguration.instance.jira
+      issueType = jira.IssueType.instance.Bug
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.jira
+      issueType = jira.IssueType.instance._System__Incident@his
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.jira
+      issueType = jira.IssueType.instance._System__Post_incident_review@hisbs
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.migrationtest3
+      issueType = jira.IssueType.instance._System__Service_request@hiss
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.migrationtest3
+      issueType = jira.IssueType.instance._System__Service_request_with_approvals@hissss
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.jira
+      issueType = jira.IssueType.instance._System__Problem@his
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.migrationtest4
+      issueType = jira.IssueType.instance.LiorIssueTypeRenamed
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.migrationtest1
+      issueType = jira.IssueType.instance.Report_a_maintenance_issue@s
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.migrationtest4
+      issueType = jira.IssueType.instance.Request_a_move@s
+    },
+  ]
+}

@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute Services_Applications_Updated {
+  objectType = jira.ObjectType.instance.Services_Applications
+  name = "Updated"
+  type = 0
+  editable = false
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 6
+  _alias = "Updated"
+}

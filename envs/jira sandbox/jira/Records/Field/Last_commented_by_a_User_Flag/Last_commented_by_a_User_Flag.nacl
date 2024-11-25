@@ -1,0 +1,10 @@
+jira.Field Last_commented_by_a_User_Flag__lastusercommented__c@sssssuuuu {
+  name = "Last commented by a User Flag"
+  description = ""
+  searcherKey = "com.atlassian.jira.toolkit:lastcommentersearcher"
+  type = "com.atlassian.jira.toolkit:lastusercommented"
+  contexts = [
+    jira.CustomFieldContext.instance.Last_commented_by_a_User_Flag__lastusercommented__c_sssssuuuu_Default_Configuration_Scheme_for_Last_commented_by_a_User_Flag@uuuuuuuuumusssssssss,
+  ]
+  _alias = "Last commented by a User Flag"
+}

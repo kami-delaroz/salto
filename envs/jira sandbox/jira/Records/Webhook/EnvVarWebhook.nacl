@@ -1,0 +1,8 @@
+jira.Webhook EnvVarWebhook {
+  name = "EnvVarWebhook"
+  url = "https://example.com/rest/webhooks/webhook1"
+  description = ""
+  excludeBody = true
+  enabled = true
+  isSigned = true
+}

@@ -1,0 +1,13 @@
+jira.ObjectType AAAA_Hardware_Assets_us_Phones@uumu {
+  name = "Phones"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.AAAA_Hardware_Assets@us
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Phone
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+  _alias = "Phones"
+}

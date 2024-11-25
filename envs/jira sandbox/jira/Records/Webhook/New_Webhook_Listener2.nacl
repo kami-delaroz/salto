@@ -1,0 +1,8 @@
+jira.Webhook New_Webhook_Listener2@s {
+  name = "New Webhook Listener2"
+  url = "https://staging.salto.com/rest/webhooks/webhook2"
+  description = ""
+  excludeBody = true
+  enabled = true
+  isSigned = false
+}

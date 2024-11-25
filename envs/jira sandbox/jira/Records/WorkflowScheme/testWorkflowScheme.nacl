@@ -1,0 +1,4 @@
+jira.WorkflowScheme testWorkflowScheme {
+  name = "testWorkflowScheme"
+  defaultWorkflow = jira.WorkflowConfiguration.instance.Alon_s_Test_Workflow_10@tsss
+}

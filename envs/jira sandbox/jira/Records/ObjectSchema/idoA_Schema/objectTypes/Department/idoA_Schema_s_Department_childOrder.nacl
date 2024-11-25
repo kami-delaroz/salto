@@ -1,0 +1,10 @@
+jira.ObjectTypeOrder idoA_Schema_s_Department_childOrder@umuu {
+  objectTypes = [
+    jira.ObjectType.instance.idoA_Schema_s_Department_umu_SALES@uuumu,
+    jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D@uuumue,
+    jira.ObjectType.instance.idoA_Schema_s_Department_umu_shir@uuumu,
+  ]
+  _parent = [
+    jira.ObjectType.instance.idoA_Schema_s_Department@umu,
+  ]
+}

@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus LN___Software_sbs__In_transit@uuumuus {
+  name = "In transit"
+  description = "Asset is being transported"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.LN___Software@sbs,
+  ]
+  _alias = "LN - Software:In transit"
+}

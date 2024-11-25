@@ -1,0 +1,51 @@
+jira.Board testBoard8 {
+  name = "testBoard8"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "5fa91999b2633d0076583a61"
+        displayName = "Alon Stern"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.AlonCompanyProject
+  }
+  isPrivate = false
+  filterId = jira.Filter.instance.Filter_for_testBoard@s
+  columnConfig = {
+    columns = [
+      {
+        name = "To Do5"
+        statuses = [
+          jira.Status.instance.a_shared_status3@s,
+          jira.Status.instance.backlog,
+          jira.Status.instance.to_do@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_review@s,
+          jira.Status.instance.in_progress@s,
+          jira.Status.instance.build_broken@s,
+          jira.Status.instance.open,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.approved,
+          jira.Status.instance.done,
+          jira.Status.instance.resolved,
+        ]
+      },
+      {
+        name = "New Column"
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() AND ${ jira.Field.instance.Status__status } = ${ jira.Status.instance.done.name }"
+}

@@ -1,0 +1,20 @@
+jira.Field test__readonlyfield__c {
+  name = "test"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:readonlyfield"
+  contexts = [
+    jira.CustomFieldContext.instance.test__readonlyfield__c_Default_Configuration_Scheme_for_test@uuuuussss,
+  ]
+  _alias = "test"
+}
+jira.Field test__textarea__c {
+  name = "test"
+  description = "change description 2"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.test__textarea__c_Default_Configuration_Scheme_for_test@uuuuussss,
+  ]
+  _alias = "test"
+}

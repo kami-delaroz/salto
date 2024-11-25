@@ -1,0 +1,9 @@
+jira.Field Original_estimate__number@suu {
+  name = "Original estimate"
+  schema = {
+    type = "number"
+    system = "timeoriginalestimate"
+  }
+  description = ""
+  _alias = "Original estimate"
+}

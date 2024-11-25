@@ -1,0 +1,13 @@
+jira.ObjectType IT_Inventory__s_Models_uumu_Software_Models@uuuumus {
+  name = "Software Models"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.IT_Inventory__s_Models@uumu
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "Software Models"
+}

@@ -1,0 +1,33 @@
+jira.Screen IP__Jira_Service_Management__Request_Fulfilment_View_Edit_Screen@fsssfsssds {
+  name = "IP: Jira Service Management: Request Fulfilment View/Edit Screen"
+  description = ""
+  tabs = {
+    Default = {
+      name = "Default"
+      fields = [
+        jira.Field.instance.Summary__string,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+        jira.Field.instance.Components__array,
+        jira.Field.instance.Attachment__array,
+        jira.Field.instance.Description__string,
+        jira.Field.instance.Reporter__user,
+        jira.Field.instance.Linked_Issues__array@suu,
+        jira.Field.instance.Assignee__user,
+        jira.Field.instance.Priority__priority,
+        jira.Field.instance.Labels__array,
+        jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu,
+        jira.Field.instance.Approvers__multiuserpicker__c,
+        jira.Field.instance.Organizations__sd_customer_organizations__c@uubbuu,
+        jira.Field.instance.Urgency__select__c,
+        jira.Field.instance.Impact__select__c,
+        jira.Field.instance.Pending_reason__select__c@suuuu,
+        jira.Field.instance.Product_categorization__cascadingselect__c@suuuu,
+        jira.Field.instance.Operational_categorization__cascadingselect__c@suuuu,
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+        jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu,
+        jira.Field.instance.Parent,
+      ]
+      position = 0
+    }
+  }
+}

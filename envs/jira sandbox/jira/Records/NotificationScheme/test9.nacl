@@ -1,0 +1,29 @@
+jira.NotificationScheme test9 {
+  name = "test9"
+  description = "change"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "ComponentLead"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "CurrentUser"
+        },
+        {
+          type = "ProjectLead"
+        },
+        {
+          type = "Reporter"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+  ]
+}

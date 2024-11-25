@@ -1,0 +1,39 @@
+jira.NotificationScheme name1 {
+  name = "name1"
+  description = "desc1"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          type = "ComponentLead"
+        },
+        {
+          type = "Reporter"
+        },
+        {
+          parameter = {
+            id = "5cd027a783de300fe5d4b9b0"
+            displayName = "Ori Moisis"
+          }
+          type = "User"
+        },
+        {
+          parameter = {
+            id = "5fa91999b2633d0076583a61"
+            displayName = "Alon Stern"
+          }
+          type = "User"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+    {
+      notifications = [
+        {
+          type = "ComponentLead"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Commented@s
+    },
+  ]
+}

@@ -1,0 +1,540 @@
+jira.WorkflowConfiguration Copy_of_IP__Change_Management_workflow_for_Jira_Service_Management@ssfsssssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Copy of IP: Change Management workflow for Jira Service Management"
+  description = "3This Jira Service Management Change Management workflow was generated for Project IP (This copy was automatically generated from a draft, when workflow 'IP: Change Management workflow for Jira Service Management' was made inactive.)2"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.authorize
+      properties = [
+        {
+          key = "approval.active"
+          value = "true"
+        },
+        {
+          key = "approval.condition.type"
+          value = "numberPerPrincipal"
+        },
+        {
+          key = "approval.condition.value"
+          value = "1"
+        },
+        {
+          key = "approval.field.id"
+          value = jira.Field.instance.Approver_groups__multigrouppicker__c@suuuu
+        },
+        {
+          key = "approval.groups"
+          value = "true"
+        },
+        {
+          key = "approval.pre-populated.field.id"
+          value = jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu
+        },
+        {
+          key = "approval.transition.approved"
+          value = jira.WorkflowConfiguration.instance.Copy_of_IP__Change_Management_workflow_for_Jira_Service_Management@ssfsssssss.transitions.missing_9202
+        },
+        {
+          key = "approval.transition.rejected"
+          value = jira.WorkflowConfiguration.instance.Copy_of_IP__Change_Management_workflow_for_Jira_Service_Management@ssfsssssss.transitions.missing_9232
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Authorize"
+    },
+    {
+      statusReference = jira.Status.instance.awaiting_implementation@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Awaiting implementation"
+    },
+    {
+      statusReference = jira.Status.instance.canceled
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Canceled"
+    },
+    {
+      statusReference = jira.Status.instance.completed
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Completed"
+    },
+    {
+      statusReference = jira.Status.instance.declined
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Declined"
+    },
+    {
+      statusReference = jira.Status.instance.failed
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Failed"
+    },
+    {
+      statusReference = jira.Status.instance.implementing
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Implementing"
+    },
+    {
+      statusReference = jira.Status.instance.planning
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Planning"
+    },
+    {
+      statusReference = jira.Status.instance.review
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Review"
+    },
+  ]
+  transitions = {
+    Standard_change__From__Review__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.awaiting_implementation@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+        },
+      ]
+      name = "Standard change"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.review
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Normal_change__From__Review__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.planning
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+        },
+      ]
+      name = "Normal change"
+      description = ""
+    }
+    Mark_as_canceled__From__Declined__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.declined
+        },
+      ]
+      name = "Mark as canceled"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Emergency_override__From__Review__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.implementing
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+        },
+      ]
+      name = "Emergency override"
+      description = ""
+    }
+    Mark_as_canceled__From__Review__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+        },
+      ]
+      name = "Mark as canceled"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Complete__From__Implementing__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.completed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.implementing
+        },
+      ]
+      name = "Complete"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Back_to_awaiting_implementation__From__Implementing__Directed@sssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.awaiting_implementation@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.implementing
+        },
+      ]
+      name = "Back to awaiting implementation"
+      description = ""
+    }
+    Mark_as_canceled__From__Authorize__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.authorize
+        },
+      ]
+      name = "Mark as canceled"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Mark_as_canceled__From__Implementing__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.implementing
+        },
+      ]
+      name = "Mark as canceled"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Back_to_planning__From__Authorize__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.planning
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.authorize
+        },
+      ]
+      name = "Back to planning"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:block-in-progress-approval"
+          },
+        ]
+      }
+    }
+    Decline__From__Review__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.declined
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+        },
+      ]
+      name = "Decline"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Fail__From__Implementing__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.failed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.implementing
+        },
+      ]
+      name = "Fail"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Mark_as_canceled__From__Awaiting_implementation__Directed@ssfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.awaiting_implementation@s
+        },
+      ]
+      name = "Mark as canceled"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Mark_as_done__From__Review__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.completed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+        },
+      ]
+      name = "Mark as done"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Ready_for_approval__From__Planning__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.authorize
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.planning
+        },
+      ]
+      name = "Ready for approval"
+      description = ""
+    }
+    Implement__From__Awaiting_implementation__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.implementing
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.awaiting_implementation@s
+        },
+      ]
+      name = "Implement"
+      description = ""
+    }
+    Fail__From__Awaiting_implementation__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.failed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.awaiting_implementation@s
+        },
+      ]
+      name = "Fail"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Mark_as_canceled__From__Planning__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.planning
+        },
+      ]
+      name = "Mark as canceled"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Decline__From__Authorize__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.declined
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.authorize
+        },
+      ]
+      name = "Decline"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:block-in-progress-approval"
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Approve__From__Authorize__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.awaiting_implementation@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.authorize
+        },
+      ]
+      name = "Approve"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:block-in-progress-approval"
+          },
+        ]
+      }
+    }
+    Back_to_implementing__From__Failed__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.implementing
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.failed
+        },
+      ]
+      name = "Back to implementing"
+      description = ""
+    }
+    Back_to_review__From__Declined__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.review
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.declined
+        },
+      ]
+      name = "Back to review"
+      description = ""
+    }
+    Ready_for_approval__From__Review__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.authorize
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+        },
+      ]
+      name = "Ready for approval"
+      description = ""
+    }
+    Fail__From__Review__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.failed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+        },
+      ]
+      name = "Fail"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+    Complete__From__Awaiting_implementation__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.completed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.awaiting_implementation@s
+        },
+      ]
+      name = "Complete"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___3@ssssssbs
+        }
+      }
+    }
+  }
+}

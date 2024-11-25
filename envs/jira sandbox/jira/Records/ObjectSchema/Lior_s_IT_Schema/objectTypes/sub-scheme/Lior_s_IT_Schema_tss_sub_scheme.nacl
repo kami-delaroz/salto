@@ -1,0 +1,14 @@
+jira.ObjectType Lior_s_IT_Schema_tss_sub_scheme@uuumub {
+  name = "sub-scheme"
+  type = 0
+  description = ""
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Apple_Watch@s
+  parentObjectTypeId = jira.ObjectSchema.instance.Lior_s_IT_Schema@tss
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "sub-scheme"
+}

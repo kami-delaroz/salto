@@ -1,0 +1,10 @@
+jira.ObjectTypeOrder People_childOrder {
+  objectTypes = [
+    jira.ObjectType.instance.People_Department,
+    jira.ObjectType.instance.People_Role,
+    jira.ObjectType.instance.People_Employees,
+  ]
+  _parent = [
+    jira.ObjectSchema.instance.People,
+  ]
+}

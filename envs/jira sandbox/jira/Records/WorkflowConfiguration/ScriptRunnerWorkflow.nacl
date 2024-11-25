@@ -1,0 +1,93 @@
+jira.WorkflowConfiguration ScriptRunnerWorkflow {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "ScriptRunnerWorkflow"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 784
+    y = 42.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 562.078125
+        y = 161.4
+      }
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 719.8203125
+        y = 120.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Close__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "Close"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "7df4b9fa-98b8-4942-8b51-bd8d3c5b07fd"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.TransitionParent"
+              uuid = "e5c58e83-525a-436a-878a-72be363ccc80"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "issue.fields.assignee != null"
+              description = ""
+              additionalCode = '''
+// this only works when there is a transition screen
+Map addComment = transition.update.comment[0].add as Map
+addComment.body = "\${issue.key} caused this to be transitioned"
+
+'''
+              comment = ""
+              transitionId = ""
+              transitionName = "Close"
+            }
+          }
+        },
+      ]
+    }
+  }
+}

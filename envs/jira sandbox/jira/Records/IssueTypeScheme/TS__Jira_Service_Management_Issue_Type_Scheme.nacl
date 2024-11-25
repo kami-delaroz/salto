@@ -1,0 +1,13 @@
+jira.IssueTypeScheme TS__Jira_Service_Management_Issue_Type_Scheme@fssssss {
+  name = "TS: Jira Service Management Issue Type Scheme"
+  description = "This Jira Service Management Issue Type Scheme was generated automatically"
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Request_an_event@s,
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance.Report_a_maintenance_issue@s,
+    jira.IssueType.instance.Request_a_move@s,
+    jira.IssueType.instance.Questions_for_facilities@s,
+    jira.IssueType.instance.Emailed_request@s,
+  ]
+}

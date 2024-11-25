@@ -1,0 +1,29 @@
+jira.Screen Custom_screen@s {
+  name = "Custom screen"
+  description = "my custom screen"
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Approvers__multiuserpicker__c,
+        jira.Field.instance.Change_completion_date__datetime__c@ssuuuu,
+        jira.Field.instance.development__devsummarycf__c,
+        jira.Field.instance.Change_reason__select__c@suuuu,
+        jira.Field.instance.Custom_multi_line_field__textarea__c@sssuuuu,
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+    Other_tab@s = {
+      name = "Other tab"
+      fields = [
+        jira.Field.instance.uuid__uuid__c,
+        jira.Field.instance._CHART__Time_in_Status__timeinstatus__c@hisssuuuu,
+        jira.Field.instance.Story_Points__float__c@suuuu,
+        jira.Field.instance.CustomCheckboxes__multicheckboxes__c,
+        jira.Field.instance.CustomMultiSelect__multiselect__c,
+      ]
+      position = 1
+    }
+  }
+}

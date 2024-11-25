@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Module {
+  name = "Module"
+  icon = file("jira/ObjectTypeIcon/Module.png")
+}

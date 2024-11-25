@@ -1,0 +1,25 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Employees_umu_Department3@uuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Employees@umu
+  name = "Department3"
+  type = 1
+  description = "Employee's department ido Amit Amit Kal"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  suffix = ""
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  regexValidation = ""
+  qlQuery = ""
+  options = ""
+  iql = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.idoA_Schema_s__Member_of@umuus
+  typeValue = jira.ObjectType.instance.idoA_Schema_s_Employees@umu
+  _alias = "Department3"
+}

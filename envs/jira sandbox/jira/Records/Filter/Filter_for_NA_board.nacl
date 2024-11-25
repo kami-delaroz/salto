@@ -1,0 +1,16 @@
+jira.Filter Filter_for_NA_board@s {
+  name = "Filter for NA board"
+  owner = {
+    id = "5eea285a41f7000abb1b049d"
+    displayName = "Neta Marcus"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.Neta_aaa@s.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.Neta_aaa@s
+      }
+    },
+  ]
+}

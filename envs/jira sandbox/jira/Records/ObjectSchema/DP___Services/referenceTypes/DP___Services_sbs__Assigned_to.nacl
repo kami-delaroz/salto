@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType DP___Services_sbs__Assigned_to@uuumuus {
+  name = "Assigned to"
+  color = "5243AA"
+  removable = false
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+}

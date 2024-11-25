@@ -1,0 +1,12 @@
+jira.ObjectSchema IT_Inventory_@s {
+  name = "IT Inventory "
+  objectSchemaKey = "II"
+  status = "Ok"
+  description = ""
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = false
+  }
+  _alias = "IT Inventory "
+}

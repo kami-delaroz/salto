@@ -1,0 +1,12 @@
+jira.ObjectSchema DP___People@sbs {
+  name = "DP - People"
+  objectSchemaKey = "DP"
+  status = "Ok"
+  description = "Testing for Uniqueness"
+  properties = {
+    quickCreateObjects = true
+    validateQuickCreate = true
+    allowOtherObjectSchema = false
+  }
+  _alias = "DP - People"
+}

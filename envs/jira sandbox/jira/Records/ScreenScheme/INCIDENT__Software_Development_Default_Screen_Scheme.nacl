@@ -1,0 +1,7 @@
+jira.ScreenScheme INCIDENT__Software_Development_Default_Screen_Scheme@fsssss {
+  name = "INCIDENT: Software Development Default Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.INCIDENT__Software_Development_Default_Issue_Screen@fsssss
+  }
+}
