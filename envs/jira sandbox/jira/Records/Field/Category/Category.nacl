@@ -1,0 +1,12 @@
+jira.Field Category__jwm_category__c@uubuu {
+  name = "Category"
+  description = "Choose a category using a popup picker window."
+  isLocked = true
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:jwm-category"
+  contexts = [
+    jira.CustomFieldContext.instance.Category__jwm_category__c_uubuu_Category_Field_Config_Scheme_for_Project__process_control_project@uuuuumusssssfsbb,
+    jira.CustomFieldContext.instance.Category__jwm_category__c_uubuu_Default_Configuration_Scheme_for_Category@uuuuumussss,
+  ]
+  _alias = "Category"
+}

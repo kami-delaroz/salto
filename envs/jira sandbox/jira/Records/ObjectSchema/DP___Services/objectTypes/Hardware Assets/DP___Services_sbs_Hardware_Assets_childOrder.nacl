@@ -1,0 +1,11 @@
+jira.ObjectTypeOrder DP___Services_sbs_Hardware_Assets_childOrder@uuumusu {
+  objectTypes = [
+    jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets_uuumus_Phones@uuuuuumu,
+    jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets_uuumus_Laptops@uuuuuumu,
+    jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets_uuumus_Servers@uuuuuumu,
+    jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets_uuumus_Printers@uuuuuumu,
+  ]
+  _parent = [
+    jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets@uuumus,
+  ]
+}

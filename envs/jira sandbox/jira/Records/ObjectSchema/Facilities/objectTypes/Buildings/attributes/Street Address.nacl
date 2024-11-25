@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute Facilities_Buildings_Street_Address@uus {
+  objectType = jira.ObjectType.instance.Facilities_Buildings
+  name = "Street Address"
+  type = 0
+  description = "Building street address"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "Street Address"
+}

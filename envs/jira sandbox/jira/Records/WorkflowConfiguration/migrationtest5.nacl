@@ -1,0 +1,109 @@
+jira.WorkflowConfiguration migrationtest5 {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "migrationtest5"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 1397
+    y = -41.599999999999994
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.first
+      layout = {
+        x = 1024.21875
+        y = -27.700001220703115
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "first"
+    },
+    {
+      statusReference = jira.Status.instance.second
+      layout = {
+        x = 767.40625
+        y = -27.700001220703115
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "second"
+    },
+  ]
+  transitions = {
+    second__From__second__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.first
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.second
+          fromPort = 1
+          toPort = 1
+        },
+      ]
+      name = "second"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    first__From__first__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.second
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.first
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "first"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.second
+      links = [
+        {
+          toPort = 5
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+jira.Board SHIR_board@s {
+  name = "SHIR board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "616e3f77e79ff6006f1eca7f"
+        displayName = "Shir Reifenberg"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.ShirTest1
+  }
+  isPrivate = false
+  filterId = jira.Filter.instance.Filter_for_SHIR_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+          jira.Status.instance.aaa,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Copy {
+  name = "Copy"
+  icon = file("jira/ObjectTypeIcon/Copy.png")
+}

@@ -1,0 +1,58 @@
+jira.Automation DanTal_Rule@s {
+  name = "DanTal Rule"
+  state = "ENABLED"
+  description = ""
+  authorAccountId = {
+    id = "6160b007a707100069ce5ed3"
+    displayName = "Daniel Tal"
+  }
+  actor = {
+    type = "ACCOUNT_ID"
+    value = {
+      id = "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077"
+      displayName = "Automation for Jira"
+    }
+  }
+  trigger = {
+    component = "TRIGGER"
+    type = "jira.issue.comment.event.trigger:deleted"
+    value = {
+      eventKey = "jira:issue_deleted"
+      issueEvent = "issue_comment_deleted"
+    }
+    children = [
+    ]
+    conditions = [
+    ]
+  }
+  components = [
+    {
+      component = "ACTION"
+      type = "jira.issue.create.subtasks"
+      value = {
+        subtasks = [
+        ]
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+  ]
+  canOtherRuleTrigger = false
+  notifyOnError = "FIRSTERROR"
+  labels = [
+  ]
+  tags = [
+    {
+      ruleIdUuid = "01930155-e5ab-730f-9189-60026fb46838"
+      tagType = "IS_RULE_UPDATED"
+      tagValue = "true"
+    },
+  ]
+  writeAccessType = "UNRESTRICTED"
+  collaborators = [
+  ]
+  billingType = "NORMAL"
+  _alias = "DanTal Rule"
+}

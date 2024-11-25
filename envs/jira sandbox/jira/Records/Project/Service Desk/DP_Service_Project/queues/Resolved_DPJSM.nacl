@@ -1,0 +1,20 @@
+jira.Queue Resolved_DPJSM {
+  name = "Resolved"
+  jql = "${ jira.Field.instance.Resolution__resolution } != EMPTY ORDER BY \"Time to resolution\" ASC"
+  columns = [
+    jira.Field.instance.Request_Type__vp_origin__c@suubuu,
+    jira.Field.instance.Key,
+    jira.Field.instance.Summary__string,
+    jira.Field.instance.Reporter__user,
+    jira.Field.instance.Assignee__user,
+    jira.Field.instance.Status__status,
+    jira.Field.instance.Created__datetime,
+    jira.Field.instance.missing_customfield_10184,
+  ]
+  canBeHidden = false
+  favourite = false
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+  _alias = "DP Service Project:Resolved"
+}

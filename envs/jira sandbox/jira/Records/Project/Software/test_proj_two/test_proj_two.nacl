@@ -1,0 +1,29 @@
+jira.Project test_proj_two@b {
+  key = "TPT"
+  description = ""
+  name = "test-proj-two"
+  projectTypeKey = "software"
+  components = [
+    jira.ProjectComponent.instance.test_proj_two_b__TPT_Comp1@uumuub,
+    jira.ProjectComponent.instance.test_proj_two_b__TPT_Comp2@uumuub,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.TPT__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.TPT_software_permission_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.TPT__Scrum_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.TPT__Scrum_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "5cd027a783de300fe5d4b9b0"
+    displayName = "Ori Moisis"
+  }
+  assigneeType = "UNASSIGNED"
+  fieldContexts = [
+    jira.CustomFieldContext.instance.Custom_multi_line_field__textarea__c_sssuuuu_Default_Configuration_Scheme_for_Custom_multi_line_field@uuuuuuumusssssss,
+    jira.CustomFieldContext.instance.testSelectList2__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,
+    jira.CustomFieldContext.instance.testSelectList5__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,
+    jira.CustomFieldContext.instance.testSelectList6__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,
+    jira.CustomFieldContext.instance.testSelectList8__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,
+    jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss,
+    jira.CustomFieldContext.instance.testSelectList__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss,
+  ]
+}

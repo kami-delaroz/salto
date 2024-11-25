@@ -1,0 +1,13 @@
+jira.ObjectType People_Role {
+  name = "Role"
+  type = 0
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Puzzle
+  parentObjectTypeId = jira.ObjectSchema.instance.People
+  _parent = [
+    jira.ObjectSchema.instance.People,
+  ]
+  _alias = "Role"
+}

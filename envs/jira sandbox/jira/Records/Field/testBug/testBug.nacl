@@ -1,0 +1,11 @@
+jira.Field testBug__multicheckboxes__c {
+  name = "testBug"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"
+  contexts = [
+    jira.CustomFieldContext.instance.testBug__multicheckboxes__c_Default_Configuration_Scheme_for_testBug@uuuuussss,
+    jira.CustomFieldContext.instance.testBug__multicheckboxes__c_NewContext,
+  ]
+  _alias = "testBug"
+}

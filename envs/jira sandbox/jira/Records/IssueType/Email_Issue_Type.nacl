@@ -1,0 +1,7 @@
+jira.IssueType Email_Issue_Type@s {
+  description = ""
+  name = "Email Issue Type"
+  untranslatedName = "Email Issue Type"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Email_Issue_Type.png")
+}

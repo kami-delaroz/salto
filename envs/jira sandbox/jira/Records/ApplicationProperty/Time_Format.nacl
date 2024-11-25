@@ -1,0 +1,7 @@
+jira.ApplicationProperty Time_Format@s {
+  id = "jira.lf.date.time"
+  value = "h:mm a"
+  name = "Time Format"
+  type = "string"
+  example = "3:55 AM"
+}

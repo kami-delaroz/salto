@@ -1,0 +1,66 @@
+jira.NotificationScheme name4 {
+  name = "name4"
+  description = "desc4"
+  notificationSchemeEvents = [
+    {
+      notifications = [
+        {
+          parameter = jira.Field.instance.userPicker__multiuserpicker__c
+          type = "UserCustomField"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Assigned@s
+    },
+    {
+      notifications = [
+        {
+          type = "AllWatchers"
+        },
+        {
+          type = "ComponentLead"
+        },
+        {
+          type = "CurrentAssignee"
+        },
+        {
+          type = "CurrentUser"
+        },
+        {
+          parameter = jira.Field.instance.Urgency__select__c
+          type = "GroupCustomField"
+        },
+        {
+          type = "ProjectLead"
+        },
+        {
+          parameter = jira.ProjectRole.instance.Administrators
+          type = "ProjectRole"
+        },
+        {
+          type = "Reporter"
+        },
+        {
+          parameter = {
+            id = "5fa91999b2633d0076583a61"
+            displayName = "Alon Stern"
+          }
+          type = "User"
+        },
+        {
+          parameter = jira.Field.instance.Approvers__multiuserpicker__c
+          type = "UserCustomField"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Created@s
+    },
+    {
+      notifications = [
+        {
+          parameter = jira.Field.instance.Approvers__multiuserpicker__c
+          type = "UserCustomField"
+        },
+      ]
+      eventType = jira.IssueEvent.instance.Issue_Updated@s
+    },
+  ]
+}

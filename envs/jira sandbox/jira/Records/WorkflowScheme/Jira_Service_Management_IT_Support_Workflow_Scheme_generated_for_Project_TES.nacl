@@ -1,0 +1,27 @@
+jira.WorkflowScheme Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_TES@s {
+  name = "Jira Service Management IT Support Workflow Scheme generated for Project TES"
+  description = "This Jira Service Management IT Support Workflow Scheme was generated for Project TES"
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
+  items = [
+    {
+      workflow = jira.WorkflowConfiguration.instance.TES__Jira_Service_Management_default_workflow@fsssss
+      issueType = jira.IssueType.instance.Task
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.TES__Jira_Service_Management_default_workflow@fsssss
+      issueType = jira.IssueType.instance.Sub_task@b
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.TES__Default_ESM_workflow_for_Jira_Service_Management@fsssssss
+      issueType = jira.IssueType.instance.Submit_a_request_or_incident@s
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.TES__Simple_ESM_workflow_for_Jira_Service_Management@fsssssss
+      issueType = jira.IssueType.instance.Ask_a_question@s
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.TES__Simple_ESM_workflow_for_Jira_Service_Management@fsssssss
+      issueType = jira.IssueType.instance.Emailed_request@s
+    },
+  ]
+}

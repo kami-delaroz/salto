@@ -1,0 +1,14 @@
+jira.ObjectType Lior_s_IT_Schema_tss_Models_uuumu_Jsm2@uuuuumu {
+  name = "Jsm2"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models@uuumu
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "Jsm2"
+}

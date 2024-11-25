@@ -1,0 +1,458 @@
+jira.WorkflowConfiguration WorkflowScriptRunnerCloud {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "WorkflowScriptRunnerCloud"
+  description = "sss"
+  isEditable = true
+  startPointLayout = {
+    x = 1104
+    y = 17.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 1072.078125
+        y = 167.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Close"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 1056.796875
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1079.40625
+        y = 67.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Start__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "Start"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "d49e1bdc-2bbe-4f20-8d8e-235e5961cfbb"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.RunScript"
+              uuid = "7464bf9d-cd56-4cf7-9a1d-b216506a26ff"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "(${ jira.Field.instance.a_b__float__c@ruuuu }).value ==a"
+              description = "In script reference"
+              additionalCode = '''
+def issueId = issue.id
+
+def link = post('/rest/api/2/issueLink')
+        .header('Content-Type', 'application/json')
+        .body([
+            type: [ name: "Blocks" ],
+            outwardIssue: [ id: issueId ],  // This is the issue that the link 'starts' at
+            inwardIssue: [ key: 'EX-1' ]  // You'll need to specify an issue ID or key here
+        ])
+        .asString()
+assert link.status == 201
+
+'''
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "45a6798a-7be7-471a-b4d6-0fecbcbe5d94"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.AssignToUserInGroup"
+              uuid = "e9c3d0ec-0d9d-4b1f-b010-3c0e3a18111a"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "((Map) issue.fields.issuetype)?.name == 'Task'"
+              description = "Assign Issue"
+              groupName = jira.Group.instance.site_admins@b
+              roleId = jira.ProjectRole.instance.atlassian_addons_project_access@b
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "e76dda11-94e8-4783-917f-d7b9299d1714"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.SprintTransition"
+              uuid = "cdd9122d-d7c5-4fcb-8615-5944cce3d8c7"
+              enabled = true
+              executionUser = "ADD_ON"
+              boardId = jira.Board.instance.SFDC_board@s
+              condition = "((Map) issue.fields.issuetype)?.name == 'Task'"
+              description = "Add remove from sprint"
+              action = "add"
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "ad98c78f-fc28-4630-8785-6b39c1f5571b"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.UpdateIssue"
+              uuid = "f1c65b9e-2074-4e18-b021-2998bf310816"
+              enabled = true
+              executionUser = "INITIATING_USER"
+              condition = "issue.fields.reporter != null"
+              description = "Modify issue"
+              additionalCode = '''
+issueInput.update.labels = [[remove: "finance"]]
+
+'''
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "ed0d2526-f3bd-4947-9ab8-8b9c97150986"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.CreateSubtask"
+              uuid = "7f51cf15-017b-4fae-b905-7bd1cfd76e75"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "AAA = BBB"
+              description = "create subtask"
+              issueTypeId = jira.IssueType.instance.Story
+              summary = "bla"
+              additionalCode = "XXX = YYY"
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "e16e3280-d426-4e16-bdd2-ebf5546bdff3"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.AssignToUserInGroup"
+              uuid = "36e3b17e-1cd7-4f22-85e0-91a18ffa9a9a"
+              enabled = true
+              executionUser = "INITIATING_USER"
+              condition = "issue.fields.assignee != null"
+              description = "Post description"
+              groupName = jira.Group.instance.atlassian_addons_admin@b
+              roleId = jira.ProjectRole.instance.aaa
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "e8a9daf5-2047-4141-b690-dc73ec42baec"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.FastTrackIssue"
+              uuid = "2cf3f903-7be1-4a14-9b12-8136c07681c6"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "((Map) issue.fields.issuetype)?.name == 'Task'"
+              description = "Fast track transition issue"
+              additionalCode = '''
+Map addComment = transition.update.comment[0].add as Map
+addComment.body = "\${issue.key} updated by ScriptRunner"
+
+'''
+              comment = "comment"
+              transitionId = jira.WorkflowConfiguration.instance.WorkflowScriptRunnerCloud.transitions.Start__From__Open__Directed@fffsff
+              transitionName = ""
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "05984590-a52a-4d73-80ae-764b1deeabca"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.TransitionParent"
+              uuid = "d873643e-8d32-4c90-9c96-c1ff882b8ebb"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "issue.fields.assignee != null"
+              description = "Transition parent issue"
+              additionalCode = '''
+// this only works when there is a transition screen
+Map addComment = transition.update.comment[0].add as Map
+addComment.body = "\${issue.key} caused this to be transitioned"
+
+'''
+              comment = "Comment"
+              transitionId = jira.WorkflowConfiguration.instance.WorkflowScriptRunnerCloud.transitions.Start__From__Open__Directed@fffsff
+              transitionName = "Close"
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "efd60739-1567-45a7-8dd4-6c60882be497"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.CloneIssue"
+              uuid = "faf02f5e-bbec-45e5-84e7-ff2a33614a7b"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "issue.fields.assignee != null"
+              description = "Clone Issue"
+              issueTypeId = jira.IssueType.instance.Story
+              linkDirection = "Inward"
+              linkTypeId = jira.IssueLinkType.instance.Cloners
+              projectId = jira.Project.instance.test
+              additionalCode = '''
+List labels = issue.fields.labels ?: [] // get the labels for the current issue
+labels += "newLabel"
+issueInput.fields.labels = labels
+
+'''
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "4ab09da4-ebac-4617-892e-062a19e3fc63"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.SendNotification"
+              uuid = "e72d0899-584b-4bff-a150-12a99d0a7693"
+              enabled = true
+              executionUser = "ADD_ON"
+              description = "Send Notifications"
+              subject = "Subject"
+              additionalCode = '''
+// There must be users in this group for this notify request to succeed
+notification.restrict = [
+        groups: [
+                [name: "jira-administrators"]
+        ]
+]
+
+'''
+              condition = "issue.fields.summary ==~ /^(?i)foo.*/"
+              accountIds = [
+                {
+                  id = "60e8b78784c9920071996842"
+                  displayName = "Lior Neudorfer"
+                },
+                {
+                  id = "60a60ff79b362f006919d5ff"
+                  displayName = "Former user"
+                },
+              ]
+              assignee = true
+              reporter = true
+              voters = true
+              watchers = true
+              groupName = [
+                jira.Group.instance.site_admins@b,
+                jira.Group.instance.atlassian_addons_admin@b,
+              ]
+              emailCode = '''
+def fields = get('/rest/api/2/field')
+        .asObject(List)
+        .body as List<Map>
+
+def customFieldId = fields.find { it.name == 'TextFieldB' }.id as String
+def customFieldValue = (issue.fields[customFieldId] as Map)?.value
+
+"""Dear \${issue.fields.assignee?.displayName},
+
+The \${issue.fields.issuetype.name} \${issue.key} with priority \${issue.fields.priority?.name} has been assigned to you.
+
+Description: \${issue.fields.description}
+
+Custom field value: \${customFieldValue}
+
+Regards,
+\${issue.fields.reporter?.displayName}"""
+
+'''
+            }
+          }
+        },
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "cc0aa277-4272-4ca7-b7b2-959c959dd23d"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.RunScript"
+              uuid = "0436e17d-a45c-4080-84b1-b5cc2d7561a2"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = "issue.fields.summary ==~ /^(?i)foo.*/"
+              description = "Run Script2"
+              additionalCode = '''
+def issueKey = issue.key
+def newSummary = 'Updated by a script'
+
+def result = put("/rest/api/2/issue/\${issueKey}")
+        .header('Content-Type', 'application/json')
+        .body([
+                fields: [
+                        summary: newSummary
+                ]
+        ])
+        .asString()
+
+'''
+            }
+          }
+        },
+      ]
+      validators = [
+        {
+          ruleKey = "connect:expression-validator"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            id = "851b02b9-524a-4676-a1fc-c2d3fea4806b"
+            disabled = "false"
+            scriptRunner = {
+              uuid = "b8de9e66-8248-4c6f-9160-0fad129ea88d"
+              enabled = true
+              description = "Validator123"
+              expression = '''
+List labels = issue.fields.labels ?: [] // get the labels for the current issue
+labels += "newLabel"
+issueInput.fields.labels = labels
+'''
+              errorMessage = "A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information."
+            }
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "connect:expression-condition"
+            parameters = {
+              appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-conditions"
+              id = "e2ae0003-bb75-4040-b0f0-20080c10b49b"
+              disabled = "false"
+              scriptRunner = {
+                uuid = "45f3701c-5682-4ff1-ad8d-403dd4d2b3d6"
+                enabled = true
+                description = "Condition123"
+                expression = "issue.fields.assignee != null"
+              }
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Close__From__In_Progress__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "Close"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+}

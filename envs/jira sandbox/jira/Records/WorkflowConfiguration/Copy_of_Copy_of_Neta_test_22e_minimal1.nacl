@@ -1,0 +1,166 @@
+jira.WorkflowConfiguration Copy_of_Copy_of_Neta_test_22e_minimal1@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Copy of Copy of Neta test 22e minimal1"
+  description = "aaa"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "A shared status3"
+    },
+    {
+      statusReference = jira.Status.instance.an_inactive_status@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+        {
+          key = "testKey"
+          value = "testValue"
+        },
+      ]
+      deprecated = false
+      name = "An Inactive Status"
+    },
+    {
+      statusReference = jira.Status.instance.approved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.authorize
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Authorize"
+    },
+    {
+      statusReference = jira.Status.instance.build_broken@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Build Broken"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Build_Broken__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.build_broken@s
+      name = "Build Broken"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Focus__From__A_shared_status3_Approved__Directed@fffssszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.approved
+        },
+        {
+          fromStatusReference = jira.Status.instance.a_shared_status3@s
+        },
+      ]
+      name = "Focus"
+      description = "desc2"
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:previous-status-condition"
+            parameters = {
+              previousStatusIds = jira.Status.instance.build_broken@s
+              not = "true"
+              mostRecentStatusOnly = "true"
+              includeCurrentStatus = "true"
+              ignoreLoopTransitions = "true"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.AL__Kanban_Bug_Screen@fsss
+        }
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+}

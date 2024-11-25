@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Privacy {
+  name = "Privacy"
+  icon = file("jira/ObjectTypeIcon/Privacy.png")
+}

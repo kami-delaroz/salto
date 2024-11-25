@@ -1,0 +1,29 @@
+jira.Board testNewBoard {
+  name = "testNewBoard"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "5fa91999b2633d0076583a61"
+        displayName = "Alon Stern"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.AlonCompanyProject
+  }
+  isPrivate = false
+  filterId = jira.Filter.instance.Filter_for_testNewBoard@s
+  columnConfig = {
+    columns = [
+      {
+        name = "New Column"
+        statuses = [
+          jira.Status.instance.resolved,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

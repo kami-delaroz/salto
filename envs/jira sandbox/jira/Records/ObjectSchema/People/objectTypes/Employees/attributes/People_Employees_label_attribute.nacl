@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute People_Employees_label_attribute {
+  labelAttribute = jira.ObjectTypeAttribute.instance.People_Employees_Name
+  objectType = jira.ObjectType.instance.People_Employees
+}

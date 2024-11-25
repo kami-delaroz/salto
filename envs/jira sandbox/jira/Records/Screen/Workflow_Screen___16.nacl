@@ -1,0 +1,14 @@
+jira.Screen Workflow_Screen___16@ssbs {
+  name = "Workflow Screen - 16"
+  description = "This screen is used in the workflow and enables you to assign issues"
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Assignee__user,
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+  }
+}

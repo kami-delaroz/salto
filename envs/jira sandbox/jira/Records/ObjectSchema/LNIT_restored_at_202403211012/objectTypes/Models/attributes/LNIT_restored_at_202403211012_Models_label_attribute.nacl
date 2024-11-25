@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute LNIT_restored_at_202403211012_Models_label_attribute {
+  labelAttribute = jira.ObjectTypeAttribute.instance.LNIT_restored_at_202403211012_Models_Name
+  objectType = jira.ObjectType.instance.LNIT_restored_at_202403211012_Models
+}

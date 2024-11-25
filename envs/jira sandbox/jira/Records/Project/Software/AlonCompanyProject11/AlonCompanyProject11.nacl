@@ -1,0 +1,24 @@
+jira.Project AlonCompanyProject11 {
+  key = "LNCMPNPJ11"
+  description = ""
+  name = "AlonCompanyProject11"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.LNPRJCT3__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueSecurityScheme = jira.SecurityScheme.instance.name
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.LNCMPNPRJC__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.Default_Issue_Type_Scheme@s
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  assigneeType = "PROJECT_LEAD"
+  fieldContexts = [
+    jira.CustomFieldContext.instance.Flagged2__multicheckboxes__c_name2,
+    jira.CustomFieldContext.instance.For_Jira_PCS_180060__select__c_ssbuuuu_label2@uuuuuuumu,
+    jira.CustomFieldContext.instance.Urgency4__select__c_test2,
+    jira.CustomFieldContext.instance.Version_Picker__single_version___version__c_ssjskuuuu_Default_Configuration_Scheme_for_Version_Picker__single_version_@uuuuuuuuumussssssjsk,
+    jira.CustomFieldContext.instance.testGlobalIssues__multicheckboxes__c_testContext,
+  ]
+}

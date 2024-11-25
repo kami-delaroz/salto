@@ -1,0 +1,13 @@
+jira.ObjectType ITSBX_Models {
+  name = "Models"
+  type = 0
+  inherited = false
+  abstractObjectType = true
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  parentObjectTypeId = jira.ObjectSchema.instance.ITSBX
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "Models"
+}

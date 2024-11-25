@@ -1,0 +1,10 @@
+jira.Field Who_is_moving___multiuserpicker__c@ssauuuu {
+  name = "Who is moving?"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:userpickergroupsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker"
+  contexts = [
+    jira.CustomFieldContext.instance.Who_is_moving___multiuserpicker__c_ssauuuu_Default_Configuration_Scheme_for_Who_is_moving_@uuuuuuumussssssa,
+  ]
+  _alias = "Who is moving?"
+}

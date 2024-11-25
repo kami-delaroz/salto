@@ -1,0 +1,88 @@
+jira.WorkflowConfiguration shay_shay@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "shay shay"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 617
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.approved
+      layout = {
+        x = 351.068359375
+        y = 206.29999877929689
+      }
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.authorize
+      layout = {
+        x = 575.91796875
+        y = 206.29999877929689
+      }
+      deprecated = false
+      name = "Authorize"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 592.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    a__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.authorize
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "a"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    b__From__Authorize__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.authorize
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "b"
+      description = ""
+    }
+  }
+}

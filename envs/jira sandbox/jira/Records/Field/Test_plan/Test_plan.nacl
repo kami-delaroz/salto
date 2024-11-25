@@ -1,0 +1,10 @@
+jira.Field Test_plan__textarea__c@suuuu {
+  name = "Test plan"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.Test_plan__textarea__c_suuuu_Default_Configuration_Scheme_for_Test_plan@uuuuumusssss,
+  ]
+  _alias = "Test plan"
+}

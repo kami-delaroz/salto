@@ -1,0 +1,47 @@
+jira.DashboardGadget ITSM_Sample_Dashboard_s__Bubble_Chart_1_1@uumuusuu {
+  moduleKey = "com.atlassian.jira.gadgets:bubble-chart-dashboard-item"
+  color = "blue"
+  position = {
+    row = 1
+    column = 1
+  }
+  title = "Bubble Chart"
+  properties = [
+    {
+      key = "bubbleType"
+      value = "participants"
+    },
+    {
+      key = "id"
+      value = "10038"
+    },
+    {
+      key = "isConfigured"
+      value = true
+    },
+    {
+      key = "name"
+      value = "ITSM sample space"
+    },
+    {
+      key = "recentCommentsPeriod"
+      value = 7
+    },
+    {
+      key = "type"
+      value = "project"
+    },
+    {
+      key = "useLogarithmicScale"
+      value = false
+    },
+    {
+      key = "useRelativeColoring"
+      value = true
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.ITSM_Sample_Dashboard@s,
+  ]
+  _alias = "Bubble Chart"
+}

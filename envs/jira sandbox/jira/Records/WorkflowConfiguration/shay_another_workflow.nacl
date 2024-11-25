@@ -1,0 +1,53 @@
+jira.WorkflowConfiguration shay_another_workflow@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "shay another workflow"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 688
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.approved
+      layout = {
+        x = 627.068359375
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 663.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

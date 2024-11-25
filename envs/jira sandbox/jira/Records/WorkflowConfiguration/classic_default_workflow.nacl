@@ -1,0 +1,320 @@
+jira.WorkflowConfiguration classic_default_workflow@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "classic default workflow"
+  description = "The classic JIRA default workflow2"
+  isEditable = true
+  startPointLayout = {
+    x = 521
+    y = -32.599999999999994
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 489.078125
+        y = 67.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 473.796875
+        y = 167.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 496.41015625
+        y = 17.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      layout = {
+        x = 481.12890625
+        y = 117.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Reopened"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      layout = {
+        x = 482.15234375
+        y = 217.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Resolved"
+    },
+  ]
+  transitions = {
+    Start_Progress__From__Open_Reopened__Directed@sfffszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "Start Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              accountIds = "allow-assignee"
+            }
+          },
+        ]
+      }
+      customIssueEventId = jira.IssueEvent.instance.Work_Started_On_Issue@s
+    }
+    Resolve_Issue__From__In_Progress_Open_Reopened__Directed@sfffsszdzdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.resolved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+          fromPort = 7
+          toPort = 3
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "Resolve Issue"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+      customIssueEventId = jira.IssueEvent.instance.Issue_Resolved@s
+    }
+    Reopen_Issue__From__Closed_Resolved__Directed@sfffszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.reopened
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.closed
+          fromPort = 3
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.resolved
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "Reopen Issue"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+      customIssueEventId = jira.IssueEvent.instance.Issue_Reopened@s
+    }
+    Stop_Progress__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "Stop Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              accountIds = "allow-assignee"
+            }
+          },
+        ]
+      }
+      customIssueEventId = jira.IssueEvent.instance.Work_Stopped_On_Issue@s
+    }
+    Close_Issue__From__Resolved__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.resolved
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "Close Issue"
+      description = "Closing an issue indicates there is no more work to be done on it, and it has been verified as complete."
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "CLOSE_ISSUES"
+            }
+          },
+        ]
+      }
+      customIssueEventId = jira.IssueEvent.instance.Issue_Closed@s
+    }
+    Close_Issue__From__In_Progress_Open_Reopened__Directed@sfffsszdzdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+          fromPort = 7
+          toPort = 3
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "Close Issue"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "CLOSE_ISSUES"
+            }
+          },
+        ]
+      }
+      customIssueEventId = jira.IssueEvent.instance.Issue_Closed@s
+    }
+    Create_Issue__From__none__Initial@sfffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create Issue"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

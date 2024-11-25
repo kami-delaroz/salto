@@ -1,0 +1,47 @@
+jira.Board TSTPRJ5_board@s {
+  name = "TSTPRJ5 board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "5fa91999b2633d0076583a61"
+        displayName = "Alon Stern"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.testProj5
+  }
+  isPrivate = false
+  filterId = jira.Filter.instance.Filter_for_TSTPRJ5_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Backlog"
+        statuses = [
+          jira.Status.instance.backlog,
+        ]
+      },
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

@@ -1,0 +1,141 @@
+jira.WorkflowConfiguration AS2__Simple_Issue_Tracking_Workflow__3_@fsssssjk {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "AS2: Simple Issue Tracking Workflow (3)"
+  description = "desc8"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "To Do"
+    },
+  ]
+  transitions = {
+    Done__From__To_Do__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+      ]
+      name = "Done"
+      description = ""
+    }
+    Reopen__From__Done__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.done
+        },
+      ]
+      name = "Reopen"
+      description = ""
+    }
+    Reopen_and_start_progress__From__Done__Directed@sssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.done
+        },
+      ]
+      name = "Reopen and start progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+      ]
+    }
+    Start_Progress__From__To_Do__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+      ]
+      name = "Start Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+      ]
+    }
+    Done__From__In_Progress__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+      name = "Done"
+      description = ""
+    }
+    Stop_Progress__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+      name = "Stop Progress"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.to_do@s
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

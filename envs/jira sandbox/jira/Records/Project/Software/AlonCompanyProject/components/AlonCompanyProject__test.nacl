@@ -1,0 +1,12 @@
+jira.ProjectComponent AlonCompanyProject__test {
+  assigneeType = "PROJECT_LEAD"
+  name = "test"
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  _parent = [
+    jira.Project.instance.AlonCompanyProject,
+  ]
+  _alias = "AlonCompanyProject:test"
+}

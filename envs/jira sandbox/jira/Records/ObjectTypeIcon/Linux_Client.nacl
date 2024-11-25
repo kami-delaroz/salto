@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Linux_Client@s {
+  name = "Linux Client"
+  icon = file("jira/ObjectTypeIcon/Linux_Client.png")
+}

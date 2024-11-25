@@ -1,0 +1,14 @@
+jira.CustomFieldContext Version_Picker__single_version___version__c_ssjskuuuu_second@uuuuuuuuumu {
+  name = "second"
+  description = ""
+  isGlobalContext = false
+  defaultValue = {
+    type = "version.single"
+    versionId = "10001"
+    versionOrder = "releasedFirst"
+  }
+  _parent = [
+    jira.Field.instance.Version_Picker__single_version___version__c@ssjskuuuu,
+  ]
+  _alias = "Version Picker (single version) context in second"
+}

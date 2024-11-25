@@ -1,0 +1,47 @@
+jira.Board NA_board@s {
+  name = "NA board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "5eea285a41f7000abb1b049d"
+        displayName = "Neta Marcus"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.Neta_aaa@s
+  }
+  isPrivate = false
+  filterId = jira.Filter.instance.Filter_for_NA_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Backlog"
+        statuses = [
+          jira.Status.instance.backlog,
+        ]
+      },
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

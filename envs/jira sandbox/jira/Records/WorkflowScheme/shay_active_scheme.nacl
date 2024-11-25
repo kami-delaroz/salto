@@ -1,0 +1,31 @@
+jira.WorkflowScheme shay_active_scheme@s {
+  name = "shay active scheme"
+  description = ""
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
+  items = [
+    {
+      workflow = jira.WorkflowConfiguration.instance.shay_shay@s
+      issueType = jira.IssueType.instance._System__Incident@his
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.shay_shay@s
+      issueType = jira.IssueType.instance._System__Post_incident_review@hisbs
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.shay_shay@s
+      issueType = jira.IssueType.instance._System__Service_request@hiss
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.shay_shay@s
+      issueType = jira.IssueType.instance._System__Service_request_with_approvals@hissss
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.shay_shay@s
+      issueType = jira.IssueType.instance._System__Change@his
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.shay_shay@s
+      issueType = jira.IssueType.instance._System__Problem@his
+    },
+  ]
+}

@@ -1,0 +1,4 @@
+jira.NotificationScheme shir000 {
+  name = "shir000"
+  description = "desssciptionn"
+}

@@ -1,0 +1,13 @@
+jira.ObjectType DP___Services_sbs_Hardware_Assets_uuumus_Phones@uuuuuumu {
+  name = "Phones"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.DP___Services_sbs_Hardware_Assets@uuumus
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Phone
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "Phones"
+}

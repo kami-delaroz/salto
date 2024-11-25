@@ -1,0 +1,239 @@
+jira.WorkflowConfiguration Copy_of_PCP__Process_Management_Workflow@ssfsss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Copy of PCP: Process Management Workflow"
+  description = "3process-management-workflow (This copy was automatically generated from a draft, when workflow 'PCP: Process Management Workflow' was made inactive.)2"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.approved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.cancelled
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Cancelled"
+    },
+    {
+      statusReference = jira.Status.instance.done
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.rejected
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Rejected"
+    },
+    {
+      statusReference = jira.Status.instance.under_review@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Under Review"
+    },
+  ]
+  transitions = {
+    Reject__From__Under_Review__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.rejected
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.under_review@s
+        },
+      ]
+      name = "Reject"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Comment_Screen@fsssss
+        }
+      }
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Approve__From__Under_Review__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.under_review@s
+        },
+      ]
+      name = "Approve"
+      description = ""
+    }
+    Stop_progress__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.cancelled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+      name = "Stop progress"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss
+        }
+      }
+    }
+    Start_progress__From__Rejected__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.rejected
+        },
+      ]
+      name = "Start progress"
+      description = ""
+    }
+    Start_Progress__From__Open__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+      ]
+      name = "Start Progress"
+      description = ""
+    }
+    Done__From__Approved__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.approved
+        },
+      ]
+      name = "Done"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.PROC0356__Simple_Issue_Tracking_Resolve_Issue_Screen@fssssss
+        }
+      }
+    }
+    Reopen__From__Cancelled__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.cancelled
+        },
+      ]
+      name = "Reopen"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+    }
+    Ready_for_review__From__In_Progress__Directed@ssfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.under_review@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+      name = "Ready for review"
+      description = ""
+    }
+  }
+}

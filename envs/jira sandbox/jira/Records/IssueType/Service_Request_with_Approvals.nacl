@@ -1,0 +1,6 @@
+jira.IssueType Service_Request_with_Approvals@s {
+  description = "A requests that may require approval."
+  name = "Service Request with Approvals"
+  untranslatedName = "Service Request with Approvals"
+  hierarchyLevel = 0
+}

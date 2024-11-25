@@ -1,0 +1,10 @@
+jira.IssueTypeScheme TEST__Scrum_Issue_Type_Scheme@fssss {
+  name = "TEST: Scrum Issue Type Scheme"
+  defaultIssueTypeId = jira.IssueType.instance.Story
+  issueTypeIds = [
+    jira.IssueType.instance.Task,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Bug,
+    jira.IssueType.instance.Epic,
+  ]
+}

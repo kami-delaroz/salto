@@ -1,0 +1,67 @@
+jira.WorkflowConfiguration Neta_bulk_1@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Neta bulk 1"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = -100.00030899047852
+    y = -153.00020599365234
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done_2@s
+      layout = {
+        x = 508.000244140625
+        y = -16
+      }
+      deprecated = false
+      name = "Done 2"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress_2@s
+      layout = {
+        x = 317.0000915527344
+        y = -16
+      }
+      deprecated = false
+      name = "In Progress 2"
+    },
+    {
+      statusReference = jira.Status.instance.to_do_2@s
+      layout = {
+        x = 114.99993896484375
+        y = -16
+      }
+      deprecated = false
+      name = "To Do 2"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.to_do_2@s
+      name = "Create"
+      description = ""
+    }
+    Done__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.done_2@s
+      name = "Done"
+      description = ""
+    }
+    In_Progress__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.in_progress_2@s
+      name = "In Progress"
+      description = ""
+    }
+    To_Do__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.to_do_2@s
+      name = "To Do"
+      description = ""
+    }
+  }
+}

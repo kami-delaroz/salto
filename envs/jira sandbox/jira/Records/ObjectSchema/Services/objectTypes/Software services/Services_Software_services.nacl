@@ -1,0 +1,14 @@
+jira.ObjectType Services_Software_services@us {
+  name = "Software services"
+  type = 0
+  description = "This object type contains the services your site uses across projects."
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Software_Services@s
+  parentObjectTypeId = jira.ObjectSchema.instance.Services
+  _parent = [
+    jira.ObjectSchema.instance.Services,
+  ]
+  _alias = "Software services"
+}

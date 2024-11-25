@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute Lior_s_IT_Schema_tss_new_Root_label_attribute@uuumusuu {
+  labelAttribute = jira.ObjectTypeAttribute.instance.Lior_s_IT_Schema_tss_new_Root_uuumus_Name@uuuuuumu
+  objectType = jira.ObjectType.instance.Lior_s_IT_Schema_tss_new_Root@uuumus
+}

@@ -1,0 +1,120 @@
+jira.WorkflowConfiguration AS2__Simple_Issue_Tracking_Workflow__4__ae1473c0_91b4_4971_a2bd_74142b227f3b@fsssssjkbbbbb {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "AS2: Simple Issue Tracking Workflow (4)-ae1473c0-91b4-4971-a2bd-74142b227f3b"
+  description = "desc"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "To Do"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.to_do@s
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "common.forms.create"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "common.forms.create"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Start_Progress__From__To_Do__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+      ]
+      name = "Start Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "startprogress.title"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "startprogress.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Stop_Progress__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+        },
+      ]
+      name = "Stop Progress"
+      description = ""
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "stopprogress.title"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "stopprogress.title"
+        },
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+}

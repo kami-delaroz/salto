@@ -1,0 +1,7 @@
+jira.IssueType AnIssueSubType {
+  description = "הגדרה של משהו"
+  name = "AnIssueSubType"
+  untranslatedName = "AnIssueSubType"
+  hierarchyLevel = -1
+  avatar = file("jira/IssueType/AnIssueSubType.png")
+}

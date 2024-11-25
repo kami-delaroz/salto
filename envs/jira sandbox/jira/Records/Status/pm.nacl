@@ -1,0 +1,6 @@
+jira.Status pm {
+  name = "PM"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = "Tickets in the PM backlog"
+  _alias = "PM"
+}

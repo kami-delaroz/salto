@@ -1,0 +1,10 @@
+jira.Field Number_of_comments__comments__c@ssuuuu {
+  name = "Number of comments"
+  description = ""
+  searcherKey = "com.atlassian.jira.toolkit:commentcountsearcher"
+  type = "com.atlassian.jira.toolkit:comments"
+  contexts = [
+    jira.CustomFieldContext.instance.Number_of_comments__comments__c_ssuuuu_Default_Configuration_Scheme_for_Number_of_comments@uuuuuumussssss,
+  ]
+  _alias = "Number of comments"
+}
