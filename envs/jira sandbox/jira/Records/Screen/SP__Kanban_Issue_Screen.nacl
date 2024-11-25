@@ -1,0 +1,10 @@
+jira.Screen SP__Kanban_Issue_Screen@fsss {
+  name = "SP: Kanban Issue Screen"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      position = 0
+    }
+  }
+}

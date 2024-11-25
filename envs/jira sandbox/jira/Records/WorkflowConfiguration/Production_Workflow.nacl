@@ -1,0 +1,319 @@
+jira.WorkflowConfiguration Production_Workflow@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Production Workflow"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 1015
+    y = -27.599999999999994
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 1653.109375
+        y = 16.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 1303.796875
+        y = 16.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1181.40625
+        y = 16.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.review
+      layout = {
+        x = 1474.296875
+        y = 16.400000000000006
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Review"
+    },
+    {
+      statusReference = jira.Status.instance.sla_customer_waiting@s
+      layout = {
+        x = 1192.6796875
+        y = 141.4
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "SLA Customer Waiting"
+    },
+  ]
+  transitions = {
+    Stop_Work__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 1
+          toPort = 1
+        },
+      ]
+      name = "Stop Work"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    SLA_Customer_Waiting__From__Open__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.sla_customer_waiting@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 5
+          toPort = 0
+        },
+      ]
+      name = "SLA Customer Waiting"
+      description = ""
+      validators = [
+        {
+          ruleKey = "connect:expression-validator"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            id = "83704e30-b1d2-48a6-b2db-aca716020d40"
+            disabled = "false"
+            scriptRunner = {
+              uuid = "546dcec5-d4b4-4320-8acc-c091bdb3791e"
+              enabled = true
+              description = "Test that SLA is correct"
+              expression = "issue.customfield_14076 == 'Urgent SLA' || issue.customfield_14076 == 'Silver SLA'"
+              errorMessage = "A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information."
+            }
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Start_Work__From__Open__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "Start Work"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Start_Work__From__SLA_Customer_Waiting__Directed@sfffsssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.sla_customer_waiting@s
+          fromPort = 2
+          toPort = 5
+        },
+      ]
+      name = "Start Work"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Stop_Review__From__Review__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+          fromPort = 5
+          toPort = 5
+        },
+      ]
+      name = "Stop Review"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Start_Review__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.review
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "Start Review"
+      description = ""
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+    Done__From__Review__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.review
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "Done"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "e51f0f42-19a2-45cc-b754-44a05a009539"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.SendNotification"
+              uuid = "0910e8f7-c91f-40e4-a957-7ca66b3bd119"
+              enabled = true
+              executionUser = "ADD_ON"
+              description = ""
+              subject = "An urgent SLA issue has been closed"
+              additionalCode = ""
+              condition = "issue.fields.customfield_14076 == \"Urgent SLA\""
+              accountIds = [
+                {
+                  id = "5c7289009170244d98d8192c"
+                  displayName = "Gil Hoffer"
+                },
+              ]
+              assignee = false
+              reporter = false
+              voters = true
+              watchers = true
+              groupName = [
+                jira.Group.instance.SLA_Notification_Users@s,
+              ]
+              emailCode = '''
+def fields = get('/rest/api/2/field')
+        .asObject(List)
+        .body as List<Map>
+
+def customFieldId = fields.find { it.name == 'TextFieldB' }.id as String
+def customFieldValue = (issue.fields[customFieldId] as Map)?.value
+
+"""Dear \${issue.fields.assignee?.displayName},
+
+The \${issue.fields.issuetype.name} \${issue.key} with priority \${issue.fields.priority?.name} has been assigned to you.
+
+Description: \${issue.fields.description}
+
+Custom field value: \${customFieldValue}
+
+Regards,
+\${issue.fields.reporter?.displayName}"""
+
+'''
+            }
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+    }
+  }
+}

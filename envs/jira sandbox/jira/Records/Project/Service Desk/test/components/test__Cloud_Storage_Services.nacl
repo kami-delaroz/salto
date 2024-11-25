@@ -1,0 +1,13 @@
+jira.ProjectComponent test__Cloud_Storage_Services@uuss {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Cloud Storage Services"
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  _parent = [
+    jira.Project.instance.test,
+  ]
+  _alias = "test:Cloud Storage Services"
+}

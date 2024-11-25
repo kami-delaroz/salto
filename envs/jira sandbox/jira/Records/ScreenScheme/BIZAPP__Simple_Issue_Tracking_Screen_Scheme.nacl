@@ -1,0 +1,8 @@
+jira.ScreenScheme BIZAPP__Simple_Issue_Tracking_Screen_Scheme@fsssss {
+  name = "BIZAPP: Simple Issue Tracking Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.BIZAPP__Simple_Issue_Tracking_Edit_View_Issue_Screen@fssssdss
+    create = jira.Screen.instance.BIZAPP__Simple_Issue_Tracking_Create_Issue_Screen@fssssss
+  }
+}

@@ -1,0 +1,13 @@
+jira.ObjectType Facilities_Buildings {
+  name = "Buildings"
+  type = 0
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Building
+  parentObjectTypeId = jira.ObjectSchema.instance.Facilities
+  _parent = [
+    jira.ObjectSchema.instance.Facilities,
+  ]
+  _alias = "Buildings"
+}

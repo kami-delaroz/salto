@@ -1,0 +1,20 @@
+jira.Dashboard another_dashbord@s {
+  description = "test refs"
+  name = "another dashbord"
+  owner = {
+    id = "616e3f77e79ff6006f1eca7f"
+    displayName = "Shir Reifenberg"
+  }
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+  gadgets = [
+    jira.DashboardGadget.instance.another_dashbord_s__Filter_counts_0_0@umuusuu,
+    jira.DashboardGadget.instance.another_dashbord_s__Workload_Pie__ITSM_sample_space_0_1@umuusfsssuu,
+    jira.DashboardGadget.instance.another_dashbord_s__Two_Dimensional_Filter_Statistics_0_2@umuusssuu,
+    jira.DashboardGadget.instance.another_dashbord_s__Filter_Results_1_0@umuusuu,
+  ]
+  layout = "AA"
+}

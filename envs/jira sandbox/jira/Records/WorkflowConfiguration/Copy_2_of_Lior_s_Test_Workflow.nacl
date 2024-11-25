@@ -1,0 +1,206 @@
+jira.WorkflowConfiguration Copy_2_of_Lior_s_Test_Workflow@ssstss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Copy 2 of Lior's Test Workflow"
+  description = "booms5 (This copy was automatically generated from a draft, when workflow 'Lior's Test Workflow' was made inactive.)3"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.a_shared_status3@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "A shared status"
+    },
+    {
+      statusReference = jira.Status.instance.approved
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Approved"
+    },
+    {
+      statusReference = jira.Status.instance.backlog
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Backlog"
+    },
+    {
+      statusReference = jira.Status.instance.build_broken@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Build Broken"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    AnotherTestTransition__From__Approved__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.approved
+        },
+      ]
+      name = "AnotherTestTransition"
+      description = ""
+    }
+    Hello_Yuri__From__Approved__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.approved
+        },
+      ]
+      name = "Hello Yuri"
+      description = ""
+    }
+    ImportantTransition__From__A_shared_status__Directed@fffsssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.a_shared_status3@s
+        },
+      ]
+      name = "ImportantTransition"
+      description = ""
+    }
+    TransitionToSharedStatus__From__A_shared_status__Directed@fffsssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.a_shared_status3@s
+        },
+      ]
+      name = "TransitionToSharedStatus"
+      description = ""
+    }
+    Build_Broken__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.build_broken@s
+      name = "Build Broken"
+      description = ""
+    }
+    BackLogToSharedStatus__From__Backlog__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.a_shared_status3@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.backlog
+        },
+      ]
+      name = "BackLogToSharedStatus"
+      description = ""
+    }
+    Wow__From__Backlog__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.approved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.backlog
+        },
+      ]
+      name = "Wow"
+      description = ""
+    }
+    LiorTestTransition__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.build_broken@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+        },
+      ]
+      name = "LiorTestTransition"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:validate-field-value"
+          parameters = {
+            ruleType = "fieldRequired"
+            fieldsRequired = [
+              jira.Field.instance.Change_risk__select__c@suuuu,
+            ]
+            ignoreContext = "false"
+          }
+        },
+        {
+          ruleKey = "connect:expression-validator"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            id = "f32d1eff-2cd0-43ea-acdc-3be6490ba332"
+            disabled = "false"
+            scriptRunner = {
+              uuid = "bd1aaa25-00ad-49b5-9423-b03e425d8df4"
+              enabled = true
+              description = "Lior Test ScriptRunner Validator "
+              expression = "!config['enabled'] ? true : (true)"
+              errorMessage = "A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information."
+            }
+          }
+        },
+        {
+          ruleKey = "connect:expression-validator"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-workflow-validators"
+            id = "91c46dac-eba3-468d-8d81-f17b922487a6"
+            disabled = "false"
+            scriptRunner = {
+              uuid = "8e4ba219-4715-495a-b854-203ba8ca2af5"
+              enabled = true
+              description = "Another ScriptRunner validator"
+              expression = "!config['enabled'] ? true : (issue.getResolution() == \"Fixed\")"
+              errorMessage = "A ScriptRunner Script Validator is preventing this transition, please contact your Jira admin for more information."
+            }
+          }
+        },
+      ]
+    }
+  }
+}

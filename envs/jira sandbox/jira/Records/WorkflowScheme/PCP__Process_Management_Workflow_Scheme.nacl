@@ -1,0 +1,4 @@
+jira.WorkflowScheme PCP__Process_Management_Workflow_Scheme@fssss {
+  name = "PCP: Process Management Workflow Scheme"
+  defaultWorkflow = jira.WorkflowConfiguration.instance.PCP__Process_Management_Workflow@fsss
+}

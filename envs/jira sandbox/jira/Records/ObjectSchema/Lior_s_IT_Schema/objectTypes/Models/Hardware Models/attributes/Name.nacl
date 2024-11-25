@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute Lior_s_IT_Schema_tss_Models_uuumu_Hardware_Models_uuuuumus_Name@uuuuuuuumu {
+  objectType = jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models_uuumu_Hardware_Models@uuuuumus
+  name = "Name"
+  type = 0
+  description = "The name of the object"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "Name"
+}

@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus DP___Services_sbs__In_transit@uuumuus {
+  name = "In transit"
+  description = "Asset is being transported"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "DP - Services:In transit"
+}

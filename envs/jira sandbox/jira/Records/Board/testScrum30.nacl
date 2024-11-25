@@ -1,0 +1,50 @@
+jira.Board testScrum30 {
+  name = "testScrum30"
+  type = "scrum"
+  admins = {
+    users = [
+      {
+        id = "5fa91999b2633d0076583a61"
+        displayName = "Alon Stern"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.AlonCompanyProject2
+  }
+  isPrivate = false
+  filterId = jira.Filter.instance.Filter_for_testScrum@s
+  columnConfig = {
+    columns = [
+      {
+        name = "To Do2"
+        statuses = [
+          jira.Status.instance.open,
+          jira.Status.instance.a_shared_status3@s,
+          jira.Status.instance.backlog,
+          jira.Status.instance.to_do@s,
+          jira.Status.instance.in_review@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+          jira.Status.instance.build_broken@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.approved,
+          jira.Status.instance.done,
+          jira.Status.instance.resolved,
+        ]
+      },
+    ]
+    constraintType = "none"
+  }
+  estimation = {
+    field = jira.Field.instance.Original_estimate__number@suu
+  }
+}

@@ -1,0 +1,6 @@
+jira.Status won_t_fix@ts {
+  name = "Won't Fix"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = "We do not want to fix this issue"
+  _alias = "Won't Fix"
+}

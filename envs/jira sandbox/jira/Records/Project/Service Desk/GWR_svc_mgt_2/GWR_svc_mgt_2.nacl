@@ -1,0 +1,35 @@
+jira.Project GWR_svc_mgt_2@s {
+  key = "GWRJSM2"
+  description = ""
+  name = "GWR svc mgt 2"
+  projectTypeKey = "service_desk"
+  components = [
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Active_Directory@uuumuus,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Analytics_and_Reporting_Service@uuumuusss,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Billing_Services@uuumuus,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Cloud_Storage_Services@uuumuuss,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Data_Center_Services@uuumuuss,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Email_and_Collaboration_Services@uuumuusss,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Financial_Services@uuumuus,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__HR_Services@uuumuus,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Intranet@uuumuu,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Jira@uuumuu,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Office_Network@uuumuus,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Payroll_Services@uuumuus,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Printers@uuumuu,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Public_Website@uuumuus,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__VPN_Server@uuumuus,
+    jira.ProjectComponent.instance.GWR_svc_mgt_2_s__Webstore_Purchasing_Services@uuumuuss,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_GWRJSM2@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_GWRJSM2@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.GWRJSM2__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.GWRJSM2__Jira_Service_Management_Issue_Type_Scheme@fssssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_GWRJSM2@s
+  leadAccountId = {
+    id = "61980f073618cd006f48823b"
+    displayName = "Geoffrey Routledge"
+  }
+  assigneeType = "UNASSIGNED"
+}

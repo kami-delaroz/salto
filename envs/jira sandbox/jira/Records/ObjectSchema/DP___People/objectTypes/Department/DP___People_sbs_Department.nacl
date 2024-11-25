@@ -1,0 +1,13 @@
+jira.ObjectType DP___People_sbs_Department@uuumu {
+  name = "Department"
+  type = 0
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Parallel_Tasks@s
+  parentObjectTypeId = jira.ObjectSchema.instance.DP___People@sbs
+  _parent = [
+    jira.ObjectSchema.instance.DP___People@sbs,
+  ]
+  _alias = "Department"
+}

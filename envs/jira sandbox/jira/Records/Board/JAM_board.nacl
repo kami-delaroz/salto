@@ -1,0 +1,47 @@
+jira.Board JAM_board@s {
+  name = "JAM board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "5e5e289fc8ec310c955d2d15"
+        displayName = "Hadas Birin"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.Jira_management@s
+  }
+  isPrivate = false
+  filterId = jira.Filter.instance.Filter_for_JAM_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "aaa"
+        statuses = [
+          jira.Status.instance.aaa,
+        ]
+      },
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

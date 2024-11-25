@@ -1,0 +1,44 @@
+jira.WorkflowConfiguration Copy_of_migrationtest2@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Copy of migrationtest2"
+  description = "(This copy was automatically generated from a draft, when workflow 'migrationtest2' was made inactive.)"
+  isEditable = true
+  startPointLayout = {
+    x = 720
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 695.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

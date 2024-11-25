@@ -1,0 +1,7 @@
+jira.ScreenScheme TEST__Software_Development_Default_Screen_Scheme@fsssss {
+  name = "TEST: Software Development Default Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.TEST__Software_Development_Default_Issue_Screen@fsssss
+  }
+}

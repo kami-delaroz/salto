@@ -1,0 +1,13 @@
+jira.DashboardGadget Custom_dashboard_s__Bubble_Chart_0_1@umuusuu {
+  moduleKey = "com.atlassian.jira.gadgets:bubble-chart-dashboard-item"
+  color = "blue"
+  position = {
+    row = 1
+    column = 0
+  }
+  title = "Bubble Chart"
+  _parent = [
+    jira.Dashboard.instance.Custom_dashboard@s,
+  ]
+  _alias = "Bubble Chart"
+}

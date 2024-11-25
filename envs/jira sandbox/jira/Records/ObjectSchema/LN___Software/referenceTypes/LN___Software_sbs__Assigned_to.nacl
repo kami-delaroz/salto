@@ -1,0 +1,8 @@
+jira.ObjectSchemaReferenceType LN___Software_sbs__Assigned_to@uuumuus {
+  name = "Assigned to"
+  color = "5243AA"
+  removable = true
+  _parent = [
+    jira.ObjectSchema.instance.LN___Software@sbs,
+  ]
+}

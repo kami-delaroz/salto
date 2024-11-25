@@ -1,0 +1,10 @@
+jira.ObjectTypeOrder Facilities_childOrder {
+  objectTypes = [
+    jira.ObjectType.instance.Facilities_Buildings,
+    jira.ObjectType.instance.Facilities_Rooms,
+    jira.ObjectType.instance.Facilities_Floors,
+  ]
+  _parent = [
+    jira.ObjectSchema.instance.Facilities,
+  ]
+}

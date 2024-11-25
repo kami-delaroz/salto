@@ -1,0 +1,6 @@
+jira.Status sla_customer_waiting@s {
+  name = "SLA Customer Waiting"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "SLA Customer Waiting"
+}

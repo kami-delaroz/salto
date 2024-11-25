@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Employees_umu_Atlassian_Account_IDoA@uuumuss {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Employees@umu
+  name = "Atlassian Account IDoA"
+  type = 2
+  description = "User"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  _alias = "Atlassian Account IDoA"
+}

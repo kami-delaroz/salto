@@ -1,0 +1,8 @@
+jira.ScriptRunnerSettings {
+  jql_search_view@b = true
+  filter_sync_interval@b = 5
+  notifications_group@b = jira.Group.instance.site_admins@b
+  issue_polling@b = true
+  scripts_timezone@b = "UTC"
+  notify_assignee_reporter@b = true
+}

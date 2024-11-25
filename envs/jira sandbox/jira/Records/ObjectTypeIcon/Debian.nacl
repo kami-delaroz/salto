@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Debian {
+  name = "Debian"
+  icon = file("jira/ObjectTypeIcon/Debian.png")
+}

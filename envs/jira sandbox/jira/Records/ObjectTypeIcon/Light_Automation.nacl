@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Light_Automation@s {
+  name = "Light Automation"
+  icon = file("jira/ObjectTypeIcon/Light_Automation.png")
+}

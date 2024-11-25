@@ -1,0 +1,9 @@
+jira.ObjectTypeOrder Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Red_Hat_Linux_childOrder@uuuuuuuumussu {
+  objectTypes = [
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Red_Hat_Linux_uuuuuuuumuss_chilli_peper@uuuuuuuuuuuumus,
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Red_Hat_Linux_uuuuuuuumuss_singer@uuuuuuuuuuuumu,
+  ]
+  _parent = [
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Red_Hat_Linux@uuuuuuuumuss,
+  ]
+}

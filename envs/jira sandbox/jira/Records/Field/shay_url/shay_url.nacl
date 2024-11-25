@@ -1,0 +1,10 @@
+jira.Field shay_url__url__c@suuuu {
+  name = "shay url"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exacttextsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:url"
+  contexts = [
+    jira.CustomFieldContext.instance.shay_url__url__c_suuuu_Default_Configuration_Scheme_for_shay_url@uuuuumusssss,
+  ]
+  _alias = "shay url"
+}

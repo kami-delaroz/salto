@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Administrative_Tools@s {
+  name = "Administrative Tools"
+  icon = file("jira/ObjectTypeIcon/Administrative_Tools.png")
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Stack {
+  name = "Stack"
+  icon = file("jira/ObjectTypeIcon/Stack.png")
+}

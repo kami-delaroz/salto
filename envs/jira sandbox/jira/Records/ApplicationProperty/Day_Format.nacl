@@ -1,0 +1,7 @@
+jira.ApplicationProperty Day_Format@s {
+  id = "jira.lf.date.day"
+  value = "EEEE h:mm a"
+  name = "Day Format"
+  type = "string"
+  example = "Wednesday 3:55 AM"
+}

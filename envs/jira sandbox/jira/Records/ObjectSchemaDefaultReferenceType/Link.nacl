@@ -1,0 +1,6 @@
+jira.ObjectSchemaDefaultReferenceType Link {
+  name = "Link"
+  description = "Link"
+  color = "1ab812"
+  removable = true
+}

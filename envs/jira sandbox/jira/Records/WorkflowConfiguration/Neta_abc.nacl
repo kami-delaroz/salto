@@ -1,0 +1,119 @@
+jira.WorkflowConfiguration Neta_abc@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "Neta abc"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 720
+    y = 42.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 672.796875
+        y = 142.4
+      }
+      deprecated = false
+      name = "a"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 695.41015625
+        y = 92.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      layout = {
+        x = 1064.125
+        y = 67.4
+      }
+      deprecated = false
+      name = "c"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      layout = {
+        x = 1065.1484375
+        y = 117.4
+      }
+      deprecated = false
+      name = "d"
+    },
+  ]
+  transitions = {
+    x__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "x"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "a501f1a8-03ae-45a3-b00a-6fa2b51fe662"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.TransitionParent"
+              uuid = "a1b0c13d-fb49-4218-9ace-647fd7720c8c"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = ""
+              description = "aaa"
+              additionalCode = ""
+              comment = ""
+              transitionId = jira.WorkflowConfiguration.instance.Neta_abc@s.transitions.missing_77
+              transitionName = ""
+            }
+          }
+        },
+      ]
+    }
+    x__From__a__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 1
+          toPort = 5
+        },
+      ]
+      name = "x"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

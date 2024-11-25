@@ -1,0 +1,17 @@
+jira.Project DP_JSM___2@ssbs {
+  key = "DPJSM2"
+  description = ""
+  name = "DP JSM - 2"
+  projectTypeKey = "service_desk"
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_DPJSM2@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_DPJSM2@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.DPJSM2__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.DPJSM2__Jira_Service_Management_Issue_Type_Scheme@fssssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_DPJSM2@s
+  leadAccountId = {
+    id = "6205b3c7d362410069133701"
+    displayName = "Dan Putman"
+  }
+  assigneeType = "UNASSIGNED"
+}

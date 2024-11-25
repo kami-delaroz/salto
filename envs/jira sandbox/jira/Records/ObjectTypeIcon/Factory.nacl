@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Factory {
+  name = "Factory"
+  icon = file("jira/ObjectTypeIcon/Factory.png")
+}

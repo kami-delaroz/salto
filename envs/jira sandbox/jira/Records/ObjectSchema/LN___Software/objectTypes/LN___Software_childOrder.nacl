@@ -1,0 +1,8 @@
+jira.ObjectTypeOrder LN___Software_childOrder@sbsu {
+  objectTypes = [
+    jira.ObjectType.instance.LN___Software_sbs_Software@uuumu,
+  ]
+  _parent = [
+    jira.ObjectSchema.instance.LN___Software@sbs,
+  ]
+}

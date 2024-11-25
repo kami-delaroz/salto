@@ -1,0 +1,16 @@
+jira.Filter Filter_for_DPJSM@s {
+  name = "Filter for DPJSM"
+  owner = {
+    id = "6205b3c7d362410069133701"
+    displayName = "Dan Putman"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.DP_Service_Project@s.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.DP_Service_Project@s
+      }
+    },
+  ]
+}

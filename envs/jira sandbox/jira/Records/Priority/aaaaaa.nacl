@@ -1,0 +1,7 @@
+jira.Priority aaaaaa {
+  statusColor = "#ffff"
+  description = ""
+  iconUrl = "/images/icons/priorities/blocker.svg"
+  name = "aaaaaa"
+  _alias = "aaaaaa"
+}

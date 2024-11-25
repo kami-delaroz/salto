@@ -1,0 +1,14 @@
+jira.PortalGroup Computers_ITSAMPLE {
+  name = "Computers"
+  ticketTypeIds = [
+    jira.RequestType.instance.Get_IT_help_ITSAMPLE@ssu,
+    jira.RequestType.instance.Request_new_software_ITSAMPLE@ssu,
+    jira.RequestType.instance.Request_new_hardware_ITSAMPLE@ssu,
+    jira.RequestType.instance.New_mobile_device_ITSAMPLE@ssu,
+    jira.RequestType.instance.Report_broken_hardware_ITSAMPLE@ssu,
+  ]
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Computers"
+}

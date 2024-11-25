@@ -1,0 +1,6 @@
+jira.Status on_hold@s {
+  name = "on hold"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "on hold"
+}

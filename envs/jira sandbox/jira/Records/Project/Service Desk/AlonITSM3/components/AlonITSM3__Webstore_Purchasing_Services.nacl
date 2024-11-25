@@ -1,0 +1,13 @@
+jira.ProjectComponent AlonITSM3__Webstore_Purchasing_Services@uuss {
+  description = "Created by Jira Service Management"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Webstore Purchasing Services"
+  leadAccountId = {
+    id = "640a4787f00d095406f6727f"
+    displayName = "Ido Amit"
+  }
+  _parent = [
+    jira.Project.instance.AlonITSM3,
+  ]
+  _alias = "AlonITSM3:Webstore Purchasing Services"
+}

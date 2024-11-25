@@ -1,0 +1,113 @@
+jira.WorkflowConfiguration New_Software_Simplified_Workflow_for_Project_TPT@s {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "New Software Simplified Workflow for Project TPT"
+  description = "Workflow for TPT5"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "To Do"
+    },
+  ]
+  transitions = {
+    In_Progress__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.in_progress@s
+      name = "In Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+    }
+    Done__From__any_status__Global@fffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.done
+      name = "Done"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+            value = jira.Resolution.instance.Done
+          }
+        },
+      ]
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.to_do@s
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Start_work__From__To_Do__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+        },
+      ]
+      name = "Start work"
+      description = ""
+    }
+    To_Do__From__any_status__Global@sfffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance.to_do@s
+      name = "To Do"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+    }
+  }
+}

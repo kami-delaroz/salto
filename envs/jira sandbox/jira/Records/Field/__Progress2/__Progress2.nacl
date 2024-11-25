@@ -1,0 +1,9 @@
+jira.Field __Progress2__multicheckboxes__c@_00931suuuu {
+  name = "Σ Progress2"
+  description = "aaaaa"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"
+  contexts = [
+    jira.CustomFieldContext.instance.__Progress2__multicheckboxes__c__00931suuuu_testContext1@uuuuuumuu,
+  ]
+  _alias = "Σ Progress2"
+}

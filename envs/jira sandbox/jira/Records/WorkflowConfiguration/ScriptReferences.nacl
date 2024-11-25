@@ -1,0 +1,99 @@
+jira.WorkflowConfiguration ScriptReferences {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "ScriptReferences"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 580
+    y = 42.400000000000006
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.in_staging@s
+      layout = {
+        x = 539.3203125
+        y = 142.4
+      }
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 555.41015625
+        y = 92.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    Close__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_staging@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "Close"
+      description = ""
+      actions = [
+        {
+          ruleKey = "connect:remote-workflow-function"
+          parameters = {
+            appKey = "com.onresolve.jira.groovy.groovyrunner__script-postfunction"
+            id = "d09b451a-88f5-42b2-bef7-5827d2ce3f75"
+            disabled = "false"
+            scriptRunner = {
+              className = "com.adaptavist.sr.cloud.workflow.RunScript"
+              uuid = "f56f3a70-fc9f-4b94-bba4-91ef8d581b8b"
+              enabled = true
+              executionUser = "ADD_ON"
+              condition = '''
+(${ jira.Field.instance.a_b__float__c@ruuuu }).value == "a"
+
+'''
+              description = ""
+              additionalCode = '''
+def issueKey = issue.key
+def comment = 'Here is a comment I prepared earlier'
+
+def result = post("/rest/api/2/issue/\${issueKey}/comment")
+        .header('Content-Type', 'application/json')
+        .body([
+            body: comment
+        ])
+        .asString()
+
+'''
+            }
+          }
+        },
+      ]
+    }
+  }
+}

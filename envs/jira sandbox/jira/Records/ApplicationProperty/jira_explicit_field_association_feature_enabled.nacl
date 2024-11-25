@@ -1,0 +1,7 @@
+jira.ApplicationProperty jira_explicit_field_association_feature_enabled@v {
+  id = "jira.explicit.field.association.feature.enabled"
+  value = "true"
+  name = "jira.explicit.field.association.feature.enabled"
+  desc = "When false, disables explicit field association for all TMP projects."
+  type = "boolean"
+}

@@ -1,0 +1,13 @@
+jira.ObjectType AAAA_Hardware_Assets_us_Printers@uumu {
+  name = "Printers"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.AAAA_Hardware_Assets@us
+  inherited = true
+  abstractObjectType = false
+  parentObjectTypeInherited = true
+  iconId = jira.ObjectTypeIcon.instance.Print
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+  _alias = "Printers"
+}
