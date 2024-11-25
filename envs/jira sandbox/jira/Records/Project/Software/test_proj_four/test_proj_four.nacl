@@ -15,6 +15,7 @@ jira.Project test_proj_four@b {
   }
   assigneeType = "PROJECT_LEAD"
   fieldContexts = [
+    jira.CustomFieldContext.instance.ABCDEFG__labels__c_Default_Configuration_Scheme_for_ABCDEFG@uuuuussss,
     jira.CustomFieldContext.instance.AEAEAEA__labels__c_Default_Configuration_Scheme_for_AEAEAEA@uuuuussss,
   ]
 }
