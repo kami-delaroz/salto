@@ -1,7 +1,7 @@
 jira.Field Affected_hardware__textfield__c@suuuu {
   name = "Affected hardware"
   description = "desc \${}"
-  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:exacttextsearcher"
   type = "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
   contexts = [
     jira.CustomFieldContext.instance.Affected_hardware__textfield__c_suuuu_Default_Configuration_Scheme_for_Affected_hardware@uuuuumusssss,
