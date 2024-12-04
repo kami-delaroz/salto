@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Virtual_Machine_2@s {
+  name = "Virtual Machine 2"
+  icon = file("jira/ObjectTypeIcon/Virtual_Machine_2.s.png")
+}

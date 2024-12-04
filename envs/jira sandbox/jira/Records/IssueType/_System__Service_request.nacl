@@ -1,0 +1,7 @@
+jira.IssueType _System__Service_request@hiss {
+  description = "A request that follows ITSM workflows."
+  name = "[System] Service request"
+  untranslatedName = "[System] Service request"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/_System__Service_request.hiss.png")
+}

@@ -1,0 +1,7 @@
+jira.IssueType _System__Change@his {
+  description = "Created by Jira Service Management."
+  name = "[System] Change"
+  untranslatedName = "[System] Change"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/_System__Change.his.png")
+}

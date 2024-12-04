@@ -1,0 +1,11 @@
+jira.ObjectTypeOrder Lior_s_IT_Schema_childOrder@tssu {
+  objectTypes = [
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_new_Root@uuumus,
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets@uuumus,
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Models@uuumu,
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_sub_scheme@uuumub,
+  ]
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+}

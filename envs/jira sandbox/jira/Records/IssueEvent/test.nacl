@@ -1,0 +1,3 @@
+jira.IssueEvent test {
+  name = "test"
+}

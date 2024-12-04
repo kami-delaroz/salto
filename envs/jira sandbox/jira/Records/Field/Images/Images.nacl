@@ -1,0 +1,5 @@
+jira.Field Images {
+  name = "Images"
+  description = ""
+  _alias = "Images"
+}

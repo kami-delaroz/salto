@@ -1,0 +1,10 @@
+jira.Field ido5San_assets__cmdb_object_cftype__c@suubbuu {
+  name = "ido5San assets"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugins.cmdb:cmdb-object-searcher"
+  type = "com.atlassian.jira.plugins.cmdb:cmdb-object-cftype"
+  contexts = [
+    jira.CustomFieldContext.instance.ido5San_assets__cmdb_object_cftype__c_suubbuu_Default_Configuration_Scheme_for_ido5San_assets@uuuuuuumusssss,
+  ]
+  _alias = "ido5San assets"
+}

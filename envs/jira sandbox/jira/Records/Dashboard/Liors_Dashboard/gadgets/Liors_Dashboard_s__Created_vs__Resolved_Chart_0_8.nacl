@@ -1,0 +1,72 @@
+jira.DashboardGadget Liors_Dashboard_s__Created_vs__Resolved_Chart_0_8@umuusvssuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.gadgets:created-vs-resolved-issues-chart-gadget/gadgets/createdvsresolved-gadget.xml"
+  color = "blue"
+  position = {
+    row = 8
+    column = 0
+  }
+  title = "Created vs. Resolved Chart"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "isPopup"
+          value = "false"
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+        {
+          key = "periodName"
+          value = "daily"
+        },
+        {
+          key = "showUnresolvedTrend"
+          value = "false"
+        },
+        {
+          key = "projectOrFilterId"
+          value = ""
+        },
+        {
+          key = "type"
+          value = "filter"
+        },
+        {
+          key = "versionLabel"
+          value = "major"
+        },
+        {
+          key = "isCumulative"
+          value = "false"
+        },
+        {
+          key = "name"
+          value = "The filter you requested does not exist or you do not have permission to view it."
+        },
+        {
+          key = "daysprevious"
+          value = "30"
+        },
+        {
+          key = "id"
+          value = "10084"
+        },
+        {
+          key = "operation"
+          value = "count"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.Liors_Dashboard@s,
+  ]
+  _alias = "Created vs. Resolved Chart"
+}

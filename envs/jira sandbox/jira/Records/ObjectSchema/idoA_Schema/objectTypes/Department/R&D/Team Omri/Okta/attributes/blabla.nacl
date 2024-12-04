@@ -1,0 +1,21 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus_Okta_uuuuuuuuumu_blabla@uuuuuuuuuuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D_uuumue_Team_Omri_uuuuuumus_Okta@uuuuuuuuumu
+  name = "blabla"
+  type = 1
+  description = ""
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.idoA_Schema_s__Owing_to@umuus
+  typeValue = jira.ObjectType.instance.idoA_Schema_s_Department_umu_R_D_uuumue_Team_Amit_uuuuuumus_one@uuuuuuuuumu
+  _alias = "blabla"
+}

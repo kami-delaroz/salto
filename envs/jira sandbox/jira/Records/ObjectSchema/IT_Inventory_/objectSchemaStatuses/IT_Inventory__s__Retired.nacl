@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus IT_Inventory__s__Retired@uumuu {
+  name = "Retired"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.IT_Inventory_@s,
+  ]
+  _alias = "IT Inventory :Retired"
+}

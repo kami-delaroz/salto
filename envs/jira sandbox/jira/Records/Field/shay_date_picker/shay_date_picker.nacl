@@ -1,0 +1,10 @@
+jira.Field shay_date_picker__datepicker__c@ssuuuu {
+  name = "shay date picker"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:daterange"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:datepicker"
+  contexts = [
+    jira.CustomFieldContext.instance.shay_date_picker__datepicker__c_ssuuuu_Default_Configuration_Scheme_for_shay_date_picker@uuuuuumussssss,
+  ]
+  _alias = "shay date picker"
+}

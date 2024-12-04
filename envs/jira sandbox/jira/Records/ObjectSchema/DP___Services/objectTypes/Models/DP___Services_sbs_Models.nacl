@@ -1,0 +1,13 @@
+jira.ObjectType DP___Services_sbs_Models@uuumu {
+  name = "Models"
+  type = 0
+  inherited = false
+  abstractObjectType = true
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  parentObjectTypeId = jira.ObjectSchema.instance.DP___Services@sbs
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "Models"
+}

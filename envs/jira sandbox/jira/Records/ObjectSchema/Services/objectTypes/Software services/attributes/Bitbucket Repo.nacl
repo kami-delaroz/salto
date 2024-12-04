@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute Services_Software_services_us_Bitbucket_Repo@uumus {
+  objectType = jira.ObjectType.instance.Services_Software_services@us
+  name = "Bitbucket Repo"
+  type = 8
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = true
+  options = ""
+  defaultTypeId = -1
+  _alias = "Bitbucket Repo"
+}

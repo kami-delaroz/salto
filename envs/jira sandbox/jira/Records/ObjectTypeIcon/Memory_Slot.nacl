@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Memory_Slot@s {
+  name = "Memory Slot"
+  icon = file("jira/ObjectTypeIcon/Memory_Slot.s.png")
+}

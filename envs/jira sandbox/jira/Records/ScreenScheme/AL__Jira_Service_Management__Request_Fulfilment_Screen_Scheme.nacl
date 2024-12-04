@@ -1,0 +1,10 @@
+jira.ScreenScheme AL__Jira_Service_Management__Request_Fulfilment_Screen_Scheme@fsssfssss {
+  name = "AL: Jira Service Management: Request Fulfilment Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.AL__Jira_Service_Management__Request_Fulfilment_Create_Issue_Screen@fsssfsssss
+    edit = jira.Screen.instance.AL__Jira_Service_Management__Request_Fulfilment_View_Edit_Screen@fsssfsssds
+    create = jira.Screen.instance.AL__Jira_Service_Management__Request_Fulfilment_Create_Issue_Screen@fsssfsssss
+    view = jira.Screen.instance.AL__Jira_Service_Management__Request_Fulfilment_View_Edit_Screen@fsssfsssds
+  }
+}

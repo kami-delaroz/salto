@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Automatic {
+  name = "Automatic"
+  icon = file("jira/ObjectTypeIcon/Automatic.png")
+}

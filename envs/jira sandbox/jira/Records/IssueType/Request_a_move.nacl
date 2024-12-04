@@ -1,0 +1,7 @@
+jira.IssueType Request_a_move@s {
+  description = "Need help with your upcoming office or desk move? Log your request here."
+  name = "Request a move"
+  untranslatedName = "Request a move"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Request_a_move.s.png")
+}

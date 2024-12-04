@@ -1,0 +1,9 @@
+jira.Field Security_Level__securitylevel@suu {
+  name = "Security Level"
+  schema = {
+    type = "securitylevel"
+    system = "security"
+  }
+  description = ""
+  _alias = "Security Level"
+}

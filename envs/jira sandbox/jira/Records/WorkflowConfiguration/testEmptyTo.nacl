@@ -1,0 +1,65 @@
+jira.WorkflowConfiguration testEmptyTo {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "testEmptyTo"
+  description = ""
+  isEditable = true
+  startPointLayout = {
+    x = 720
+    y = 67.4
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance._teststatus_@hi
+      layout = {
+        x = 651.033203125
+        y = -93.70000122070311
+      }
+      deprecated = false
+      name = "[testStatus]"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 695.41015625
+        y = 117.4
+      }
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+    _testStatus___From__any_status__Global@hifffssff = {
+      type = "GLOBAL"
+      toStatusReference = jira.Status.instance._teststatus_@hi
+      name = "[testStatus]"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.AL__Kanban_Bug_Screen__1_@fssssjk
+        }
+      }
+    }
+  }
+}

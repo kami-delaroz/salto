@@ -1,0 +1,11 @@
+jira.Field Request_language__sd_request_language__c@suubbuu {
+  name = "Request language"
+  description = "The language which a request was raised in."
+  isLocked = true
+  searcherKey = "com.atlassian.servicedesk.servicedesk-lingo-integration-plugin:sd-request-language-searcher"
+  type = "com.atlassian.servicedesk.servicedesk-lingo-integration-plugin:sd-request-language"
+  contexts = [
+    jira.CustomFieldContext.instance.Request_language__sd_request_language__c_suubbuu_Default_Configuration_Scheme_for_Request_language@uuuuuuumusssss,
+  ]
+  _alias = "Request language"
+}

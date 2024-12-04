@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Mac_OS@s {
+  name = "Mac OS"
+  icon = file("jira/ObjectTypeIcon/Mac_OS.s.png")
+}

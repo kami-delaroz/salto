@@ -1,0 +1,6 @@
+jira.Status executed {
+  name = "executed"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "executed"
+}

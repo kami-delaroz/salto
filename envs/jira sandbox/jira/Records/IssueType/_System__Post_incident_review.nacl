@@ -1,0 +1,7 @@
+jira.IssueType _System__Post_incident_review@hisbs {
+  description = "Document and share incident learning."
+  name = "[System] Post-incident review"
+  untranslatedName = "[System] Post-incident review"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/_System__Post_incident_review.hisbs.png")
+}

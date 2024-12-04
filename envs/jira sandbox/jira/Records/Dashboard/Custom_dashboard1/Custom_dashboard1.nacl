@@ -1,0 +1,14 @@
+jira.Dashboard Custom_dashboard1@s {
+  description = ""
+  name = "Custom dashboard1"
+  owner = {
+    id = "62ebc187e50f2f2a395557cc"
+    displayName = "Shay Cohen"
+  }
+  sharePermissions = [
+    {
+      type = "authenticated"
+    },
+  ]
+  layout = "AAA"
+}

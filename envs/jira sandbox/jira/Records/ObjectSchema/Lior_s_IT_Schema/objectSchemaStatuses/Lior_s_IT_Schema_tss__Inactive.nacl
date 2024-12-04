@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus Lior_s_IT_Schema_tss__Inactive@uuumuu {
+  name = "Inactive"
+  description = ""
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.Lior_s_IT_Schema@tss,
+  ]
+  _alias = "Lior's IT Schema:Inactive"
+}

@@ -1,0 +1,37 @@
+jira.CustomFieldContext testBug__multicheckboxes__c_NewContext {
+  name = "NewContext"
+  description = ""
+  options = {
+    d = {
+      value = "d"
+      disabled = false
+      position = 1
+    }
+    e = {
+      value = "e"
+      disabled = false
+      position = 2
+    }
+    f = {
+      value = "f"
+      disabled = false
+      position = 3
+    }
+  }
+  defaultValue = {
+    type = "option.multiple"
+    optionIds = [
+      jira.CustomFieldContext.instance.testBug__multicheckboxes__c_NewContext.options.e,
+    ]
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.AnIssueSubType,
+  ]
+  _parent = [
+    jira.Field.instance.testBug__multicheckboxes__c,
+  ]
+  _alias = "testBug context in NewContext"
+  projectIds = [
+    jira.Project.instance.AlonCompanyProject10,
+  ]
+}

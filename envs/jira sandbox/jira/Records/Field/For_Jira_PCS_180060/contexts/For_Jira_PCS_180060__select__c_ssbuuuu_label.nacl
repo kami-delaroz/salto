@@ -1,0 +1,31 @@
+jira.CustomFieldContext For_Jira_PCS_180060__select__c_ssbuuuu_label@uuuuuuumu {
+  name = "label"
+  description = ""
+  options = {
+    _@s = {
+      value = " "
+      disabled = false
+      position = 1
+    }
+    a = {
+      value = "a"
+      disabled = false
+      position = 2
+    }
+    b = {
+      value = "b"
+      disabled = false
+      position = 3
+    }
+  }
+  defaultValue = {
+    type = "option.single"
+  }
+  _parent = [
+    jira.Field.instance.For_Jira_PCS_180060__select__c@ssbuuuu,
+  ]
+  _alias = "For Jira PCS-180060 context in label"
+  projectIds = [
+    jira.Project.instance.AlonCompanyProject,
+  ]
+}

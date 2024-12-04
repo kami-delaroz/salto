@@ -1,0 +1,85 @@
+jira.Form DPJSM_DP___Info_Bug@usbss {
+  design = {
+    conditions = {
+    }
+    layout = [
+      {
+        version = 1
+        type = "doc"
+        content = [
+          {
+            type = "panel"
+            attrs = {
+              panelType = "info"
+            }
+            content = [
+              {
+                type = "paragraph"
+                content = [
+                  {
+                    type = "text"
+                    text = "This is an info section. This content should change in the next deployment"
+                  },
+                ]
+                attrs = {
+                  localId = "f1e4e1c1-c344-4cc9-9339-54640949a20a"
+                }
+              },
+            ]
+          },
+          {
+            type = "paragraph"
+            content = [
+              {
+                type = "hardBreak"
+              },
+            ]
+          },
+          {
+            type = "panel"
+            attrs = {
+              panelType = "info"
+            }
+            content = [
+              {
+                type = "paragraph"
+                content = [
+                  {
+                    type = "text"
+                    text = "This is the second info section"
+                  },
+                ]
+                attrs = {
+                  localId = "a5226a36-b684-40cb-ad36-d94e113ac3a6"
+                }
+              },
+            ]
+          },
+          {
+            type = "paragraph"
+            content = [
+            ]
+          },
+        ]
+      },
+    ]
+    questions = {
+    }
+    sections = {
+    }
+    settings = {
+      name = "DP - Info Bug"
+      submit = {
+        lock = false
+        pdf = false
+      }
+      primaryLocale = "en-US"
+      translatedLocale = "en-US"
+    }
+  }
+  publish = {
+  }
+  _parent = [
+    jira.Project.instance.DP_Service_Project@s,
+  ]
+}

@@ -1,0 +1,7 @@
+jira.IssueType Submit_a_request_or_incident@s {
+  description = "Submit a request or report a problem."
+  name = "Submit a request or incident"
+  untranslatedName = "Submit a request or incident"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Submit_a_request_or_incident.s.png")
+}

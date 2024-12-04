@@ -1,0 +1,9 @@
+jira.ProjectComponent Jira_management_s__Jira_project_2@umuubb {
+  description = "Tickets relevant for Jira-project-1"
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Jira-project-2"
+  _parent = [
+    jira.Project.instance.Jira_management@s,
+  ]
+  _alias = "Jira management:Jira-project-2"
+}

@@ -1,0 +1,6 @@
+jira.Status in_system_testing@s {
+  name = "in system testing"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "in system testing"
+}

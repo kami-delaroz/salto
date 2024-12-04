@@ -1,0 +1,162 @@
+jira.CustomFieldContext testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss {
+  name = "CustomConfigurationScheme for CustomSelectList9"
+  options = {
+    p1 = {
+      value = "p1"
+      disabled = false
+      cascadingOptions = {
+        c11 = {
+          value = "c11"
+          disabled = false
+          position = 0
+        }
+        c12 = {
+          value = "c12"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 1
+    }
+    p2 = {
+      value = "p2"
+      disabled = false
+      cascadingOptions = {
+        c22 = {
+          value = "c22"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 2
+    }
+    p3 = {
+      value = "p3"
+      disabled = true
+      position = 3
+    }
+    p4 = {
+      value = "p4"
+      disabled = false
+      position = 4
+    }
+  }
+  defaultValue = {
+    type = "option.cascading"
+    optionId = jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss.options.p1
+    cascadingOptionId = jira.CustomFieldContext.instance.testSelectList9__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList9@uuuuuss.options.p1.cascadingOptions.c11
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+    jira.IssueType.instance.testMany1,
+    jira.IssueType.instance.testMany0,
+    jira.IssueType.instance.testMany12,
+    jira.IssueType.instance.testMany10,
+    jira.IssueType.instance.testMany11,
+    jira.IssueType.instance.testMany14,
+    jira.IssueType.instance.testMany15,
+    jira.IssueType.instance.testMany13,
+    jira.IssueType.instance.testMany16,
+    jira.IssueType.instance.testMany17,
+    jira.IssueType.instance.testMany19,
+    jira.IssueType.instance.testMany18,
+    jira.IssueType.instance.testMany2,
+    jira.IssueType.instance.testMany22,
+    jira.IssueType.instance.testMany21,
+    jira.IssueType.instance.testMany20,
+    jira.IssueType.instance.testMany23,
+    jira.IssueType.instance.testMany24,
+    jira.IssueType.instance.testMany25,
+    jira.IssueType.instance.testMany26,
+    jira.IssueType.instance.testMany27,
+    jira.IssueType.instance.testMany28,
+    jira.IssueType.instance.testMany29,
+    jira.IssueType.instance.testMany3,
+    jira.IssueType.instance.testMany30,
+    jira.IssueType.instance.testMany31,
+    jira.IssueType.instance.testMany32,
+    jira.IssueType.instance.testMany33,
+    jira.IssueType.instance.testMany34,
+    jira.IssueType.instance.testMany35,
+    jira.IssueType.instance.testMany36,
+    jira.IssueType.instance.testMany37,
+    jira.IssueType.instance.testMany38,
+    jira.IssueType.instance.testMany39,
+    jira.IssueType.instance.testMany4,
+    jira.IssueType.instance.testMany41,
+    jira.IssueType.instance.testMany42,
+    jira.IssueType.instance.testMany40,
+    jira.IssueType.instance.testMany43,
+    jira.IssueType.instance.testMany44,
+    jira.IssueType.instance.testMany46,
+    jira.IssueType.instance.testMany45,
+    jira.IssueType.instance.testMany47,
+    jira.IssueType.instance.testMany49,
+    jira.IssueType.instance.testMany48,
+    jira.IssueType.instance.testMany5,
+    jira.IssueType.instance.testMany50,
+    jira.IssueType.instance.testMany6,
+    jira.IssueType.instance.testMany7,
+    jira.IssueType.instance.testMany9,
+    jira.IssueType.instance.testMany8,
+  ]
+  _parent = [
+    jira.Field.instance.testSelectList9__cascadingselect__c,
+  ]
+  _alias = "testSelectList9 context in CustomConfigurationScheme for CustomSelectList9"
+  projectIds = [
+    jira.Project.instance.process_control_project@b,
+    jira.Project.instance.test_proj_two@b,
+    jira.Project.instance.test_proj_three@b,
+    jira.Project.instance.Jira_management@s,
+    jira.Project.instance.LiorCompanyManaged,
+    jira.Project.instance.SalesforceLiorDemo,
+    jira.Project.instance.CloanbleProjectRenamed,
+    jira.Project.instance.ITSM_project@s,
+    jira.Project.instance.ITSM_sample_space@s,
+    jira.Project.instance.Gil_s_Project@ts,
+    jira.Project.instance.Website_@s,
+    jira.Project.instance.Salto,
+    jira.Project.instance.Salto_SaaS@s,
+    jira.Project.instance.testProject,
+    jira.Project.instance.guytestproject,
+    jira.Project.instance.testFacilities,
+    jira.Project.instance.testFacilities2,
+    jira.Project.instance.testFacilities3,
+    jira.Project.instance.testFacilities4,
+    jira.Project.instance.AlonCompanyProject9,
+    "10112",
+    jira.Project.instance.test2,
+    jira.Project.instance.testProj,
+    jira.Project.instance.testProj2,
+    jira.Project.instance.testProj3,
+    jira.Project.instance.testProj4,
+    jira.Project.instance.testProj5,
+    jira.Project.instance.test_proj_five@b,
+    jira.Project.instance.testProj22,
+    jira.Project.instance.test_proj_four@b,
+    jira.Project.instance.Move_me_to_prod_2@s,
+    jira.Project.instance.testSmartValues,
+    jira.Project.instance.BUG1,
+    jira.Project.instance.testIdoProject,
+    jira.Project.instance.AlonProject2,
+    jira.Project.instance.AlonProjecta2,
+    jira.Project.instance.test12345,
+    jira.Project.instance.shay_project@s,
+    jira.Project.instance.Project_Playground@s,
+    jira.Project.instance.JiraCon_Project@s,
+    jira.Project.instance.BizApps,
+    jira.Project.instance.Empty22,
+    jira.Project.instance.testIssueTypeScheme,
+    jira.Project.instance.ScrumProject,
+    jira.Project.instance.usersTest,
+    jira.Project.instance.guytestmigration,
+    jira.Project.instance.guytest3,
+    jira.Project.instance.Mig,
+    jira.Project.instance.testMigProject,
+    "10162",
+    jira.Project.instance.Neta_aaa@s,
+  ]
+}

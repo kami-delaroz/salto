@@ -1,0 +1,7 @@
+jira.IssueType Custom_issue_type_two@s {
+  description = "custom issue type for project two"
+  name = "Custom issue type two"
+  untranslatedName = "Custom issue type two"
+  hierarchyLevel = 3
+  avatar = file("jira/IssueType/Custom_issue_type_two.s.png")
+}

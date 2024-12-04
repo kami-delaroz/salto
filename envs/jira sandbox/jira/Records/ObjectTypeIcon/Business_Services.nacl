@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Business_Services@s {
+  name = "Business Services"
+  icon = file("jira/ObjectTypeIcon/Business_Services.s.png")
+}

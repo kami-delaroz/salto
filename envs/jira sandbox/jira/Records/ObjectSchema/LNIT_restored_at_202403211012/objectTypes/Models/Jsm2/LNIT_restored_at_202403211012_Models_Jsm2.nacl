@@ -1,0 +1,14 @@
+jira.ObjectType LNIT_restored_at_202403211012_Models_Jsm2 {
+  name = "Jsm2"
+  type = 0
+  description = ""
+  parentObjectTypeId = jira.ObjectType.instance.LNIT_restored_at_202403211012_Models
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  _parent = [
+    jira.ObjectSchema.instance.LNIT_restored_at_202403211012,
+  ]
+  _alias = "Jsm2"
+}

@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus Processes__Retired {
+  name = "Retired"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.Processes,
+  ]
+  _alias = "Processes:Retired"
+}

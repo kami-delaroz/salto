@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute Services_Software_services_us_Description@uumu {
+  objectType = jira.ObjectType.instance.Services_Software_services@us
+  name = "Description"
+  type = 0
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 9
+  _alias = "Description"
+}

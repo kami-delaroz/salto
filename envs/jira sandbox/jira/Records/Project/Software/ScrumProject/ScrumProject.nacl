@@ -1,0 +1,16 @@
+jira.Project ScrumProject {
+  key = "SCRUM"
+  description = ""
+  name = "ScrumProject"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.SCRUM__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.SCRUM__Scrum_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.SCRUM__Scrum_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  assigneeType = "UNASSIGNED"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Cisco_Router@s {
+  name = "Cisco Router"
+  icon = file("jira/ObjectTypeIcon/Cisco_Router.s.png")
+}

@@ -1,0 +1,9 @@
+jira.Field Event_count__textfield__c@suuuu {
+  name = "Event count"
+  description = ""
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  contexts = [
+    jira.CustomFieldContext.instance.Event_count__textfield__c_suuuu_Default_Configuration_Scheme_for_Event_count@uuuuumusssss,
+  ]
+  _alias = "Event count"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Active_Directory@s {
+  name = "Active Directory"
+  icon = file("jira/ObjectTypeIcon/Active_Directory.s.png")
+}

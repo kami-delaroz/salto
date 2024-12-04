@@ -1,0 +1,7 @@
+jira.ApplicationProperty Delay_in_days_before_newsletter_signup_tip_is_shown@s {
+  id = "jira.newsletter.tip.delay.days"
+  value = "7"
+  name = "Delay in days before newsletter signup tip is shown"
+  desc = "The number of days before a prompt to sign up to the Jira Insiders newsletter is shown. A value of -1 disables this functionality."
+  type = "int"
+}

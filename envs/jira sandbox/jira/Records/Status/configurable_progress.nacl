@@ -1,0 +1,6 @@
+jira.Status configurable_progress@s {
+  name = "Configurable Progress"
+  statusCategory = jira.StatusCategory.instance.In_Progress@s
+  description = ""
+  _alias = "Configurable Progress"
+}

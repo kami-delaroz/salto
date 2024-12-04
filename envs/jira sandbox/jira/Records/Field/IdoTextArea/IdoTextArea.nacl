@@ -1,0 +1,10 @@
+jira.Field IdoTextArea__textarea__c {
+  name = "IdoTextArea"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.IdoTextArea__textarea__c_Default_Configuration_Scheme_for_IdoTextArea@uuuuussss,
+  ]
+  _alias = "IdoTextArea"
+}

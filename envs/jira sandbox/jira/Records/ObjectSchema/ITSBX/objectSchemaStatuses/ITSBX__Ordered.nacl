@@ -1,0 +1,9 @@
+jira.ObjectSchemaStatus ITSBX__Ordered {
+  name = "Ordered"
+  description = "Asset is deployed but no longer in use"
+  category = 2
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+  _alias = "ITSBX:Ordered"
+}

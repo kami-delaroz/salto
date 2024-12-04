@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute ID2_restored_at_202403211012_Test1_label_attribute {
+  labelAttribute = jira.ObjectTypeAttribute.instance.ID2_restored_at_202403211012_Test1_Name
+  objectType = jira.ObjectType.instance.ID2_restored_at_202403211012_Test1
+}

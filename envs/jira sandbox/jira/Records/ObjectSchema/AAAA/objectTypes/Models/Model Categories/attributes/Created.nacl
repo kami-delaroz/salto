@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute AAAA_Models_Model_Categories_uus_Created@uuumu {
+  objectType = jira.ObjectType.instance.AAAA_Models_Model_Categories@uus
+  name = "Created"
+  type = 0
+  editable = false
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 6
+  _alias = "Created"
+}

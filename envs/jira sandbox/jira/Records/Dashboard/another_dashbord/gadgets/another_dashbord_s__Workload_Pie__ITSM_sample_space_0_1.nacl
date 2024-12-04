@@ -1,0 +1,56 @@
+jira.DashboardGadget another_dashbord_s__Workload_Pie__ITSM_sample_space_0_1@umuusfsssuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.ext.charting:workloadpie-gadget/com/atlassian/jira/ext/charting/gadget/workloadpie-gadget.xml"
+  color = "blue"
+  position = {
+    row = 1
+    column = 0
+  }
+  title = "Workload Pie: ITSM sample space"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "statistictype"
+          value = jira.Field.instance.Change_requires_downtime___select__c@ssauuuu
+        },
+        {
+          key = "issuetimetype"
+          value = "currentestimate"
+        },
+        {
+          key = "isPopup"
+          value = "false"
+        },
+        {
+          key = "name"
+          value = "EnhancedFilter1"
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+        {
+          key = "projectOrFilterId"
+          value = jira.Project.instance.ITSM_sample_space@s
+        },
+        {
+          key = "id"
+          value = "10089"
+        },
+        {
+          key = "type"
+          value = "filter"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.another_dashbord@s,
+  ]
+  _alias = "Workload Pie: ITSM sample space"
+}

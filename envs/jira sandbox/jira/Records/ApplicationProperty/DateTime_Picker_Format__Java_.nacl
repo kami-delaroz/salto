@@ -1,0 +1,7 @@
+jira.ApplicationProperty DateTime_Picker_Format__Java_@sssjk {
+  id = "jira.date.time.picker.java.format"
+  value = "dd/MMM/yy h:mm a"
+  name = "DateTime Picker Format (Java)"
+  desc = "This part is only for the Java (server side) generated datetimes. Note that this should correspond to the javascript datetime picker format (jira.date.time.picker.javascript.format) setting."
+  type = "string"
+}

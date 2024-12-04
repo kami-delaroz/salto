@@ -1,0 +1,157 @@
+jira.SLA SLA1_ITSAMPLE {
+  name = "SLA1"
+  config = {
+    definition = {
+      start = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "assignee-sla-condition-factory"
+          conditionId = "assignee-changed-hit-condition"
+          name = "Assignee: Changed"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "assignee-sla-condition-factory"
+          conditionId = "assignee-set-hit-condition"
+          name = "Assignee: From Unassigned"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "assignee-sla-condition-factory"
+          conditionId = "assignee-cleared-hit-condition"
+          name = "Assignee: To Unassigned"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "comment-sla-condition-factory"
+          conditionId = "comment-by-reporter-hit-condition"
+          name = "Comment: By Customer"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "comment-sla-condition-factory"
+          conditionId = "comment-for-reporter-hit-condition"
+          name = "Comment: For Customers"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "duedate-sla-condition-factory"
+          conditionId = "duedate-changed-hit-condition"
+          name = "Due Date: Changed"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "duedate-sla-condition-factory"
+          conditionId = "duedate-cleared-hit-condition"
+          name = "Due Date: Cleared"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "duedate-sla-condition-factory"
+          conditionId = "duedate-set-hit-condition"
+          name = "Due Date: Set"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.closed
+          name = "Entered Status: Closed"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.done
+          name = "Entered Status: Done"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.in_progress@s
+          name = "Entered Status: In Progress"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.open
+          name = "Entered Status: Open"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.reopened
+          name = "Entered Status: Reopened"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.resolved
+          name = "Entered Status: Resolved"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.to_do@s
+          name = "Entered Status: To Do"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "issue-created-sla-condition-factory"
+          conditionId = "issue-created-hit-condition"
+          name = "Issue Created"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "resolution-sla-condition-factory"
+          conditionId = "resolution-cleared-hit-condition"
+          name = "Resolution: Cleared"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "resolution-sla-condition-factory"
+          conditionId = "resolution-set-hit-condition"
+          name = "Resolution: Set"
+        },
+      ]
+      pause = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "duedate-sla-condition-factory"
+          conditionId = "duedate-set-match-condition"
+          name = "Due Date: Set"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.closed
+          name = "Status: Closed"
+        },
+      ]
+      stop = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "duedate-sla-condition-factory"
+          conditionId = "duedate-changed-hit-condition"
+          name = "Due Date: Changed"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.name65
+          name = "Entered Status: name65"
+        },
+      ]
+    }
+    goals = [
+      {
+        jqlQuery = ""
+        defaultGoal = true
+        timeMetricId = 0
+      },
+    ]
+    slaDisplayFormat = "NEW_SLA_FORMAT"
+  }
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:SLA1"
+}

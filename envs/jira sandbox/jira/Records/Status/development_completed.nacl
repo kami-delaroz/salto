@@ -1,0 +1,6 @@
+jira.Status development_completed@s {
+  name = "development completed"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = ""
+  _alias = "development completed"
+}

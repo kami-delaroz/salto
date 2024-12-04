@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Cardboard_Box@s {
+  name = "Cardboard Box"
+  icon = file("jira/ObjectTypeIcon/Cardboard_Box.s.png")
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Support {
+  name = "Support"
+  icon = file("jira/ObjectTypeIcon/Support.png")
+}

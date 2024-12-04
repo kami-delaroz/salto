@@ -1,0 +1,6 @@
+jira.Status cannot_reproduce@s {
+  name = "CANNOT REPRODUCE"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = "For issues we cannot reproduce"
+  _alias = "CANNOT REPRODUCE"
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeLabelAttribute LN___Software_sbs_Software_uuumu_PhysicalCopies_label_attribute@uuuuumuuu {
+  labelAttribute = jira.ObjectTypeAttribute.instance.LN___Software_sbs_Software_uuumu_PhysicalCopies_uuuuumu_Name@uuuuuuumu
+  objectType = jira.ObjectType.instance.LN___Software_sbs_Software_uuumu_PhysicalCopies@uuuuumu
+}

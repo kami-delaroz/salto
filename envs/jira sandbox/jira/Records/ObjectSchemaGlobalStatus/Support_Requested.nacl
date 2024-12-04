@@ -1,0 +1,5 @@
+jira.ObjectSchemaGlobalStatus Support_Requested@s {
+  name = "Support Requested"
+  description = ""
+  category = 2
+}

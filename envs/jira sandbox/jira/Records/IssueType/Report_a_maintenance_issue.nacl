@@ -1,0 +1,7 @@
+jira.IssueType Report_a_maintenance_issue@s {
+  description = "Log a maintenance concern that needs our attention."
+  name = "Report a maintenance issue"
+  untranslatedName = "Report a maintenance issue"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Report_a_maintenance_issue.s.png")
+}

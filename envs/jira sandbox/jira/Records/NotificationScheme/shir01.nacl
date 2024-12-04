@@ -1,0 +1,4 @@
+jira.NotificationScheme shir01 {
+  name = "shir01"
+  description = "desc-updated"
+}

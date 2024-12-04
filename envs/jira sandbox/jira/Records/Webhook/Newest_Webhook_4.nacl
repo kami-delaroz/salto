@@ -1,0 +1,17 @@
+jira.Webhook Newest_Webhook_4@s {
+  name = "Newest Webhook 4"
+  url = "https://staging.salto.com/rest/webhooks/webhook4"
+  description = ""
+  excludeBody = true
+  events = [
+    "option_voting_changed",
+    "issuelink_created",
+    "option_unassigned_issues_changed",
+    "issuelink_deleted",
+    "worklog_updated",
+    "project_restored_deleted",
+    "project_deleted",
+  ]
+  enabled = true
+  isSigned = false
+}

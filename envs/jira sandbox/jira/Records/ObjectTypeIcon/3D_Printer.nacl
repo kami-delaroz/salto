@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon "3D_Printer@s" {
+  name = "3D Printer"
+  icon = file("jira/ObjectTypeIcon/3D_Printer.s.png")
+}

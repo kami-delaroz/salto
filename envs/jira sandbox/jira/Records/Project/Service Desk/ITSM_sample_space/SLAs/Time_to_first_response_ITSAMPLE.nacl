@@ -1,0 +1,62 @@
+jira.SLA Time_to_first_response_ITSAMPLE@sssu {
+  name = "Time to first response"
+  config = {
+    definition = {
+      start = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "issue-created-sla-condition-factory"
+          conditionId = "issue-created-hit-condition"
+          name = "Issue Created"
+        },
+      ]
+      stop = [
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "comment-sla-condition-factory"
+          conditionId = "comment-for-reporter-hit-condition"
+          name = "Comment: For Customers"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "status-sla-condition-factory"
+          conditionId = jira.Status.instance.waiting_for_customer@s
+          name = "Entered Status: Waiting for customer"
+        },
+        {
+          pluginKey = "com.atlassian.servicedesk"
+          factoryKey = "resolution-sla-condition-factory"
+          conditionId = "resolution-set-hit-condition"
+          name = "Resolution: Set"
+        },
+      ]
+    }
+    goals = [
+      {
+        jqlQuery = "\"Ticket category\" = Incidents"
+        duration = 7200000
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_ITSAMPLE@sbsu
+        defaultGoal = false
+        timeMetricId = 0
+      },
+      {
+        jqlQuery = "\"Ticket category\" = \"Service requests\""
+        duration = 14400000
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_ITSAMPLE@sbsu
+        defaultGoal = false
+        timeMetricId = 0
+      },
+      {
+        jqlQuery = ""
+        calendarId = jira.Calendar.instance.Sample_9_5_Calendar_ITSAMPLE@sbsu
+        defaultGoal = true
+        timeMetricId = 0
+      },
+    ]
+    slaDisplayFormat = "NEW_SLA_FORMAT"
+  }
+  _parent = [
+    jira.Project.instance.ITSM_sample_space@s,
+  ]
+  _alias = "ITSM sample space:Time to first response"
+}

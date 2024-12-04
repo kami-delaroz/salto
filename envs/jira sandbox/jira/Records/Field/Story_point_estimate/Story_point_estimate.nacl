@@ -1,0 +1,11 @@
+jira.Field Story_point_estimate__jsw_story_points__c@ssuubbuu {
+  name = "Story point estimate"
+  description = "Measurement of complexity and/or size of a requirement."
+  isLocked = true
+  searcherKey = "com.pyxis.greenhopper.jira:jsw-story-points-searcher"
+  type = "com.pyxis.greenhopper.jira:jsw-story-points"
+  contexts = [
+    jira.CustomFieldContext.instance.Story_point_estimate__jsw_story_points__c_ssuubbuu_Default_Configuration_Scheme_for_Story_point_estimate@uuuuuuuumussssss,
+  ]
+  _alias = "Story point estimate"
+}

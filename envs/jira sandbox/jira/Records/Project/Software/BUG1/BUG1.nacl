@@ -1,0 +1,17 @@
+jira.Project BUG1 {
+  key = "BUG1"
+  description = ""
+  name = "BUG1"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.BUG1__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.BUG1__Software_Development_Issue_Type_Screen_Scheme@fssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.BUG1__Software_Development_Issue_Type_Scheme@fsssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.A_new_FCS@s
+  leadAccountId = {
+    id = "5b8ed5177a33352bf10f7a48"
+    displayName = "Lior Neudorfer"
+  }
+  assigneeType = "PROJECT_LEAD"
+}

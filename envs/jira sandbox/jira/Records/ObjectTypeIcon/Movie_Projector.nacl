@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Movie_Projector@s {
+  name = "Movie Projector"
+  icon = file("jira/ObjectTypeIcon/Movie_Projector.s.png")
+}

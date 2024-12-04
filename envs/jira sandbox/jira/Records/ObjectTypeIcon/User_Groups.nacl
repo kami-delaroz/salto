@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon User_Groups@s {
+  name = "User Groups"
+  icon = file("jira/ObjectTypeIcon/User_Groups.s.png")
+}

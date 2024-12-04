@@ -1,0 +1,10 @@
+jira.Field Operational_categorization__cascadingselect__c@suuuu {
+  name = "Operational categorization"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselectsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect"
+  contexts = [
+    jira.CustomFieldContext.instance.Operational_categorization__cascadingselect__c_suuuu_Default_Configuration_Scheme_for_Operational_categorization@uuuuumusssss,
+  ]
+  _alias = "Operational categorization"
+}

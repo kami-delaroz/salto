@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Primary_GWR_20240410 {
+  name = "Primary_GWR_20240410"
+  icon = file("jira/ObjectTypeIcon/Primary_GWR_20240410.png")
+}

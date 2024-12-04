@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Pincode_Keyboard@s {
+  name = "Pincode Keyboard"
+  icon = file("jira/ObjectTypeIcon/Pincode_Keyboard.s.png")
+}

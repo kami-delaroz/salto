@@ -1,0 +1,9 @@
+jira.IssueTypeScheme ookcewf {
+  name = "ookcewf"
+  description = ""
+  issueTypeIds = [
+    jira.IssueType.instance.Sub_task@b,
+    jira.IssueType.instance._System__Change@his,
+    jira.IssueType.instance.IT_Help2@s,
+  ]
+}

@@ -1,0 +1,8 @@
+jira.ObjectTypeOrder Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Windows_Server_childOrder@uuuuuuuumusu {
+  objectTypes = [
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Windows_Server_uuuuuuuumus_windows_son@uuuuuuuuuuumus,
+  ]
+  _parent = [
+    jira.ObjectType.instance.Lior_s_IT_Schema_tss_Hardware_Assets_uuumus_Servers_uuuuuumu_Windows_Server@uuuuuuuumus,
+  ]
+}
