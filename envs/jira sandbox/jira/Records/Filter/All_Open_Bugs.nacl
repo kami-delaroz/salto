@@ -2,8 +2,8 @@ jira.Filter All_Open_Bugs@s {
   name = "All Open Bugs"
   description = "Lists all open bugs"
   owner = {
-    id = "5fa91999b2633d0076583a61"
-    displayName = "Alon Stern"
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
   }
   jql = "type = Bug and ${ jira.Field.instance.Resolution__resolution } is empty"
   sharePermissions = [
