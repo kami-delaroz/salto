@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Electrical_Sensor@s {
+  name = "Electrical Sensor"
+  icon = file("jira/ObjectTypeIcon/Electrical_Sensor.s.png")
+}

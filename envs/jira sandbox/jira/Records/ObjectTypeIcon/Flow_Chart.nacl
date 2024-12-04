@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Flow_Chart@s {
+  name = "Flow Chart"
+  icon = file("jira/ObjectTypeIcon/Flow_Chart.s.png")
+}

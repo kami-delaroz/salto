@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Parallel_Tasks@s {
+  name = "Parallel Tasks"
+  icon = file("jira/ObjectTypeIcon/Parallel_Tasks.s.png")
+}

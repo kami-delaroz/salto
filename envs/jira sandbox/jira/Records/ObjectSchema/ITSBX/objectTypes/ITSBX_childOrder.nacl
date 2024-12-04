@@ -1,0 +1,9 @@
+jira.ObjectTypeOrder ITSBX_childOrder {
+  objectTypes = [
+    jira.ObjectType.instance.ITSBX_Hardware_Assets@us,
+    jira.ObjectType.instance.ITSBX_Models,
+  ]
+  _parent = [
+    jira.ObjectSchema.instance.ITSBX,
+  ]
+}

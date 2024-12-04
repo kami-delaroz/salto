@@ -1,0 +1,188 @@
+jira.WorkflowConfiguration TES__Default_ESM_workflow_for_Jira_Service_Management@fsssssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "TES: Default ESM workflow for Jira Service Management"
+  description = "This Jira Service Management Service Default ESM workflow was generated for Project TES"
+  isEditable = true
+  startPointLayout = {
+    x = 314.5
+    y = 81.80000000000001
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.done
+      layout = {
+        x = 717.5078125
+        y = 107.80000000000001
+      }
+      deprecated = false
+      name = "Done"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 546.2421875
+        y = 45.35000146484376
+      }
+      deprecated = false
+      name = "In progress"
+    },
+    {
+      statusReference = jira.Status.instance.pending
+      layout = {
+        x = 559.3828125
+        y = 170.09999755859377
+      }
+      deprecated = false
+      name = "Pending"
+    },
+    {
+      statusReference = jira.Status.instance.to_do@s
+      layout = {
+        x = 412.19921875
+        y = 107.80000000000001
+      }
+      deprecated = false
+      name = "To Do"
+    },
+  ]
+  transitions = {
+    Reopened__From__Done__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.done
+          fromPort = 1
+          toPort = 1
+        },
+      ]
+      name = "Reopened"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "sd.resolution.clear"
+          value = ""
+        },
+      ]
+    }
+    In_review__From__In_progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.pending
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "In review"
+      description = ""
+    }
+    Resolved__From__Pending__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.pending
+          fromPort = 3
+          toPort = 5
+        },
+      ]
+      name = "Resolved"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Jira_Service_Desk_Resolve_Issue_Screen___2@ssssssbs
+        }
+      }
+    }
+    Start__From__To_Do__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+          fromPort = 1
+          toPort = 7
+        },
+      ]
+      name = "Start"
+      description = ""
+    }
+    In_review__From__To_Do__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.pending
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.to_do@s
+          fromPort = 5
+          toPort = 7
+        },
+      ]
+      name = "In review"
+      description = ""
+    }
+    Approved__From__Pending__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.pending
+          fromPort = 1
+          toPort = 5
+        },
+      ]
+      name = "Approved"
+      description = ""
+    }
+    Resolved__From__In_progress__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.done
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 3
+          toPort = 1
+        },
+      ]
+      name = "Resolved"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Jira_Service_Desk_Resolve_Issue_Screen___2@ssssssbs
+        }
+      }
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.to_do@s
+      links = [
+        {
+          toPort = 7
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

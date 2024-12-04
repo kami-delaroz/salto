@@ -1,0 +1,9 @@
+jira.Field Status_Category_Changed__datetime@ssuu {
+  name = "Status Category Changed"
+  schema = {
+    type = "datetime"
+    system = "statuscategorychangedate"
+  }
+  description = ""
+  _alias = "Status Category Changed"
+}

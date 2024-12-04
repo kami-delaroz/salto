@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Country {
+  name = "Country"
+  icon = file("jira/ObjectTypeIcon/Country.png")
+}

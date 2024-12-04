@@ -1,0 +1,17 @@
+jira.CustomFieldContext Urgency4__select__c_test2 {
+  name = "test2"
+  description = ""
+  defaultValue = {
+    type = "option.single"
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Sub_task@b,
+  ]
+  _parent = [
+    jira.Field.instance.Urgency4__select__c,
+  ]
+  _alias = "Urgency4 context in test2"
+  projectIds = [
+    jira.Project.instance.AlonCompanyProject11,
+  ]
+}

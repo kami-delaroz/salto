@@ -1,0 +1,77 @@
+jira.Automation Send_alert_on_due_date_change@s {
+  name = "Send alert on due date change"
+  state = "ENABLED"
+  description = ""
+  authorAccountId = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  actor = {
+    type = "ACCOUNT_ID"
+    value = {
+      id = "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077"
+      displayName = "Automation for Jira"
+    }
+  }
+  trigger = {
+    component = "TRIGGER"
+    type = "jira.issue.field.changed"
+    value = {
+      changeType = "ANY_CHANGE"
+      fields = [
+        {
+          value = jira.Field.instance.Due_date__date@suu
+          type = "field"
+        },
+      ]
+      actions = [
+      ]
+      eventFilters = [
+        "ari:cloud:jira::site/cc55e2a7-7908-4b67-ad90-b8c78de0e9ad",
+      ]
+    }
+    children = [
+    ]
+    conditions = [
+    ]
+  }
+  components = [
+    {
+      component = "ACTION"
+      type = "jira.issue.outgoing.email"
+      value = {
+        fromName = ""
+        replyTo = ""
+        to = [
+          {
+            type = "FREE"
+            value = "stagingalerts@salto.io"
+          },
+        ]
+        cc = [
+        ]
+        bcc = [
+        ]
+        subject = "Updated issue {{issue.key}}!"
+        body = "Boom"
+        mimeType = "text/html"
+        convertLineBreaks = true
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+  ]
+  canOtherRuleTrigger = false
+  notifyOnError = "FIRSTERROR"
+  labels = [
+  ]
+  tags = [
+  ]
+  writeAccessType = "UNRESTRICTED"
+  collaborators = [
+  ]
+  billingType = "NORMAL"
+  _alias = "Send alert on due date change"
+}

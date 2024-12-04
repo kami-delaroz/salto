@@ -1,0 +1,14 @@
+jira.Project Dan_E_s_Project@bts {
+  key = "DGE"
+  description = ""
+  name = "Dan-E's Project"
+  projectTypeKey = "software"
+  entityId = "5097a6c9-33fa-4133-9393-e9bf4d7860ea"
+  uuid = "5097a6c9-33fa-4133-9393-e9bf4d7860ea"
+  issueSecurityScheme = jira.SecurityScheme.instance.DGE__Simplified_Issue_Security_Scheme@fssss
+  leadAccountId = {
+    id = "712020:f12c0bf7-5d75-427b-b149-5ddd2da2ab8e"
+    displayName = "Former user"
+  }
+  assigneeType = "UNASSIGNED"
+}

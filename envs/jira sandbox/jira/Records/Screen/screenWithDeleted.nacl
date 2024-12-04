@@ -1,0 +1,13 @@
+jira.Screen screenWithDeleted {
+  name = "screenWithDeleted"
+  description = ""
+  tabs = {
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.NewCustomFieldLior__multicheckboxes__c,
+      ]
+      position = 0
+    }
+  }
+}

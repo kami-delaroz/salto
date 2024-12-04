@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Employees_umu_oneF_uuumu_Created@uuuuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Employees_umu_oneF@uuumu
+  name = "Created"
+  type = 0
+  editable = false
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 6
+  _alias = "Created"
+}

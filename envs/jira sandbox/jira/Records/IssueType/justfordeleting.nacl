@@ -1,0 +1,7 @@
+jira.IssueType justfordeleting {
+  description = ""
+  name = "justfordeleting"
+  untranslatedName = "justfordeleting"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/justfordeleting.png")
+}

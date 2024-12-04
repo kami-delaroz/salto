@@ -1,0 +1,18 @@
+jira.IssueTypeScreenScheme DPJSM__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss {
+  name = "DPJSM: Jira Service Management Issue Type Screen Scheme"
+  description = "This Jira Service Management Issue Type Screen Scheme was generated automatically"
+  issueTypeMappings = [
+    {
+      issueTypeId = jira.IssueType.instance.Sub_task@b
+      screenSchemeId = jira.ScreenScheme.instance.DPJSM__Jira_Service_Management_Task_and_Subtask_Screen_Scheme@fssssssss
+    },
+    {
+      issueTypeId = jira.IssueType.instance.Task
+      screenSchemeId = jira.ScreenScheme.instance.DPJSM__Jira_Service_Management_Task_and_Subtask_Screen_Scheme@fssssssss
+    },
+    {
+      issueTypeId = "default"
+      screenSchemeId = jira.ScreenScheme.instance.DPJSM__Jira_Service_Management_Screen_Scheme@fsssss
+    },
+  ]
+}

@@ -1,0 +1,11 @@
+jira.Field Target_start__jpo_custom_field_baseline_start__c@suubbbbuu {
+  name = "Target start"
+  description = "The targeted start date. This custom field is created and required by Advanced Roadmaps for Jira."
+  isLocked = true
+  searcherKey = "com.atlassian.jpo:jpo-custom-field-baseline-start-searcher"
+  type = "com.atlassian.jpo:jpo-custom-field-baseline-start"
+  contexts = [
+    jira.CustomFieldContext.instance.Target_start__jpo_custom_field_baseline_start__c_suubbbbuu_Default_Configuration_Scheme_for_Target_start@uuuuuuuuumusssss,
+  ]
+  _alias = "Target start"
+}

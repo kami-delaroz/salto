@@ -1,0 +1,9 @@
+jira.Field Days_since_last_comment__dayslastcommented__c@sssuuuu {
+  name = "Days since last comment"
+  description = ""
+  type = "com.atlassian.jira.toolkit:dayslastcommented"
+  contexts = [
+    jira.CustomFieldContext.instance.Days_since_last_comment__dayslastcommented__c_sssuuuu_Default_Configuration_Scheme_for_Days_since_last_comment@uuuuuuumusssssss,
+  ]
+  _alias = "Days since last comment"
+}

@@ -1,0 +1,7 @@
+jira.ScreenScheme LIORCOMP__Scrum_Default_Screen_Scheme@fssss {
+  name = "LIORCOMP: Scrum Default Screen Scheme"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.LIORCOMP__Scrum_Default_Issue_Screen@fssss
+  }
+}

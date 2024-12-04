@@ -1,0 +1,56 @@
+jira.DashboardGadget ITSM_Sample_Dashboard_s__Two_Dimensional_Filter_Statistics_0_3@uumuusssuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.gadgets:two-dimensional-stats-gadget/gadgets/two-dimensional-stats-gadget.xml"
+  color = "blue"
+  position = {
+    row = 3
+    column = 0
+  }
+  title = "Two Dimensional Filter Statistics"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "filterId"
+          value = jira.Filter.instance.Sample_Filter@s
+        },
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "sortDirection"
+          value = "asc"
+        },
+        {
+          key = "more"
+          value = "false"
+        },
+        {
+          key = "ystattype"
+          value = jira.Field.instance.Issue_Type__issuetype@suu
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+        {
+          key = "sortBy"
+          value = "natural"
+        },
+        {
+          key = "numberToShow"
+          value = "5"
+        },
+        {
+          key = "xstattype"
+          value = jira.Field.instance.Urgency__select__c
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.ITSM_Sample_Dashboard@s,
+  ]
+  _alias = "Two Dimensional Filter Statistics"
+}

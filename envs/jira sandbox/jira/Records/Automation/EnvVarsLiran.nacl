@@ -1,0 +1,66 @@
+jira.Automation EnvVarsLiran {
+  name = "EnvVarsLiran"
+  state = "ENABLED"
+  description = ""
+  authorAccountId = {
+    id = "60e8b78784c9920071996842"
+    displayName = "Lior Neudorfer"
+  }
+  actor = {
+    type = "ACCOUNT_ID"
+    value = {
+      id = "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077"
+      displayName = "Automation for Jira"
+    }
+  }
+  trigger = {
+    component = "TRIGGER"
+    type = "jira.version.event.trigger:deleted"
+    value = {
+      versionNameFilter = ""
+    }
+    children = [
+    ]
+    conditions = [
+    ]
+  }
+  components = [
+    {
+      component = "ACTION"
+      type = "jira.issue.outgoing.email"
+      value = {
+        fromName = ""
+        replyTo = ""
+        to = [
+          {
+            type = "FREE"
+            value = "staging@blabla.com"
+          },
+        ]
+        cc = [
+        ]
+        bcc = [
+        ]
+        subject = "Subject"
+        body = "Content!!!"
+        mimeType = "text/html"
+        convertLineBreaks = true
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+  ]
+  canOtherRuleTrigger = false
+  notifyOnError = "FIRSTERROR"
+  labels = [
+  ]
+  tags = [
+  ]
+  writeAccessType = "UNRESTRICTED"
+  collaborators = [
+  ]
+  billingType = "NORMAL"
+  _alias = "EnvVarsLiran"
+}

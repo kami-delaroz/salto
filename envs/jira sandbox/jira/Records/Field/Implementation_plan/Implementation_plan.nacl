@@ -1,0 +1,10 @@
+jira.Field Implementation_plan__textarea__c@suuuu {
+  name = "Implementation plan"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  contexts = [
+    jira.CustomFieldContext.instance.Implementation_plan__textarea__c_suuuu_Default_Configuration_Scheme_for_Implementation_plan@uuuuumusssss,
+  ]
+  _alias = "Implementation plan"
+}

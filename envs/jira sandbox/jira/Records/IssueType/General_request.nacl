@@ -1,0 +1,7 @@
+jira.IssueType General_request@s {
+  description = "For general requests"
+  name = "General request"
+  untranslatedName = "General request"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/General_request.s.png")
+}

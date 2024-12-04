@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Apple_TV@s {
+  name = "Apple TV"
+  icon = file("jira/ObjectTypeIcon/Apple_TV.s.png")
+}

@@ -1,0 +1,31 @@
+jira.ScheduledJob DP___Scheduled_Script@sbss {
+  atlassianUser = {
+    accountId = {
+      id = "6205b3c7d362410069133701"
+      displayName = "Dan Putman"
+    }
+  }
+  script = '''
+import java.util.Calendar
+
+//Edit this!
+
+def now = Calendar.getInstance()
+def version = String.format("%d-%02d-%02d", now.get(Calendar.YEAR), now.get(Calendar.MONTH), now.get(Calendar.DAY_OF_MONTH))
+
+post("/rest/api/2/version")
+    .header('Content-Type', 'application/json')
+    .body([
+        name: "Version \${version}",
+        archived: false,
+        released: true,
+        releaseDate: version,
+        project: "EXAMPLE"
+    ])
+    .asString()
+
+'''
+  name = "DP - Scheduled Script"
+  enabled = true
+  cronExpression = "0 0 12 ? * 2,3,4,5,6"
+}

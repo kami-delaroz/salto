@@ -1,0 +1,44 @@
+jira.DashboardGadget DP___JSM_Dashboard_sbss__Filter_Results_1_1@uuuumuusuu {
+  uri = "rest/gadgets/1.0/g/com.atlassian.jira.gadgets:filter-results-gadget/gadgets/filter-results-gadget.xml"
+  color = "blue"
+  position = {
+    row = 1
+    column = 1
+  }
+  title = "Filter Results"
+  properties = [
+    {
+      key = "config"
+      values = [
+        {
+          key = "filterId"
+          value = "13209"
+        },
+        {
+          key = "isConfigured"
+          value = "true"
+        },
+        {
+          key = "columnNames"
+          value = "issuetype|issuekey|summary|priority"
+        },
+        {
+          key = "isPopup"
+          value = "false"
+        },
+        {
+          key = "num"
+          value = "10"
+        },
+        {
+          key = "refresh"
+          value = "false"
+        },
+      ]
+    },
+  ]
+  _parent = [
+    jira.Dashboard.instance.DP___JSM_Dashboard@sbss,
+  ]
+  _alias = "Filter Results"
+}

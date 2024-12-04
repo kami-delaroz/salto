@@ -1,0 +1,27 @@
+jira.WorkflowScheme Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_TS4@s {
+  name = "Jira Service Management IT Support Workflow Scheme generated for Project TS4"
+  description = "This Jira Service Management IT Support Workflow Scheme was generated for Project TS4"
+  defaultWorkflow = jira.WorkflowConfiguration.instance.jira
+  items = [
+    {
+      workflow = jira.WorkflowConfiguration.instance.TS4__Jira_Service_Management_default_workflow@fsssss
+      issueType = jira.IssueType.instance.Task
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.TS4__Jira_Service_Management_default_workflow@fsssss
+      issueType = jira.IssueType.instance.Sub_task@b
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.TS4__Service_Request_Fulfilment_workflow_for_Jira_Service_Management@fssssssss
+      issueType = jira.IssueType.instance.IT_Help@s
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.TS4__Service_Request_Fulfilment_workflow_for_Jira_Service_Management@fssssssss
+      issueType = jira.IssueType.instance.Service_Request@s
+    },
+    {
+      workflow = jira.WorkflowConfiguration.instance.TS4__Service_Request_Fulfilment_with_Approvals_workflow_for_Jira_Service_Management@fssssssssss
+      issueType = jira.IssueType.instance.Service_Request_with_Approvals@s
+    },
+  ]
+}

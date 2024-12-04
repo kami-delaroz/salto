@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Red_Hat@s {
+  name = "Red Hat"
+  icon = file("jira/ObjectTypeIcon/Red_Hat.s.png")
+}

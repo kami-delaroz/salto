@@ -1,0 +1,61 @@
+jira.CustomFieldContext testSelectList6__cascadingselect__c_CustomConfigurationScheme_for_CustomSelectList@uuuuuss {
+  name = "CustomConfigurationScheme for CustomSelectList"
+  description = "desc"
+  options = {
+    p1 = {
+      value = "p1"
+      disabled = false
+      cascadingOptions = {
+        c11 = {
+          value = "c11"
+          disabled = false
+          position = 0
+        }
+        c12 = {
+          value = "c12"
+          disabled = false
+          position = 1
+        }
+      }
+      position = 1
+    }
+    p2 = {
+      value = "p2"
+      disabled = false
+      cascadingOptions = {
+        c22 = {
+          value = "c22"
+          disabled = false
+          position = 0
+        }
+      }
+      position = 2
+    }
+    p3 = {
+      value = "p3"
+      disabled = true
+      position = 3
+    }
+    p4 = {
+      value = "p4"
+      disabled = false
+      position = 4
+    }
+  }
+  defaultValue = {
+    type = "option.cascading"
+  }
+  issueTypeIds = [
+    jira.IssueType.instance.Epic,
+    jira.IssueType.instance.Story,
+    jira.IssueType.instance.Custom_issue_type_two@s,
+  ]
+  _parent = [
+    jira.Field.instance.testSelectList6__cascadingselect__c,
+  ]
+  _alias = "testSelectList6 context in CustomConfigurationScheme for CustomSelectList"
+  projectIds = [
+    jira.Project.instance.test_proj_three@b,
+    jira.Project.instance.test_proj_two@b,
+  ]
+}

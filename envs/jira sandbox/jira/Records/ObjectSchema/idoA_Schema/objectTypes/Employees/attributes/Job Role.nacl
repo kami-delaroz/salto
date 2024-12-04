@@ -1,0 +1,21 @@
+jira.ObjectTypeAttribute idoA_Schema_s_Employees_umu_Job_Role@uuumus {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_Employees@umu
+  name = "Job Role"
+  type = 1
+  description = "Employee's job role yes!!"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 0
+  maximumCardinality = 1
+  removable = true
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = -1
+  additionalValue = jira.ObjectSchemaReferenceType.instance.idoA_Schema_s__Member_of@umuus
+  typeValue = jira.ObjectType.instance.idoA_Schema_s_Role@umu
+  _alias = "Job Role"
+}

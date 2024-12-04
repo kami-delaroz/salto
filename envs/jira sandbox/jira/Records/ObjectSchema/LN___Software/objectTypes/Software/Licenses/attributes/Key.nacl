@@ -1,0 +1,18 @@
+jira.ObjectTypeAttribute LN___Software_sbs_Software_uuumu_Licenses_uuuuumu_Key@uuuuuuumu {
+  objectType = jira.ObjectType.instance.LN___Software_sbs_Software_uuumu_Licenses@uuuuumu
+  name = "Key"
+  type = 0
+  editable = false
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "Key"
+}

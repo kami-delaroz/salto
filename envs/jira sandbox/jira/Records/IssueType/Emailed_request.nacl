@@ -1,0 +1,7 @@
+jira.IssueType Emailed_request@s {
+  description = "Request received from your email support channel."
+  name = "Emailed request"
+  untranslatedName = "Emailed request"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Emailed_request.s.png")
+}

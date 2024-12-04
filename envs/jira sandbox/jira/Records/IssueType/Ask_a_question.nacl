@@ -1,0 +1,7 @@
+jira.IssueType Ask_a_question@s {
+  description = "Have a question? Submit it here."
+  name = "Ask a question"
+  untranslatedName = "Ask a question"
+  hierarchyLevel = 2
+  avatar = file("jira/IssueType/Ask_a_question.s.png")
+}

@@ -1,0 +1,17 @@
+jira.Project test_proj_three@b {
+  key = "TP3"
+  description = "the third test project"
+  name = "test-proj-three"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.TP3__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.TP3_software_permission_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.TP3__Software_Development_Issue_Type_Screen_Scheme@fssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.New_issue_type_scheme_for_project_test_proj_three@ssssssbb
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Custom_field_config@s
+  leadAccountId = {
+    id = "5cd027a783de300fe5d4b9b0"
+    displayName = "Ori Moisis"
+  }
+  assigneeType = "UNASSIGNED"
+}

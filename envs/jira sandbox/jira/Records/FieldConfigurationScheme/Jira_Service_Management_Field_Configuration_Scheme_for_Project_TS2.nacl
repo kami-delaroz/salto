@@ -1,0 +1,10 @@
+jira.FieldConfigurationScheme Jira_Service_Management_Field_Configuration_Scheme_for_Project_TS2@s {
+  name = "Jira Service Management Field Configuration Scheme for Project TS2"
+  description = "This Jira Service Management Field Configuration Scheme was generated for Project TS2"
+  items = [
+    {
+      issueTypeId = "default"
+      fieldConfigurationId = jira.FieldConfiguration.instance.Jira_Service_Management_Field_Configuration_for_Project_TS2@s
+    },
+  ]
+}

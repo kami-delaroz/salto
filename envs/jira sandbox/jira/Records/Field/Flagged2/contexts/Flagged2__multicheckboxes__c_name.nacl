@@ -1,0 +1,14 @@
+jira.CustomFieldContext Flagged2__multicheckboxes__c_name {
+  name = "name"
+  description = ""
+  defaultValue = {
+    type = "option.multiple"
+  }
+  _parent = [
+    jira.Field.instance.Flagged2__multicheckboxes__c,
+  ]
+  _alias = "Flagged2 context in name"
+  projectIds = [
+    jira.Project.instance.AlonCompanyProject10,
+  ]
+}

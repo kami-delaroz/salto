@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Software_Installer@s {
+  name = "Software Installer"
+  icon = file("jira/ObjectTypeIcon/Software_Installer.s.png")
+}

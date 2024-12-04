@@ -1,0 +1,35 @@
+jira.Project test2 {
+  key = "TST2"
+  description = ""
+  name = "test2"
+  projectTypeKey = "service_desk"
+  components = [
+    jira.ProjectComponent.instance.test2__Active_Directory@uus,
+    jira.ProjectComponent.instance.test2__Analytics_and_Reporting_Service@uusss,
+    jira.ProjectComponent.instance.test2__Billing_Services@uus,
+    jira.ProjectComponent.instance.test2__Cloud_Storage_Services@uuss,
+    jira.ProjectComponent.instance.test2__Data_Center_Services@uuss,
+    jira.ProjectComponent.instance.test2__Email_and_Collaboration_Services@uusss,
+    jira.ProjectComponent.instance.test2__Financial_Services@uus,
+    jira.ProjectComponent.instance.test2__HR_Services@uus,
+    jira.ProjectComponent.instance.test2__Intranet,
+    jira.ProjectComponent.instance.test2__Jira,
+    jira.ProjectComponent.instance.test2__Office_Network@uus,
+    jira.ProjectComponent.instance.test2__Payroll_Services@uus,
+    jira.ProjectComponent.instance.test2__Printers,
+    jira.ProjectComponent.instance.test2__Public_Website@uus,
+    jira.ProjectComponent.instance.test2__VPN_Server@uus,
+    jira.ProjectComponent.instance.test2__Webstore_Purchasing_Services@uuss,
+  ]
+  workflowScheme = jira.WorkflowScheme.instance.Jira_Service_Management_IT_Support_Workflow_Scheme_generated_for_Project_TST2@s
+  permissionScheme = jira.PermissionScheme.instance.Jira_Service_Management_Permission_Scheme_for_Project_TST2@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.TST2__Jira_Service_Management_Issue_Type_Screen_Scheme@fsssssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.TST2__Jira_Service_Management_Issue_Type_Scheme@fssssss
+  fieldConfigurationScheme = jira.FieldConfigurationScheme.instance.Jira_Service_Management_Field_Configuration_Scheme_for_Project_TST2@s
+  leadAccountId = {
+    id = "5fa91999b2633d0076583a61"
+    displayName = "Alon Stern"
+  }
+  assigneeType = "UNASSIGNED"
+}

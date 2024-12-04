@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Data_Configuration@s {
+  name = "Data Configuration"
+  icon = file("jira/ObjectTypeIcon/Data_Configuration.s.png")
+}

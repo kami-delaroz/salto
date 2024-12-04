@@ -1,0 +1,6 @@
+jira.Status finished111 {
+  name = "Finished111"
+  statusCategory = jira.StatusCategory.instance.Done
+  description = "The issue is resolved"
+  _alias = "Finished111"
+}

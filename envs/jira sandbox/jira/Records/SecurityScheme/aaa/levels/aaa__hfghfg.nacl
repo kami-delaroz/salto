@@ -1,0 +1,15 @@
+jira.SecurityLevel aaa__hfghfg {
+  description = ""
+  name = "hfghfg"
+  members = [
+    {
+      holder = {
+        type = "projectRole"
+        parameter = jira.ProjectRole.instance.atlassian_addons_project_access@b
+      }
+    },
+  ]
+  _parent = [
+    jira.SecurityScheme.instance.aaa,
+  ]
+}

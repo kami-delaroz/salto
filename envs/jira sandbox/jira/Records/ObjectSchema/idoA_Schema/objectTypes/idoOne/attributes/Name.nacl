@@ -1,0 +1,19 @@
+jira.ObjectTypeAttribute idoA_Schema_s_idoOne_umu_Name@uuumu {
+  objectType = jira.ObjectType.instance.idoA_Schema_s_idoOne@umu
+  name = "Name"
+  type = 0
+  description = "The name of the object"
+  editable = true
+  sortable = true
+  summable = false
+  indexed = true
+  minimumCardinality = 1
+  maximumCardinality = 1
+  removable = false
+  hidden = false
+  includeChildObjectTypes = false
+  uniqueAttribute = false
+  options = ""
+  defaultTypeId = 0
+  _alias = "Name"
+}

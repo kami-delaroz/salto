@@ -1,0 +1,49 @@
+jira.Screen DPJSM__Jira_Service_Management_Screen@fssss {
+  name = "DPJSM: Jira Service Management Screen"
+  description = "This Jira Service Management Screen was generated automatically"
+  tabs = {
+    Default = {
+      name = "Default"
+      fields = [
+        jira.Field.instance.Summary__string,
+        jira.Field.instance.Issue_Type__issuetype@suu,
+        jira.Field.instance.Attachment__array,
+        jira.Field.instance.Due_date__date@suu,
+        jira.Field.instance.Description__string,
+        jira.Field.instance.Reporter__user,
+        jira.Field.instance.Linked_Issues__array@suu,
+        jira.Field.instance.Assignee__user,
+        jira.Field.instance.Priority__priority,
+        jira.Field.instance.Team__atlassian_team__c@uubuu,
+        jira.Field.instance.Labels__array,
+        jira.Field.instance.Request_Type__vp_origin__c@suubuu,
+        jira.Field.instance.Request_language__sd_request_language__c@suubbuu,
+        jira.Field.instance.Request_participants__sd_request_participants__c@suubbuu,
+        jira.Field.instance.Approvers__multiuserpicker__c,
+        jira.Field.instance.Time_tracking__timetracking@suu,
+        jira.Field.instance.Approver_groups__multigrouppicker__c@suuuu,
+        jira.Field.instance.DP___Priority__float__c@sbsuuuu,
+        jira.Field.instance.Actual_end__datetime__c@suuuu,
+        jira.Field.instance.DP___Date__datetime__c@sbsuuuu,
+      ]
+      position = 0
+    }
+    General = {
+      name = "General"
+      fields = [
+        jira.Field.instance.Approvals__sd_approvals__c@uubuu,
+        jira.Field.instance.Change_risk__select__c@suuuu,
+        jira.Field.instance.Change_type__select__c@suuuu,
+      ]
+      position = 1
+    }
+    Analysis = {
+      name = "Analysis"
+      fields = [
+        jira.Field.instance.Satisfaction_date__sd_request_feedback_date__c@suubbbuu,
+        jira.Field.instance.Satisfaction__sd_request_feedback__c@uubbuu,
+      ]
+      position = 2
+    }
+  }
+}

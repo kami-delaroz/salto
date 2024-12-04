@@ -1,0 +1,13 @@
+jira.ObjectType AAAA_Models {
+  name = "Models"
+  type = 0
+  inherited = false
+  abstractObjectType = true
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  parentObjectTypeId = jira.ObjectSchema.instance.AAAA
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+  _alias = "Models"
+}

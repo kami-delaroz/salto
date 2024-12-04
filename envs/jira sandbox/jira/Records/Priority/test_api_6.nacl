@@ -1,0 +1,7 @@
+jira.Priority test_api_6 {
+  statusColor = "#ff00ff"
+  description = ""
+  iconUrl = "/images/icons/priorities/blocker.svg"
+  name = "test_api_6"
+  _alias = "test_api_6"
+}

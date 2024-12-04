@@ -1,0 +1,20 @@
+jira.Field Labels__array {
+  name = "Labels"
+  schema = {
+    type = "array"
+    items = "string"
+    system = "labels"
+  }
+  description = ""
+  _alias = "Labels"
+}
+jira.Field Labels__labels__c {
+  name = "Labels"
+  description = ""
+  searcherKey = "com.atlassian.jira.plugin.system.customfieldtypes:labelsearcher"
+  type = "com.atlassian.jira.plugin.system.customfieldtypes:labels"
+  contexts = [
+    jira.CustomFieldContext.instance.Labels__labels__c_Default_Configuration_Scheme_for_Labels@uuuuussss,
+  ]
+  _alias = "Labels"
+}

@@ -1,0 +1,7 @@
+jira.IssueType Request_an_event@s {
+  description = "Send a request to help you plan your upcoming event."
+  name = "Request an event"
+  untranslatedName = "Request an event"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/Request_an_event.s.png")
+}

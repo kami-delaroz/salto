@@ -1,0 +1,7 @@
+jira.CustomFieldContext Location__location__c_testContext {
+  name = "testContext"
+  _parent = [
+    jira.Field.instance.Location__location__c,
+  ]
+  _alias = "Location context in testContext"
+}

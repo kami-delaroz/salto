@@ -1,0 +1,8 @@
+jira.ObjectSchemaStatus AAAA__Retired {
+  name = "Retired"
+  category = 0
+  _parent = [
+    jira.ObjectSchema.instance.AAAA,
+  ]
+  _alias = "AAAA:Retired"
+}

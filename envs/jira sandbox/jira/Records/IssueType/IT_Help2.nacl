@@ -1,0 +1,7 @@
+jira.IssueType IT_Help2@s {
+  description = "An IT problem or question."
+  name = "IT Help2"
+  untranslatedName = "IT Help2"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/IT_Help2.s.png")
+}

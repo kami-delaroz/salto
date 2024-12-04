@@ -1,0 +1,302 @@
+jira.WorkflowConfiguration GWRJSM1__Post_Incident_Review_workflow_for_Jira_Service_Management@fsbssssss {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "GWRJSM1: Post-Incident Review workflow for Jira Service Management"
+  description = "This Jira Service Management Post-Incident Review workflow was generated for Project GWRJSM1"
+  isEditable = true
+  startPointLayout = {
+    x = 1539.1630859375
+    y = -27.641679763793945
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.awaiting_approval@s
+      layout = {
+        x = 1245.0235595703125
+        y = 171.05202636718752
+      }
+      properties = [
+        {
+          key = "approval.active"
+          value = "true"
+        },
+        {
+          key = "approval.condition.type"
+          value = "numberPerPrincipal"
+        },
+        {
+          key = "approval.condition.value"
+          value = "1"
+        },
+        {
+          key = "approval.exclude"
+          value = "reporter,assignee"
+        },
+        {
+          key = "approval.field.id"
+          value = jira.Field.instance.Approver_groups__multigrouppicker__c@suuuu
+        },
+        {
+          key = "approval.groups"
+          value = "true"
+        },
+        {
+          key = "approval.pre-populated.field.id"
+          value = jira.Field.instance.Affected_services__service_entity_field_cftype__c@suubbbuu
+        },
+        {
+          key = "approval.transition.approved"
+          value = jira.WorkflowConfiguration.instance.GWRJSM1__Post_Incident_Review_workflow_for_Jira_Service_Management@fsbssssss.transitions.Mark_as_published__From__Awaiting_approval_Draft__Directed@ssfffsszdff
+        },
+        {
+          key = "approval.transition.rejected"
+          value = jira.WorkflowConfiguration.instance.GWRJSM1__Post_Incident_Review_workflow_for_Jira_Service_Management@fsbssssss.transitions.Draft__From__Awaiting_approval__Directed@fffssff
+        },
+      ]
+      deprecated = false
+      name = "Awaiting approval"
+    },
+    {
+      statusReference = jira.Status.instance.canceled
+      layout = {
+        x = 1499.6162109375
+        y = 277.1323638916016
+      }
+      deprecated = false
+      name = "Canceled"
+    },
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 1851.8704833984375
+        y = 171.05202636718752
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.draft
+      layout = {
+        x = 1511.5302734375
+        y = 171.05202636718752
+      }
+      deprecated = false
+      name = "Draft"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1514.5849609375
+        y = 56
+      }
+      properties = [
+        {
+          key = "approval.active"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.published
+      layout = {
+        x = 1676.58544921875
+        y = 171.05202636718752
+      }
+      deprecated = false
+      name = "Published"
+    },
+  ]
+  transitions = {
+    Back_to_draft__From__Published__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.draft
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.published
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "Back to draft"
+      description = ""
+    }
+    Ready_for_approval__From__Open__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.awaiting_approval@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 6
+          toPort = 1
+        },
+      ]
+      name = "Ready for approval"
+      description = ""
+    }
+    Mark_as_closed__From__Canceled_Published__Directed@ssfffszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.canceled
+          fromPort = 3
+          toPort = 5
+        },
+        {
+          fromStatusReference = jira.Status.instance.published
+          fromPort = 3
+          toPort = 7
+        },
+      ]
+      name = "Mark as closed"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___74@ssssssbs
+        }
+      }
+    }
+    Mark_as_published__From__Awaiting_approval_Draft__Directed@ssfffsszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.published
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.awaiting_approval@s
+          fromPort = 6
+          toPort = 5
+        },
+        {
+          fromStatusReference = jira.Status.instance.draft
+          fromPort = 2
+          toPort = 1
+        },
+      ]
+      name = "Mark as published"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:block-in-progress-approval"
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___74@ssssssbs
+        }
+      }
+    }
+    Ready_for_approval__From__Draft__Directed@ssfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.awaiting_approval@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.draft
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "Ready for approval"
+      description = ""
+    }
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 1
+        },
+      ]
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "common.forms.create"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "0"
+        },
+      ]
+    }
+    Draft__From__Awaiting_approval__Directed@fffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.draft
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.awaiting_approval@s
+          fromPort = 2
+          toPort = 0
+        },
+      ]
+      name = "Draft"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:block-in-progress-approval"
+          },
+        ]
+      }
+    }
+    Mark_as_canceled__From__Awaiting_approval_Draft__Directed@ssfffsszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.canceled
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.awaiting_approval@s
+          fromPort = 4
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.draft
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "Mark as canceled"
+      description = ""
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.JIRA_Service_Desk_Resolve_Issue_Screen___74@ssssssbs
+        }
+      }
+    }
+    Draft__From__Open__Directed@fffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.draft
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 5
+          toPort = 1
+        },
+      ]
+      name = "Draft"
+      description = ""
+    }
+  }
+}

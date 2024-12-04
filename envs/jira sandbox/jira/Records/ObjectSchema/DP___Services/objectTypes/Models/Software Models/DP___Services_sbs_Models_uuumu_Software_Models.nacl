@@ -1,0 +1,13 @@
+jira.ObjectType DP___Services_sbs_Models_uuumu_Software_Models@uuuuumus {
+  name = "Software Models"
+  type = 0
+  parentObjectTypeId = jira.ObjectType.instance.DP___Services_sbs_Models@uuumu
+  inherited = false
+  abstractObjectType = false
+  parentObjectTypeInherited = false
+  iconId = jira.ObjectTypeIcon.instance.Module
+  _parent = [
+    jira.ObjectSchema.instance.DP___Services@sbs,
+  ]
+  _alias = "Software Models"
+}

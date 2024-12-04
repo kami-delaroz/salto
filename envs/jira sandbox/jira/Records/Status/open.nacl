@@ -1,0 +1,6 @@
+jira.Status open {
+  name = "Open"
+  statusCategory = jira.StatusCategory.instance.To_Do@s
+  description = "The issue is open and ready for the assignee to start work on it."
+  _alias = "Open"
+}

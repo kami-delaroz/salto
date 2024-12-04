@@ -1,0 +1,8 @@
+jira.Filter batel_filter_30_01_24@ssbb {
+  name = "batel filter 30-01-24"
+  owner = {
+    id = "61d44bf59ee70a00685fa6b6"
+    displayName = "Testing salto"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.Batel_Project_30_01@ssb.key } order by ${ jira.Field.instance.Created__datetime } DESC"
+}

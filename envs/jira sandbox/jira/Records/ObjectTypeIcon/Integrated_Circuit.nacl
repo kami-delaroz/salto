@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Integrated_Circuit@s {
+  name = "Integrated Circuit"
+  icon = file("jira/ObjectTypeIcon/Integrated_Circuit.s.png")
+}

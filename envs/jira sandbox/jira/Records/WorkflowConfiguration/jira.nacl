@@ -1,0 +1,412 @@
+jira.WorkflowConfiguration jira {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "jira"
+  description = "The default Jira workflow."
+  isEditable = false
+  startPointLayout = {
+    x = 1353
+    y = 54
+  }
+  statuses = [
+    {
+      statusReference = jira.Status.instance.closed
+      layout = {
+        x = 1522
+        y = 315
+      }
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "false"
+        },
+      ]
+      deprecated = false
+      name = "Closed"
+    },
+    {
+      statusReference = jira.Status.instance.in_progress@s
+      layout = {
+        x = 1305.5
+        y = 421
+      }
+      deprecated = false
+      name = "In Progress"
+    },
+    {
+      statusReference = jira.Status.instance.open
+      layout = {
+        x = 1328
+        y = 165
+      }
+      deprecated = false
+      name = "Open"
+    },
+    {
+      statusReference = jira.Status.instance.reopened
+      layout = {
+        x = 1713.75
+        y = 421
+      }
+      deprecated = false
+      name = "Reopened"
+    },
+    {
+      statusReference = jira.Status.instance.resolved
+      layout = {
+        x = 1714.5
+        y = 165
+      }
+      deprecated = false
+      name = "Resolved"
+    },
+  ]
+  transitions = {
+    Reopen_Issue__From__Closed_Resolved__Directed@sfffszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.reopened
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.resolved
+          fromPort = 5
+          toPort = 1
+        },
+        {
+          fromStatusReference = jira.Status.instance.closed
+          fromPort = 3
+          toPort = 1
+        },
+      ]
+      name = "Reopen Issue"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "issue.operations.reopen.issue"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "issue.operations.reopen.issue"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "80"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Issue_Reopened@s
+    }
+    Stop_Progress__From__In_Progress__Directed@sfffssff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 7
+          toPort = 7
+        },
+      ]
+      name = "Stop Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "ASSIGNABLE_USER"
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "stopprogress.title"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "20"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Work_Stopped_On_Issue@s
+    }
+    Create_Issue__From__none__Initial@sfffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      links = [
+        {
+          toPort = 1
+        },
+      ]
+      name = "Create Issue"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "common.forms.create"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "0"
+        },
+      ]
+    }
+    Close_Issue__From__Resolved__Directed@sfffsff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.resolved
+          fromPort = 6
+          toPort = 1
+        },
+      ]
+      name = "Close Issue"
+      description = "Closing an issue indicates there is no more work to be done on it, and it has been verified as complete."
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "CLOSE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Workflow_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "closeissue.close"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "closeissue.title"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "60"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Issue_Closed@s
+    }
+    Resolve_Issue__From__In_Progress_Open_Reopened__Directed@sfffsszdzdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.resolved
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 3
+          toPort = 7
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 5
+          toPort = 3
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+          fromPort = 3
+          toPort = 3
+        },
+      ]
+      name = "Resolve Issue"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Resolve_Issue_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "resolveissue.resolve"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "resolveissue.title"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "40"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Issue_Resolved@s
+    }
+    Start_Progress__From__Open_Reopened__Directed@sfffszdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.in_progress@s
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 5
+          toPort = 1
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+          fromPort = 7
+          toPort = 3
+        },
+      ]
+      name = "Start Progress"
+      description = ""
+      actions = [
+        {
+          ruleKey = "system:update-field"
+          parameters = {
+            field = jira.Field.instance.Resolution__resolution
+          }
+        },
+        {
+          ruleKey = "system:change-assignee"
+          parameters = {
+            type = "to-current-user"
+          }
+        },
+      ]
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "ASSIGNABLE_USER"
+            }
+          },
+        ]
+      }
+      properties = [
+        {
+          key = "jira.i18n.title"
+          value = "startprogress.title"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "20"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Work_Started_On_Issue@s
+    }
+    Close_Issue__From__In_Progress_Open_Reopened__Directed@sfffsszdzdff = {
+      type = "DIRECTED"
+      toStatusReference = jira.Status.instance.closed
+      links = [
+        {
+          fromStatusReference = jira.Status.instance.open
+          fromPort = 4
+          toPort = 1
+        },
+        {
+          fromStatusReference = jira.Status.instance.in_progress@s
+          fromPort = 2
+          toPort = 6
+        },
+        {
+          fromStatusReference = jira.Status.instance.reopened
+          fromPort = 0
+          toPort = 4
+        },
+      ]
+      name = "Close Issue"
+      description = ""
+      conditions = {
+        operation = "ALL"
+        conditions = [
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "RESOLVE_ISSUES"
+            }
+          },
+          {
+            ruleKey = "system:restrict-issue-transition"
+            parameters = {
+              permissionKeys = "CLOSE_ISSUES"
+            }
+          },
+        ]
+      }
+      transitionScreen = {
+        ruleKey = "system:transition-screen"
+        parameters = {
+          screenId = jira.Screen.instance.Resolve_Issue_Screen@s
+        }
+      }
+      properties = [
+        {
+          key = "jira.i18n.submit"
+          value = "closeissue.close"
+        },
+        {
+          key = "jira.i18n.title"
+          value = "closeissue.title"
+        },
+        {
+          key = "opsbar-sequence"
+          value = "60"
+        },
+      ]
+      customIssueEventId = jira.IssueEvent.instance.Issue_Closed@s
+    }
+  }
+}

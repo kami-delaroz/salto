@@ -1,0 +1,122 @@
+jira.Automation When_a_customer_comments_on_a_closed_request___then_reopen_the_request_DP_JSM___2@ssssssss_08594ssssussbs {
+  name = "When a customer comments on a closed request → then reopen the request"
+  state = "ENABLED"
+  authorAccountId = {
+    id = "6205b3c7d362410069133701"
+    displayName = "Dan Putman"
+  }
+  actor = {
+    type = "ACCOUNT_ID"
+    value = {
+      id = "6205b3c7d362410069133701"
+      displayName = "Dan Putman"
+    }
+  }
+  trigger = {
+    component = "TRIGGER"
+    type = "jira.issue.event.trigger:commented"
+    value = {
+      eventKey = "jira:issue_updated"
+      issueEvent = "issue_commented"
+      eventTypes = [
+        "PRIMARY_ACTION",
+      ]
+    }
+    children = [
+    ]
+    conditions = [
+    ]
+  }
+  components = [
+    {
+      component = "CONDITION"
+      type = "jira.user.condition"
+      value = {
+        conditions = [
+          {
+            field = "initiator"
+            check = "USER_IS"
+            criteria = [
+              {
+                type = "SMART"
+                value = "{{issue.reporter}}"
+              },
+            ]
+          },
+          {
+            field = "initiator"
+            check = "NOT_IN_ROLE"
+            criteria = [
+              {
+                type = "NAME"
+                value = "Service Desk Team"
+              },
+            ]
+          },
+        ]
+        operator = "OR"
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+    {
+      component = "CONDITION"
+      type = "jira.jql.condition"
+      children = [
+      ]
+      conditions = [
+      ]
+      rawValue = "statusCategory = done"
+    },
+    {
+      component = "ACTION"
+      type = "jira.issue.transition"
+      value = {
+        operations = [
+        ]
+        sendNotifications = true
+        destinationStatus = {
+          type = "ID"
+          value = jira.Status.instance.reopened
+        }
+      }
+      children = [
+      ]
+      conditions = [
+      ]
+    },
+  ]
+  canOtherRuleTrigger = false
+  notifyOnError = "FIRSTERROR"
+  projects = [
+    {
+      projectId = jira.Project.instance.DP_JSM___2@ssbs
+    },
+  ]
+  labels = [
+  ]
+  tags = [
+    {
+      ruleIdUuid = "01914c13-eee2-7ea8-9581-ad180d39e4fd"
+      tagType = "CREATION_TYPE"
+      tagValue = "AUTO"
+    },
+    {
+      ruleIdUuid = "01914c13-eee2-7ea8-9581-ad180d39e4fd"
+      tagType = "SAMPLE_RULE"
+      tagValue = "service_desk"
+    },
+    {
+      ruleIdUuid = "01914c13-eee2-7ea8-9581-ad180d39e4fd"
+      tagType = "TEMPLATE_ID"
+      tagValue = "itsm_template_3"
+    },
+  ]
+  writeAccessType = "UNRESTRICTED"
+  collaborators = [
+  ]
+  billingType = "SYSTEM"
+  _alias = "When a customer comments on a closed request → then reopen the request"
+}

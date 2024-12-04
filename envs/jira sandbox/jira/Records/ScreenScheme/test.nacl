@@ -1,0 +1,8 @@
+jira.ScreenScheme test {
+  name = "test"
+  description = ""
+  screens = {
+    default = jira.Screen.instance.test
+    edit = jira.Screen.instance.chatzir
+  }
+}

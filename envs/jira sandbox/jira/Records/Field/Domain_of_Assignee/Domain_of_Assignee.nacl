@@ -1,0 +1,9 @@
+jira.Field Domain_of_Assignee__assigneedomain__c@ssuuuu {
+  name = "Domain of Assignee"
+  description = ""
+  type = "com.atlassian.jira.toolkit:assigneedomain"
+  contexts = [
+    jira.CustomFieldContext.instance.Domain_of_Assignee__assigneedomain__c_ssuuuu_Default_Configuration_Scheme_for_Domain_of_Assignee@uuuuuumussssss,
+  ]
+  _alias = "Domain of Assignee"
+}

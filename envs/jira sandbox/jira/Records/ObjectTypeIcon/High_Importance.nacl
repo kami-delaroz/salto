@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon High_Importance@s {
+  name = "High Importance"
+  icon = file("jira/ObjectTypeIcon/High_Importance.s.png")
+}

@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon AV_Receiver@s {
+  name = "AV Receiver"
+  icon = file("jira/ObjectTypeIcon/AV_Receiver.s.png")
+}

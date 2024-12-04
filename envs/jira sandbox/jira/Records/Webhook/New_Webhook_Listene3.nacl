@@ -1,0 +1,20 @@
+jira.Webhook New_Webhook_Listene3@s {
+  name = "New Webhook Listene3"
+  url = "https://staging.salto.com/rest/webhooks/webhook3"
+  description = ""
+  excludeBody = true
+  filters = {
+    issue_related_events_section = "${ jira.Field.instance.Status__status } = Todo"
+  }
+  events = [
+    "user_updated",
+    "issuelink_created",
+    "option_unassigned_issues_changed",
+    "project_restored_deleted",
+    "project_deleted",
+    "jira:version_moved",
+    "sprint_created",
+  ]
+  enabled = true
+  isSigned = false
+}

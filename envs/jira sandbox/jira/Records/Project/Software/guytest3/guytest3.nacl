@@ -1,0 +1,17 @@
+jira.Project guytest3 {
+  key = "GTST3"
+  description = ""
+  name = "guytest3"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.same1
+  permissionScheme = jira.PermissionScheme.instance.Default_software_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueSecurityScheme = jira.SecurityScheme.instance.guytestissuesecurity
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.GTST3__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.Default_Issue_Type_Scheme@s
+  leadAccountId = {
+    id = "60a60ff79b362f006919d5ff"
+    displayName = "Former user"
+  }
+  assigneeType = "UNASSIGNED"
+}

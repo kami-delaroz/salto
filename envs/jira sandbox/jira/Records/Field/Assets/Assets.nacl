@@ -1,0 +1,10 @@
+jira.Field Assets__assetfield__c {
+  name = "Assets"
+  description = ""
+  searcherKey = "com.atlassian.servicedesk.assets-plugin:sd-asset-searcher"
+  type = "com.atlassian.servicedesk.assets-plugin:assetfield"
+  contexts = [
+    jira.CustomFieldContext.instance.Assets__assetfield__c_Default_Configuration_Scheme_for_Assets@uuuuussss,
+  ]
+  _alias = "Assets"
+}

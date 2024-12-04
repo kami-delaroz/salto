@@ -1,0 +1,11 @@
+jira.CustomFieldContext Category__jwm_category__c_uubuu_Category_Field_Config_Scheme_for_Project__process_control_project@uuuuumusssssfsbb {
+  name = "Category Field Config Scheme for Project: process-control-project"
+  description = "Category Field Options"
+  _parent = [
+    jira.Field.instance.Category__jwm_category__c@uubuu,
+  ]
+  _alias = "Category context in Category Field Config Scheme for Project: process-control-project"
+  projectIds = [
+    jira.Project.instance.process_control_project@b,
+  ]
+}

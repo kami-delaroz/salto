@@ -1,0 +1,7 @@
+jira.IssueType _System__Incident@his {
+  description = "For system outages or incidents. Created by Jira Service Management."
+  name = "[System] Incident"
+  untranslatedName = "[System] Incident"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/_System__Incident.his.png")
+}

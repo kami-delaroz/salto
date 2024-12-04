@@ -1,0 +1,4 @@
+jira.ObjectTypeIcon Root_Server@s {
+  name = "Root Server"
+  icon = file("jira/ObjectTypeIcon/Root_Server.s.png")
+}

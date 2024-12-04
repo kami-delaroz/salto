@@ -1,0 +1,8 @@
+jira.ProjectComponent Salto__Stripe_Adapter@uus {
+  assigneeType = "PROJECT_DEFAULT"
+  name = "Stripe Adapter"
+  _parent = [
+    jira.Project.instance.Salto,
+  ]
+  _alias = "Salto:Stripe Adapter"
+}

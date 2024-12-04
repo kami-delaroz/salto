@@ -1,0 +1,37 @@
+jira.WorkflowConfiguration test {
+  scope = {
+    type = "GLOBAL"
+  }
+  name = "test"
+  description = "test4"
+  isEditable = true
+  statuses = [
+    {
+      statusReference = jira.Status.instance.open
+      properties = [
+        {
+          key = "jira.issue.editable"
+          value = "true"
+        },
+      ]
+      deprecated = false
+      name = "Open"
+    },
+  ]
+  transitions = {
+    Create__From__none__Initial@fffsff = {
+      type = "INITIAL"
+      toStatusReference = jira.Status.instance.open
+      name = "Create"
+      description = ""
+      validators = [
+        {
+          ruleKey = "system:check-permission-validator"
+          parameters = {
+            permissionKey = "CREATE_ISSUES"
+          }
+        },
+      ]
+    }
+  }
+}

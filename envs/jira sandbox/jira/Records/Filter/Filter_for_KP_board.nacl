@@ -1,0 +1,16 @@
+jira.Filter Filter_for_KP_board@s {
+  name = "Filter for KP board"
+  owner = {
+    id = "605c3da2109af10068b38c4e"
+    displayName = "Sagi Bracha"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.Kanban_Project__@s.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.Kanban_Project__@s
+      }
+    },
+  ]
+}

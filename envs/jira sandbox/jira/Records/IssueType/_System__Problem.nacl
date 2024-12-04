@@ -1,0 +1,7 @@
+jira.IssueType _System__Problem@his {
+  description = "Track underlying causes of incidents. Created by Jira Service Management."
+  name = "[System] Problem"
+  untranslatedName = "[System] Problem"
+  hierarchyLevel = 0
+  avatar = file("jira/IssueType/_System__Problem.his.png")
+}
